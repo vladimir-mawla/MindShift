@@ -13,4 +13,9 @@ class Question extends Model
     {
         return $this->belongsTo(Game::class);
     }
+
+    public function answers()
+    {
+        return $this->belongsTo(Answer::class);
+    }
 }
