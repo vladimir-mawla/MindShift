@@ -70,4 +70,9 @@ class User extends Authenticatable implements JWTSubject
         return $this->belongsToMany(Level::class);
     }
 
+    public function achievments()
+    {
+        return $this->belongsToMany(Achievment::class);
+    }
+
 }
