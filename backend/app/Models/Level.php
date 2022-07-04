@@ -9,8 +9,8 @@ class Level extends Model
 {
     use HasFactory;
 
-    public function levels()
+    public function users()
     {
-        return $this->hasMany(Level::class);
+        return $this->hasMany(User::class);
     }
 }
