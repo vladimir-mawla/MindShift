@@ -1,3 +1,4 @@
+<?php
 namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -57,6 +58,11 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    public function companies()
+    {
+        return $this->belongsTo(Company::class);
     }
 
 }
