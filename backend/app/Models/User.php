@@ -75,4 +75,9 @@ class User extends Authenticatable implements JWTSubject
         return $this->belongsToMany(Achievment::class);
     }
 
+    public function rewards()
+    {
+        return $this->belongsToMany(Reward::class);
+    }
+
 }
