@@ -18,4 +18,9 @@ class Question extends Model
     {
         return $this->belongsTo(Answer::class);
     }
+
+    public function question_options()
+    {
+        return $this->hasMany(QuestionOption::class);
+    }
 }
