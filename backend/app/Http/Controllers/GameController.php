@@ -22,4 +22,14 @@ class GameController extends Controller
             "game" => $game,
         ], 200);
     }
+
+    public function searchGame(Request $request){
+        $name = $request->name;
+        $game = Game::where("name", "LIKE", "%$name%")->get();
+        
+        return response()->json([
+            "status" => "Success",
+            "result" => $game,
+        ], 200);
+    }
 }
