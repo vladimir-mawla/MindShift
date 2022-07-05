@@ -32,4 +32,12 @@ class GameController extends Controller
             "result" => $game,
         ], 200);
     }
+
+    public function deleteGame(Request $request){
+        
+        Game::where('id',$request->game_id)->delete();
+        return response()->json([
+            "survey" => "Successfully Deleted",
+        ], 200);
+    }
 }
