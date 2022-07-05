@@ -57,4 +57,20 @@ class GameController extends Controller
            $game['name'] => $game,
         ], 200);
     }
+
+    public function editGame(Request $request){
+        
+        $game_id = $request->game_id;
+        $name = $request->name;
+        $points = $request->points;
+        $img = $request->img;
+        $description = $request->description;
+        Game::where('id', $game_id)->update(['name'=>$name],
+                                            ['points'=>$points],
+                                            ['img'=>$img],
+                                            ['description'=>$description]);
+        return response()->json([
+            "status" => "Done",
+        ], 200);
+    }
 }

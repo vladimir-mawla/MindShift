@@ -21,6 +21,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/delete_game', [GameController::class, 'deleteGame']);
         Route::get('/get_games', [GameController::class, 'getGames']);
         Route::post('/get_specific_game', [GameController::class, 'getGameById']);
+        Route::post('/edit_game', [GameController::class, 'editGame']);
     });
 
 });
