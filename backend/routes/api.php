@@ -15,9 +15,8 @@ Route::group(['prefix' => 'v1'], function(){
 
     });
 
-    Route::controller(GameController::class)->group(['prefix' => 'games'], function(){
-        Route::post('add_game', 'addGame');
-
+    Route::group(['prefix' => 'games'], function(){
+        Route::post('/add_game', [GameController::class, 'addGame']);
     });
 
 });
