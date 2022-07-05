@@ -23,4 +23,12 @@ class QuestionController extends Controller
                 "question" => $question,
             ], 200);
         }
+        // Delete Question API
+        public function deleteQuestion(Request $request){
+            Question::where('id',$request->question_id)->delete();
+
+            return response()->json([
+                "Successfully Deleted",
+            ], 200);
+        }
 }
