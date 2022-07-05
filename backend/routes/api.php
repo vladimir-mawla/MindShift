@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\QuestionController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -14,7 +15,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('refresh', 'refresh');
 
     });
-
+    
     Route::group(['prefix' => 'games'], function(){
         Route::post('/add_game', [GameController::class, 'addGame']);
         Route::post('/search_game', [GameController::class, 'searchGame']);
@@ -22,6 +23,11 @@ Route::group(['prefix' => 'v1'], function(){
         Route::get('/get_games', [GameController::class, 'getGames']);
         Route::post('/get_specific_game', [GameController::class, 'getGameById']);
         Route::post('/edit_game', [GameController::class, 'editGame']);
+    });
+
+    Route::group(['prefix' => 'questions'], function(){
+        Route::post('/add_question', [QuestionController::class, 'addQuestion']);
+
     });
 
 });
