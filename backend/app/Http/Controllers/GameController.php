@@ -8,6 +8,7 @@ use App\Models\Game;
 
 class GameController extends Controller
 {
+    // Add Game API
     public function addGame(Request $request){
 
         $game = new Game;
@@ -22,7 +23,7 @@ class GameController extends Controller
             "game" => $game,
         ], 200);
     }
-
+    // Search Game API
     public function searchGame(Request $request){
         $name = $request->name;
         $game = Game::where("name", "LIKE", "%$name%")->get();
@@ -32,7 +33,7 @@ class GameController extends Controller
             "result" => $game,
         ], 200);
     }
-
+    // Delete Game API
     public function deleteGame(Request $request){
         Game::where('id',$request->game_id)->delete();
 
@@ -40,7 +41,7 @@ class GameController extends Controller
             "survey" => "Successfully Deleted",
         ], 200);
     }
-
+    // Get Games API
     public function getGames(){
         $games = Game::all();
 
@@ -49,7 +50,7 @@ class GameController extends Controller
             "games" => $games,
         ], 200);
     }
-
+    // Get Specific Game API
     public function getGameById(Request $request){
         $game_id = $request->game_id;
         $game = Game::find($game_id);
@@ -57,7 +58,7 @@ class GameController extends Controller
            $game['name'] => $game,
         ], 200);
     }
-
+    // Edit Game API
     public function editGame(Request $request){
         
         $game_id = $request->game_id;
