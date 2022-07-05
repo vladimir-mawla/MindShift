@@ -31,4 +31,13 @@ class QuestionController extends Controller
                 "Successfully Deleted",
             ], 200);
         }
+        // Get Questions API
+        public function getQuestions(Request $request){
+            $questions = Question::where('game_id', $request->game_id)->get();
+
+            return response()->json([
+                "status" => "success",
+                "questions" => $questions,
+            ], 200);
+        }
 }

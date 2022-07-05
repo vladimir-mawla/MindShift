@@ -28,6 +28,7 @@ Route::group(['prefix' => 'v1'], function(){
     Route::group(['prefix' => 'questions'], function(){
         Route::post('/add_question', [QuestionController::class, 'addQuestion']);
         Route::post('/delete_question', [QuestionController::class, 'deleteQuestion']);
+        Route::post('/get_questions', [QuestionController::class, 'getQuestions']);
 
     });
 
