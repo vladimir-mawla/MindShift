@@ -36,6 +36,7 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'answers'], function(){
         Route::post('/add_answer', [AnswerController::class, 'addAnswer']);
+        Route::post('/get_question_answer', [AnswerController::class, 'getAnswerOfQuestion']);
 
     });
 

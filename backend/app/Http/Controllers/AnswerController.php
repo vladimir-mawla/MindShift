@@ -21,4 +21,12 @@ class AnswerController extends Controller
             "status" => "Success",
         ], 200);
     }
+    // Get Question's Answer
+    public function getAnswerOfQuestion(Request $request){
+        $question_id = $request->question_id;
+        $answer = Answer::where('question_id', $question_id)->get();
+        return response()->json(
+            $answer
+        );
+    }
 }
