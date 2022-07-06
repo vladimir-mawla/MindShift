@@ -45,6 +45,7 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'companies'], function(){
         Route::post('/add_company', [CompanyController::class, 'addCopmany']);
+        Route::post('/delete_company', [CompanyController::class, 'deleteCopmany']);
 
     });
 

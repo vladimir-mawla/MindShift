@@ -7,6 +7,7 @@ use App\Models\Company;
 
 class CompanyController extends Controller
 {
+    //Add Company API
     public function addCompany(Request $request){
         $company = new Company;
         $name = $request->name;
@@ -18,6 +19,14 @@ class CompanyController extends Controller
         return response()->json([
             "status" => "Success",
             "compant" => $company,
+        ], 200);
+    }
+    // Delete Company API
+    public function deleteCompany(Request $request){
+        Company::where('id',$request->company_id)->delete();
+
+        return response()->json([
+            "Successfully Deleted",
         ], 200);
     }
 }
