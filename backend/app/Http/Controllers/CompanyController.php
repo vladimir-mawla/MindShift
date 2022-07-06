@@ -18,7 +18,7 @@ class CompanyController extends Controller
 
         return response()->json([
             "status" => "Success",
-            "compant" => $company,
+            "company" => $company,
         ], 200);
     }
     // Delete Company API
