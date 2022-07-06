@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\AnswerController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -30,6 +31,11 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/delete_question', [QuestionController::class, 'deleteQuestion']);
         Route::post('/get_questions', [QuestionController::class, 'getQuestions']);
         Route::post('/edit_question', [QuestionController::class, 'editQuestion']);
+
+    });
+
+    Route::group(['prefix' => 'answers'], function(){
+        Route::post('/add_answer', [AnswerController::class, 'addAnswer']);
 
     });
 
