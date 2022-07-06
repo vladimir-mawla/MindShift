@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Answer;
+use App\Models\Question;
 
 
 class AnswerController extends Controller
@@ -25,7 +26,7 @@ class AnswerController extends Controller
     public function getAnswerOfQuestion(Request $request){
         $question_id = $request->question_id;
         $answer = Answer::where('question_id', $question_id)->get();
-        
+
         return response()->json(
             $answer
         );
@@ -39,5 +40,27 @@ class AnswerController extends Controller
         return response()->json(
             $answer
         );
+    }
+    // Check Answer
+    public function checkAnswer(Request $request){
+
+        $user_id = $request->user_id;
+        $game_id = $request->game_id;
+        $question_id = $request->question_id;
+        $correct_answer = Question::where('id', $question_id)->where('game_id', $game_id)->get();
+        $answer = Answer::where('question_id', $question_id)->where('user_id', $user_id)->get();
+
+        if ($answer[0]['answer'] == $correct_answer[0]['correct_answer']){
+
+            return response()->json(
+                "True"
+            );
+        }else{
+
+            return response()->json(
+                "False"
+            );
+        }
+        
     }
 }
