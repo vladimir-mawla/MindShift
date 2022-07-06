@@ -37,7 +37,7 @@ class CompanyController extends Controller
         $location = $request->location;
         $employees_number = $request->employees_number;
         $description = $request->description;
-        Game::where('id', $company_id)->update(['name'=>$name,
+        Company::where('id', $company_id)->update(['name'=>$name,
                                             'location'=>$location,
                                             'employees_number'=>$employees_number,
                                             'description'=>$description]);
