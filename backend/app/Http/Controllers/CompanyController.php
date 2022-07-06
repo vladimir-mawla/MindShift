@@ -29,4 +29,20 @@ class CompanyController extends Controller
             "Successfully Deleted",
         ], 200);
     }
+    // Edit Company API
+    public function editCompany(Request $request){
+    
+        $company_id = $request->company_id;
+        $name = $request->name;
+        $location = $request->location;
+        $employees_number = $request->employees_number;
+        $description = $request->description;
+        Game::where('id', $company_id)->update(['name'=>$name,
+                                            'location'=>$location,
+                                            'employees_number'=>$employees_number,
+                                            'description'=>$description]);
+        return response()->json([
+            "status" => "Done",
+        ], 200);
+    }
 }
