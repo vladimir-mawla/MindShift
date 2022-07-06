@@ -45,4 +45,14 @@ class CompanyController extends Controller
             "status" => "Done",
         ], 200);
     }
+    // Get Company API
+    public function getCompanies(){
+        $companies = Company::all();
+
+        return response()->json([
+            "status" => "success",
+            "companies" => $companies,
+        ], 200);
+    }
+
 }
