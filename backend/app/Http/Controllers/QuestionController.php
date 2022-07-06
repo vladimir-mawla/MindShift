@@ -40,4 +40,22 @@ class QuestionController extends Controller
                 "questions" => $questions,
             ], 200);
         }
+        // Edit Question API
+        public function editQuestion(Request $request){
+
+            $question_id = $request->question_id;
+            $question = $request->question;
+            $correct_answer = $request->correct_answer;
+            $points = $request->points;
+            $game_id = $request->game_id; //Maybe I should remove this line
+            $question_type = $request->question_type;
+            Question::where('id', $question_id)->update(['question'=>$question,
+                                                'correct_answer'=>$correct_answer,
+                                                'points'=>$points,
+                                                'game_id'=>$game_id,
+                                                'question_type'=>$question_type]);
+            return response()->json([
+                "status" => "Done",
+            ], 200);
+        }
 }
