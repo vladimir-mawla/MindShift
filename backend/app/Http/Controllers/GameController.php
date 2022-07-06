@@ -38,7 +38,7 @@ class GameController extends Controller
         Game::where('id',$request->game_id)->delete();
 
         return response()->json([
-            "survey" => "Successfully Deleted",
+            "Successfully Deleted",
         ], 200);
     }
     // Get Games API
@@ -66,10 +66,10 @@ class GameController extends Controller
         $points = $request->points;
         $img = $request->img;
         $description = $request->description;
-        Game::where('id', $game_id)->update(['name'=>$name],
-                                            ['points'=>$points],
-                                            ['img'=>$img],
-                                            ['description'=>$description]);
+        Game::where('id', $game_id)->update(['name'=>$name,
+                                            'points'=>$points,
+                                            'img'=>$img,
+                                            'description'=>$description]);
         return response()->json([
             "status" => "Done",
         ], 200);
