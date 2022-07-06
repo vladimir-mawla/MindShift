@@ -10,10 +10,10 @@ class CompanyController extends Controller
     //Add Company API
     public function addCompany(Request $request){
         $company = new Company;
-        $name = $request->name;
-        $description = $request->description;
-        $location = $request->location;
-        $employees_number = $request->employees_number;
+        $company->name = $request->name;
+        $company->description = $request->description;
+        $company->location = $request->location;
+        $company->employees_number = $request->employees_number;
         $company->save();
 
         return response()->json([
