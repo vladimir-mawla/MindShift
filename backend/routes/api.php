@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
+use App\Http\Controllers\CompanyController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -39,6 +40,11 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/get_question_answer', [AnswerController::class, 'getAnswerOfQuestion']);
         Route::post('/get_user_answer', [AnswerController::class, 'getAnswerOfUserOnQuestion']);
         Route::post('/check_answer', [AnswerController::class, 'checkAnswer']);
+
+    });
+
+    Route::group(['prefix' => 'companies'], function(){
+        Route::post('/add_company', [CompanyController::class, 'addCopmany']);
 
     });
 
