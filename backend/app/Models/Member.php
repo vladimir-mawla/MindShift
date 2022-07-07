@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Memebr extends Model
 {
     use HasFactory;
+    public function groups()
+    {
+        return $this->belongsTo(Group::class);
+    }
 }
