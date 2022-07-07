@@ -80,4 +80,12 @@ Route::group(['prefix' => 'v1'], function(){
 
     });
 
+    Route::group(['prefix' => 'achievements'], function(){
+        Route::post('/add_achievement', [AchievementController::class, 'createReward']);
+        Route::post('/delete_achievement', [AchievementController::class, 'deleteReward']);
+        Route::post('/edit_achievement', [AchievementController::class, 'renameReward']);
+        Route::get('/get_achievements', [AchievementController::class, 'getRewards']);
+
+    });
+
 });
