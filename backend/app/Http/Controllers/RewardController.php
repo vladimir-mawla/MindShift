@@ -28,4 +28,18 @@ class RewardController extends Controller
             "Successfully Deleted",
         ], 200);
     }
+    // Edit Reward API
+    public function editReward(Request $request){
+    
+        $reward_id = $request->reward_id;
+        $reward->name = $request->name;
+        $reward->description = $request->description;
+        $reward->needed_points = $request->needed_points;
+        Reward::where('id', $reward_id)->update(['name'=>$name,
+                                            'needed_points'=>$needed_points,
+                                            'description'=>$description]);
+        return response()->json([
+            "status" => "Done",
+        ], 200);
+    }
 }
