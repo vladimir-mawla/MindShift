@@ -10,7 +10,6 @@ class GroupController extends Controller
     public function createGroup(Request $request){
         $group = new Group;
         $group->name = $request->name;
-        $group->description = $request->description;
         $group->save();
 
         return response()->json([
