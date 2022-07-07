@@ -58,16 +58,13 @@ class GroupController extends Controller
     // Get Group Members API
     public function getGroupMembers(Request $request){
         $group_id = $request->group_id;
-        $members = Member::all()->where('group_id', $group_id);
-
+        $members = Group::find(1)->members->where('group_id', $group_id);
+        
         foreach ($members as $member) {
-            $user = User::all()->where('id', $member['id']);
-
-            echo $user;
+            $users = User::all()->where('id', $member['user_id']);
+            foreach ($users as $user){
+                echo $user;
+            }
         }
-        // return response()->json([
-        //     $user, 
-        // ], 200);
-
     }
 }
