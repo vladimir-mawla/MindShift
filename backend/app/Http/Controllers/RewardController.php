@@ -42,4 +42,13 @@ class RewardController extends Controller
             "status" => "Done",
         ], 200);
     }
+    // Get Reward API
+    public function getRewards(){
+        $rewards = Reward::all();
+
+        return response()->json([
+            "status" => "success",
+            "rewards" => $rewards,
+        ], 200);
+    }
 }
