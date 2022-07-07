@@ -20,4 +20,12 @@ class RewardController extends Controller
             "reward" => $reward,
         ], 200);
     }
+    // Delete Reward API
+    public function deleteReward(Request $request){
+        Reward::where('id',$request->reward_id)->delete();
+
+        return response()->json([
+            "Successfully Deleted",
+        ], 200);
+    }
 }
