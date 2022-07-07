@@ -31,12 +31,28 @@ class AchievmentController extends Controller
         ], 200);
     }
     // Get Achievements API
-    public function getGames(){
+    public function getAchievements(){
         $achievements = Achievement::all();
 
         return response()->json([
             "status" => "success",
             "achievements" => $achievements,
+        ], 200);
+    }
+    // Edit Achievement API
+    public function editAchievement(Request $request){
+        
+        $achievement_id = $request->achievement_id;
+        $name = $request->name;
+        $points = $request->points;
+        $img = $request->img;
+        $description = $request->description;
+        Achievement::where('id', $achievement_id)->update(['name'=>$name,
+                                            'points'=>$points,
+                                            'img'=>$img,
+                                            'description'=>$description]);
+        return response()->json([
+            "status" => "Done",
         ], 200);
     }
 }
