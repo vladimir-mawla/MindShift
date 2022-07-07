@@ -52,4 +52,9 @@ Route::group(['prefix' => 'v1'], function(){
 
     });
 
+    Route::group(['prefix' => 'groups'], function(){
+        Route::post('/create_group', [CompanyController::class, 'createGroup']);
+
+    });
+
 });
