@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Group;
+use App\Models\Member;
 
 class GroupController extends Controller
 {
@@ -50,6 +53,15 @@ class GroupController extends Controller
         $group = Group::find($group_id);
         return response()->json([
             $group['name'] => $group,
+        ], 200);
+    }
+    // Get Specific Group API
+    public function getGroupMembers(Request $request){
+        $group_id = $request->group_id;
+        $members = Member::find('group_id', $group_id);
+        // $users = User::find('user_id', $members['id'])->get();
+        return response()->json([
+            $members,
         ], 200);
     }
 }

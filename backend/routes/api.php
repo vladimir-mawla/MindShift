@@ -61,6 +61,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/rename_group', [GroupController::class, 'renameGroup']);
         Route::get('/get_groups', [GroupController::class, 'getGroups']);
         Route::post('/get_specific_group', [GroupController::class, 'getSpecificGroup']);
+        Route::post('/get_group_members', [GroupController::class, 'getGroupMembers']);
 
     });
 
