@@ -30,4 +30,13 @@ class AchievmentController extends Controller
             "Successfully Deleted",
         ], 200);
     }
+    // Get Achievements API
+    public function getGames(){
+        $achievements = Achievement::all();
+
+        return response()->json([
+            "status" => "success",
+            "achievements" => $achievements,
+        ], 200);
+    }
 }
