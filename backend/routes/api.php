@@ -7,6 +7,7 @@ use App\Http\Controllers\GameController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\GroupController;
 
 Route::group(['prefix' => 'v1'], function(){
 
