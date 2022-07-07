@@ -54,5 +54,13 @@ class CompanyController extends Controller
             "companies" => $companies,
         ], 200);
     }
+    // Get Specific Company API
+    public function getCompanyById(Request $request){
+        $company_id = $request->company_id;
+        $company = Company::find($company_id);
+        return response()->json([
+            $company['name'] => $company,
+        ], 200);
+    }
 
 }
