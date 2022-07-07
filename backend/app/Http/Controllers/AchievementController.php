@@ -22,4 +22,12 @@ class AchievmentController extends Controller
             "achievement" => $achievement,
         ], 200);
     }
+    // Delete Achievement API
+    public function deleteAchievement(Request $request){
+        Achievement::where('id',$request->achievement_id)->delete();
+
+        return response()->json([
+            "Successfully Deleted",
+        ], 200);
+    }
 }
