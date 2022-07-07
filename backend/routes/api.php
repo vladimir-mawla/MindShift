@@ -55,11 +55,11 @@ Route::group(['prefix' => 'v1'], function(){
     });
 
     Route::group(['prefix' => 'groups'], function(){
-        Route::post('/create_group', [GameController::class, 'createGroup']);
-        Route::post('/delete_group', [GameController::class, 'deleteGroup']);
-        Route::post('/rename_group', [GameController::class, 'renameGroup']);
-        Route::get('/get_groups', [GameController::class, 'getGroups']);
-        Route::post('/get_specific_group', [GameController::class, 'getSpecificGroup']);
+        Route::post('/create_group', [GroupController::class, 'createGroup']);
+        Route::post('/delete_group', [GroupController::class, 'deleteGroup']);
+        Route::post('/rename_group', [GroupController::class, 'renameGroup']);
+        Route::get('/get_groups', [GroupController::class, 'getGroups']);
+        Route::post('/get_specific_group', [GroupController::class, 'getSpecificGroup']);
 
     });
 
