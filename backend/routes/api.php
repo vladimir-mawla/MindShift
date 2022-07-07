@@ -9,6 +9,7 @@ use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\RewardController;
+use App\Http\Controllers\MemberController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -69,6 +70,12 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/rename_reward', [RewardController::class, 'renameReward']);
         Route::get('/get_rewards', [RewardController::class, 'getRewards']);
         Route::post('/get_specific_reward', [RewardController::class, 'getSpecificReward']);
+
+    });
+
+    Route::group(['prefix' => 'rewards'], function(){
+        Route::post('/add_member', [MemberController::class, 'addMember']);
+        Route::post('/remove_member', [MemberController::class, 'removeMember']);
 
     });
 
