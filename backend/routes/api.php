@@ -62,4 +62,13 @@ Route::group(['prefix' => 'v1'], function(){
 
     });
 
+    Route::group(['prefix' => 'rewards'], function(){
+        Route::post('/create_reward', [RewardController::class, 'createReward']);
+        Route::post('/delete_reward', [RewardController::class, 'deleteReward']);
+        Route::post('/rename_reward', [RewardController::class, 'renameReward']);
+        Route::post('/get_rewards', [RewardController::class, 'getRewards']);
+        Route::post('/get_specific_reward', [RewardController::class, 'getSpecificReward']);
+
+    });
+
 });
