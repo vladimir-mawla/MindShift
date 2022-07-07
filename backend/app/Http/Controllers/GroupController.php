@@ -25,4 +25,14 @@ class GroupController extends Controller
             "Successfully Deleted",
         ], 200);
     }
+    // Rename Group API
+    public function renameGroup(Request $request){
+    
+        $group_id = $request->group_id;
+        $name = $request->name;
+        Group::where('id', $group_id)->update(['name'=>$name]);
+        return response()->json([
+            "status" => "Done",
+        ], 200);
+    }
 }
