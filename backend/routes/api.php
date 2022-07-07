@@ -8,6 +8,7 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\GroupController;
+use App\Http\Controllers\RewardController;
 
 Route::group(['prefix' => 'v1'], function(){
 
