@@ -18,4 +18,12 @@ class GroupController extends Controller
             "group" => $group,
         ], 200);
     }
+    // Delete Group API
+    public function deleteGroup(Request $request){
+        Group::where('id',$request->group_id)->delete();
+
+        return response()->json([
+            "Successfully Deleted",
+        ], 200);
+    }
 }
