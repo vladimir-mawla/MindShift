@@ -10,6 +10,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\RewardController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\AchievementController;
 
 Route::group(['prefix' => 'v1'], function(){
 
