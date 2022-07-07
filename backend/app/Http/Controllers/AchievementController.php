@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Achievment;
+use App\Models\Achievement;
 
 
 class AchievmentController extends Controller
