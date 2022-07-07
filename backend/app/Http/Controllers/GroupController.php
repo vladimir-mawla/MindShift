@@ -44,4 +44,12 @@ class GroupController extends Controller
             "groups" => $groups,
         ], 200);
     }
+    // Get Specific Group API
+    public function getSpecificGroup(Request $request){
+        $group_id = $request->group_id;
+        $group = Group::find($group_id);
+        return response()->json([
+            $group['name'] => $group,
+        ], 200);
+    }
 }

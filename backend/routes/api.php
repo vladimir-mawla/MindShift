@@ -57,6 +57,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/delete_group', [CompanyController::class, 'deleteGroup']);
         Route::post('/rename_group', [CompanyController::class, 'renameGroup']);
         Route::post('/get_groups', [CompanyController::class, 'getGroups']);
+        Route::post('/get_specific_group', [CompanyController::class, 'getSpecificGroup']);
 
     });
 
