@@ -58,7 +58,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/create_group', [GameController::class, 'createGroup']);
         Route::post('/delete_group', [GameController::class, 'deleteGroup']);
         Route::post('/rename_group', [GameController::class, 'renameGroup']);
-        Route::post('/get_groups', [GameController::class, 'getGroups']);
+        Route::get('/get_groups', [GameController::class, 'getGroups']);
         Route::post('/get_specific_group', [GameController::class, 'getSpecificGroup']);
 
     });
@@ -67,7 +67,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/create_reward', [RewardController::class, 'createReward']);
         Route::post('/delete_reward', [RewardController::class, 'deleteReward']);
         Route::post('/rename_reward', [RewardController::class, 'renameReward']);
-        Route::post('/get_rewards', [RewardController::class, 'getRewards']);
+        Route::get('/get_rewards', [RewardController::class, 'getRewards']);
         Route::post('/get_specific_reward', [RewardController::class, 'getSpecificReward']);
 
     });
