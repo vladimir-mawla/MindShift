@@ -52,7 +52,7 @@ class RewardController extends Controller
         ], 200);
     }
     // Get Specific Reward API
-    public function getOneReward(Request $request){
+    public function getSpecificReward(Request $request){
         $reward_id = $request->reward_id;
         $reward = Reward::find($reward_id);
         return response()->json([
