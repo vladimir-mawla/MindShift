@@ -35,4 +35,13 @@ class GroupController extends Controller
             "status" => "Done",
         ], 200);
     }
+    // Get Groups API
+    public function getGroups(){
+        $groups = Group::all();
+
+        return response()->json([
+            "status" => "success",
+            "groups" => $groups,
+        ], 200);
+    }
 }
