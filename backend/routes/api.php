@@ -12,6 +12,7 @@ use App\Http\Controllers\RewardController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\QuestionOptionController;
+use App\Http\Controllers\QuestionTypeController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -93,6 +94,11 @@ Route::group(['prefix' => 'v1'], function(){
     Route::group(['prefix' => 'question_options'], function(){
         Route::post('/add_option', [QuestionOptionController::class, 'addOption']);
         Route::post('/get_options', [QuestionOptionController::class, 'getOptions']);
+
+    });
+
+    Route::group(['prefix' => 'question_types'], function(){
+        Route::post('/add_type', [QuestionTypeController::class, 'addQuestionType']);
 
     });
 
