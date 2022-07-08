@@ -105,7 +105,7 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'question_types'], function(){
         Route::post('/add_user', [LeaderboardController::class, 'addUser']);
-        Route::get('/get_leaderboard', [LeaderboardController::class, 'getLeaderBoard']);
+        Route::get('/get_leaderboard', [LeaderboardController::class, 'getLeaderboard']);
 
     });
 

@@ -19,7 +19,7 @@ class LeaderboardController extends Controller
         ], 200);
     }
     // Get Leaderboard API
-    public function getLeaderBoard(){
+    public function getLeaderboard(){
         $users = Leaderboard::all();
 
         return response()->json([
