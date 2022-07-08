@@ -4,6 +4,21 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+    function login() {
+
+        const navigate = useNavigate();
+        const login_email = document.getElementById("login_email");
+        const login_password = document.getElementById("login_password");
+
+        axios
+          .post("http://127.0.0.1:8000/api/v1/login", {
+            email: login_email.value,
+            password: login_password.value,
+        })
+
+    }
+
   return (
     <center>
       <div className="form">
@@ -18,7 +33,7 @@ const Login = () => {
           text={"Login"}
           className={"login-btn"}
           onClick={() => {
-            ;
+            login();
           }}
         />
         <p className="goto-link">
