@@ -11,6 +11,7 @@ use App\Http\Controllers\GroupController;
 use App\Http\Controllers\RewardController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\AchievementController;
+use App\Http\Controllers\QuestionOptionController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -86,6 +87,12 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/delete_achievement', [AchievementController::class, 'deleteReward']);
         Route::post('/edit_achievement', [AchievementController::class, 'renameReward']);
         Route::get('/get_achievements', [AchievementController::class, 'getRewards']);
+
+    });
+
+    Route::group(['prefix' => 'achievements'], function(){
+        Route::post('/add_option', [QuestionOptionController::class, 'createReward']);
+        Route::post('/get_options', [QuestionOptionController::class, 'deleteReward']);
 
     });
 
