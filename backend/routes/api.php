@@ -90,7 +90,7 @@ Route::group(['prefix' => 'v1'], function(){
 
     });
 
-    Route::group(['prefix' => 'achievements'], function(){
+    Route::group(['prefix' => 'question_options'], function(){
         Route::post('/add_option', [QuestionOptionController::class, 'createReward']);
         Route::post('/get_options', [QuestionOptionController::class, 'deleteReward']);
 
