@@ -91,8 +91,8 @@ Route::group(['prefix' => 'v1'], function(){
     });
 
     Route::group(['prefix' => 'question_options'], function(){
-        Route::post('/add_option', [QuestionOptionController::class, 'createReward']);
-        Route::post('/get_options', [QuestionOptionController::class, 'deleteReward']);
+        Route::post('/add_option', [QuestionOptionController::class, 'addOption']);
+        Route::post('/get_options', [QuestionOptionController::class, 'getOptions']);
 
     });
 

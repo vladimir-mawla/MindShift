@@ -8,7 +8,7 @@ use App\Models\QuestionOption;
 class QuestionOptionController extends Controller
 {
     //Add Question Option API
-    public function addQuestionOption(Request $request){
+    public function addOption(Request $request){
 
         $question_option = new QuestionOption;
         $question_option->question_id = $request->question_id;
@@ -21,7 +21,7 @@ class QuestionOptionController extends Controller
         ], 200);
     }
     //Get Question Options API
-    public function getQuestionOptions(Request $request){
+    public function getOptions(Request $request){
 
         $question_id = $request->question_id;
 
