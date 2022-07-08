@@ -18,4 +18,13 @@ class LeaderboardController extends Controller
             "leaderboard" => $leaderboard,
         ], 200);
     }
+    // Get Leaderboard API
+    public function getLeaderBoard(){
+        $users = Leaderboard::all();
+
+        return response()->json([
+            "status" => "success",
+            "users" => $users,
+        ], 200);
+    }
 }
