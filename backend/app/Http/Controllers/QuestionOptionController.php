@@ -20,4 +20,16 @@ class QuestionOptionController extends Controller
             "status" => "Success",
         ], 200);
     }
+    //Get Question Options API
+    public function getQuestionOptions(Request $request){
+
+        $question_id = $request->question_id;
+
+        $options = QuestionOption::where('question_id', $question_id)->get();
+        
+        return response()->json([
+            "status" => "success",
+            "options" => $options,
+        ], 200);
+    }
 }
