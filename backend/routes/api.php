@@ -13,6 +13,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\QuestionOptionController;
 use App\Http\Controllers\QuestionTypeController;
+use App\Http\Controllers\LeaderboardController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -99,6 +100,12 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'question_types'], function(){
         Route::post('/add_type', [QuestionTypeController::class, 'addType']);
+
+    });
+
+    Route::group(['prefix' => 'question_types'], function(){
+        Route::post('/add_user', [LeaderboardController::class, 'addUser']);
+        Route::get('/get_leaderboard', [LeaderboardController::class, 'getLeaderBoard']);
 
     });
 
