@@ -98,7 +98,7 @@ Route::group(['prefix' => 'v1'], function(){
     });
 
     Route::group(['prefix' => 'question_types'], function(){
-        Route::post('/add_type', [QuestionTypeController::class, 'addQuestionType']);
+        Route::post('/add_type', [QuestionTypeController::class, 'addType']);
 
     });
 

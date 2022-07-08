@@ -8,7 +8,7 @@ use App\Models\QuestionType;
 class QuestionTypeController extends Controller
 {
     //Add Question Type API
-    public function addQuestionType(Request $request){
+    public function addType(Request $request){
 
         $question_type = new QuestionType;
         $question_type->question_id = $request->question_id;
