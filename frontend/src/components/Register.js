@@ -61,7 +61,7 @@ const Register = () => {
           }}
         />
         <p className="goto-link">
-          <Link to={"/signup"}>Create Account</Link>
+          <Link to={"/login"}>Create Account</Link>
         </p>
       </div>
     </center>
