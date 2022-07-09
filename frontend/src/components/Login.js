@@ -10,32 +10,32 @@ const Login = () => {
   const password = useRef(0);
   const navigate = useNavigate();
 
-    function login() {
-      if (email.current.value == '' || password.current.value == ''){
-        alert("You should fill all fields")
-      }else{
-        axios
-          .post("http://127.0.0.1:8000/api/v1/login", {
-            email: email.current.value,
-            password: password.current.value,
+  function login() {
+    if (email.current.value == "" || password.current.value == "") {
+      alert("You should fill all fields");
+    } else {
+      axios
+        .post("http://127.0.0.1:8000/api/v1/login", {
+          email: email.current.value,
+          password: password.current.value,
         })
 
         .then((res) => {
-          console.log(res.data)
-            if (res.data["user"]) {
-              localStorage.setItem("user_id", res.data.user.id);
-              navigate("/page");
-            }
+          if (res.data["user"]) {
+            localStorage.setItem("user_id", res.data.user.id);
+            navigate("/page");
+          }
         })
-        .catch((error)=>{
-          let message = error.response.data.message
-          if(message == "The email must be a valid email address."){
+        .catch((error) => {
+          let message = error.response.data.message;
+          if (message == "The email must be a valid email address.") {
             alert("The email must be a valid email address.");
             password.current.value = "";
-          }else if(message == "Unauthorized"){
-              alert("User Not Found")
-              password.current.value = "";
-    }});
+          } else if (message == "Unauthorized") {
+            alert("User Not Found");
+            password.current.value = "";
+          }
+        });
     }
   }
 
