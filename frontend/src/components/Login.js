@@ -26,7 +26,7 @@ const Login = () => {
                 alert("User Not Found")
                 password.current.value = "";
             }else if (res.data["user"]) {
-              localStorage.setItem("user_id", res.data["user"]["_id"]);
+              localStorage.setItem("user_id", res.data.user.id);
               navigate("/page");
             }
         });
