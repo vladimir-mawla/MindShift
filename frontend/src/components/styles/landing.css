@@ -3,6 +3,7 @@ body{
     background-color: #95BDCE;
 }
 .hero{
+    padding-top: 50px;
     display: flex;
     justify-content: space-evenly;
 }
