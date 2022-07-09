@@ -1,3 +1,12 @@
 body{
     margin: 0;
+    background-color: #95BDCE;
+}
+.hero{
+    display: flex;
+    justify-content: space-evenly;
+}
+.hero div{
+    padding: 5%;
+    background-color: #939393;
 }
