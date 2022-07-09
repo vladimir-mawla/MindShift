@@ -58,7 +58,7 @@ const Login = () => {
           }}
         />
         <p className="goto-link">
-          <Link to={"/signup"}>Create Account</Link>
+          <Link to={"/register"}>Create Account</Link>
         </p>
       </div>
     </center>
