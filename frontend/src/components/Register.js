@@ -54,14 +54,14 @@ const Register = () => {
           autoComplete="on"
         />
         <Button
-          text={"Login"}
-          className={"login-btn"}
+          text={"Signup"}
+          className={"signup-btn"}
           onClick={() => {
             register();
           }}
         />
         <p className="goto-link">
-          <Link to={"/login"}>Create Account</Link>
+          <Link to={"/login"}>Already have an account?</Link>
         </p>
       </div>
     </center>
