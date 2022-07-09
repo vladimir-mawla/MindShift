@@ -11,6 +11,9 @@ const Login = () => {
   const navigate = useNavigate();
 
     function login() {
+      if (email.current.value == '' || password.current.value == ''){
+        alert("You should fill all fields")
+      }else{
         axios
           .post("http://127.0.0.1:8000/api/v1/login", {
             email: email.current.value,
@@ -34,6 +37,7 @@ const Login = () => {
               password.current.value = "";
     }});
     }
+  }
 
   return (
     <center>
