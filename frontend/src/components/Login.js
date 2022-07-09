@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
@@ -34,6 +35,7 @@ const Login = () => {
 
   return (
     <center>
+      <Navbar />
       <div className="form">
         <input type="email" placeholder="email" ref={email} />
         <input
