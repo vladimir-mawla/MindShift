@@ -19,20 +19,20 @@ const Login = () => {
 
         .then((res) => {
           console.log(res.data)
-            if(res.data["message"] == "The email must be a valid email address."){
-              alert("The email must be a valid email address.");
-              password.current.value = "";
-            }else if(res.data['message'] == "Unauthorized"){
-                alert("User Not Found")
-                password.current.value = "";
-            }else if (res.data["user"]) {
+            if (res.data["user"]) {
               localStorage.setItem("user_id", res.data.user.id);
               navigate("/page");
             }
         })
         .catch((error)=>{
-          console.log(error.response.data.message)
-        });
+          let message = error.response.data.message
+          if(message == "The email must be a valid email address."){
+            alert("The email must be a valid email address.");
+            password.current.value = "";
+          }else if(message == "Unauthorized"){
+              alert("User Not Found")
+              password.current.value = "";
+    }});
     }
 
   return (
