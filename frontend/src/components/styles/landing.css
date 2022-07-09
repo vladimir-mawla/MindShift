@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color: #95BDCE;
+    background-color: #ffffff;
 }
 .hero{
     padding-top: 50px;
@@ -9,7 +9,6 @@ body{
 }
 .hero div{
     padding: 5%;
-    background-color: #939393;
 }
 #logo{
     height: 150px;
