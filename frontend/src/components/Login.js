@@ -17,6 +17,17 @@ const Login = () => {
             password: login_password.value,
         })
 
+        .then((res) => {
+            if(res.data["message"] == "The email must be a valid email address."){
+              alert("The email must be a valid email address.");
+              login_password.value = "";
+            }else if(res.data['message'] == "Unauthorized"){
+                alert("User Not Found")
+            }else if (res.data["user"]) {
+              localStorage.setItem("user_id", res.data["user"]["_id"]);
+              navigate("/page");
+            }
+        });
     }
 
   return (
