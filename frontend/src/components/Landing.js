@@ -1,3 +1,4 @@
+import './styles/landing.css'
 import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
@@ -13,7 +14,7 @@ const Landing = () => {
                 <div className='logo'>
                     <h1>LOGO Goes Here</h1>
                 </div>
-                <div>
+                <div className='links'>
                     <h1>Form Goes Here</h1>
                 </div>
             </div>
