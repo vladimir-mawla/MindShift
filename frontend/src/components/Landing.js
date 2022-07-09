@@ -12,7 +12,7 @@ const Landing = () => {
             <Navbar />
             <div className='hero'>
                 <div className='logo'>
-                    <h1>LOGO Goes Here</h1>
+                <img id='logo' src={ require('./assets/logo.jpeg') } />
                 </div>
                 <div className='links'>
                     <h1>Form Goes Here</h1>
