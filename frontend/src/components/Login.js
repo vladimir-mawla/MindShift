@@ -29,6 +29,9 @@ const Login = () => {
               localStorage.setItem("user_id", res.data.user.id);
               navigate("/page");
             }
+        })
+        .catch((error)=>{
+          console.log(error.response.data.message)
         });
     }
 
