@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import { useNavigate, Link } from "react-router-dom";
 
 const Landing = () => {
-
+    const navigate = useNavigate();
 
     return(
         <div>
@@ -15,8 +15,8 @@ const Landing = () => {
                 <img id='logo' src={ require('./assets/logo.jpeg') } />
                 </div>
                 <div className='links'>
-                <Button text={"Login"} className={"login-btn"} onClick={() => { }}/><br/>
-                <Button text={"Signup"} className={"login-btn"} onClick={() => { }}/>
+                <Button text={"Login"} className={"login-btn"} onClick={() => { navigate('/login') }}/><br/>
+                <Button text={"Signup"} className={"login-btn"} onClick={() => { navigate('/register') }}/>
                 </div>
             </div>
         </div>
