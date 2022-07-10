@@ -15,8 +15,8 @@ const Landing = () => {
                     <img id='logo' src={ require('./assets/logo.jpeg') } />
                 </div>
                 <div className='links'>
-                    <Button text={"Login"} className={"login-btn"} onClick={() => { navigate('/login') }}/><br/>
-                    <Button text={"Signup"} className={"login-btn"} onClick={() => { navigate('/register') }}/>
+                    <Button text={"Login"} className={"form-btn"} onClick={() => { navigate('/login') }}/><br/>
+                    <Button text={"Signup"} className={"form-btn"} onClick={() => { navigate('/register') }}/>
                 </div>
             </div>
         </div>
