@@ -55,7 +55,7 @@ const Register = () => {
         />
         <Button
           text={"Signup"}
-          className={"signup-btn"}
+          className={"form-btn"}
           onClick={() => {
             register();
           }}

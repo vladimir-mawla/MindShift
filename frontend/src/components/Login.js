@@ -52,7 +52,7 @@ const Login = () => {
         />
         <Button
           text={"Login"}
-          className={"login-btn"}
+          className={"form-btn"}
           onClick={() => {
             login();
           }}
