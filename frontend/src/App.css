@@ -43,3 +43,12 @@
   background-color: rgb(164, 164, 164);
   height: 60px;
 }
+.form-btn {
+  width: 160px;
+  height: 40px;
+  background-color: rgb(31, 31, 31);
+  color: rgb(238, 238, 238);
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 15px;
+}
