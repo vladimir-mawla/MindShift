@@ -1,3 +1,4 @@
+import './styles/form'
 import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
