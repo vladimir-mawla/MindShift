@@ -78,7 +78,7 @@ Route::group(['prefix' => 'v1'], function(){
 
     });
 
-    Route::group(['prefix' => 'rewards'], function(){
+    Route::group(['prefix' => 's'], function(){
         Route::post('/add_member', [MemberController::class, 'addMember']);
         Route::post('/remove_member', [MemberController::class, 'removeMember']);
 
