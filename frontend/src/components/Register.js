@@ -61,8 +61,8 @@ const Register = () => {
             register();
           }}
         />
-        <p className="goto-link">
-          <Link to={"/login"}>Already have an account?</Link>
+        <p>
+          <Link className="goto-link" to={"/login"}>Already have an account?</Link>
         </p>
       </div>
     </center>
