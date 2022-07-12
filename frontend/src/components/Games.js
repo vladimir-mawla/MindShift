@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
 import { useNavigate, Link } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
 
 const Games = () => {
@@ -10,7 +10,16 @@ const Games = () => {
 
 
   return (
-    <div></div>
+    <div className="container">
+        <Navbar />
+        <div className="game">
+        {games.map((game) => (
+          <div className="game" key={game.id}>
+              {game}
+          </div>
+        ))}
+        </div>
+    </div>
   );
 };
 export default Games;
