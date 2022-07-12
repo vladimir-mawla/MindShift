@@ -1,4 +1,4 @@
-import './styles/form'
+import './styles/form.css'
 import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
