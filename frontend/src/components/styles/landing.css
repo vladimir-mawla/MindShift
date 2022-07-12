@@ -30,9 +30,9 @@ body{
     border: 1px solid #95BDCE;
   }
   .form-btn:hover {
-    background-color: rgb(135, 135, 135);
+    background-color: rgb(52, 104, 116);
     color: rgb(238, 238, 238);
     font-size: 1.1em;
     font-weight: bolder;
-    border: 1px solid rgb(135, 135, 135);
+    border: 1px solid rgb(52, 104, 116);
   }
