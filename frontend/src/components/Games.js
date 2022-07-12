@@ -6,8 +6,8 @@ import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 
 const Games = () => {
-  const navigate = useNavigate();
-  const [games, setGames] = useState([])
+    const navigate = useNavigate();
+    const [games, setGames] = useState([])
   
     useEffect(() => {
     axios
@@ -22,17 +22,17 @@ const Games = () => {
     }, []);
 
   
-  return (
-    <div className="container">
-        <Navbar />
-        <div className="game">
-        {games.map((game) => (
-          <div className="game" key={game.id}>
-              {game}
-          </div>
-        ))}
+    return (
+        <div className="container">
+            <Navbar />
+            <div className="game">
+                {games.map((game) => (
+                    <div className="game" key={game.id}>
+                        {game}
+                    </div>
+                ))}
+            </div>
         </div>
-    </div>
-  );
+    );
 };
 export default Games;
