@@ -58,8 +58,8 @@ const Login = () => {
             login();
           }}
         />
-        <p className="goto-link">
-          <Link to={"/register"}>Create Account</Link>
+        <p>
+          <Link className="goto-link" to={"/register"}>Create Account</Link>
         </p>
       </div>
     </center>

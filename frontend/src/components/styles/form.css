@@ -19,3 +19,11 @@
     border-radius: 10px;
     border: 1px solid black;
 }
+.goto-link{
+    text-decoration: none;
+    color: black;
+}
+.goto-link:hover{
+    text-decoration: none;
+    color: rgb(54, 82, 224);
+}
