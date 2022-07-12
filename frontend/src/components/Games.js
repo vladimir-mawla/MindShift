@@ -28,7 +28,7 @@ const Games = () => {
             <div className="game">
                 {games.map((game) => (
                     <div className="game" key={game.id}>
-                        {game}
+                        {game.name}
                     </div>
                 ))}
             </div>
