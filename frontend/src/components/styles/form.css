@@ -8,12 +8,14 @@
     background-color: #95BDCE;
     border-radius: 20px;
     margin-top: 100px;
-    box-shadow: 3px 8px rgb(137, 137, 137) ;
+    box-shadow: 3px 8px rgb(137, 137, 137);
+    padding: 1%;
 }
 .form input{
     font-size: 15px;
     width: 180px;
     height: 30px;
+    padding: 0 10px;
     border-radius: 10px;
     border: 1px solid black;
 }
