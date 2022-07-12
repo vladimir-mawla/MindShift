@@ -1,4 +1,4 @@
-import './styles/form.css'
+import './styles/form.css';
 import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
@@ -44,10 +44,10 @@ const Login = () => {
     <center>
       <Navbar />
       <div className="form">
-        <input type="email" placeholder="email" ref={email} />
+        <input type="email" placeholder="Email" ref={email} />
         <input
           type="password"
-          placeholder="password"
+          placeholder="Password"
           ref={password}
           autoComplete="on"
         />
