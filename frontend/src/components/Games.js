@@ -32,13 +32,13 @@ const Games = () => {
                 <ul class="cards">
                     <li>
                         <a href="" class="card">
-                            <img src="https://i.imgur.com/oYiTqum.jpg" class="card-image" alt="" />
+                            <img src={game.img} class="card-image" alt="" />
                             <div class="card-overlay">
                                 <div class="card-header">
                                     <svg class="card-arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
                                     <div class="card-header-text">
                                         <h3 class="card-title">{game.name}</h3>            
-                                        <span class="card-status">{game.created_at}</span>
+                                        <span class="card-status">{game.created_at.slice(5,10)} at {game.created_at.slice(11,16)}</span>
                                     </div>
                                 </div>
                                 <p class="card-description">{game.description}</p>
