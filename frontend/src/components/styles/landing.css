@@ -22,18 +22,17 @@ body{
 .form-btn {
     width: 160px;
     height: 40px;
-    background-color: rgb(135, 135, 135);
+    background-color: #95BDCE;
     color: rgb(238, 238, 238);
     font-size: 1em;
     font-weight: bold;
     border-radius: 15px;
-    border: 1px solid rgb(135, 135, 135);
-    box-shadow: 10px;
+    border: 1px solid #95BDCE;
   }
   .form-btn:hover {
-    background-color: #95BDCE;
+    background-color: rgb(135, 135, 135);
     color: rgb(238, 238, 238);
     font-size: 1.1em;
     font-weight: bolder;
-    border: 1px solid #95BDCE;
+    border: 1px solid rgb(135, 135, 135);
   }
