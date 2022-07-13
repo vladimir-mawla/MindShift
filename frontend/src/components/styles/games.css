@@ -117,3 +117,8 @@ body {
     -webkit-line-clamp: 3;
     overflow: hidden;
 }
+.dis{
+    display: flex;
+    flex-direction: row;
+    gap: 260%;
+}
