@@ -11,10 +11,8 @@ const Games = () => {
     const [games, setGames] = useState([])
 
     const handleClick = (event) => {
-        console.log('clicked')
-        return (
-            <div>.</div>
-            )
+        localStorage.setItem('game_id', event.currentTarget.id);
+        navigate("/game");
     }
   
     useEffect(() => {
@@ -37,7 +35,7 @@ const Games = () => {
                 {games.map((game) => (
                     <div className="game" key={game.id}>
                 <ul className="cards">
-                    <li>
+                    <li id={game.id} onClick={handleClick}>
                         <a href="" className="card">
                             <img src={game.img} className="card-image" alt="" />
                             <div className="card-overlay">
