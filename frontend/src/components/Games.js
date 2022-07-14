@@ -9,6 +9,12 @@ import axios from "axios";
 const Games = () => {
     const navigate = useNavigate();
     const [games, setGames] = useState([])
+
+    const handleClick = (event) => {
+        return (
+            <Game id={event.currentTarget.id} />
+        )
+    }
   
     useEffect(() => {
     axios
@@ -30,7 +36,7 @@ const Games = () => {
                 {games.map((game) => (
                     <div className="game" key={game.id}>
                 <ul className="cards">
-                    <li>
+                    <li onClick={handleClick()} >
                         <a href="" className="card">
                             <img src={game.img} className="card-image" alt="" />
                             <div className="card-overlay">
