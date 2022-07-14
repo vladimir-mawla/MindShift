@@ -24,9 +24,11 @@ const Game = () => {
 
     return (
         <div>
-            {questions.map((question) => (
-                <li key={question.id}>{question.question} ({question.points})</li>
-            ))}
+            <ul>
+                {questions.map((question) => (
+                    <li key={question.id}>{question.question} ({question.points} points)</li>
+                ))}
+            </ul>
         </div>
     );
 };
