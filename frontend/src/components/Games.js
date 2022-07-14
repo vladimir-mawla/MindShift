@@ -1,4 +1,4 @@
-import './styles/games.css'
+import './styles/games.css';
 import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
@@ -11,9 +11,10 @@ const Games = () => {
     const [games, setGames] = useState([])
 
     const handleClick = (event) => {
+        console.log('clicked')
         return (
-            <Game id={event.currentTarget.id} />
-        )
+            <div>.</div>
+            )
     }
   
     useEffect(() => {
@@ -36,7 +37,7 @@ const Games = () => {
                 {games.map((game) => (
                     <div className="game" key={game.id}>
                 <ul className="cards">
-                    <li onClick={handleClick()} >
+                    <li>
                         <a href="" className="card">
                             <img src={game.img} className="card-image" alt="" />
                             <div className="card-overlay">
