@@ -6,11 +6,11 @@ import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 
-const Game = ({id}) => {
-
+const Game = () => {
+    var game_id = localStorage.getItem('game_id')
     return (
         <div>
-            <h1>{id}</h1>
+            <h1>{game_id}</h1>
         </div>
     );
 };
