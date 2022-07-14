@@ -6,7 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 
-const Game = () => {
+const Questions = () => {
     const [questions, setQuestions] = useState([])
     var game_id = localStorage.getItem('game_id')
 
@@ -32,4 +32,4 @@ const Game = () => {
         </div>
     );
 };
-export default Game;
+export default Questions;

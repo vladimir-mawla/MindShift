@@ -4,7 +4,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Landing from './components/Landing';
 import Games from './components/Games';
-import Game from './components/Game';
+import Questions from './components/Questions';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/games" element={<Games />}></Route>
-        <Route path="/game" element={<Game />}></Route>
+        <Route path="/questions" element={<Questions />}></Route>
       </Routes>
     </BrowserRouter>
     );
