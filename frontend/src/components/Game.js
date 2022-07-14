@@ -12,7 +12,7 @@ const Game = () => {
 
     useEffect(() => {
         axios
-        .get("http://127.0.0.1:8000/api/v1/questions/get_questions", {
+        .post("http://127.0.0.1:8000/api/v1/questions/get_questions", {
             game_id: game_id
         })
     
@@ -21,10 +21,12 @@ const Game = () => {
             setQuestions(s);
         });
         }, []);
-        
+
     return (
         <div>
-            <h1>{game_id}</h1>
+            {questions.map((question) => (
+                <li key={question.id}>{question.question} ({question.points})</li>
+            ))}
         </div>
     );
 };
