@@ -33,6 +33,7 @@ const Questions = () => {
                     </div>
                 ))}
             </ul>
+            <Button text={"Submit"} id={"submit_btn"}/>
         </div>
     );
 };
