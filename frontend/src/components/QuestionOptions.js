@@ -19,11 +19,15 @@ const QuestionOptions = (props) => {
       
     return (
         <div>
-            {question_type === 0 ? <input type='text' />
-            : question_type === 1 ? <input type='checkbox' />
-            : question_type === 2 ? <input type='radio' />
-            :""
-            }
+            {options.map((option) => (
+            <div>
+                {question_type === 0 ? <input type='text' />
+                : question_type === 1 ? <div><input type='checkbox' name={props.question_id}/>{option.option}</div>
+                : question_type === 2 ? <div><input type='radio' name={props.question_id}/>{option.option}</div>
+                :""
+                }
+            </div>
+            ))}
         </div>
     )
 };
