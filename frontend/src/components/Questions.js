@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import QuestionOptions from './QuestionOptions';
 
 const Questions = () => {
     const [questions, setQuestions] = useState([])
@@ -26,7 +27,10 @@ const Questions = () => {
         <div>
             <ul>
                 {questions.map((question) => (
-                    <li key={question.id}>{question.question} ({question.points} points)</li>
+                    <div>
+                        <li key={question.id}>{question.question} ({question.points} points)</li>
+                        <QuestionOptions question_id={question.id}/>
+                    </div>
                 ))}
             </ul>
         </div>
