@@ -12,7 +12,7 @@ const Games = () => {
 
     const handleClick = (event) => {
         localStorage.setItem('game_id', event.currentTarget.id);
-        navigate("/game");
+        navigate("/questions");
     }
   
     useEffect(() => {
