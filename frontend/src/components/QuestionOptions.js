@@ -14,13 +14,13 @@ const QuestionOptions = (props) => {
         .then((response) => {
             setOptions(response.data["options"]);
         });
-    }, []);
+    }, [props.question_id]);
 
       
     return (
         <div>
             {options.map((option) => (
-            <div>
+            <div key={option.id}>
                 {question_type === 0 ? <input type='text' />
                 : question_type === 1 ? <div><input type='checkbox' name={props.question_id}/>{option.option}</div>
                 : question_type === 2 ? <div><input type='radio' name={props.question_id}/>{option.option}</div>

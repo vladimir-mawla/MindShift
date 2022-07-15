@@ -27,7 +27,7 @@ const Questions = () => {
         <div>
             <ul>
                 {questions.map((question) => (
-                    <div>
+                    <div key={question.id}>
                         <li key={question.id}>{question.question} ({question.points} points)</li>
                         <QuestionOptions question_id={question.id} question_type={question.question_type_id}/>
                     </div>
