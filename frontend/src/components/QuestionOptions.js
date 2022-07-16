@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import TextBox from "./TextBox";
 
 const QuestionOptions = (props) => {
     const [options, setOptions] = useState([]);
@@ -19,9 +20,7 @@ const QuestionOptions = (props) => {
 
     if(question_type === 0){
         return(
-         <div>
-
-         </div>   
+            <TextBox />
         )
     }else if(question_type === 1){
         return(
