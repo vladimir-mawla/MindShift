@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import TextBox from "./TextBox";
 import Radio from "./Radio";
+import Checkbox from "./Checkbox";
 
 const QuestionOptions = (props) => {
     const [options, setOptions] = useState([]);
@@ -29,9 +30,7 @@ const QuestionOptions = (props) => {
         )
     }else if(question_type === 2){
         return(
-         <div>
-
-         </div>   
+            <Checkbox options={options}/>
         )
     }
 };
