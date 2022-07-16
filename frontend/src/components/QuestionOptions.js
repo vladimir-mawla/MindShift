@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import TextBox from "./TextBox";
+import Radio from "./Radio";
 
 const QuestionOptions = (props) => {
     const [options, setOptions] = useState([]);
@@ -24,9 +25,7 @@ const QuestionOptions = (props) => {
         )
     }else if(question_type === 1){
         return(
-         <div>
-
-         </div>   
+            <Radio options={options}/>
         )
     }else if(question_type === 2){
         return(
