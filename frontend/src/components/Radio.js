@@ -4,10 +4,9 @@ const Radio = ({ options }) => {
   return (
     <>
       {options.map((option) => (
-        <>
-          <label>{option.option}</label>
-          <input type="radio" name={option.question_id} />
-        </>
+        <div>
+          <input type="radio" name={option.question_id} />{option.option}
+        </div>
       ))}
     </>
   );
