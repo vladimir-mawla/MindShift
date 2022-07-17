@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Leaderboard;
+use App\Models\User;
 
 class LeaderboardController extends Controller
 {
@@ -20,7 +21,7 @@ class LeaderboardController extends Controller
     }
     // Get Leaderboard API
     public function getLeaderboard(){
-        $users = Leaderboard::all();
+        $users = User::all()->sortByDesc('points')->take(10);
 
         return response()->json([
             "status" => "success",
