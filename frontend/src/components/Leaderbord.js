@@ -1,4 +1,4 @@
-import './styles/games.css'
+import './styles/leaderboard.css'
 import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";

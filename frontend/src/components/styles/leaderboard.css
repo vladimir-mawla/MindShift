@@ -1,0 +1,13 @@
+table{
+    border: 2px solid;
+    width: 50%;
+    border-collapse: collapse;
+    margin: 5% 25%;
+}
+td{
+    border: 1px solid;
+}
+.title{
+    font-weight: bold;
+    background-color: rgb(203, 199, 192);
+}
