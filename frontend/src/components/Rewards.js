@@ -1,3 +1,4 @@
+import './styles/rewards.css'
 import React, { useEffect } from "react";
 import { useState } from "react";
 import Navbar from "./Navbar";
