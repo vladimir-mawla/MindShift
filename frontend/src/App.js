@@ -5,6 +5,7 @@ import Register from './components/Register';
 import Landing from './components/Landing';
 import Games from './components/Games';
 import Questions from './components/Questions';
+import Leaderboard from './components/Leaderbord';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/games" element={<Games />}></Route>
         <Route path="/questions" element={<Questions />}></Route>
+        <Route path="/leaderboards" element={<Leaderboard />}></Route>
       </Routes>
     </BrowserRouter>
     );
