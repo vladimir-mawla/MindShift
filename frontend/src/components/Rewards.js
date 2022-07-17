@@ -23,25 +23,25 @@ const Rewards = () => {
     <div className="container">
         <Navbar />
         <div className="game">
-            {games.map((game) => (
-                <div className="game" key={game.id}>
+            {rewards.map((reward) => (
+                <div className="game" key={reward.id}>
             <ul className="cards">
-                <li id={game.id} onClick={handleClick}>
+                <li id={reward.id} onClick={handleClick}>
                     <a href="" className="card">
-                        <img src={game.img} className="card-image" alt="" />
+                        <img src={reward.img} className="card-image" alt="" />
                         <div className="card-overlay">
                             <div className="card-header">
                                 <svg className="card-arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
                                 <div className="card-header-text">
                                     <div className='dis'>
 
-                                        <div><h3 className="card-title">{game.name}</h3></div>
-                                        <div><h3>{game.points}</h3></div>
+                                        <div><h3 className="card-title">{reward.name}</h3></div>
+                                        <div><h3>{reward.points}</h3></div>
                                     </div>            
-                                    <span className="card-status">{game.created_at.slice(5,10)} at {game.created_at.slice(11,16)}</span>
+                                    <span className="card-status">{reward.created_at.slice(5,10)} at {reward.created_at.slice(11,16)}</span>
                                 </div>
                             </div>
-                            <p className="card-description">{game.description}</p>
+                            <p className="card-description">{reward.description}</p>
                         </div>
                     </a>      
                 </li>
