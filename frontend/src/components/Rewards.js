@@ -26,7 +26,7 @@ const Rewards = () => {
             {rewards.map((reward) => (
                 <div className="game" key={reward.id}>
             <ul className="cards">
-                <li id={reward.id} onClick={handleClick}>
+                <li id={reward.id}>
                     <a href="" className="card">
                         <img src={reward.img} className="card-image" alt="" />
                         <div className="card-overlay">
@@ -36,7 +36,7 @@ const Rewards = () => {
                                     <div className='dis'>
 
                                         <div><h3 className="card-title">{reward.name}</h3></div>
-                                        <div><h3>{reward.points}</h3></div>
+                                        <div><h3>{reward.needed_points}</h3></div>
                                     </div>            
                                     <span className="card-status">{reward.created_at.slice(5,10)} at {reward.created_at.slice(11,16)}</span>
                                 </div>
