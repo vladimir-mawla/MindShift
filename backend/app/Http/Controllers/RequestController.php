@@ -20,4 +20,14 @@ class RequestController extends Controller
             "status" => "Success"
         ], 200);
     }
+
+    // Get Requests API
+    public function getRequests(){
+        $requests = Request::all();
+
+        return response()->json([
+            "status" => "success",
+            "requests" => $requests,
+        ], 200);
+    }
 }
