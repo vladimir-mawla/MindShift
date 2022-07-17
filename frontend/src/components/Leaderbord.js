@@ -15,10 +15,11 @@ const Leaderboard = () => {
     
         .then((response) => {
             const s = response.data.users;
-            setUsers([s]);
+            setUsers(s);
         });
         }, []);
         console.log(users)
+        users.sort((a,b) => b.points - a.points);
     return (
         <div>
             <ul>
