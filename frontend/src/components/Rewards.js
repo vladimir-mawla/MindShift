@@ -2,9 +2,12 @@ import './styles/rewards.css'
 import React, { useEffect } from "react";
 import { useState } from "react";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
 const Rewards = () => {
+    const navigate = useNavigate();
     const [rewards, setRewards] = useState([]);
 
     const handleClick = (event) => {
