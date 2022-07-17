@@ -14,6 +14,7 @@ use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\QuestionOptionController;
 use App\Http\Controllers\QuestionTypeController;
 use App\Http\Controllers\LeaderboardController;
+use App\Http\Controllers\OrderController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -106,6 +107,12 @@ Route::group(['prefix' => 'v1'], function(){
     Route::group(['prefix' => 'leaderboards'], function(){
         Route::post('/add_user', [LeaderboardController::class, 'addUser']);
         Route::get('/get_leaderboard', [LeaderboardController::class, 'getLeaderboard']);
+
+    });
+
+    Route::group(['prefix' => 'orders'], function(){
+        Route::post('/add_order', [OrderController::class, 'addOrder']);
+        Route::get('/get_orders', [OrderController::class, 'getOrders']);
 
     });
 
