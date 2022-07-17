@@ -15,13 +15,19 @@ const Leaderboard = () => {
     
         .then((response) => {
             const s = response.data.users;
-            setUsers(s);
+            setUsers([s]);
         });
         }, []);
-
+        console.log(users)
     return (
         <div>
-
+            <ul>
+                {users.map((user, index) => (
+                    <div key={index}>
+                        <li>{user.name} ({user.points} points)</li>
+                    </div>
+                ))}
+            </ul>
         </div>
     );
 };
