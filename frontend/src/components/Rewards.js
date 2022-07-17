@@ -7,6 +7,11 @@ import axios from "axios";
 const Rewards = () => {
     const [rewards, setRewards] = useState([]);
 
+    const handleClick = (event) => {
+        localStorage.setItem('reward_id', event.currentTarget.id);
+        navigate("/requests");
+    }
+
   useEffect(() => {
 
     axios
@@ -26,7 +31,7 @@ const Rewards = () => {
             {rewards.map((reward) => (
                 <div className="game" key={reward.id}>
             <ul className="cards">
-                <li id={reward.id}>
+                <li id={reward.id} onClick={handleClick}>
                     <a href="" className="card">
                         <img src={reward.img} className="card-image" alt="" />
                         <div className="card-overlay">
