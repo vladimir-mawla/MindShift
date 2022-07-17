@@ -7,7 +7,17 @@ import axios from "axios";
 import QuestionOptions from './QuestionOptions';
 
 const Leaderboard = () => {
+    const [users, setUsers] = useState([])
 
+    useEffect(() => {
+        axios
+        .get("http://127.0.0.1:8000/api/v1/leaderboards/get_leaderboard")
+    
+        .then((response) => {
+            const s = response.data.users;
+            setUsers(s);
+        });
+        }, []);
 
     return (
         <div>
