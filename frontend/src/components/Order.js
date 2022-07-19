@@ -19,7 +19,7 @@ const Request = ({props}) => {
         <div>
             <h3>Add your comment bellow</h3>
             <p>For example: Your day off, Your dinner time, Your favorite coffee, etc...</p>
-            <input type='text'></input>
+            <input type='text' placeholder="Add your comment"></input>
             <Button text={"Submit"} className={"form-btn"} />
         </div>
     )
