@@ -12,7 +12,7 @@ const Rewards = () => {
 
     const handleClick = (event) => {
         localStorage.setItem('reward_id', event.currentTarget.id);
-        navigate("/requests");
+        navigate("/order");
     }
 
   useEffect(() => {

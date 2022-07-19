@@ -7,6 +7,7 @@ import Games from './components/Games';
 import Questions from './components/Questions';
 import Leaderboard from './components/Leaderbord';
 import Rewards from './components/Rewards';
+import Order from "./components/Order"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/questions" element={<Questions />}></Route>
         <Route path="/leaderboards" element={<Leaderboard />}></Route>
         <Route path="/rewards" element={<Rewards />}></Route>
+        <Route path="/order" element={<Order />}></Route>
       </Routes>
     </BrowserRouter>
     );
