@@ -8,12 +8,11 @@ use App\Models\Order;
 class OrderController extends Controller
 {
     // Add Order API
-    public function addRequest(Request $request){
+    public function addOrder(Request $request){
         $order = new Order;
         $order->request = $request->request;
         $order->reward_id = $request->question_id;
         $order->user_id = $request->user_id;
-        $order->game_id = $request->game_id;
         $order->company_id = $request->company_id;
         $order->save();
 
