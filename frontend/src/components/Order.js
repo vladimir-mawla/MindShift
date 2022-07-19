@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+import Button from "./Button";
 
 const Request = ({props}) => {
 
@@ -16,7 +17,10 @@ const Request = ({props}) => {
     
     return(
         <div>
+            <h3>Add your comment bellow</h3>
+            <p>For example: Your day off, Your dinner time, Your favorite coffee, etc...</p>
             <input type='text'></input>
+            <Button text={"Submit"} className={"form-btn"} />
         </div>
     )
 
