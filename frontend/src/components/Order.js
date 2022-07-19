@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import axios from "axios";
 import Button from "./Button";
 
 const Request = ({props}) => {
-
+    const order = useRef(0);
     const submit = () => {
 
         axios
@@ -11,6 +11,7 @@ const Request = ({props}) => {
             user_id:"blank",
             reward_id:"blank",
             company_id:"blank",
+            request: order.current.value
             
         })
 }
@@ -18,7 +19,7 @@ const Request = ({props}) => {
         <div>
             <h3>Add your comment bellow</h3>
             <p>For example: Your day off, Your dinner time, Your favorite coffee, etc...</p>
-            <input type='text' placeholder="Add your comment"></input>
+            <input ref={order} type='text' placeholder="Add your comment"></input>
             <Button text={"Submit"} className={"form-btn"} onClick={() => {submit();}}/>
         </div>
     )
