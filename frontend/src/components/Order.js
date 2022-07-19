@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const Request = ({props}) => {
 
-    useEffect(() => {
+    const submit = () => {
 
         axios
         .post("http://127.0.0.1:8000/api/v1/orders/add_order", {
@@ -13,14 +13,13 @@ const Request = ({props}) => {
             company_id:"blank",
             
         })
-    }, [])
-    
+}
     return(
         <div>
             <h3>Add your comment bellow</h3>
             <p>For example: Your day off, Your dinner time, Your favorite coffee, etc...</p>
             <input type='text' placeholder="Add your comment"></input>
-            <Button text={"Submit"} className={"form-btn"} />
+            <Button text={"Submit"} className={"form-btn"} onClick={() => {submit();}}/>
         </div>
     )
 
