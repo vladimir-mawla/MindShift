@@ -6,6 +6,12 @@ import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 
 const AddGameQuestion = () => {
+    const navigate = useNavigate()
+    const question = useRef(0)
+    const correct_answer = useRef(0)
+    const points = useRef(0)
+    const question_type = useRef(0)
+
 
     return (
         <div className="container">
