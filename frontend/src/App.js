@@ -10,6 +10,7 @@ import Rewards from './components/Rewards';
 import Order from "./components/Order";
 import AddGame from './components/AddGame';
 import AddGameQuestion from './components/AddGameQuestions';
+import AddOptions from './components/AddOptions';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/order" element={<Order />}></Route>
         <Route path="/add_game" element={<AddGame />}></Route>
         <Route path="/add_game_questions" element={<AddGameQuestion />}></Route>
+        <Route path="/add_options" element={<AddOptions />}></Route>
       </Routes>
     </BrowserRouter>
     );
