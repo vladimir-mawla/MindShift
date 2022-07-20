@@ -19,5 +19,13 @@ const AddGame = () => {
     });
     }, []);
 
+    return (
+        <div className="container">
+            <input type="text" placeholder="Game name"></input>
+            <input type="text" placeholder="Game description"></input>
+            <input type="range" placeholder="Game points"></input>
+            <input type="image"></input>
+        </div>
+    )
 };
 export default AddGame;
