@@ -6,6 +6,21 @@ import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 
 const AddGame = () => {
+    const element = useRef(0)
+    const name = useRef(0)
+    const description = useRef(0)
+    const points = useRef(0)
+    var s;
+    
+  function encode() {
+    var file = element.current.files[0];
+    var reader = new FileReader();
+    reader.onloadend = function () {
+      s = reader.result;
+      console.log(s);
+    };
+    reader.readAsDataURL(file);
+  }
 
   function submit() {
     axios
