@@ -22,15 +22,27 @@ const QuestionOptions = (props) => {
 
     if(question_type === 0){
         return(
-            <TextBox />
+            <input type={"text"} />
         )
     }else if(question_type === 1){
         return(
-            <Radio options={options}/>
+            <>
+            {options.map((option) => (
+              <div>
+                <input type="radio" name={option.question_id} />{option.option}
+              </div>
+            ))}
+          </>
         )
     }else if(question_type === 2){
         return(
-            <Checkbox options={options}/>
+            <>
+            {options.map((option) => (
+              <div>
+                <input type="checkbox" name={option.question_id} />{option.option}
+              </div>
+            ))}
+          </>
         )
     }
 };
