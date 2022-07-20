@@ -22,6 +22,18 @@ const Questions = () => {
             setQuestions(s);
         });
         }, []);
+        
+        
+        function submitAnswers(id, answer){
+
+            axios
+            .post("http://127.0.0.1:8000/api/v1/answers/add_answer", {
+                answer: answer,
+                question_id: id,
+                user_id: 1,
+                game_id: 2
+            })
+        }
 
     return (
         <div>
