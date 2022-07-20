@@ -19,7 +19,7 @@ const QuestionOptions = (props) => {
 
     if(question_type === 0){
         return(
-            <input type={"text"} />
+            <input id={props.question_id} type={"text"} />
         )
     }else if(question_type === 1){
         return(
