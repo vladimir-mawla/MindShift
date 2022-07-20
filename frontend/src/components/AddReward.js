@@ -23,7 +23,7 @@ const AddReward = () => {
 
   function submit() {
     axios
-    .post("http://127.0.0.1:8000/api/v1/rewards/add_reward", {
+    .post("http://127.0.0.1:8000/api/v1/rewards/create_reward", {
         name: name.current.value,
         description: description.current.value,
         points_needed: points.current.value,
