@@ -17,30 +17,17 @@ const QuestionOptions = (props) => {
     }, [props.question_id]);
 
 
-    if(question_type === 0){
-        return(
-            <input id={props.question_id} type={"text"} />
-        )
-    }else if(question_type === 1){
-        return(
-            <>
+
+
+    return(
+        <div>
             {options.map((option) => (
-              <div>
-                <input type="radio" name={option.question_id} />{option.option}
-              </div>
+              (question_type === 0) ? <input id={props.question_id} type={"text"} /> :
+              (question_type === 1) ? <div><input type="radio" name={option.question_id} />{option.option} </div>:
+              (question_type === 1) ? <div><input type="checkbox" name={option.question_id} />{option.option} </div>:
+              ''
             ))}
-          </>
-        )
-    }else if(question_type === 2){
-        return(
-            <>
-            {options.map((option) => (
-              <div>
-                <input type="checkbox" name={option.question_id} />{option.option}
-              </div>
-            ))}
-          </>
-        )
-    }
+        </div>
+    )
 };
 export default QuestionOptions;
