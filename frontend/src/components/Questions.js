@@ -9,6 +9,7 @@ import QuestionOptions from './QuestionOptions';
 
 const Questions = () => {
     const [questions, setQuestions] = useState([])
+    const [name, setName] = useState();
     var game_id = localStorage.getItem('game_id')
 
     useEffect(() => {
@@ -23,7 +24,7 @@ const Questions = () => {
         });
         }, []);
         
-        
+
         function submitAnswers(id, answer){
 
             axios
@@ -34,19 +35,19 @@ const Questions = () => {
                 game_id: 2
             })
         }
-
+        console.log(name)
     return (
         <div>
             <ul>
                 {questions.map((question) => (
                     <div key={question.id}>
                         <li key={question.id}>{question.question} ({question.points} points)</li>
-                        <QuestionOptions question_id={question.id} question_type={question.question_type_id}/>
+                        <QuestionOptions setName={setName} name={name} question_id={question.id} question_type={question.question_type_id}/>
                     </div>
                 ))}
             </ul>
             
-            <button onClick={() => {
+            <button disabled={!name} onClick={() => {
                 const input = document.getElementsByTagName("input")
                 for (var i = 0; i < input.length; i++){
 
