@@ -17,7 +17,6 @@ const AddGame = () => {
     var reader = new FileReader();
     reader.onloadend = function () {
       s = reader.result;
-      console.log(s);
     };
     reader.readAsDataURL(file);
   }
@@ -31,9 +30,6 @@ const AddGame = () => {
         img: s,
     })
 
-    .then((response) => {
-        console.log(response.data.games)
-    });
   }
     return (
         <div className="container">
