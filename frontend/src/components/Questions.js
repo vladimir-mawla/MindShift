@@ -33,7 +33,19 @@ const Questions = () => {
                     </div>
                 ))}
             </ul>
-            <Button text={"Submit"} id={"submit_btn"}/>
+            
+            <button onClick={() => {
+                const input = document.getElementsByTagName("input")
+                for (var i = 0; i < input.length; i++){
+
+                if (input[i].type === 'text'){
+                    submitAnswers(input[i].id, input[i].value)
+                    
+                } else if (input[i].checked === true) {
+                    console.log(input[i])
+                    submitAnswers(input[i].name, input[i].value)
+                } 
+            }}}>Submit</button>
         </div>
     );
 };
