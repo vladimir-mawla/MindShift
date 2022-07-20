@@ -42,7 +42,9 @@ const Questions = () => {
                 {questions.map((question) => (
                     <div key={question.id}>
                         <li key={question.id}>{question.question} ({question.points} points)</li>
-                        <QuestionOptions setName={setName} name={name} question_id={question.id} question_type={question.question_type_id}/>
+                        {(question.question_type === 0) ? <div><input onChange={(e) => setName(e.target.value)} id={question.id} type={"text"} /></div> : 
+                        <QuestionOptions setName={setName} name={name} question_id={question.id} question_type={question.question_type}/>
+                        }
                     </div>
                 ))}
             </ul>
