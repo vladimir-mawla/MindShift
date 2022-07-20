@@ -12,6 +12,14 @@ const AddReward = () => {
     const points = useRef(0)
     var s;
     
+  function encode() {
+    var file = element.current.files[0];
+    var reader = new FileReader();
+    reader.onloadend = function () {
+      s = reader.result;
+    };
+    reader.readAsDataURL(file);
+  }
 
   function submit() {
     axios
