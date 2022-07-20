@@ -18,7 +18,7 @@ const AddGameQuestion = () => {
         question: question.current.value,
         correct_answer: correct_answer.current.value,
         points: points.current.value,
-        game_id: 2,
+        game_id: localStorage.getItem('game_id'),
         question_type: question_type.current.value,
     })
     if (question_type.current.value == 2 || question_type.current.value == 3) {
