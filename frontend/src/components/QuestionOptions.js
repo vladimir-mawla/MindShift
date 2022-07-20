@@ -23,8 +23,8 @@ const QuestionOptions = (props) => {
         <div>
             {options.map((option) => (
               (question_type === 0) ? <input id={props.question_id} type={"text"} /> :
-              (question_type === 1) ? <div><input type="radio" name={option.question_id} />{option.option} </div>:
-              (question_type === 1) ? <div><input type="checkbox" name={option.question_id} />{option.option} </div>:
+              (question_type === 1) ? <div><input type="radio" name={option.question_id} value={option.option} />{option.option} </div>:
+              (question_type === 2) ? <div><input type="checkbox" name={option.question_id} value={option.option} />{option.option} </div>:
               ''
             ))}
         </div>
