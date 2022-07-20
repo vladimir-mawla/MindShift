@@ -1,9 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import TextBox from "./TextBox";
-import Radio from "./Radio";
-import Checkbox from "./Checkbox";
 
 const QuestionOptions = (props) => {
     const [options, setOptions] = useState([]);
