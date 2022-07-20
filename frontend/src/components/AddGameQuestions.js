@@ -12,7 +12,19 @@ const AddGameQuestion = () => {
     const points = useRef(0)
     const question_type = useRef(0)
 
-
+  function submit() {
+    axios
+    .post("http://127.0.0.1:8000/api/v1/questions/add_question", {
+        question: question.current.value,
+        correct_answer: correct_answer.current.value,
+        points: points.current.value,
+        game_id: 2,
+        question_type: question_type.current.value,
+    })
+    if (question_type.current.value == 2 || question_type.current.value == 3) {
+        navigate("../AddOptions");
+      }
+  }
     return (
         <div className="container">
                     <select name="type" ref={question_type}>
