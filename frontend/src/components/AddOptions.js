@@ -8,7 +8,7 @@ const AddOptions = () => {
   function submit() {
     const question_id = localStorage.getItem("question_id");
     axios
-      .post("http://127.0.0.1:8000/api/v1/options/add_option", {
+      .post("http://127.0.0.1:8000/api/v1/question_options/add_option", {
         question_id: question_id,
         option: input.current.value,
       })
