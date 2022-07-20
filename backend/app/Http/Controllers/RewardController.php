@@ -13,6 +13,7 @@ class RewardController extends Controller
         $reward->name = $request->name;
         $reward->description = $request->description;
         $reward->needed_points = $request->needed_points;
+        $reward->img = $request->img;
         $reward->save();
 
         return response()->json([
