@@ -21,8 +21,11 @@ const AddGameQuestion = () => {
         game_id: localStorage.getItem('game_id'),
         question_type: question_type.current.value,
     })
-    if (question_type.current.value == 2 || question_type.current.value == 3) {
-        navigate("../AddOptions");
+    .then((response)=> {
+        localStorage.setItem("question_id", response.data.question.id)
+    })
+    if (question_type.current.value == 1 || question_type.current.value == 2) {
+        navigate("../add_options");
       }
   }
     return (
