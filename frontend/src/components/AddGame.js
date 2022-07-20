@@ -29,6 +29,10 @@ const AddGame = () => {
         points: points.current.value,
         img: s,
     })
+    .then((response) => {
+        console.log(response.data)
+        localStorage.setItem('game_id', response.data.game.id)
+      });
 
   }
     return (
