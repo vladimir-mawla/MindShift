@@ -28,9 +28,9 @@ const AddGameQuestion = () => {
     return (
         <div className="container">
                     <select name="type" ref={question_type}>
-                        <option value="1">Text</option>
-                        <option value="2">Radio</option>
-                        <option value="3">Checkbox</option>
+                        <option value={0}>Text</option>
+                        <option value={1}>Radio</option>
+                        <option value={2}>Checkbox</option>
                     </select>
             <input ref={question} type="text" placeholder="Question"></input>
             <input ref={correct_answer} type="text" placeholder="Correct answer"></input>
