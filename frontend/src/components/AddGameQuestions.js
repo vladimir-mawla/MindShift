@@ -23,6 +23,9 @@ const AddGameQuestion = () => {
     })
     .then((response)=> {
         localStorage.setItem("question_id", response.data.question.id)
+        question.current.value = ""
+        correct_answer.current.value = ""
+        points.current.value = ""
     })
     if (question_type.current.value == 1 || question_type.current.value == 2) {
         navigate("../add_options");
