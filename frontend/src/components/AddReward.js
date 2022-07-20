@@ -6,6 +6,12 @@ import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 
 const AddReward = () => {
+    const element = useRef(0)
+    const name = useRef(0)
+    const description = useRef(0)
+    const points = useRef(0)
+    var s;
+    
 
     return (
         <div className="container">
