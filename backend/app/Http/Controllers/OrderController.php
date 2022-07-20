@@ -23,7 +23,7 @@ class OrderController extends Controller
 
     // Get Orders API
     public function getOrders(){
-        $orders = Order::all();
+        $orders = Order::all()->where('accepted', 0);
 
         return response()->json([
             "status" => "success",
