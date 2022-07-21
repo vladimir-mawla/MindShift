@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Answer;
+use App\Models\Question;
 
 
 class AnswerController extends Controller
@@ -46,7 +47,7 @@ class AnswerController extends Controller
         $user_id = $request->user_id;
         $game_id = $request->game_id;
         $question_id = $request->question_id;
-        $correct_answer = Answer::find(1)->questions->where('id', $question_id)->where('game_id', $game_id)->get();
+        $correct_answer = Question::where('id', $question_id)->where('game_id', $game_id)->get();
         $answer = Answer::where('question_id', $question_id)->where('user_id', $user_id)->get();
 
         if ($answer[0]['answer'] == $correct_answer[0]['correct_answer']){
