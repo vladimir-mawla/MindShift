@@ -119,6 +119,7 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'users'], function(){
         Route::post('/get_users', [UserController::class, 'getUsers']);
+        Route::post('/points_control', [UserController::class, 'pointsControl']);
 
     });
 

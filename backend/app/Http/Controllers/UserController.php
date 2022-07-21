@@ -16,4 +16,14 @@ class UserController extends Controller
             "users" => $users,
         ], 200);
     }
+    // Increment points API
+    public function pointsControl(Request $request){
+        
+        $user_id = $request->user_id;
+        $points = $request->points;
+        User::where('id', $user_id)->increment('points', $points);
+        return response()->json([
+            "status" => "Done",
+        ], 200);
+    }
 }
