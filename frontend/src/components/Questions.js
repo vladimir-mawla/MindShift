@@ -41,6 +41,7 @@ const Questions = () => {
                 .post("http://127.0.0.1:8000/api/v1/answers/check_answer", {
                     question_id: id,
                     user_id: 1,
+                    answer: answer,
                     game_id: 2
                 })
                 .then((response) => {
@@ -48,7 +49,6 @@ const Questions = () => {
                         axios
                         .post("http://127.0.0.1:8000/api/v1/users/points_control", {
                             user_id: 1,
-                            answer: answer,
                             points: response.data["Points"]
                         })
                     }
