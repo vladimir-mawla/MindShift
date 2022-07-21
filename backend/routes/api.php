@@ -15,6 +15,7 @@ use App\Http\Controllers\QuestionOptionController;
 use App\Http\Controllers\QuestionTypeController;
 use App\Http\Controllers\LeaderboardController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -113,6 +114,11 @@ Route::group(['prefix' => 'v1'], function(){
     Route::group(['prefix' => 'orders'], function(){
         Route::post('/add_order', [OrderController::class, 'addOrder']);
         Route::get('/get_orders', [OrderController::class, 'getOrders']);
+
+    });
+
+    Route::group(['prefix' => 'users'], function(){
+        Route::post('/get_users', [UserController::class, 'getUsers']);
 
     });
 
