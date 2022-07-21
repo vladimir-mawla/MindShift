@@ -6,6 +6,7 @@ import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 
 const Profile = () => {
+    const [info, setInfo] = useState([])
     
     useEffect(() => {
         axios
@@ -15,6 +16,8 @@ const Profile = () => {
     
         .then((response) => {
             console.log(response.data)
+            const s = response.data.users
+            setInfo(s)
         });
         }, []);
 
