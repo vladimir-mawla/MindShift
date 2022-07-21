@@ -11,6 +11,7 @@ const Questions = () => {
     const [questions, setQuestions] = useState([])
     const [name, setName] = useState();
     var game_id = localStorage.getItem('game_id')
+    var p;
 
     useEffect(() => {
         axios
@@ -20,6 +21,7 @@ const Questions = () => {
     
         .then((response) => {
             const s = response.data.questions;
+            p = response.data.questions.points;
             setQuestions(s);
         });
         }, []);
@@ -33,6 +35,15 @@ const Questions = () => {
                 question_id: id,
                 user_id: 1,
                 game_id: 2
+            })
+            .then(()=> {
+                axios
+                .post("http://127.0.0.1:8000/api/v1/answers/check_answer", {
+                    question_id: id,
+                    user_id: 1,
+                    game_id: 2
+                })
+
             })
         }
         console.log(name)
