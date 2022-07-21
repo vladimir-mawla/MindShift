@@ -28,7 +28,7 @@ const Questions = () => {
         
 
         function submitAnswers(id, answer){
-
+            console.log(answer)
             axios
             .post("http://127.0.0.1:8000/api/v1/answers/add_answer", {
                 answer: answer,
@@ -44,12 +44,12 @@ const Questions = () => {
                     game_id: 2
                 })
                 .then((response) => {
-                    console.log(p)
-                    if(response.data === "True"){
+                    if(response.data["Status"] === "True"){
                         axios
                         .post("http://127.0.0.1:8000/api/v1/users/points_control", {
                             user_id: 1,
-                            points: parseInt(p)
+                            answer: answer,
+                            points: response.data["Points"]
                         })
                     }
                 })
