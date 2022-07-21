@@ -21,7 +21,7 @@ const Questions = () => {
     
         .then((response) => {
             const s = response.data.questions;
-            p = response.data.questions.points;
+            console.log(response.data.questions);
             setQuestions(s);
         });
         }, []);
@@ -43,7 +43,16 @@ const Questions = () => {
                     user_id: 1,
                     game_id: 2
                 })
-
+                .then((response) => {
+                    console.log(p)
+                    if(response.data === "True"){
+                        axios
+                        .post("http://127.0.0.1:8000/api/v1/users/points_control", {
+                            user_id: 1,
+                            points: parseInt(p)
+                        })
+                    }
+                })
             })
         }
         console.log(name)
