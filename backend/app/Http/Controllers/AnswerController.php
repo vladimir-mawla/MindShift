@@ -48,13 +48,16 @@ class AnswerController extends Controller
         $game_id = $request->game_id;
         $question_id = $request->question_id;
         $correct_answer = Question::where('id', $question_id)->where('game_id', $game_id)->get();
+        $points = Question::where('id', $question_id)->where('game_id', $game_id)->get();
         $answer = Answer::where('question_id', $question_id)->where('user_id', $user_id)->get();
 
         if ($answer[0]['answer'] == $correct_answer[0]['correct_answer']){
 
-            return response()->json(
-                "True"
-            );
+            return response()->json([
+                "Status" => "True",
+                "Points" => $points[0]['points'],
+
+            ], 200);
         }else{
 
             return response()->json(
