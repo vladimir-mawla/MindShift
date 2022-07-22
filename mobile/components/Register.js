@@ -1,6 +1,22 @@
+import axios from "axios";
 import { StyleSheet, View, Text, TouchableOpacity, Alert, Image, Button, TextInput } from "react-native";
 
 export default function Register() {
+
+    const baseUrl= 'http://127.0.0.1:8000/api/v1';
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    function register() {
+
+        axios.post(`${baseUrl}/register`, {
+            name,
+            email,
+            password
+          })
+      }
+
     return (
         <View>
             <Text style={styles.header}>Register</Text>
