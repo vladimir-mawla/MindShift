@@ -24,6 +24,7 @@ const Login = () => {
         .then((res) => {
           if (res.data["user"]) {
             localStorage.setItem("user_id", res.data.user.id);
+            localStorage.setItem("company_id", res.data.user.company_id);
             navigate("/page");
           }
         })
