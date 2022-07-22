@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity, Alert, Image, Button, TextInp
 export default function Login() {
   return (
     <View>
+        <Text style={styles.header}>Login</Text>
         <View style={styles.inputView}>
             <TextInput 
                 style={styles.textInput}
@@ -46,5 +47,10 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 10,
         marginLeft: 20,
+      },
+      header: {
+          fontSize:70,
+          fontWeight:"bold",
+          marginBottom:120,
       }
   });
