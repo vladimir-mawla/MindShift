@@ -18,6 +18,9 @@ export default function Login() {
                 secureTextEntry={true}
             />
         </View>
+        <View style={styles.alignButton}>
+          <Button color='#95BDCE' title={"Login"} />
+        </View>
     </View>
   );
 }
