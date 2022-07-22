@@ -28,14 +28,18 @@ export default function Login() {
 
 const styles = StyleSheet.create({
     inputView: {
-        backgroundColor: "#95BDCE",
+        borderWidth:1,
         borderRadius: 30,
         width: 200,
         height: 45,
         marginBottom: 20,
         alignItems: "center",
       },
-      
+      alignButton: {
+        borderRadius: 5,
+        padding: 8,
+        margin: 5,
+      },
       textInput: {
         width:"100%",
         height: 50,
