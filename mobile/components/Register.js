@@ -8,6 +8,17 @@ export default function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const onChangeNameHandler = (name) => {
+        setName(name);
+      };
+    
+    const onChangeEmailHandler = (email) => {
+        setEmail(email);
+      };
+    
+    const onChangePasswordHandler = (password) => {
+        setPassword(password);
+      };
     function register() {
 
         axios.post(`${baseUrl}/register`, {
