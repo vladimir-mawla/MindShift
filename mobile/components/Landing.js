@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Alert, Image, Button } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, Alert, Image, Button } from "react-native";
 
 export default function Landing() {
   return (
@@ -13,3 +13,12 @@ export default function Landing() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  img: {
+    height: 200,
+    width: 200,
+    marginTop: 100,
+  },
+
+});
