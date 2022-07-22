@@ -33,14 +33,14 @@ const Questions = () => {
             .post("http://127.0.0.1:8000/api/v1/answers/add_answer", {
                 answer: answer,
                 question_id: id,
-                user_id: 1,
+                user_id: localStorage.getItem("user_id"),
                 game_id: 2
             })
             .then(()=> {
                 axios
                 .post("http://127.0.0.1:8000/api/v1/answers/check_answer", {
                     question_id: id,
-                    user_id: 1,
+                    user_id: localStorage.getItem("user_id"),
                     answer: answer,
                     game_id: 2
                 })
@@ -48,7 +48,7 @@ const Questions = () => {
                     if(response.data["Status"] === "True"){
                         axios
                         .post("http://127.0.0.1:8000/api/v1/users/points_control", {
-                            user_id: 1,
+                            user_id: localStorage.getItem("user_id"),
                             points: response.data["Points"]
                         })
                     }
