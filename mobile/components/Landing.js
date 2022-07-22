@@ -10,10 +10,10 @@ export default function Landing() {
       <Text>Description Goes Here...</Text>
 
       <View style={styles.buttonContainer}>
-        <View style={styles.align_btn}>
+        <View style={styles.alignButton}>
           <Button color='#95BDCE' title={"Login"} />
         </View>
-        <View style={styles.align_btn}>
+        <View style={styles.alignButton}>
           <Button color='#95BDCE' title={"Register"} />
         </View>
       </View>
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     width: 200,
     
   },
-  align_btn: {
+  alignButton: {
     borderRadius: 5,
     padding: 8,
     margin: 5,
