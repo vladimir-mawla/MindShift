@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
 }
-.links {
+.nav-links {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
@@ -12,7 +12,7 @@
   font-size: 18px;
   font-weight: bold;
 }
-.links > li {
+.nav-links > li {
   margin-right: 20px;
   cursor: pointer;
   display: inline-block;
