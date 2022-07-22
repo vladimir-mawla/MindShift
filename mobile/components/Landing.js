@@ -8,12 +8,14 @@ export default function Landing() {
         source={require("./logo.jpeg")}
       />
       <Text>Description Goes Here...</Text>
-      <View>
-        <Button color='#95BDCE' title={"Login"} />
-      </View>
 
-      <View>
-        <Button color='#95BDCE' title={"Register"} />
+      <View style={styles.btns}>
+        <View style={styles.align_btn}>
+          <Button color='#95BDCE' title={"Login"} />
+        </View>
+        <View style={styles.align_btn}>
+          <Button color='#95BDCE' title={"Register"} />
+        </View>
       </View>
       
     </View>
@@ -26,5 +28,10 @@ const styles = StyleSheet.create({
     width: 200,
     marginTop: 100,
   },
-
+  align_btn: {
+    margin:5,
+  },
+  btns: {
+    marginTop:150,
+  }
 });
