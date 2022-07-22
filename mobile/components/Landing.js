@@ -7,7 +7,8 @@ export default function Landing() {
         style={styles.img}
         source={require("./logo.jpeg")}
       />
-      <Text>Description Goes Here...</Text>
+
+      <Text>Increase Your Employees{'\n'}Motivation and Engagement</Text>
 
       <View style={styles.buttonContainer}>
         <View style={styles.alignButton}>
