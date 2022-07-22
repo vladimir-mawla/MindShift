@@ -4,23 +4,25 @@ export default function Login() {
   return (
     <View>
         <Text style={styles.header}>Login</Text>
-        <View style={styles.inputView}>
-            <TextInput 
-                style={styles.textInput}
-                placeholder="Email"
-                placeholderTextColor="#003f5c"
-            />
-        </View>
-        <View style={styles.inputView}>
-            <TextInput 
-                style={styles.textInput}
-                placeholder="Password"
-                placeholderTextColor="#003f5c"
-                secureTextEntry={true}
-            />
-        </View>
-        <View style={styles.alignButton}>
-          <Button color='#95BDCE' title={"Login"} />
+        <View style={styles.form}>
+            <View style={styles.inputView}>
+                <TextInput 
+                    style={styles.textInput}
+                    placeholder="Email"
+                    placeholderTextColor="#003f5c"
+                />
+            </View>
+            <View style={styles.inputView}>
+                <TextInput 
+                    style={styles.textInput}
+                    placeholder="Password"
+                    placeholderTextColor="#003f5c"
+                    secureTextEntry={true}
+                />
+            </View>
+            <View style={styles.alignButton}>
+            <Button color='#95BDCE' title={"Login"} />
+            </View>
         </View>
     </View>
   );
@@ -49,8 +51,12 @@ const styles = StyleSheet.create({
         marginLeft: 20,
       },
       header: {
-          fontSize:70,
-          fontWeight:"bold",
-          marginBottom:120,
-      }
+        fontSize:70,
+        fontWeight:"bold",
+        marginBottom:120,
+        marginRight:40
+      },
+      form: {
+        alignItems:'center'
+    }
   });

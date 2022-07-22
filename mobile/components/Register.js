@@ -76,10 +76,10 @@ const styles = StyleSheet.create({
         marginLeft: 20,
       },
       header: {
-          fontSize:70,
-          fontWeight:"bold",
-          marginBottom:120,
-          marginRight:40
+        fontSize:70,
+        fontWeight:"bold",
+        marginBottom:120,
+        marginRight:40
       },
       form: {
           alignItems:'center'
