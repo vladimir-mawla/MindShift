@@ -2,7 +2,7 @@ import { StyleSheet, View, Text, TouchableOpacity, Alert, Image, Button } from "
 
 export default function Landing() {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <Image
         style={styles.img}
         source={require("./logo.jpeg")}
@@ -32,6 +32,13 @@ const styles = StyleSheet.create({
     margin:5,
   },
   btns: {
-    marginTop:150,
+    justifyContent: 'flex-end',
+    
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    width: '100%',
   }
 });
