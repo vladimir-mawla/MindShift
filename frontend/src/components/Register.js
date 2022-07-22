@@ -44,7 +44,6 @@ const Register = () => {
 
   return (
     <center>
-      <Navbar />
       <div className="form">
         <input type="text" placeholder="Name" ref={name} />
         <input type="email" placeholder="Email" ref={email} />

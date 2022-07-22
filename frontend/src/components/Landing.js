@@ -9,7 +9,6 @@ const Landing = () => {
 
     return(
         <div>
-            <Navbar />
             <div className='hero'>
                 <div className='logo'>
                     <img id='logo' src={ require('./assets/logo.jpeg') } />

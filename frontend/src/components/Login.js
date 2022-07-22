@@ -42,7 +42,6 @@ const Login = () => {
 
   return (
     <center>
-      <Navbar />
       <div className="form">
         <input type="email" placeholder="Email" ref={email} />
         <input
