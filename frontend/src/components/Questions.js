@@ -34,7 +34,7 @@ const Questions = () => {
                 answer: answer,
                 question_id: id,
                 user_id: localStorage.getItem("user_id"),
-                game_id: 2
+                game_id: localStorage.getItem("game_id")
             })
             .then(()=> {
                 axios
@@ -42,7 +42,7 @@ const Questions = () => {
                     question_id: id,
                     user_id: localStorage.getItem("user_id"),
                     answer: answer,
-                    game_id: 2
+                    game_id: localStorage.getItem("game_id")
                 })
                 .then((response) => {
                     if(response.data["Status"] === "True"){
