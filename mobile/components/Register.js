@@ -1,4 +1,5 @@
 import axios from "axios";
+import React, { useState } from "react";
 import { StyleSheet, View, Text, TouchableOpacity, Alert, Image, Button, TextInput } from "react-native";
 
 export default function Register() {
@@ -19,13 +20,29 @@ export default function Register() {
     const onChangePasswordHandler = (password) => {
         setPassword(password);
       };
-    function register() {
+    const  register = async (event) => {
+        if (!name.trim() || !email.trim()) {
+            alert("Name or Email is invalid");
+            return;
+          }
+          try {
+        await axios.post("http://127.0.0.1:8000/api/v1/register", {
+            name: name,
+            email: email,
+            password: password
+        })
+        .then((response) => {
+            if (response) {
+                alert('You have successfuly registered');
+            } else {
+                alert("An error has occurred");
+            }
+        })
+        } catch(error){
+            alert(error);
+        }
+          
 
-        axios.post(`${baseUrl}/register`, {
-            name,
-            email,
-            password
-          })
       }
 
     return (
@@ -37,6 +54,7 @@ export default function Register() {
                         style={styles.textInput}
                         placeholder="Name"
                         placeholderTextColor="#003f5c"
+                        onChangeText={onChangeNameHandler}
                     />
                 </View>
                 <View style={styles.inputView}>
@@ -44,7 +62,7 @@ export default function Register() {
                         style={styles.textInput}
                         placeholder="Email"
                         placeholderTextColor="#003f5c"
-                        secureTextEntry={true}
+                        onChangeText={onChangeEmailHandler}
                     />
                 </View>
                 <View style={styles.inputView}>
@@ -53,6 +71,7 @@ export default function Register() {
                         placeholder="Password"
                         placeholderTextColor="#003f5c"
                         secureTextEntry={true}
+                        onChangeText={onChangePasswordHandler}
                     />
                 </View>
                 {/* <View style={styles.inputView}>
@@ -72,7 +91,7 @@ export default function Register() {
                     />
                 </View> */}
                 <View style={styles.alignButton}>
-                <Button color='#95BDCE' title={"Register"} />
+                <Button color='#95BDCE' title={"Register"} onPress={register}/>
                 </View>
             </View>
         </View>
