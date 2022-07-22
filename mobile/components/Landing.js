@@ -8,7 +8,7 @@ export default function Landing() {
         source={require("./logo.jpeg")}
       />
 
-      <Text>Increase Your Employees{'\n'}Motivation and Engagement</Text>
+      <Text style={styles.description}>Increase Your Employees Motivation and Engagement</Text>
 
       <View style={styles.buttonContainer}>
         <View style={styles.alignButton}>
@@ -44,5 +44,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
     width: '100%',
+  },
+  description: {
+    width:'auto',
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 });
