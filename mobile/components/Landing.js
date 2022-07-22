@@ -9,7 +9,7 @@ export default function Landing() {
       />
       <Text>Description Goes Here...</Text>
 
-      <View style={styles.btns}>
+      <View style={styles.buttonContainer}>
         <View style={styles.align_btn}>
           <Button color='#95BDCE' title={"Login"} />
         </View>
@@ -26,14 +26,17 @@ const styles = StyleSheet.create({
   img: {
     height: 200,
     width: 200,
-    marginTop: 100,
+    
   },
   align_btn: {
-    margin:5,
+    borderRadius: 5,
+    padding: 8,
+    margin: 5,
   },
-  btns: {
+  buttonContainer: {
     justifyContent: 'flex-end',
-    
+    width: '80%',
+
   },
   container: {
     flex: 1,
