@@ -7,6 +7,7 @@ export default function Landing() {
         style={{ height: 200, width: 200, marginTop: 100 }}
         source={require("./logo.jpeg")}
       />
+      <Text>Description Goes Here...</Text>
     </View>
   );
 }
