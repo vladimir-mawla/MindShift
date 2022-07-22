@@ -16,6 +16,7 @@ use App\Http\Controllers\QuestionTypeController;
 use App\Http\Controllers\LeaderboardController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GainedRewardController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -121,6 +122,11 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/get_users', [UserController::class, 'getUsers']);
         Route::post('/points_control', [UserController::class, 'pointsControl']);
         Route::post('/get_user', [UserController::class, 'getUser']);
+
+    });
+
+    Route::group(['prefix' => 'gained_rewards'], function(){
+        Route::post('/get_colleagues_rewards', [GainedRewardController::class, 'getColleaguesGainedRewards']);
 
     });
 
