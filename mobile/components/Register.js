@@ -28,7 +28,7 @@ export default function Register() {
                         secureTextEntry={true}
                     />
                 </View>
-                <View style={styles.inputView}>
+                {/* <View style={styles.inputView}>
                     <TextInput 
                         style={styles.textInput}
                         placeholder="Username"
@@ -43,7 +43,7 @@ export default function Register() {
                         placeholderTextColor="#003f5c"
                         secureTextEntry={true}
                     />
-                </View>
+                </View> */}
                 <View style={styles.alignButton}>
                 <Button color='#95BDCE' title={"Register"} />
                 </View>
