@@ -8,8 +8,14 @@ export default function Landing() {
         source={require("./logo.jpeg")}
       />
       <Text>Description Goes Here...</Text>
-      <Button color='#95BDCE' title={"Login"} />
-      <Button color='#95BDCE' title={"Register"} />
+      <View>
+        <Button color='#95BDCE' title={"Login"} />
+      </View>
+
+      <View>
+        <Button color='#95BDCE' title={"Register"} />
+      </View>
+      
     </View>
   );
 }
