@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 8,
         margin: 5,
+        width:'75%'
       },
       textInput: {
         width:"100%",
