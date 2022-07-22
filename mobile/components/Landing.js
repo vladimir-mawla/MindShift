@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Alert, Image } from "react-native";
+import { View, Text, TouchableOpacity, Alert, Image, Button } from "react-native";
 
 export default function Landing() {
   return (
@@ -8,6 +8,8 @@ export default function Landing() {
         source={require("./logo.jpeg")}
       />
       <Text>Description Goes Here...</Text>
+      <Button title={"Login"} />
+      <Button title={"Register"} />
     </View>
   );
 }
