@@ -14,6 +14,7 @@ import AddOptions from './components/AddOptions';
 import AddReward from './components/AddReward';
 import Profile from './components/Profile';
 import Colleagues from './components/Colleagues';
+import AddPoints from './components/AddPoints';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/add_reward" element={<AddReward />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/c" element={<Colleagues />}></Route>
+        <Route path="/add_points" element={<AddPoints />}></Route>
       </Routes>
     </BrowserRouter>
     );
