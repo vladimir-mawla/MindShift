@@ -29,7 +29,29 @@ const Profile = () => {
         return (
             <div>
                 <Navbar />
-                
+                <div className='profile-container'>
+                    <img src={info.profile_img} className='profile-img'/>
+                    <div className='profile-form'>
+                        <h1>{info.name}</h1>
+                        <h2><strong>points:</strong> {info.points}</h2>
+                        <h2><strong>email:</strong> {info.email}</h2>
+                        <h2><strong>job title:</strong> {info.job_title}</h2>
+                    </div>
+                </div>
+                <button onClick={togglePopup}>Edit Profile</button>
+                {isOpen && <Popup
+                    content={<>
+                        <b>Edit Profile</b>
+                        <div className='edit-profile'>
+                            <input type="text" placeholder="Name"/><br/>
+                            <input type="text" placeholder="Email"/><br/>
+                            <input type="text" placeholder="Position"/><br/>
+                            <button>Done</button>
+                        </div>
+                        
+                    </>}
+                    handleClose={togglePopup}
+                    />}
             </div>
         )
 
