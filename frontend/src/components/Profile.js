@@ -26,6 +26,20 @@ const Profile = () => {
         });
         }, []);
 
+        function edit(){
+            axios
+        .post("http://127.0.0.1:8000/api/v1/users/edit_user", {
+            user_id: localStorage.getItem('user_id'),
+            // name: name.current.value,
+            // email:email.current.value,
+            // country: country.current.value,
+            // city: city.current.value,
+            // job_title: job_title.current.value,
+            // img: img.current.value,
+            // description: description.current.value,
+        })
+        }
+
         return (
             <div>
                 <Navbar />
@@ -43,10 +57,15 @@ const Profile = () => {
                     content={<>
                         <b>Edit Profile</b>
                         <div className='edit-profile'>
-                            <input type="text" placeholder="Name"/><br/>
-                            <input type="text" placeholder="Email"/><br/>
-                            <input type="text" placeholder="Position"/><br/>
-                            <button>Done</button>
+                            <input type="file"/>
+                            <input type="text" placeholder="Name"/>
+                            <input type="text" placeholder="Email"/>
+                            <input type="text" placeholder="Country"/>
+                            <input type="text" placeholder="City"/>
+                            <input type="text" placeholder="Description"/>
+                            <input type="text" placeholder="Position"/>
+                            <Button text={'Done'} onClick={edit}/>
+                            
                         </div>
                         
                     </>}

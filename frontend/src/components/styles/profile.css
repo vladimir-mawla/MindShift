@@ -12,7 +12,7 @@
 }
 .box {
     position: relative;
-    width: 70%;
+    width: 30%;
     margin: 0 auto;
     height: auto;
     max-height: 70vh;
@@ -24,10 +24,11 @@
     overflow: auto;
 }
 .close-icon {
-    content: 'x';
+    content: '&#10006;';
     cursor: pointer;
     position: fixed;
-    right: calc(15% - 30px);
+    right: calc(30% + 25px);
+    top: calc(100vh - 85vh - 33px);
     background: #ededed;
     width: 25px;
     height: 25px;
@@ -45,4 +46,15 @@
     top: 0;
     left: 0;
     z-index: 2;
-  }
+}
+.edit-profile{
+    display: flex;
+    flex-direction: column;  
+    gap: 5px;  
+}
+.edit-profile > input{
+    width: 150px;
+}
+.edit-profile > button{
+    width: 150px;
+}
