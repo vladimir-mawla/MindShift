@@ -37,7 +37,7 @@ const Colleagues = () => {
             {colleagues.map((c) => (
 
 
-                <div className="co-card">
+                <div key={c.id} className="co-card">
 
                     <div className="additional">
                         <div className="user-card">

@@ -23,13 +23,13 @@ const Leaderboard = () => {
     return (
         <>
         <Navbar />
-        <div class="leaderboard-container">
-		<div class="leaderboard">
-			<div class="head">
-				<i class="fas fa-crown"></i>
+        <div className="leaderboard-container">
+		<div className="leaderboard">
+			<div className="head">
+				<i className="fas fa-crown"></i>
 				<h1>Most active Players</h1>
 			</div>
-			<div class="body">
+			<div className="body">
 				<ol>
                 {users.map((user, index) => (
 
