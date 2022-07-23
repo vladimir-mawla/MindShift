@@ -2,12 +2,13 @@ import './styles/games.css'
 import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, Navigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import QuestionOptions from './QuestionOptions';
 
 const Questions = () => {
+    const navigate = useNavigate();
     const [questions, setQuestions] = useState([])
     const [name, setName] = useState();
     var game_id = localStorage.getItem('game_id')
@@ -58,6 +59,7 @@ const Questions = () => {
                             points: response.data["Points"]
                         })
                     }
+                    navigate('/games');
                 })
             })
         }
