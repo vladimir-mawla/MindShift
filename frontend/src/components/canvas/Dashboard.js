@@ -39,11 +39,11 @@ class Dashboard extends Component {
 			exportEnabled: true,
 			theme: "dark2", // "light1", "dark1", "dark2"
 			title:{
-				text: "Employees Progress"
+				text: "Employees' Progress"
 			},
 			data: [{
 				type: "pie",
-				indexLabel: "{label}: {y}%",		
+				indexLabel: "{label}: {y} Points",		
 				startAngle: -90,
 				dataPoints: results
 					
