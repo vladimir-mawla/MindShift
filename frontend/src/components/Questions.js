@@ -26,9 +26,15 @@ const Questions = () => {
         });
         }, []);
         
+        function gamePlayed(){
+            axios
+            .post("http://127.0.0.1:8000/api/v1/played_games/add_played_game", {
+                user_id: localStorage.getItem("user_id"),
+                game_id: localStorage.getItem("game_id")
+            })
+        }
 
         function submitAnswers(id, answer){
-            console.log(answer)
             axios
             .post("http://127.0.0.1:8000/api/v1/answers/add_answer", {
                 answer: answer,
@@ -70,6 +76,7 @@ const Questions = () => {
             </ul>
             
             <button disabled={!name} onClick={() => {
+                gamePlayed(); 
                 const input = document.getElementsByTagName("input")
                 for (var i = 0; i < input.length; i++){
 
@@ -79,7 +86,7 @@ const Questions = () => {
                 } else if (input[i].checked === true) {
                     console.log(input[i])
                     submitAnswers(input[i].name, input[i].value)
-                } 
+                };
             }}}>Submit</button>
         </div>
     );
