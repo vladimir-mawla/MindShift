@@ -42,7 +42,7 @@ const Colleagues = () => {
                     <div className="additional">
                         <div className="user-card">
                             <div className="level center">
-                                Badge here
+                                <img className='badge' src={c.badge} />
                             </div>
                             <div className="points center">
                                 {c.points} Points
@@ -53,7 +53,7 @@ const Colleagues = () => {
                         <div className="more-info">
                             <h1>{c.name}</h1>
                             <div className="coords">
-                                <span>Badge</span>
+                                <span>{c.email}</span>
                                 <span>Joined {c.created_at.slice(5,7) == '01' ? "January":
                                               c.created_at.slice(5,7) == '02' ? "February":
                                               c.created_at.slice(5,7) == '03' ? "March":
