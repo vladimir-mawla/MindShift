@@ -17,6 +17,7 @@ use App\Http\Controllers\LeaderboardController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GainedRewardController;
+use App\Http\Controllers\UserGameController;
 
 Route::group(['prefix' => 'v1'], function(){
 
