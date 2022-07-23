@@ -1,13 +1,18 @@
+import './styles/profile.css'
 import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import Popup from './PopUp';
 
 const Profile = () => {
     const [info, setInfo] = useState([])
-
+    const [isOpen, setIsOpen] = useState(false);
+    const togglePopup = () => {
+        setIsOpen(!isOpen);
+      }
     useEffect(() => {
         axios
         .post("http://127.0.0.1:8000/api/v1/users/get_user", {
@@ -24,11 +29,7 @@ const Profile = () => {
         return (
             <div>
                 <Navbar />
-                <img src={info.profile_img} />
-                <h1>{info.name}</h1>
-                <h2>points: {info.points}</h2>
-                <h2>email: {info.email}</h2>
-                <h2>job title: {info.job_title}</h2>
+                
             </div>
         )
 
