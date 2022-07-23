@@ -35,4 +35,14 @@ class UserController extends Controller
                 "users" => $user,
             ], 200);
         }
+
+    public function getColleaguesGainedRewards(Request $request){
+        $company_id = $request->company_id;
+        $users = User::with('gainedRewards')->where('company_id', $company_id)->get();
+        //echo $users;
+        return response()->json([
+            "status" => "success",
+            "users" => $users,
+        ], 200);
+    }
 }

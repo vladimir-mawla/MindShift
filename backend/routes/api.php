@@ -16,7 +16,7 @@ use App\Http\Controllers\QuestionTypeController;
 use App\Http\Controllers\LeaderboardController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\RewardUserController;
+use App\Http\Controllers\GainedRewardController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -126,7 +126,7 @@ Route::group(['prefix' => 'v1'], function(){
     });
 
     Route::group(['prefix' => 'gained_rewards'], function(){
-        Route::post('/get_colleagues_rewards', [RewardUserController::class, 'getColleaguesGainedRewards']);
+        Route::post('/get_colleagues_rewards', [UserController::class, 'getColleaguesGainedRewards']);
 
     });
 
