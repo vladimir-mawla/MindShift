@@ -15,6 +15,7 @@ import AddReward from './components/AddReward';
 import Profile from './components/Profile';
 import Colleagues from './components/Colleagues';
 import AddPoints from './components/AddPoints';
+import AddBadge from './components/AddBadge';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/c" element={<Colleagues />}></Route>
         <Route path="/add_points" element={<AddPoints />}></Route>
+        <Route path="/add_badge" element={<AddBadge />}></Route>
       </Routes>
     </BrowserRouter>
     );
