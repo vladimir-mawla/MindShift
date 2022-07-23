@@ -21,19 +21,26 @@ const Leaderboard = () => {
         console.log(users)
         users.sort((a,b) => b.points - a.points);
     return (
-        <table className='leaderboard'>
-            <tr>
-                <td className='title'>Name</td>
-                <td className='title'>Points</td>
-            </tr>
+        <div class="container">
+		<div class="leaderboard">
+			<div class="head">
+				<i class="fas fa-crown"></i>
+				<h1>Most active Players</h1>
+			</div>
+			<div class="body">
+				<ol>
                 {users.map((user, index) => (
-                    <tr>
-                        <td>{user.name}</td>
-                        <td>{user.points}</td>
-                    </tr>
+
+                    <li>
+                        <mark>{user.name}</mark>
+                        <small>{user.points}</small>
+                    </li>
                 ))}
-            
-        </table>
+
+				</ol>
+			</div>
+		</div>
+	</div>
     );
 };
 export default Leaderboard;
