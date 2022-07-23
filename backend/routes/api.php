@@ -124,9 +124,14 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/get_user', [UserController::class, 'getUser']);
 
     });
-
+    
     Route::group(['prefix' => 'gained_rewards'], function(){
         Route::post('/get_colleagues', [UserController::class, 'getColleagues']);
+
+    });
+
+    Route::group(['prefix' => 'played_games'], function(){
+        Route::post('/add_played_game', [UserGameController::class, 'addPlayedGame']);
 
     });
 
