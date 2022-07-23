@@ -95,7 +95,7 @@ const Colleagues = () => {
                     </div>
                     <div className="general">
                         <h1>{c.name}</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut pulvinar.</p>
+                        <p>{c.description}</p>
                         <span className="more">Mouse over the card for more info</span>
                     </div>
                 </div>
