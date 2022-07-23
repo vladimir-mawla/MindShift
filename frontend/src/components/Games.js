@@ -33,7 +33,7 @@ const Games = () => {
             <Navbar />
             <div className="game">
                 {games.map((game) => (
-                    <div className="game" key={game.id}>
+                <div key={game.id}>
                 <ul className="cards">
                     <li id={game.id} onClick={handleClick}>
                         <a href="" className="card">

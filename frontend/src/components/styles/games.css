@@ -33,7 +33,7 @@ body {
 
 .card-image {
     width: 100%;
-    height: auto;
+    height: 250px;
 }
 
 .card-overlay {
@@ -122,4 +122,9 @@ body {
     display: flex;
     flex-direction: row;
     gap: 260%;
+}
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
