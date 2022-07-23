@@ -14,7 +14,7 @@ html, body {
   border-radius: 50%;
 }
 
-.card {
+.co-card {
   width: 450px;
   height: 250px;
   background-color: #fff;
@@ -26,11 +26,11 @@ html, body {
   margin: 1.5rem;
 }
 
-.card h1 {
+.co-card h1 {
   text-align: center;
 }
 
-.card .additional {
+.co-card .additional {
   position: absolute;
   width: 150px;
   height: 100%;
@@ -40,24 +40,24 @@ html, body {
   z-index: 2;
 }
 
-.card.green .additional {
+.co-card.green .additional {
   background: linear-gradient(#92bCa6, #A2CCB6);
 }
 
 
-.card:hover .additional {
+.co-card:hover .additional {
   width: 100%;
   border-radius: 0 5px 5px 0;
 }
 
-.card .additional .user-card {
+.co-card .additional .user-card {
   width: 150px;
   height: 100%;
   position: relative;
   float: left;
 }
 
-.card .additional .user-card::after {
+.co-card .additional .user-card::after {
   content: "";
   display: block;
   position: absolute;
@@ -67,8 +67,8 @@ html, body {
   border-left: 2px solid rgba(0,0,0,0.025);
 }
 
-.card .additional .user-card .level,
-.card .additional .user-card .points {
+.co-card .additional .user-card .level,
+.co-card .additional .user-card .points {
   top: 15%;
   color: #fff;
   text-transform: uppercase;
@@ -80,15 +80,15 @@ html, body {
   white-space: nowrap;
 }
 
-.card .additional .user-card .points {
+.co-card .additional .user-card .points {
   top: 85%;
 }
 
-.card .additional .user-card svg {
+.co-card .additional .user-card svg {
   top: 50%;
 }
 
-.card .additional .more-info {
+.co-card .additional .more-info {
   width: 300px;
   float: left;
   position: absolute;
@@ -96,30 +96,30 @@ html, body {
   height: 100%;
 }
 
-.card .additional .more-info h1 {
+.co-card .additional .more-info h1 {
   color: #fff;
   margin-bottom: 0;
 }
 
-.card.green .additional .more-info h1 {
+.co-card.green .additional .more-info h1 {
   color: #224C36;
 }
 
-.card .additional .coords {
+.co-card .additional .coords {
   margin: 0 1rem;
   color: #fff;
   font-size: 1rem;
 }
 
-.card.green .additional .coords {
+.co-card.green .additional .coords {
   color: #325C46;
 }
 
-.card .additional .coords span + span {
+.co-card .additional .coords span + span {
   float: right;
 }
 
-.card .additional .stats {
+.co-card .additional .stats {
   font-size: 2rem;
   display: flex;
   position: absolute;
@@ -130,36 +130,36 @@ html, body {
   color: #fff;
 }
 
-.card.green .additional .stats {
+.co-card.green .additional .stats {
   color: #325C46;
 }
 
-.card .additional .stats > div {
+.co-card .additional .stats > div {
   flex: 1;
   text-align: center;
 }
 
-.card .additional .stats i {
+.co-card .additional .stats i {
   display: block;
 }
 
-.card .additional .stats div.title {
+.co-card .additional .stats div.title {
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.card .additional .stats div.value {
+.co-card .additional .stats div.value {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.5rem;
 }
 
-.card .additional .stats div.value.infinity {
+.co-card .additional .stats div.value.infinity {
   font-size: 2.5rem;
 }
 
-.card .general {
+.co-card .general {
   width: 300px;
   height: 100%;
   position: absolute;
@@ -171,7 +171,7 @@ html, body {
   padding-top: 0;
 }
 
-.card .general .more {
+.co-card .general .more {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
