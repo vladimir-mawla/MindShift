@@ -16,6 +16,7 @@ import Profile from './components/Profile';
 import Colleagues from './components/Colleagues';
 import AddPoints from './components/AddPoints';
 import AddBadge from './components/AddBadge';
+import Dashboard from './components/canvas/Dashboard'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/c" element={<Colleagues />}></Route>
         <Route path="/add_points" element={<AddPoints />}></Route>
         <Route path="/add_badge" element={<AddBadge />}></Route>
+        <Route path="/dashboard" element={<Dashboard />}></Route>
       </Routes>
     </BrowserRouter>
     );
