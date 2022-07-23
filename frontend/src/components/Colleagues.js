@@ -9,7 +9,12 @@ import axios from "axios";
 const Colleagues = () => {
     const navigate = useNavigate();
     const [colleagues, setColleagues] = useState([])
-  
+
+    const handleClick = (event) => {
+        localStorage.setItem('colleague_id', event.currentTarget.id);
+        navigate("/");
+    }
+    
     useEffect(() => {
     axios
     .post("http://127.0.0.1:8000/api/v1/gained_rewards/get_colleagues", {
