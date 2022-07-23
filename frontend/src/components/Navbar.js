@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <nav className='navbar'>
-            <img id='nav-logo' src={ require('./assets/logo.jpeg') }/>
+            <img id='nav-logo' src={ require('./assets/logo.png') }/>
             <ul className='nav-links'>
                 <li><Link to={"/leaderboards"}>Leaderboard</Link></li>
                 <li><Link to={"/rewards"}>Rewards</Link></li>
