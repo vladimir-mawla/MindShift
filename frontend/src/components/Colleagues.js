@@ -42,7 +42,7 @@ const Colleagues = () => {
                     <div className="additional">
                         <div className="user-card">
                             <div className="level center">
-                                Level 13
+                                Badge here
                             </div>
                             <div className="points center">
                                 {c.points} Points
