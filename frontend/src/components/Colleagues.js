@@ -51,12 +51,23 @@ const Colleagues = () => {
                         <div className="more-info">
                             <h1>{c.name}</h1>
                             <div className="coords">
-                                <span>Group Name</span>
-                                <span>Joined January 2019</span>
+                                <span>Badge</span>
+                                <span>Joined {c.created_at.slice(5,7) == '01' ? "January":
+                                              c.created_at.slice(5,7) == '02' ? "February":
+                                              c.created_at.slice(5,7) == '03' ? "March":
+                                              c.created_at.slice(5,7) == '04' ? "April":
+                                              c.created_at.slice(5,7) == '05' ? "May":
+                                              c.created_at.slice(5,7) == '06' ? "June":
+                                              c.created_at.slice(5,7) == '07' ? "July":
+                                              c.created_at.slice(5,7) == '08' ? "August":
+                                              c.created_at.slice(5,7) == '09' ? "September":
+                                              c.created_at.slice(5,7) == '10' ? "October":
+                                              c.created_at.slice(5,7) == '11' ? "November":
+                                              c.created_at.slice(5,7) == '12' ? "December":""} {c.created_at.slice(0,4)}</span>
                             </div>
                             <div className="coords">
-                                <span>Position/Role</span>
-                                <span>City, Country</span>
+                                <span>{c.job_title}</span>
+                                <span>{c.city}, {c.country}</span>
                             </div>
                             <div className="stats">
                                 <div>
