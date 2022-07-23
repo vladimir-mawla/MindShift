@@ -8,6 +8,10 @@ import axios from "axios";
 
 const Register = () => {
   const name = useRef(0);
+  const country = useRef(0);
+  const city = useRef(0);
+  const description = useRef(0);
+  const job_title = useRef(0);
   const email = useRef(0);
   const password = useRef(0);
   const navigate = useNavigate();
@@ -21,6 +25,10 @@ const Register = () => {
           name: name.current.value,
           email: email.current.value,
           password: password.current.value,
+          job_title: job_title.current.value,
+          password: description.current.value,
+          password: country.current.value,
+          password: city.current.value,
         })
 
         .then((res) => {
@@ -47,6 +55,10 @@ const Register = () => {
     <center>
       <div className="form">
         <input type="text" placeholder="Name" ref={name} />
+        <input type="text" placeholder="Your Country of Residence" ref={country} />
+        <input type="text" placeholder="City" ref={city} />
+        <input type="text" placeholder="Your job position/role" ref={job_title} />
+        <input type="text" placeholder="One-Line Description" ref={description} />
         <input type="email" placeholder="Email" ref={email} />
         <input
           type="password"
