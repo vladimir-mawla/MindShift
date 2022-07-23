@@ -1,5 +1,5 @@
 .navbar{
-  background-color: rgb(164, 164, 164);
+  background-color: rgb(255, 255, 255);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -17,4 +17,9 @@
   cursor: pointer;
   display: inline-block;
   margin: 0 10px;
+}
+#nav-logo{
+  border-radius: 50%;
+  margin: 0 0 10px 25px;
+  height: 80px;
 }
