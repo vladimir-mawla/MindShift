@@ -31,6 +31,8 @@ const Colleagues = () => {
 
 
     return (
+        <>
+        <Navbar />
         <div className="center">
             {colleagues.map((c) => (
 
@@ -103,6 +105,7 @@ const Colleagues = () => {
 
             ))}
         </div>
+        </>
     );
 };
 export default Colleagues;
