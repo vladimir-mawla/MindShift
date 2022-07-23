@@ -18,6 +18,7 @@ import AddPoints from './components/AddPoints';
 import AddBadge from './components/AddBadge';
 import Dashboard from './components/canvas/Dashboard'
 import Page from './components/Page';
+import Employees from './components/Employees';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/add_badge" element={<AddBadge />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/page" element={<Page />}></Route>
+        <Route path="/employees" element={<Employees />}></Route>
       </Routes>
     </BrowserRouter>
     );
