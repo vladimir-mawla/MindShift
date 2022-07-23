@@ -46,4 +46,13 @@ class UserController extends Controller
             "users" => $users,
         ], 200);
     }
+    // Add Badge API
+    public function addBadge(Request $request){
+        $user_id = $request->user_id;
+        $badge = $request->badge;
+        User::where('id', $user_id)->update(['badge'=>$badge]);
+        return response()->json([
+            "status" => "Done",
+        ], 200);
+    }
 }
