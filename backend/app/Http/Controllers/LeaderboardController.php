@@ -21,7 +21,7 @@ class LeaderboardController extends Controller
     }
     // Get Leaderboard API
     public function getLeaderboard(){
-        $users = User::all()->take(10);
+        $users = User::all()->take(5);
 
         return response()->json([
             "status" => "success",
