@@ -55,4 +55,26 @@ class UserController extends Controller
             "status" => "Done",
         ], 200);
     }
+    // Edit User API
+    public function editUser(Request $request){
+        
+        $user_id = $request->user_id;
+        $name = $request->name;
+        $email = $request->email;
+        $country = $request->country;
+        $city = $request->city;
+        $profile_img = $request->profile_img;
+        $job_title = $request->job_title;
+        $description = $request->description;
+        User::where('id', $user_id)->update(['name'=>$name,
+                                            'email'=>$email,
+                                            'profile_img'=>$profile_img,
+                                            'country'=>$country,
+                                            'city'=>$city,
+                                            'job_title'=>$job_title,
+                                            'description'=>$description]);
+        return response()->json([
+            "status" => "Done",
+        ], 200);
+    }
 }
