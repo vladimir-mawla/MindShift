@@ -21,7 +21,7 @@ const Leaderboard = () => {
         console.log(users)
         users.sort((a,b) => b.points - a.points);
     return (
-        <div class="container">
+        <div class="leaderboard-container">
 		<div class="leaderboard">
 			<div class="head">
 				<i class="fas fa-crown"></i>

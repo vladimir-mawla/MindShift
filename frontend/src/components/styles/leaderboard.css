@@ -3,14 +3,7 @@
 *:after {
 	box-sizing: border-box;
 }
-html,
-body {
-	height: 100%;
-}
-body {
-	font: 16px/1.2 "Roboto", sans-serif;
-	color: #333;
-}
+
 a {
 	display: inline-block;
 	color: #333;
@@ -28,7 +21,7 @@ a {
 }
 
 /* container */
-.container {
+.leaderboard-container {
 	width: 600px;
 	height: auto;
 	border-radius: 10px;
@@ -78,8 +71,8 @@ a {
 	background-color: transparent;
 }
 .leaderboard li:before {
-	counter-increment: number; /* 遞增計數器 */
-	content: counter(number) "."; /* 顯示計數器 */
+	counter-increment: number;
+	content: counter(number) "."; 
 	margin-right: 4px;
 }
 .leaderboard li:nth-child(1) {
