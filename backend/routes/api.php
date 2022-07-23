@@ -18,6 +18,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GainedRewardController;
 use App\Http\Controllers\UserGameController;
+use App\Http\Controllers\BadgeController;
 
 Route::group(['prefix' => 'v1'], function(){
 
@@ -134,6 +135,11 @@ Route::group(['prefix' => 'v1'], function(){
     Route::group(['prefix' => 'played_games'], function(){
         Route::post('/add_played_game', [UserGameController::class, 'addPlayedGame']);
         Route::post('/get_played_game', [UserGameController::class, 'getPlayedGames']);
+
+    });
+
+    Route::group(['prefix' => 'played_games'], function(){
+        Route::get('/get_badges', [BadgeController::class, 'getBadges']);
 
     });
 
