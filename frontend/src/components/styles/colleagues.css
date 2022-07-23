@@ -177,3 +177,7 @@ html, body {
   right: 1rem;
   font-size: 0.9em;
 }
+.badge {
+    height: 30px;
+    width: 30px;
+}
