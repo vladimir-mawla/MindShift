@@ -21,6 +21,8 @@ const Leaderboard = () => {
         console.log(users)
         users.sort((a,b) => b.points - a.points);
     return (
+        <>
+        <Navbar />
         <div class="leaderboard-container">
 		<div class="leaderboard">
 			<div class="head">
@@ -41,6 +43,7 @@ const Leaderboard = () => {
 			</div>
 		</div>
 	</div>
+    </>
     );
 };
 export default Leaderboard;

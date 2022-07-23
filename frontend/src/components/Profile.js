@@ -23,6 +23,7 @@ const Profile = () => {
 
         return (
             <div>
+                <Navbar />
                 <img src={info.profile_img} />
                 <h1>{info.name}</h1>
                 <h2>points: {info.points}</h2>
