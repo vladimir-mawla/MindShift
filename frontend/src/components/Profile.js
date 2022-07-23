@@ -60,13 +60,14 @@ const Profile = () => {
                     description: description.current.value,
                 })
                 .then(() => {
-                    name.current.value = 0
-                    email.current.value = 0
-                    element.current.value = 0
-                    description.current.value = 0
-                    country.current.value = 0
-                    city.current.value = 0
-                    job_title.current.value = 0
+                    name.current.value = ''
+                    email.current.value = ''
+                    element.current.value = ''
+                    description.current.value = ''
+                    country.current.value = ''
+                    city.current.value = ''
+                    job_title.current.value = ''
+                    document.window.reload()
                 })
             }
         }

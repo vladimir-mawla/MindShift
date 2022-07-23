@@ -33,7 +33,7 @@ const Leaderboard = () => {
 				<ol>
                 {users.map((user, index) => (
 
-                    <li>
+                    <li key={index}>
                         <mark>{user.name}</mark>
                         <small>{user.points}</small>
                     </li>

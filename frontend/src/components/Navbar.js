@@ -1,11 +1,15 @@
 import './styles/navbar.css'
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+    const navigate = useNavigate()
+    const handleClick = (event) => {
+        navigate("/page");
+    }
     return (
         <nav className='navbar'>
-            <img id='nav-logo' src={ require('./assets/logo.png') }/>
+            <img id='nav-logo' src={ require('./assets/logo.png') } onClick={handleClick}/>
             <ul className='nav-links'>
                 <li><Link to={"/leaderboards"}>Leaderboard</Link></li>
                 <li><Link to={"/rewards"}>Rewards</Link></li>
