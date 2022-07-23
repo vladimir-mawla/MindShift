@@ -78,7 +78,7 @@ const Colleagues = () => {
                                 <div>
                                     <div className="title">Matches</div>
                                     <i><FaGamepad /></i>
-                                    <div className="value">27</div>
+                                    <div className="value">{c.games.length}</div>
                                 </div>
                                 <div>
                                     <div className="title">Pals</div>
