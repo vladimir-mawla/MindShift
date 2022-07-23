@@ -1,10 +1,11 @@
-import './styles/games.css';
+import './styles/colleagues.css';
 import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import { FaTrophy, FaUsers, FaGamepad, FaCoffee } from 'react-icons/fa';
 
 const Colleagues = () => {
     const navigate = useNavigate();
@@ -14,23 +15,83 @@ const Colleagues = () => {
         localStorage.setItem('colleague_id', event.currentTarget.id);
         navigate("/");
     }
-    
-    useEffect(() => {
-    axios
-    .post("http://127.0.0.1:8000/api/v1/gained_rewards/get_colleagues", {
-        company_id: localStorage.getItem('company_id')
-    })
 
-    .then((response) => {
-        const s = response.data.users;
-        console.log(response.data.users)
-        setColleagues(s);
-    });
+    useEffect(() => {
+        axios
+            .post("http://127.0.0.1:8000/api/v1/gained_rewards/get_colleagues", {
+                company_id: localStorage.getItem('company_id')
+            })
+
+            .then((response) => {
+                const s = response.data.users;
+                console.log(response.data.users)
+                setColleagues(s);
+            });
     }, []);
 
-  
+
     return (
-        <div></div>
+        <div className="center">
+            {colleagues.map((c) => (
+
+
+                <div className="card">
+
+                    <div className="additional">
+                        <div className="user-card">
+                            <div className="level center">
+                                Level 13
+                            </div>
+                            <div className="points center">
+                                {c.points} Points
+                            </div>
+                            <img  width="110" height="110"  src={c.profile_img} role="img" aria-labelledby="title desc" className="center"
+                            />
+                        </div>
+                        <div className="more-info">
+                            <h1>{c.name}</h1>
+                            <div className="coords">
+                                <span>Group Name</span>
+                                <span>Joined January 2019</span>
+                            </div>
+                            <div className="coords">
+                                <span>Position/Role</span>
+                                <span>City, Country</span>
+                            </div>
+                            <div className="stats">
+                                <div>
+                                    <div className="title">Awards</div>
+                                    <i><FaTrophy /></i>
+                                    <div className="value">{c.gained_rewards.length}</div>
+                                </div>
+                                <div>
+                                    <div className="title">Matches</div>
+                                    <i><FaGamepad /></i>
+                                    <div className="value">27</div>
+                                </div>
+                                <div>
+                                    <div className="title">Pals</div>
+                                    <i><FaUsers /></i>
+                                    <div className="value">{colleagues.length}</div>
+                                </div>
+                                <div>
+                                    <div className="title">Coffee</div>
+                                    <i><FaCoffee /></i>
+                                    <div className="value infinity">∞</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="general">
+                        <h1>{c.name}</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut pulvinar.</p>
+                        <span className="more">Mouse over the card for more info</span>
+                    </div>
+                </div>
+
+
+            ))}
+        </div>
     );
 };
 export default Colleagues;
