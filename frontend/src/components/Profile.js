@@ -8,6 +8,24 @@ import axios from "axios";
 import Popup from './PopUp';
 
 const Profile = () => {
+    const name = useRef(null)
+    const email = useRef(null)
+    const element = useRef(null)
+    const job_title = useRef(null)
+    const country = useRef(null)
+    const city = useRef(null)
+    const description = useRef(null)
+    var s;
+    
+    function encode() {
+      var file = element.current.files[0];
+      var reader = new FileReader();
+      reader.onloadend = function () {
+        s = reader.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
     const [info, setInfo] = useState([])
     const [isOpen, setIsOpen] = useState(false);
     const togglePopup = () => {
@@ -27,17 +45,30 @@ const Profile = () => {
         }, []);
 
         function edit(){
-            axios
-        .post("http://127.0.0.1:8000/api/v1/users/edit_user", {
-            user_id: localStorage.getItem('user_id'),
-            // name: name.current.value,
-            // email:email.current.value,
-            // country: country.current.value,
-            // city: city.current.value,
-            // job_title: job_title.current.value,
-            // img: img.current.value,
-            // description: description.current.value,
-        })
+            if( !name.current.value || !email.current.value|| !description.current.value || !element.current.value || !country.current.value || !city.current.value || !job_title.current.value){
+                alert("All fields should be filled")
+            }else{
+                axios
+                .post("http://127.0.0.1:8000/api/v1/users/edit_user", {
+                    user_id: localStorage.getItem('user_id'),
+                    name: name.current.value,
+                    email:email.current.value,
+                    country: country.current.value,
+                    city: city.current.value,
+                    job_title: job_title.current.value,
+                    profile_img: s,
+                    description: description.current.value,
+                })
+                .then(() => {
+                    name.current.value = 0
+                    email.current.value = 0
+                    element.current.value = 0
+                    description.current.value = 0
+                    country.current.value = 0
+                    city.current.value = 0
+                    job_title.current.value = 0
+                })
+            }
         }
 
         return (
@@ -57,13 +88,13 @@ const Profile = () => {
                     content={<>
                         <b>Edit Profile</b>
                         <div className='edit-profile'>
-                            <input type="file"/>
-                            <input type="text" placeholder="Name"/>
-                            <input type="text" placeholder="Email"/>
-                            <input type="text" placeholder="Country"/>
-                            <input type="text" placeholder="City"/>
-                            <input type="text" placeholder="Description"/>
-                            <input type="text" placeholder="Position"/>
+                            <input ref={element} type="file" onChange={() => {encode();}}/>
+                            <input ref={name} type="text" placeholder="Name"/>
+                            <input ref={email} type="text" placeholder="Email"/>
+                            <input ref={country} type="text" placeholder="Country"/>
+                            <input ref={city} type="text" placeholder="City"/>
+                            <input ref={description} type="text" placeholder="Description"/>
+                            <input ref={job_title} type="text" placeholder="Position"/>
                             <Button text={'Done'} onClick={edit}/>
                             
                         </div>
