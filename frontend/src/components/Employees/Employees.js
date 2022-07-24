@@ -41,8 +41,9 @@ const Employees = () => {
                 user_id: id
             })
 
-            .then(() => {
-                window.location.reload();
+            .then((response) => {
+                console.log(response.data)
+                // window.location.reload();
             });
     }
 

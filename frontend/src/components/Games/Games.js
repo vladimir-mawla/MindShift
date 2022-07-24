@@ -10,6 +10,7 @@ const Games = () => {
     const navigate = useNavigate();
     const [games, setGames] = useState([])
 
+    
     const handleClick = (event) => {
         localStorage.setItem('game_id', event.currentTarget.id);
         navigate("/questions");
@@ -17,7 +18,11 @@ const Games = () => {
   
     useEffect(() => {
     axios
-    .get("http://127.0.0.1:8000/api/v1/games/get_games", {
+    .get("http://127.0.0.1:8000/api/v1/games/get_games",{
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            Accept: 'application/json'
+        }
     })
 
     .then((response) => {
