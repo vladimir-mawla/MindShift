@@ -21,6 +21,7 @@ import Page from './components/Page/Page';
 import Employees from './components/Employees/Employees';
 import PlayedGames from './components/PlayedGames/PlayedGames';
 import AnsweredQuestions from './components/AnsweredQuestions/AnsweredQuestions';
+import Admin from './components/Admin/Admin';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
         <Route path="/employees" element={<Employees />}></Route>
         <Route path="/played_games" element={<PlayedGames />}></Route>
         <Route path="/answered_questions" element={<AnsweredQuestions />}></Route>
+        <Route path="/admin" element={<Admin />}></Route>
       </Routes>
     </BrowserRouter>
     );
