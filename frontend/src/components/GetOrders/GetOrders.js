@@ -42,7 +42,7 @@ const GetOrders = ({user_id}) => {
                     <a id={order.id} onClick={markDone}>x</a>
                 </li>
                 </>
-                ))} </ul> : 'No orders for this user'
+                ))} </ul> : 'No requests from this user'
             }
         </div> 
     );
