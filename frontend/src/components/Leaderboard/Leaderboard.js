@@ -21,28 +21,26 @@ const Leaderboard = () => {
         users.sort((a,b) => b.points - a.points);
     return (
         <>
-        <Navbar />
-        <div className="leaderboard-container">
-		<div className="leaderboard">
-			<div className="head">
-				<i className="fas fa-crown"></i>
-				<h1>Most Active Employees</h1>
-			</div>
-			<div className="body">
-				<ol>
-                {users.map((user, index) => (
+            <Navbar />
+            <div className="leaderboard">
+                <div className="head">
+                    <i className="fas fa-crown"></i>
+                    <h1>Most Active Employees</h1>
+                </div>
+                <div className="body">
+                    <ol>
+                    {users.map((user, index) => (
 
-                    <li key={index}>
-                        <mark>{user.name}</mark>
-                        <small>{user.points}</small>
-                    </li>
-                ))}
+                        <li key={index}>
+                            <mark>{user.name}</mark>
+                            <small>{user.points}</small>
+                        </li>
+                    ))}
 
-				</ol>
-			</div>
-		</div>
-	</div>
-    </>
+                    </ol>
+                </div>
+            </div>
+        </>
     );
 };
 export default Leaderboard;
