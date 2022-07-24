@@ -20,7 +20,7 @@ const PlayedGames = () => {
     }, []);
 
     const handleClick = (event) => {
-        localStorage.setItem('game_id', event.currentTarget.id);
+        localStorage.setItem('played_game_id', event.currentTarget.id);
         navigate("/answered_questions");
     }
 

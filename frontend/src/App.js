@@ -20,6 +20,7 @@ import Dashboard from './components/canvas/Dashboard'
 import Page from './components/Page';
 import Employees from './components/Employees';
 import PlayedGames from './components/PlayedGames';
+import AnsweredQuestions from './components/AnsweredQuestions';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/page" element={<Page />}></Route>
         <Route path="/employees" element={<Employees />}></Route>
         <Route path="/played_games" element={<PlayedGames />}></Route>
+        <Route path="/answered_questions" element={<AnsweredQuestions />}></Route>
       </Routes>
     </BrowserRouter>
     );

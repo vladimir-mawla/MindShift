@@ -7,10 +7,10 @@ import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import QuestionOptions from './QuestionOptions';
 
-const Questions = () => {
+const AnsweredQuestions = () => {
     const navigate = useNavigate();
     const [questions, setQuestions] = useState([])
-    var game_id = localStorage.getItem('game_id')
+    var game_id = localStorage.getItem('played_game_id')
 
     useEffect(() => {
         axios
@@ -31,9 +31,7 @@ const Questions = () => {
                 {questions.map((question) => (
                     <div key={question.id}>
                         <li key={question.id}>{question.question} ({question.points} points)</li>
-                        {(question.question_type === 0) ? <div><input onChange={(e) => setName(e.target.value)} id={question.id} type={"text"} /></div> : 
-                        <QuestionOptions setName={setName} name={name} question_id={question.id} question_type={question.question_type}/>
-                        }
+
                     </div>
                 ))}
             </ul>
@@ -41,4 +39,4 @@ const Questions = () => {
         </div>
     );
 };
-export default Questions;
+export default AnsweredQuestions;
