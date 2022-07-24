@@ -29,7 +29,7 @@ const Colleagues = () => {
             });
     }, []);
 
-
+    colleagues.sort((a,b) => b.points - a.points);
     return (
         <>
         <Navbar />

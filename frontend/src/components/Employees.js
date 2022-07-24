@@ -9,7 +9,7 @@ import { FaTrophy, FaUsers, FaGamepad, FaCoffee, FaTrash } from 'react-icons/fa'
 
 const Employees = () => {
     const navigate = useNavigate();
-    const [colleagues, setColleagues] = useState([])
+    const [employees, setEmployees] = useState([])
 
     const handleClick = (event) => {
         localStorage.setItem('employee_id', event.currentTarget.id);
@@ -25,7 +25,7 @@ const Employees = () => {
             .then((response) => {
                 const s = response.data.users;
                 console.log(response.data.users)
-                setColleagues(s);
+                setEmployees(s);
             });
     }, []);
 
@@ -39,12 +39,12 @@ const Employees = () => {
 
         });
     }
-
+    employees.sort((a,b) => b.points - a.points);
     return (
         <>
         <Navbar />
         <div className="users-container">
-            {colleagues.map((c) => (
+            {employees.map((c) => (
 
                 <div>
                 <span className="profile-close-icon" id={c.id} onClick={removeEmployee}><FaTrash /></span>
@@ -95,7 +95,7 @@ const Employees = () => {
                                 <div>
                                     <div className="title">Pals</div>
                                     <i><FaUsers /></i>
-                                    <div className="value">{colleagues.length}</div>
+                                    <div className="value">{employees.length}</div>
                                 </div>
                                 <div>
                                     <div className="title">Coffee</div>
