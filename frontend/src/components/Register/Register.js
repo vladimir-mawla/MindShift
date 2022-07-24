@@ -52,32 +52,53 @@ const Register = () => {
   }
 
   return (
-    <center>
-      <div className="form">
-        <input type="text" placeholder="Name" ref={name} />
-        <input type="text" placeholder="Your Country of Residence" ref={country} />
-        <input type="text" placeholder="City" ref={city} />
-        <input type="text" placeholder="Your job position/role" ref={job_title} />
-        <input type="text" placeholder="One-Line Description" ref={description} />
-        <input type="email" placeholder="Email" ref={email} />
-        <input
-          type="password"
-          placeholder="Password"
-          ref={password}
-          autoComplete="on"
-        />
-        <Button
-          text={"Signup"}
-          className={"form-btn"}
-          onClick={() => {
-            register();
-          }}
-        />
+    <div className="login-box">
+      <form>
+        <h2>Register</h2>
+        <div className="user-box">
+          <input type="text" ref={name} />
+          <label>Name</label>
+        </div>
+        <div className="user-box">
+          <input type="email" ref={email} />
+          <label>Email</label>
+        </div>
+        <div className="user-box">
+          <input type="text" ref={city} />
+          <label>City</label>
+        </div>
+        <div className="user-box">
+          <input type="text" ref={job_title} />
+          <label>Position</label>
+        </div>
+        <div className="user-box">
+          <input type="text" ref={description} />
+          <label>Description</label>
+        </div>
+        <div className="user-box">
+          <input type="text" ref={country} />
+          <label>Country</label>
+        </div>
+        <div className="user-box">
+          <input type="password" ref={password} autoComplete="on" />
+          <label>Password</label>
+        </div>
+
+        <a href="#" onClick={() => { register() }}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
         <p>
           <Link className="goto-link" to={"/login"}>Already have an account?</Link>
         </p>
-      </div>
-    </center>
+      </form>
+
+
+    </div>
+
   );
 };
 export default Register;
