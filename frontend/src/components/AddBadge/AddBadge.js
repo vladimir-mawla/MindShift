@@ -30,12 +30,12 @@ const AddBadge = () => {
     }, [])
     useEffect(() => {
         axios
-        .get("http://127.0.0.1:8000/api/v1/badges/get_badges"),{
+        .get("http://127.0.0.1:8000/api/v1/badges/get_badges",{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'
             }
-        }
+        })
 
         .then((response) => {
             const s = response.data.badges;
