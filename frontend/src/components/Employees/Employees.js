@@ -127,7 +127,9 @@ const Employees = () => {
                     </div>
                     
                 ))}
-                {isOpen && <Popup
+
+            </div>
+            {isOpen && <Popup
                     content={<>
                         <b>Are you sure you want to remove this user?</b><br/>
                         <Button className={'popup-button'} text={'Yes'} onClick={removeEmployee} />
@@ -136,7 +138,6 @@ const Employees = () => {
                     </>}
                     handleClose={togglePopup}
                 />}
-            </div>
         </>
     );
 };

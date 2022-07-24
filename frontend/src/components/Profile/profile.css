@@ -7,7 +7,7 @@
     border: 5px solid black;
     border-radius: 20px;
     padding: 40px;
-    background: rgba(0,0,0,.5);
+    background: linear-gradient(#03e9f4, #3d6e85);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
@@ -75,15 +75,16 @@
     border:none; 
     border-radius:10px; 
     padding:15px;
-    min-height:30px; 
-    min-width: 120px;
     margin: 0 42%;
     font-weight: bolder;
     font-size: 15px;
-    top: 90%;
+    top: 40%;
+    right: -30%;
+    box-shadow: 0 15px 30px rgba(0,0,0,.6);
+
   }
 .edit-profile-button:hover {
-    background-color:#95BDCE;
+    background-color:#00b9c3;
     transition: 0.7s;
 }
 .edit-button {
@@ -98,8 +99,10 @@
     margin: 0 30%;
     font-weight: bolder;
     font-size: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.6);
+
   }
 .edit-button:hover {
-    background-color:#95BDCE;
+    background-color:#00b9c3;
     transition: 0.7s;
 }
