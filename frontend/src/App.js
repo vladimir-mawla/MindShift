@@ -1,26 +1,26 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './components/Login';
-import Register from './components/Register';
-import Landing from './components/Landing';
-import Games from './components/Games';
-import Questions from './components/Questions';
-import Leaderboard from './components/Leaderbord';
-import Rewards from './components/Rewards';
-import Order from "./components/Order";
-import AddGame from './components/AddGame';
-import AddGameQuestion from './components/AddGameQuestions';
-import AddOptions from './components/AddOptions';
-import AddReward from './components/AddReward';
-import Profile from './components/Profile';
-import Colleagues from './components/Colleagues';
-import AddPoints from './components/AddPoints';
-import AddBadge from './components/AddBadge';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
+import Landing from './components/Landing/Landing';
+import Games from './components/Games/Games';
+import Questions from './components/Questions/Questions';
+import Leaderboard from './components/Leaderboard/Leaderboard';
+import Rewards from './components/Rewards/Rewards';
+import Order from "./components/Order/Order";
+import AddGame from './components/AddGame/AddGame';
+import AddGameQuestion from './components/AddGameQuestions/AddGameQuestions';
+import AddOptions from './components/AddOptions/AddOptions';
+import AddReward from './components/AddReward/AddReward';
+import Profile from './components/Profile/Profile';
+import Colleagues from './components/Colleagues/Colleagues';
+import AddPoints from './components/AddPoints/AddPoints';
+import AddBadge from './components/AddBadge/AddBadge';
 import Dashboard from './components/canvas/Dashboard'
-import Page from './components/Page';
-import Employees from './components/Employees';
-import PlayedGames from './components/PlayedGames';
-import AnsweredQuestions from './components/AnsweredQuestions';
+import Page from './components/Page/Page';
+import Employees from './components/Employees/Employees';
+import PlayedGames from './components/PlayedGames/PlayedGames';
+import AnsweredQuestions from './components/AnsweredQuestions/AnsweredQuestions';
 
 
 function App() {
