@@ -17,7 +17,7 @@ const Employees = () => {
 
     const handleClick = (event) => {
         localStorage.setItem('employee_id', event.currentTarget.id);
-        navigate("/answers");
+        navigate("/played_games");
     }
 
     useEffect(() => {
@@ -56,9 +56,9 @@ const Employees = () => {
             <div className="users-container">
                 {employees.map((c) => (
 
-                    <div>
+                    <div key={c.id}>
                         <span className="profile-close-icon" id={c.id} onClick={togglePopup}><FaTrash /></span>
-                        <div key={c.id} id={c.id} className="co-card" onClick={handleClick}>
+                        <div id={c.id} className="co-card" onClick={handleClick}>
                             <div className="additional">
                                 <div className="user-card">
                                     <div className="level center">
