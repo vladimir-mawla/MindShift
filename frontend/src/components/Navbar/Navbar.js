@@ -1,8 +1,9 @@
 import './navbar.css'
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useMatch, useResolvedPath } from 'react-router-dom';
 
-const Navbar = () => {
+export default function Navbar() {
+
     const navigate = useNavigate()
     const handleClick = (event) => {
         navigate("/page");
@@ -11,15 +12,25 @@ const Navbar = () => {
         <nav className='navbar'>
             <img id='nav-logo' src={ require('../assets/logo.png') } onClick={handleClick}/>
             <ul className='nav-links'>
-                <li><Link to={"/leaderboards"}>Leaderboard</Link></li>
-                <li><Link to={"/rewards"}>Rewards</Link></li>
-                <li><Link to={"/profile"}>Profile</Link></li>
-                <li><Link to={"/games"}>Games</Link></li>
-                <li><Link to={"/c"}>Colleagues</Link></li>
+                <CustomLink to={"/leaderboards"}>Leaderboard</CustomLink>
+                <CustomLink to={"/rewards"}>Rewards</CustomLink>
+                <CustomLink to={"/profile"}>Profile</CustomLink>
+                <CustomLink to={"/games"}>Games</CustomLink>
+                <CustomLink to={"/c"}>Colleagues</CustomLink>
             </ul>
             
         </nav>
     )
 }
-
-export default Navbar;
+function CustomLink({ to, children, ...props  }) {
+    const resolvedPath = useResolvedPath(to)
+    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+  
+    return (
+      <li className={isActive ? "active" : ""}>
+        <Link to={to} {...props}>
+          {children}
+        </Link>
+      </li>
+    )
+}
