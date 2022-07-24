@@ -2,7 +2,7 @@ import './addgame.css';
 import React from "react";
 import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, Navigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import AdminNavbar from "../AdminNavbar/AdminNavbar";
@@ -12,6 +12,7 @@ const AddGame = () => {
     const name = useRef(0)
     const description = useRef(0)
     const points = useRef(0)
+    const navigate = useNavigate()
     var s;
     
   function encode() {
@@ -32,8 +33,8 @@ const AddGame = () => {
         img: s,
     })
     .then((response) => {
-        console.log(response.data)
         localStorage.setItem('game_id', response.data.game.id)
+        navigate('/add_options')
       });
 
   }
