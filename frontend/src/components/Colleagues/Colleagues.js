@@ -33,7 +33,7 @@ const Colleagues = () => {
     return (
         <>
         <Navbar />
-        <div className="users-container">
+        <div className="colleagues-container">
             {colleagues.map((c) => (
 
 

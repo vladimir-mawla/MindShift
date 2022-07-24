@@ -55,7 +55,7 @@ const Employees = () => {
     return (
         <>
             <AdminNavbar />
-            <div className="users-container">
+            <div className="employees-container">
                 {employees.map((c) => (
 
                     <div key={c.id}>

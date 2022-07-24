@@ -5,8 +5,8 @@ html, body {
   font-family: Abel, Arial, Verdana, sans-serif;
 }
 
-.users-container {
-  margin-top: 200px;
+.employees-container {
+  margin-top: 250px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,7 +42,7 @@ html, body {
   position: absolute;
   width: 150px;
   height: 100%;
-  background: linear-gradient(#518fac, #518fac);
+  background: linear-gradient(#03e9f4, #518fac);
   transition: width 0.4s;
   overflow: hidden;
   z-index: 2;
