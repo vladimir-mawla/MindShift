@@ -29,9 +29,12 @@ const GetOrders = ({user_id}) => {
             {orders.length > 0 ? 
                 <ul>
                 {orders.map((order, index) => (
+                    <>
                 <li key={index} className='order'>
                     <p>{order.request}</p>
+                    <a onClick={markDone}>x</a>
                 </li>
+                </>
                 ))} </ul> : 'No orders for this user'
             }
         </div> 
