@@ -31,6 +31,10 @@ const AddGame = () => {
         description: description.current.value,
         points: points.current.value,
         img: s,
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+          Accept: 'application/json'
+      }
     })
     .then((response) => {
         localStorage.setItem('game_id', response.data.game.id)

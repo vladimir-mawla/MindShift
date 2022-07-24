@@ -30,6 +30,10 @@ const AddReward = () => {
         description: description.current.value,
         needed_points: points.current.value,
         img: s,
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+          Accept: 'application/json'
+      }
     })
 
   }

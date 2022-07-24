@@ -22,6 +22,10 @@ const AddGameQuestion = () => {
         points: points.current.value,
         game_id: localStorage.getItem('game_id'),
         question_type: question_type.current.value,
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            Accept: 'application/json'
+        }
     })
     .then((response)=> {
         localStorage.setItem("question_id", response.data.question.id)

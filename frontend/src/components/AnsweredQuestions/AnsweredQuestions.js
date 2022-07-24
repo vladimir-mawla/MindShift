@@ -16,7 +16,11 @@ const AnsweredQuestions = () => {
     useEffect(() => {
         axios
         .post("http://127.0.0.1:8000/api/v1/questions/get_questions", {
-            game_id: game_id
+            game_id: game_id,
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
         })
     
         .then((response) => {

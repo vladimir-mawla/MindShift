@@ -25,7 +25,11 @@ const Employees = () => {
     useEffect(() => {
         axios
             .post("http://127.0.0.1:8000/api/v1/users/get_colleagues", {
-                company_id: localStorage.getItem('company_id')
+                company_id: localStorage.getItem('company_id'),
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    Accept: 'application/json'
+                }
             })
 
             .then((response) => {
@@ -38,7 +42,11 @@ const Employees = () => {
     const removeEmployee = (event) => {
         axios
             .post("http://127.0.0.1:8000/api/v1/users/delete_user", {
-                user_id: id
+                user_id: id,
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    Accept: 'application/json'
+                }
             })
 
             .then((response) => {

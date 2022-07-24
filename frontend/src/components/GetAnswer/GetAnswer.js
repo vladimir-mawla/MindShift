@@ -9,7 +9,11 @@ const GetAnswer = (props) => {
         axios
             .post("http://127.0.0.1:8000/api/v1/answers/get_user_answer", {
                 question_id: props.question_id,
-                user_id: localStorage.getItem('employee_id')
+                user_id: localStorage.getItem('employee_id'),
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    Accept: 'application/json'
+                }
             })
 
             .then((response) => {

@@ -26,7 +26,11 @@ const GetOrders = ({user_id}) => {
     const markDone = (event) => {
         axios
         .post("http://127.0.0.1:8000/api/v1/orders/mark_order_done", {
-            order_id: event.currentTarget.id
+            order_id: event.currentTarget.id,
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
         })
 
     }

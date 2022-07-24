@@ -16,7 +16,11 @@ const AddBadge = () => {
     useEffect(() => {
         axios
         .post("http://127.0.0.1:8000/api/v1/users/get_users", {
-            company_id: localStorage.getItem("company_id")
+            company_id: localStorage.getItem("company_id"),
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
         })
         .then((response) => {
             const s = response.data.users;
@@ -26,7 +30,12 @@ const AddBadge = () => {
     }, [])
     useEffect(() => {
         axios
-        .get("http://127.0.0.1:8000/api/v1/badges/get_badges")
+        .get("http://127.0.0.1:8000/api/v1/badges/get_badges"),{
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
+        }
 
         .then((response) => {
             const s = response.data.badges;
@@ -40,6 +49,10 @@ const AddBadge = () => {
         .post("http://127.0.0.1:8000/api/v1/users/add_badge", {
             user_id: user.current.value,
             badge: badge.current.value,
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
         })
         .then((response)=> {
             alert('Assigned badge to the selected employee')

@@ -34,7 +34,11 @@ const Profile = () => {
     useEffect(() => {
         axios
         .post("http://127.0.0.1:8000/api/v1/users/get_user", {
-            user_id: localStorage.getItem('user_id')
+            user_id: localStorage.getItem('user_id'),
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
         })
     
         .then((response) => {
@@ -58,6 +62,10 @@ const Profile = () => {
                     job_title: job_title.current.value,
                     profile_img: s,
                     description: description.current.value,
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem('token')}`,
+                        Accept: 'application/json'
+                    }
                 })
                 .then(() => {
                     name.current.value = ''

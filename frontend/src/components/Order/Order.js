@@ -12,7 +12,11 @@ const Request = ({props}) => {
             user_id: localStorage.getItem("user_id"),
             reward_id: localStorage.getItem("reward_id"),
             company_id: localStorage.getItem("company_id"),
-            request: order.current.value
+            request: order.current.value,
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
             
         })
 }

@@ -10,7 +10,12 @@ const Leaderboard = () => {
 
     useEffect(() => {
         axios
-        .get("http://127.0.0.1:8000/api/v1/leaderboards/get_leaderboard")
+        .get("http://127.0.0.1:8000/api/v1/leaderboards/get_leaderboard"),{
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
+        }
     
         .then((response) => {
             const s = response.data.users;
