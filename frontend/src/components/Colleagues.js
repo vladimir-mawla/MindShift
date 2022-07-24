@@ -18,7 +18,7 @@ const Colleagues = () => {
 
     useEffect(() => {
         axios
-            .post("http://127.0.0.1:8000/api/v1/gained_rewards/get_colleagues", {
+            .post("http://127.0.0.1:8000/api/v1/users/get_colleagues", {
                 company_id: localStorage.getItem('company_id')
             })
 
@@ -33,7 +33,7 @@ const Colleagues = () => {
     return (
         <>
         <Navbar />
-        <div className="center">
+        <div className="users-container">
             {colleagues.map((c) => (
 
 

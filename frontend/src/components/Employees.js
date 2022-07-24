@@ -18,7 +18,7 @@ const Employees = () => {
 
     useEffect(() => {
         axios
-            .post("http://127.0.0.1:8000/api/v1/gained_rewards/get_colleagues", {
+            .post("http://127.0.0.1:8000/api/v1/users/get_colleagues", {
                 company_id: localStorage.getItem('company_id')
             })
 
@@ -29,28 +29,26 @@ const Employees = () => {
             });
     }, []);
 
-    const removeEmpolyee = () =>{
+    const removeEmployee = (event) =>{
         axios
         .post("http://127.0.0.1:8000/api/v1/users/delete_user", {
-            company_id: localStorage.getItem('company_id')
+            user_id: event.currentTarget.id
         })
 
-        .then((response) => {
-            const s = response.data.users;
-            console.log(response.data.users)
-            setColleagues(s);
+        .then(() => {
+
         });
     }
 
     return (
         <>
         <Navbar />
-        <div className="center">
+        <div className="users-container">
             {colleagues.map((c) => (
 
-
+                <div>
+                <span className="profile-close-icon" id={c.id} onClick={removeEmployee}><FaTrash /></span>
                 <div key={c.id} id={c.id} className="co-card" onClick={handleClick}>
-                <span className="profile-close-icon" onClick={removeEmployee}><FaTrash /></span>
                     <div className="additional">
                         <div className="user-card">
                             <div className="level center">
@@ -114,7 +112,7 @@ const Employees = () => {
                     </div>
                 </div>
 
-
+</div>
             ))}
         </div>
         </>

@@ -5,6 +5,15 @@ html, body {
   font-family: Abel, Arial, Verdana, sans-serif;
 }
 
+.users-container {
+  margin-top: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
 .center {
   position: absolute;
   top: 50%;
@@ -13,7 +22,6 @@ html, body {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-
 .co-card {
   width: 450px;
   height: 250px;
@@ -39,11 +47,6 @@ html, body {
   overflow: hidden;
   z-index: 2;
 }
-
-.co-card.green .additional {
-  background: linear-gradient(#92bCa6, #A2CCB6);
-}
-
 
 .co-card:hover .additional {
   width: 100%;
@@ -82,10 +85,6 @@ html, body {
 
 .co-card .additional .user-card .points {
   top: 85%;
-}
-
-.co-card .additional .user-card svg {
-  top: 50%;
 }
 
 .co-card .additional .more-info {
