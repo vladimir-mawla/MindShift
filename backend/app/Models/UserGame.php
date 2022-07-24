@@ -10,6 +10,6 @@ class UserGame extends Model
     use HasFactory;
     public function games()
     {
-        return $this->hasMany(Game::class, 'id');
+        return $this->hasMany(Game::class, 'id', 'game_id');
     }
 }

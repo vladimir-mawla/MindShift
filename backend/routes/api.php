@@ -137,7 +137,7 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'played_games'], function(){
         Route::post('/add_played_game', [UserGameController::class, 'addPlayedGame']);
-        Route::post('/get_played_game', [UserGameController::class, 'getPlayedGames']);
+        Route::post('/get_played_games', [UserGameController::class, 'getPlayedGames']);
 
     });
 
