@@ -26,7 +26,7 @@ const Leaderboard = () => {
 		<div className="leaderboard">
 			<div className="head">
 				<i className="fas fa-crown"></i>
-				<h1>Most active Players</h1>
+				<h1>Most Active Employees</h1>
 			</div>
 			<div className="body">
 				<ol>
