@@ -116,7 +116,7 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'orders'], function(){
         Route::post('/add_order', [OrderController::class, 'addOrder']);
-        Route::get('/get_orders', [OrderController::class, 'getOrders']);
+        Route::post('/get_orders', [OrderController::class, 'getOrders']);
 
     });
 

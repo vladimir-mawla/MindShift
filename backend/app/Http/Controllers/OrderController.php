@@ -22,8 +22,9 @@ class OrderController extends Controller
     }
 
     // Get Orders API
-    public function getOrders(){
-        $orders = Order::all()->where('accepted', 0);
+    public function getOrders(Request $request){
+        $company_id = $request->company_id;
+        $orders = Order::all()->where('accepted', 0)->where('company_id', $company_id);
 
         return response()->json([
             "status" => "success",
