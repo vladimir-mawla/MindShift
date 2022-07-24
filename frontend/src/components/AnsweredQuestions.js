@@ -2,6 +2,7 @@ import './styles/games.css'
 import React from "react";
 import Button from "./Button";
 import Navbar from "./Navbar";
+import GetAnswer from './GetAnswer';
 import { useNavigate, Link, Navigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
@@ -31,7 +32,7 @@ const AnsweredQuestions = () => {
                 {questions.map((question) => (
                     <div key={question.id}>
                         <li key={question.id}>{question.question} ({question.points} points)</li>
-
+                        <GetAnswer question_id={question.id} />
                     </div>
                 ))}
             </ul>
