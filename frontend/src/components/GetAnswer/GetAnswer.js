@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const GetAnswer = (props) => {
     const [answers, setAnswers] = useState([]);
@@ -21,7 +20,6 @@ const GetAnswer = (props) => {
 
     return (
         <div>
-            <AdminNavbar />
             <ul>
                 {answers.map((answer, index) => (
                     <li key={index}>

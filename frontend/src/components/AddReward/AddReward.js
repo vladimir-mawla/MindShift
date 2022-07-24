@@ -1,3 +1,4 @@
+import './addreward.css';
 import React from "react";
 import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
@@ -35,14 +36,36 @@ const AddReward = () => {
     return (
       <>
       <AdminNavbar />
-        <div className="container">
-            <input ref={name} type="text" placeholder="Reward name"></input>
-            <input ref={description} type="text" placeholder="Reward description"></input>
-            <input ref={points} type="text" placeholder="Reward points"></input>
-            <input ref={element} type="file" onChange={() => {encode();}}></input>
-            <Button text={"Submit"} className={"form-btn"} onClick={() => { submit(); }}/>
+        <div>
+            <div className="reward-box">
+              <form>
+                  <div className="input-box">
+                    <label>Reward Name</label>
+                    <input ref={name} type="text"></input>
+                  </div>
+                  <div className="input-box">
+                    <label>Reward Description</label>
+                    <input ref={description} type="text"></input>
+                  </div>
+                  <div className="input-box">
+                    <label>Reward Points</label>
+                    <input ref={points} type="text"></input>
+                  </div>
+                  <div className="input-box">
+                    <label>Reward Image</label>
+                    <input ref={element} type="file" onChange={() => {encode();}}></input>
+                  </div>
+                  <a onClick={() => { submit(); }}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                  </a>
+                </form>
+            </div>
         </div>
-        </>
+      </>
     )
 };
 export default AddReward;

@@ -16,6 +16,7 @@ const AdminNavbar = () => {
                 <li><Link to={"/add_game"}>Add Game</Link></li>
                 <li><Link to={"/add_badge"}>Add Badge</Link></li>
                 <li><Link to={"/add_points"}>Add points</Link></li>
+                <li><Link to={"/add_reward"}>Add Rewards</Link></li>
             </ul>
             
         </nav>
