@@ -1,3 +1,4 @@
+import './addbadge.css';
 import React from "react";
 import Button from '../Button/Button'
 import Navbar from "../Navbar/Navbar";
@@ -51,19 +52,33 @@ const AddBadge = () => {
     return (
         <>
         <AdminNavbar />
-        <label htmlFor="empolyees">Choose an employee:</label>
-        <select ref={user} name="employees">
-            {employees.map((employee, index) => (
-                <option key={index} value={employee.id}>{employee.name}</option>
-            ))}
-        </select><br/>
-        <label htmlFor="badges">Choose an employee:</label>
-        <select ref={badge} name="badges">
-            {badges.map((badge, index) => (
-                <option key={index} value={badge.badge}>{badge.name}</option>
-            ))}
-        </select><br/>
-        <Button text={"Assign"} onClick={addBadge}/>
+        <div className='badge-box'>
+            <form>
+            <div className='select-box'>
+                <label htmlFor="empolyees">Choose an employee:</label>
+                <select ref={user} name="employees">
+                    {employees.map((employee, index) => (
+                        <option key={index} value={employee.id}>{employee.name}</option>
+                    ))}
+                </select><br/>
+            </div>
+            <div className='select-box'>
+                <label htmlFor="badges">Choose an award:</label>
+                <select ref={badge} name="badges">
+                    {badges.map((badge, index) => (
+                        <option key={index} value={badge.badge}>{badge.name}</option>
+                    ))}
+                </select><br/>
+            </div>
+            <a onClick={addBadge}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Assign 
+            </a>
+        </form>
+        </div>
         </>
     )
 };
