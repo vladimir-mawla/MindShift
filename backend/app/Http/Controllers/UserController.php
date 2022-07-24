@@ -28,7 +28,7 @@ class UserController extends Controller
     }
         //Get Users Info
         public function getUser(Request $request){
-            $user = User::find(1)->where('id', $request->user_id)->get();
+            $user = User::where('id', $request->user_id)->get();
     
             return response()->json([
                 "status" => "success",
