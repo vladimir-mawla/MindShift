@@ -23,7 +23,7 @@ use App\Http\Controllers\BadgeController;
 Route::group(['prefix' => 'v1'], function(){
 
     Route::controller(AuthController::class)->group(function () {
-        Route::post('login', 'login');
+        Route::post('login', 'login')->name('home');
         Route::post('register', 'register');
         Route::post('logout', 'logout');
         Route::post('refresh', 'refresh');
@@ -127,10 +127,13 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/get_user', [UserController::class, 'getUser']);
         Route::post('/add_badge', [UserController::class, 'addBadge']);
         Route::post('/edit_user', [UserController::class, 'editUser']);
-        Route::post('/delete_user', [UserController::class, 'deleteUser']);
+        Route::post('/delete_user', [UserController::class, 'deleteUser'])->middleware(['admin']);
         Route::post('/get_colleagues', [UserController::class, 'getColleagues']);
 
     });
+    // Route::group(['middleware' => 'isAdmin'], function () {
+    //     Route::get('admin', 'adminController@adminDashboard');
+    // });
     
     Route::group(['prefix' => 'gained_rewards'], function(){
 
