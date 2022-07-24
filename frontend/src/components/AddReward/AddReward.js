@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const AddReward = () => {
     const element = useRef(0)
@@ -32,6 +33,8 @@ const AddReward = () => {
 
   }
     return (
+      <>
+      <AdminNavbar />
         <div className="container">
             <input ref={name} type="text" placeholder="Reward name"></input>
             <input ref={description} type="text" placeholder="Reward description"></input>
@@ -39,6 +42,7 @@ const AddReward = () => {
             <input ref={element} type="file" onChange={() => {encode();}}></input>
             <Button text={"Submit"} className={"form-btn"} onClick={() => { submit(); }}/>
         </div>
+        </>
     )
 };
 export default AddReward;

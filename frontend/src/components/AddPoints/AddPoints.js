@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const AddPoints = () => {
     const user = useRef(null)
@@ -38,6 +39,7 @@ const AddPoints = () => {
 
     return (
         <>
+        <AdminNavbar />
         <label htmlFor="empolyees">Choose an employee:</label>
         <select ref={user} name="employees" placeholder="select">
             {employees.map((employee, index) => (

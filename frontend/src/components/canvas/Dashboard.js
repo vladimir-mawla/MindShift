@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CanvasJSReact from './canvasjs.react';
 import axios from 'axios';
+import AdminNavbar from '../AdminNavbar/AdminNavbar';
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
  
@@ -54,6 +55,7 @@ class Dashboard extends Component {
 		
 		return (
 		<div>
+			<AdminNavbar />
 			<CanvasJSChart options = {options}
 			/>
 		</div>

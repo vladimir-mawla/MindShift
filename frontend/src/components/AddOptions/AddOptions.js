@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Button from "../Button/Button";
 import { useRef } from "react";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 const AddOptions = () => {
   const input = useRef(0);
 
@@ -19,6 +20,7 @@ const AddOptions = () => {
   }
   return (
     <div>
+      <AdminNavbar />
       <input ref={input} type="text"></input>
       <Button
         text={"Submit"}

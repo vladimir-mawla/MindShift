@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const AddBadge = () => {
     const user = useRef(null)
@@ -49,6 +50,7 @@ const AddBadge = () => {
 
     return (
         <>
+        <AdminNavbar />
         <label htmlFor="empolyees">Choose an employee:</label>
         <select ref={user} name="employees">
             {employees.map((employee, index) => (

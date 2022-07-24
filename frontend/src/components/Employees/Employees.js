@@ -7,6 +7,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import { FaTrophy, FaUsers, FaGamepad, FaCoffee, FaTrash } from 'react-icons/fa';
+import AdminNavbar from '../AdminNavbar/AdminNavbar';
 
 const Employees = () => {
     const navigate = useNavigate();
@@ -52,7 +53,7 @@ const Employees = () => {
     employees.sort((a, b) => b.points - a.points);
     return (
         <>
-            <Navbar />
+            <AdminNavbar />
             <div className="users-container">
                 {employees.map((c) => (
 

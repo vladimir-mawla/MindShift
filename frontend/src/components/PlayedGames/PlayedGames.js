@@ -4,6 +4,7 @@ import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
+import AdminNavbar from '../AdminNavbar/AdminNavbar';
 
 const PlayedGames = () => {
     const navigate = useNavigate()
@@ -27,7 +28,7 @@ const PlayedGames = () => {
 
     return (
         <div className="container">
-        <Navbar />
+        <AdminNavbar />
         <div className="game">
             {games.map((game) => (
             <div key={game.id}>

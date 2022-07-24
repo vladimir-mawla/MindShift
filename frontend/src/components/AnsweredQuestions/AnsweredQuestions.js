@@ -6,6 +6,7 @@ import { useNavigate, Link, Navigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import QuestionOptions from '../QuestionOptions/QuestionOptions';
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const AnsweredQuestions = () => {
     const navigate = useNavigate();
@@ -27,6 +28,7 @@ const AnsweredQuestions = () => {
         
     return (
         <div>
+            <AdminNavbar />
             <ul>
                 {questions.map((question) => (
                     <div key={question.id}>

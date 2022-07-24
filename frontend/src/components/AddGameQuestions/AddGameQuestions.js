@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const AddGameQuestion = () => {
     const navigate = useNavigate()
@@ -32,6 +33,8 @@ const AddGameQuestion = () => {
       }
   }
     return (
+        <>
+        <AdminNavbar />
         <div className="container">
                     <select name="type" ref={question_type}>
                         <option value={0}>Text</option>
@@ -43,6 +46,7 @@ const AddGameQuestion = () => {
             <input ref={points} type="text" placeholder="Question points"></input>
             <Button text={"Submit"} className={"form-btn"} onClick={() => { submit(); }}/>
         </div>
+        </>
     )
 };
 export default AddGameQuestion;
