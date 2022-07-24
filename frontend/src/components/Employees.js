@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
-import { FaTrophy, FaUsers, FaGamepad, FaCoffee } from 'react-icons/fa';
+import { FaTrophy, FaUsers, FaGamepad, FaCoffee, FaTrash } from 'react-icons/fa';
 
 const Employees = () => {
     const navigate = useNavigate();
