@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UserGame;
+use App\Models\Game;
 
 class UserGameController extends Controller
 {
@@ -22,10 +23,10 @@ class UserGameController extends Controller
     // Get Played Games API
     public function getPlayedGames(Request $request){
         $user_id = $request->user_id;
-        $game_id = $request->game_id;
-        $game = UserGame::where('user_id', $user_id)->where('game_id', $game_id)->get();
+        $games = UserGame::with('games')->where('user_id', $user_id)->get();
+        
         return response()->json([
-            $game,
+            $games,
         ], 200);
     }
 }
