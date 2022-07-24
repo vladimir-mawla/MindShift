@@ -61,10 +61,13 @@
     flex-direction: column;  
     gap: 5px;  
 }
-.edit-profile > input{
-    width: 150px;
+.edit-profile > input:not(:first-child){
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid grey;
 }
-#edit-profile-button {
+.edit-profile-button {
     position: absolute;
     top:50%;
     background-color:#0a0a23;
@@ -79,7 +82,24 @@
     font-size: 15px;
     top: 90%;
   }
-#edit-profile-button:hover {
-    background-color:#24c4f4;
+.edit-profile-button:hover {
+    background-color:#95BDCE;
+    transition: 0.7s;
+}
+.edit-button {
+    top:50%;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    margin: 0 30%;
+    font-weight: bolder;
+    font-size: 15px;
+  }
+.edit-button:hover {
+    background-color:#95BDCE;
     transition: 0.7s;
 }

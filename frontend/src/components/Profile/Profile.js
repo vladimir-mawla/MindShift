@@ -87,7 +87,7 @@ const Profile = () => {
                         <h2><strong>City:</strong> {info.city}</h2>
                     </div>
                 </div>
-                <button id='edit-profile-button' onClick={togglePopup}>Edit Profile</button>
+                <button className='edit-profile-button' onClick={togglePopup}>Edit Profile</button>
                 {isOpen && <Popup
                     content={<>
                         <b>Edit Profile</b>
@@ -99,7 +99,7 @@ const Profile = () => {
                             <input ref={city} type="text" placeholder="City"/>
                             <input ref={description} type="text" placeholder="Description"/>
                             <input ref={job_title} type="text" placeholder="Position"/>
-                            <Button text={'Done'} onClick={edit}/>
+                            <Button className={'edit-button'} text={'Done'} onClick={edit}/>
                             
                         </div>
                         
