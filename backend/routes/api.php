@@ -127,11 +127,11 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/add_badge', [UserController::class, 'addBadge']);
         Route::post('/edit_user', [UserController::class, 'editUser']);
         Route::post('/delete_user', [UserController::class, 'deleteUser']);
+        Route::post('/get_colleagues', [UserController::class, 'getColleagues']);
 
     });
     
     Route::group(['prefix' => 'gained_rewards'], function(){
-        Route::post('/get_colleagues', [UserController::class, 'getColleagues']);
 
     });
 
