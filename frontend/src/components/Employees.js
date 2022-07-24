@@ -12,8 +12,8 @@ const Employees = () => {
     const [colleagues, setColleagues] = useState([])
 
     const handleClick = (event) => {
-        localStorage.setItem('colleague_id', event.currentTarget.id);
-        navigate("/");
+        localStorage.setItem('employee_id', event.currentTarget.id);
+        navigate("/answers");
     }
 
     useEffect(() => {
@@ -37,7 +37,7 @@ const Employees = () => {
             {colleagues.map((c) => (
 
 
-                <div key={c.id} className="co-card">
+                <div key={c.id} id={c.id} className="co-card" onClick={handleClick}>
 
                     <div className="additional">
                         <div className="user-card">
