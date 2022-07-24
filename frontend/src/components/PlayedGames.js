@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useRef, useState, useEffect } from "react";
 
-const Answers = () => {
+const PlayedGames = () => {
     const [games, setGames] = useState([])
     useEffect(() => {
 
@@ -11,12 +11,11 @@ const Answers = () => {
             user_id: localStorage.getItem("employee_id")
         })
         .then((response) => {
-            console.log(response.data)
-            //localStorage.setItem("game_id", response.data.games.id)
+            setGames(response.data[0][0]['games'][0])
         })
 
     }, []);
 
 }
 
-export default Answers;
+export default PlayedGames;
