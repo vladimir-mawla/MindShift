@@ -1,3 +1,4 @@
+import './addgamequestions.css'
 import React from "react";
 import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
@@ -35,16 +36,36 @@ const AddGameQuestion = () => {
     return (
         <>
         <AdminNavbar />
-        <div className="container">
+        <div className="game-questions-box">
+            <form>
+                <div className="select-box">
+                    <label>Question Type</label>
                     <select name="type" ref={question_type}>
                         <option value={0}>Text</option>
                         <option value={1}>Radio</option>
                         <option value={2}>Checkbox</option>
                     </select>
-            <input ref={question} type="text" placeholder="Question"></input>
-            <input ref={correct_answer} type="text" placeholder="Correct answer"></input>
-            <input ref={points} type="text" placeholder="Question points"></input>
-            <Button text={"Submit"} className={"form-btn"} onClick={() => { submit(); }}/>
+                </div>
+                <div className="input-box">
+                    <label>Question</label>
+                    <input ref={question} type="text"></input>
+                </div>
+                <div className="input-box">
+                    <label>Correct Answer</label>
+                    <input ref={correct_answer} type="text"></input>
+                </div>
+                <div className="input-box">
+                    <label>Question Points</label>
+                    <input ref={points} type="text"></input>
+                </div>
+                <a onClick={() => { submit(); }}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                </a>
+            </form>
         </div>
         </>
     )
