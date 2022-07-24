@@ -47,7 +47,7 @@ const AddOptions = () => {
           </a>
           </div>
           <div>
-          <a onClick={() => {navigate('/addgame')}}>
+          <a onClick={() => {navigate('/add_game')}}>
             <span></span>
             <span></span>
             <span></span>
