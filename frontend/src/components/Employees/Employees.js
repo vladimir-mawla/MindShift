@@ -5,6 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import Popup from '../PopUp/PopUp';
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
+import GetOrders from '../GetOrders/GetOrders';
 import axios from "axios";
 import { FaTrophy, FaUsers, FaGamepad, FaCoffee, FaTrash } from 'react-icons/fa';
 import AdminNavbar from '../AdminNavbar/AdminNavbar';
@@ -122,8 +123,9 @@ const Employees = () => {
                                 <span className="more">Mouse over the card for more info</span>
                             </div>
                         </div>
-
+                        <GetOrders user_id={c.id}/>
                     </div>
+                    
                 ))}
                 {isOpen && <Popup
                     content={<>
