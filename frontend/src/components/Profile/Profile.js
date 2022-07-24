@@ -79,12 +79,15 @@ const Profile = () => {
                     <img src={info.profile_img} className='profile-img'/>
                     <div className='profile-form'>
                         <h1>{info.name}</h1>
-                        <h2><strong>points:</strong> {info.points}</h2>
-                        <h2><strong>email:</strong> {info.email}</h2>
-                        <h2><strong>job title:</strong> {info.job_title}</h2>
+                        <h2><strong>Points:</strong> {info.points}</h2>
+                        <h2><strong>Email:</strong> {info.email}</h2>
+                        <h2><strong>Position:</strong> {info.job_title}</h2>
+                        <h2><strong>Description:</strong> {info.description}</h2>
+                        <h2><strong>Country:</strong> {info.country}</h2>
+                        <h2><strong>City:</strong> {info.city}</h2>
                     </div>
                 </div>
-                <button onClick={togglePopup}>Edit Profile</button>
+                <button id='edit-profile-button' onClick={togglePopup}>Edit Profile</button>
                 {isOpen && <Popup
                     content={<>
                         <b>Edit Profile</b>

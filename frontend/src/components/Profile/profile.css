@@ -2,6 +2,15 @@
     display: flex;
     justify-content:space-evenly;
     margin-top: 50px;
+    width: 700px;
+    margin: 2% 20%;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
 }
 .profile-img{
     border-radius: 50%;
@@ -55,6 +64,22 @@
 .edit-profile > input{
     width: 150px;
 }
-.edit-profile > button{
-    width: 150px;
+#edit-profile-button {
+    position: absolute;
+    top:50%;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+    margin: 0 42%;
+    font-weight: bolder;
+    font-size: 15px;
+    top: 90%;
+  }
+#edit-profile-button:hover {
+    background-color:#24c4f4;
+    transition: 0.7s;
 }
