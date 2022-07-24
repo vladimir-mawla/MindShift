@@ -73,7 +73,7 @@ const Profile = () => {
         }
 
         return (
-            <div>
+            <div className='profile'>
                 <Navbar />
                 <div className='profile-container'>
                     <img src={info.profile_img} className='profile-img'/>
