@@ -1,6 +1,7 @@
+import './order.css';
 import React, { useEffect, useRef } from "react";
 import axios from "axios";
-import Button from "../Button/Button";
+import Navbar from "../Navbar/Navbar";
 
 const Request = ({props}) => {
     const order = useRef(0);
@@ -16,12 +17,27 @@ const Request = ({props}) => {
         })
 }
     return(
-        <div>
-            <h3>Add your comment bellow</h3>
-            <p>For example: Your day off, Your dinner time, Your favorite coffee, etc...</p>
-            <input ref={order} type='text' placeholder="Add your comment"></input>
-            <Button text={"Submit"} className={"form-btn"} onClick={() => {submit();}}/>
+        <>
+        <Navbar />
+        <div className="order-box">
+            <form>
+                
+                <h3>Add your comment bellow</h3>
+                <p>For example: Your day off, Your dinner time, Your favorite coffee, etc...</p>
+                <div className="input-box">
+                    <label>Add Your Comment</label>
+                    <input ref={order} type='text'></input>
+                </div>
+                <a onClick={() => {submit();}}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                </a>
+            </form>
         </div>
+        </>
     )
 
 }
