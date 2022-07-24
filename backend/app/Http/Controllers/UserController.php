@@ -77,4 +77,12 @@ class UserController extends Controller
             "status" => "Done",
         ], 200);
     }
+    // Delete User API
+    public function deleteUser(Request $request){
+        User::where('id',$request->user_id)->delete();
+
+        return response()->json([
+            "Successfully Deleted",
+        ], 200);
+    }
 }

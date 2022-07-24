@@ -29,6 +29,18 @@ const Employees = () => {
             });
     }, []);
 
+    const removeEmpolyee = () =>{
+        axios
+        .post("http://127.0.0.1:8000/api/v1/users/delete_user", {
+            company_id: localStorage.getItem('company_id')
+        })
+
+        .then((response) => {
+            const s = response.data.users;
+            console.log(response.data.users)
+            setColleagues(s);
+        });
+    }
 
     return (
         <>
@@ -38,7 +50,7 @@ const Employees = () => {
 
 
                 <div key={c.id} id={c.id} className="co-card" onClick={handleClick}>
-
+                <span className="profile-close-icon" onClick={removeEmployee}><FaTrash /></span>
                     <div className="additional">
                         <div className="user-card">
                             <div className="level center">
