@@ -1,11 +1,8 @@
 .navbar{
   background-color: #95BDCE;
   height: 80px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  z-index: 1;
 }
 .nav-links {
   list-style: none;
