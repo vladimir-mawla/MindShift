@@ -1,3 +1,4 @@
+import './addgame.css';
 import React from "react";
 import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
@@ -39,12 +40,33 @@ const AddGame = () => {
     return (
       <>
       <AdminNavbar />
-        <div className="container">
-            <input ref={name} type="text" placeholder="Game name"></input>
-            <input ref={description} type="text" placeholder="Game description"></input>
-            <input ref={points} type="text" placeholder="Game points"></input>
+        <div className="game-box">
+          <form>
+            <div className="input-box">
+              <label>Game Name</label>
+              <input ref={name} type="text"></input>
+            </div>
+            <div className="input-box">
+              <label>Game Description</label>
+            <input ref={description} type="text"></input>
+            </div>
+            <div className="input-box">
+              <label>Game Points</label>
+            <input ref={points} type="text"></input>
+            </div>
+            <div className="input-box">
+              <label>Game Image</label>
             <input ref={element} type="file" onChange={() => {encode();}}></input>
-            <Button text={"Submit"} className={"form-btn"} onClick={() => { submit(); }}/>
+            </div>
+            
+            <a onClick={() => { submit(); }}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Submit
+            </a>
+            </form>
         </div>
         </>
     )
