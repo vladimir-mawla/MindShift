@@ -23,7 +23,14 @@ const GetOrders = ({user_id}) => {
     });
     }, []);
 
-  
+    const markDone = (event) => {
+        axios
+        .post("http://127.0.0.1:8000/api/v1/orders/mark_order_done", {
+            order_id: event.currentTarget.id
+        })
+
+    }
+
     return (
         <div className="orders">
             {orders.length > 0 ? 
@@ -32,7 +39,7 @@ const GetOrders = ({user_id}) => {
                     <>
                 <li key={index} className='order'>
                     <p>{order.request}</p>
-                    <a onClick={markDone}>x</a>
+                    <a id={order.id} onClick={markDone}>x</a>
                 </li>
                 </>
                 ))} </ul> : 'No orders for this user'
