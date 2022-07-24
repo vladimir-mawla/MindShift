@@ -31,4 +31,13 @@ class OrderController extends Controller
             "orders" => $orders,
         ], 200);
     }
+    // Mark Order Done API
+    public function markDone(Request $request){
+        $order_id = $request->order_id;
+        Order::where('id', $order_id)->update(['accepted'=> 1 ]);
+
+        return response()->json([
+            "status" => "success",
+        ], 200);
+    }
 }
