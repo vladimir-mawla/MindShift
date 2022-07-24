@@ -40,7 +40,7 @@ const Employees = () => {
             })
 
             .then(() => {
-
+                window.location.reload();
             });
     }
 
@@ -126,9 +126,9 @@ const Employees = () => {
                 ))}
                 {isOpen && <Popup
                     content={<>
-                        <b>Are you sure you want to remove this user?</b>
-                        <Button text={'Yes'} onClick={removeEmployee} />
-                        <Button text={'No'} onClick={togglePopup} />
+                        <b>Are you sure you want to remove this user?</b><br/>
+                        <Button className={'popup-button'} text={'Yes'} onClick={removeEmployee} />
+                        <Button className={'popup-button'} text={'No'} onClick={togglePopup} />
 
                     </>}
                     handleClose={togglePopup}
