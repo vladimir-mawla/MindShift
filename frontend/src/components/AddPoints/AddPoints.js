@@ -1,3 +1,4 @@
+import './addpoints.css';
 import React from "react";
 import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
@@ -23,7 +24,7 @@ const AddPoints = () => {
         });
     }, [])
     
-    function incremenet(){
+    function increment(){
         axios
         .post("http://127.0.0.1:8000/api/v1/users/points_control", {
             user_id: user.current.value,
@@ -40,15 +41,29 @@ const AddPoints = () => {
     return (
         <>
         <AdminNavbar />
-        <label htmlFor="empolyees">Choose an employee:</label>
-        <select ref={user} name="employees" placeholder="select">
-            {employees.map((employee, index) => (
-                <option key={index} value={employee.id}>{employee.name}</option>
-            ))}
-        </select><br/>
-        <label>Assign points:</label>
-        <input ref={points} type="text"/><br/>
-        <Button text={"Assign"} onClick={incremenet}/>
+        <div className='points-box'>
+            <form>
+            <div className='select-box'>
+                <label htmlFor="empolyees">Choose an employee:</label>
+                <select ref={user} name="employees">
+                    {employees.map((employee, index) => (
+                        <option key={index} value={employee.id}>{employee.name}</option>
+                    ))}
+                </select><br/>
+            </div>
+            <div className='select-box'>
+                <label>Assign points:</label>
+                <input ref={points} type="text"/>
+            </div>
+            <a onClick={increment}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Assign 
+            </a>
+        </form>
+        </div>
         </>
     )
 };
