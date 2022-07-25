@@ -5,6 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
+import ChatBot from '../ChatBot/ChatBot';
 
 const Rewards = () => {
     const navigate = useNavigate();
@@ -35,6 +36,7 @@ const Rewards = () => {
   return (
     <div className="container">
         <Navbar />
+        <ChatBot />
         <div className="game">
             {rewards.map((reward) => (
                 <div className="game" key={reward.id}>
