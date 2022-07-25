@@ -3,6 +3,10 @@ import "./chatbot.css";
 import { FaTimes } from 'react-icons/fa';
 
 const ChatBot = () => {
+  const [inputs, setInputs] = useState(null);
+  const [active, setActive] = useState(0);
+  const [clicked, setClicked] = useState(false);
+  const input = useRef(0);
 
 
   return (
