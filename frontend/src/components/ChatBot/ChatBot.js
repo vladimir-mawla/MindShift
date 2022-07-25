@@ -122,6 +122,19 @@ const ChatBot = () => {
       }, 1000);
     }
 
+    let age = [
+      "How old are you|how old are you",
+    ]; //adding the age-question
+    let words10 = new RegExp(age);
+    if (words10.test(input.current.value)) {
+      // if the input contains some question
+      botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      setTimeout(() => {
+        botMessage.innerHTML = "<div class='chatbot-bot-message'>I've been around so long i can remember</div>";
+      }, 1000);
+    }
+    humanMessage.innerHTML = input.current.value; // display the input
+    input.current.value = "";
   };
 
   return (
