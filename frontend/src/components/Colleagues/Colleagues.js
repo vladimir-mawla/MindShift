@@ -6,6 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import { FaTrophy, FaUsers, FaGamepad, FaCoffee } from 'react-icons/fa';
+import ChatBot from '../ChatBot/ChatBot';
 
 const Colleagues = () => {
     const navigate = useNavigate();
@@ -37,6 +38,7 @@ const Colleagues = () => {
     return (
         <>
         <Navbar />
+        <ChatBot />
         <div className="colleagues-container">
             {colleagues.map((c) => (
 
