@@ -8,6 +8,23 @@ const ChatBot = () => {
   const [clicked, setClicked] = useState(false);
   const input = useRef(0);
 
+  useEffect(() => {
+    const listener = event => {
+      if (event.code === "Enter" || event.code === "NumpadEnter") {
+        if(active){
+          event.preventDefault();
+          handleInput();
+          setInputs(1);
+      }
+      }
+    };
+    document.addEventListener("keydown", listener);
+    return () => {
+      document.removeEventListener("keydown", listener);
+    };
+  }, []);
+
+  
 
   return (
     <>
