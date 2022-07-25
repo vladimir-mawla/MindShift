@@ -76,6 +76,17 @@ const ChatBot = () => {
       }, 1000);
     }
 
+    let rules = [
+      "Rules|rules",
+    ];
+    let set5 = new RegExp(rules);
+    if (set5.test(input.current.value)) {
+      botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      setTimeout(() => {
+        botMessage.innerHTML = "<div class='chatbot-bot-message'>The game rules are simple:</br><ol><li>You can't leave empty answers.</li><li>You can't play a game twice.</li></ol> If admins detect any cheating attempt, you will be kicked out of the application.</div>";
+      }, 1000);
+    }
+
 
   };
 
