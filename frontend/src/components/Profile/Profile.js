@@ -6,6 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import Popup from '../PopUp/PopUp';
+import ChatBot from '../ChatBot/ChatBot';
 
 const Profile = () => {
     const name = useRef(null)
@@ -83,6 +84,7 @@ const Profile = () => {
         return (
             <div className='profile'>
                 <Navbar />
+                <ChatBot />
                 <div className='profile-container'>
                     <img src={info.profile_img} className='profile-img'/>
                     <div className='profile-form'>
