@@ -40,6 +40,30 @@ const ChatBot = () => {
       }, 1000);
     }
 
+    let bye = [
+      "Bye|bye|Goodbye|goodbye|See you later|see you later|See you|see you",
+    ];
+    let set2 = new RegExp(bye);
+    if (set2.test(input.current.value)) {
+      const status = document.querySelector(".chatbot-status");
+      botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      setTimeout(async () => {
+        botMessage.innerHTML = "<div class='chatbot-bot-message'>Bye, have a nice day</div>";
+      }, 1000);
+
+    }
+
+    let thanks = [
+      "Thanks|thanks|thank you|Thank you|Thank You|thank you very much|thank you very much",
+    ];
+    let set3 = new RegExp(thanks);
+    if (set3.test(input.current.value)) {
+      botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      setTimeout(() => {
+        botMessage.innerHTML = "<div class='chatbot-bot-message'>You are welcome</div>";
+      }, 1000);
+    }
+
 
   };
 
