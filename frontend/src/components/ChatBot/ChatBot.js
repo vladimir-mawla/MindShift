@@ -4,14 +4,13 @@ import { FaTimes } from 'react-icons/fa';
 
 const ChatBot = () => {
   const [inputs, setInputs] = useState(null);
-  const [active, setActive] = useState(0);
   const [clicked, setClicked] = useState(false);
   const input = useRef(0);
 
   useEffect(() => {
     const listener = event => {
       if (event.code === "Enter" || event.code === "NumpadEnter") {
-        if(active){
+        if(input.current.value){
           event.preventDefault();
           handleInput();
           setInputs(1);
@@ -29,14 +28,14 @@ const ChatBot = () => {
     const humanMessage = document.querySelector("#message2");
 
     let greet = [
-      "Hello|Hi|hello|hi",
+      "Hello|Hi|hello|hi|Hey|hey",
     ];
     let set1 = new RegExp(greet);
     if (set1.test(input.current.value)) {
       // const status = document.querySelector(".chatbot-status");
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
       setTimeout(() => {
-        botMessage.innerHTML = "<div class='chatbot-bot-message'>Hello There how are you doing today?</br>For Rules, type \"Rules\"</br>For Rules, type \"Rules\"</div>";
+        botMessage.innerHTML = "<div class='chatbot-bot-message'>Hello There how are you doing today?</br>For Rules, type \"Rules\"</br>For Navigation, type your desired location.</div>";
       }, 1000);
     }
 
@@ -100,7 +99,7 @@ const ChatBot = () => {
     }
 
     let location = [
-      "Leaderboards|Rewards|Profile|Games|Colleagues|leaderboards|rewards|profile|games|colleagues",
+      "Leaderboards|Rewards|Profile|Games|Colleagues|Page|leaderboards|rewards|profile|games|colleagues|page",
     ];
     let set7 = new RegExp(location);
     let target = input.current.value;
@@ -164,14 +163,13 @@ const ChatBot = () => {
                 <div className="chatbot-input">
                   <input
                     ref={input}
-                    onChange={()=> {setActive(1)}}
                     type="text"
                     id="input"
                     placeholder="Enter your message"
                   />
                 </div>
                 <div className="chatbot-btn">
-                <button disabled={!active} className='chat-submit' onClick={() => {handleInput(); setInputs(1); setActive(0)}}>
+                <button disabled={!input.current.value} className='chat-submit' onClick={() => {handleInput(); setInputs(1); }}>
                     Send
                   </button>
                 </div>
