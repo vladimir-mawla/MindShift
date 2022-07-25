@@ -5,6 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import ChatBot from '../ChatBot/ChatBot';
 
 const Games = () => {
     const navigate = useNavigate();
@@ -36,6 +37,7 @@ const Games = () => {
     return (
         <div className="container">
             <Navbar />
+            <ChatBot />
             <div className="game">
                 {games.map((game) => (
                 <div key={game.id}>
