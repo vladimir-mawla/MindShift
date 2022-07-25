@@ -5,6 +5,7 @@ import { useNavigate, Link, Navigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import QuestionOptions from '../QuestionOptions/QuestionOptions';
+import ChatBot from "../ChatBot/ChatBot";
 
 const Questions = () => {
     const navigate = useNavigate();
@@ -69,6 +70,8 @@ const Questions = () => {
         console.log(name)
     return (
         <div>
+            <Navbar />
+            <ChatBot />
             <ul>
                 {questions.map((question) => (
                     <div key={question.id}>
