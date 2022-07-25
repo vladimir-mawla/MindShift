@@ -111,6 +111,16 @@ const ChatBot = () => {
       }, 1000);
     }
 
+    let name = [
+      "What's your name|what's your name|What is your name|what is your name|who are you|Who are you",
+    ];
+    let words7 = new RegExp(name);
+    if (words7.test(input.current.value)) {
+      botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      setTimeout(() => {
+        botMessage.innerHTML = "<div class='chatbot-bot-message'>MindShift</div>";
+      }, 1000);
+    }
 
   };
 
