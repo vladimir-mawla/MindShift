@@ -24,7 +24,12 @@ const ChatBot = () => {
     };
   }, []);
 
-  
+  const handleInput = () => {
+    const botMessage = document.querySelector("#message1");
+    const humanMessage = document.querySelector("#message2");
+
+
+  };
 
   return (
     <>
