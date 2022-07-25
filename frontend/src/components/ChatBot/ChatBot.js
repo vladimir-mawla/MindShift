@@ -64,6 +64,18 @@ const ChatBot = () => {
       }, 1000);
     }
 
+    let check_up = [
+      "How are you|how are you doing|how are you doing today|how are you doing today|How are you|how are you",
+    ];
+    let set4 = new RegExp(check_up);
+    if (set4.test(input.current.value)) {
+      const status = document.querySelector(".chatbot-status");
+      botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      setTimeout(() => {
+        botMessage.innerHTML = "<div class='chatbot-bot-message'>I am fine, thank you</div>";
+      }, 1000);
+    }
+
 
   };
 
