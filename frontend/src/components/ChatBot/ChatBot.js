@@ -28,6 +28,18 @@ const ChatBot = () => {
     const botMessage = document.querySelector("#message1");
     const humanMessage = document.querySelector("#message2");
 
+    let greet = [
+      "Hello|Hi|hello|hi",
+    ];
+    let set1 = new RegExp(greet);
+    if (set1.test(input.current.value)) {
+      // const status = document.querySelector(".chatbot-status");
+      botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      setTimeout(() => {
+        botMessage.innerHTML = "<div class='chatbot-bot-message'>Hello There how are you doing today?</br>For Rules, type \"Rules\"</br>For Rules, type \"Rules\"</div>";
+      }, 1000);
+    }
+
 
   };
 
