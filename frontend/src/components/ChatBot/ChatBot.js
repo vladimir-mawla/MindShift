@@ -87,6 +87,18 @@ const ChatBot = () => {
       }, 1000);
     }
 
+    let response = [
+      "I'm fine|I am fine|I am fine today|I am fine today|i'm fine|i'm great|I'm fine|I'm great|Good|good|I'm good|i'm good|great|Great",
+    ];
+    let set6 = new RegExp(response);
+    if (set6.test(input.current.value)) {
+      botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      setTimeout(() => {
+        botMessage.innerHTML =
+          "<div class='chatbot-bot-message'>please choose a movie from the list(minions, doctor strange, jurassic world, thor, sonic, spider-man, dog, the lost city, morbius</div>";
+        }, 1000);
+    }
+
 
   };
 
