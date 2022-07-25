@@ -99,6 +99,18 @@ const ChatBot = () => {
         }, 1000);
     }
 
+    let location = [
+      "Leaderboards|Rewards|Profile|Games|Colleagues|leaderboards|rewards|profile|games|colleagues",
+    ];
+    let set7 = new RegExp(location);
+    let target = input.current.value;
+    if (set7.test(target)) {
+      botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      setTimeout(() => {
+        botMessage.innerHTML = `<div class='chatbot-bot-message'>Here is your link <a href="http://localhost:3000/${target}">Click here to go to ${target}</a></div>`;
+      }, 1000);
+    }
+
 
   };
 
