@@ -22,6 +22,7 @@ import Employees from './components/Employees/Employees';
 import PlayedGames from './components/PlayedGames/PlayedGames';
 import AnsweredQuestions from './components/AnsweredQuestions/AnsweredQuestions';
 import Admin from './components/Admin/Admin';
+import ChatBot from './components/ChatBot/ChatBot';
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
         <Route path="/played_games" element={<PlayedGames />}></Route>
         <Route path="/answered_questions" element={<AnsweredQuestions />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
+        <Route path="/chatbot" element={<ChatBot />}></Route>
       </Routes>
     </BrowserRouter>
     );
