@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
+import ChatBot from '../ChatBot/ChatBot';
 
 const Leaderboard = () => {
     const [users, setUsers] = useState([])
@@ -27,6 +28,7 @@ const Leaderboard = () => {
     return (
         <>
             <Navbar />
+            <ChatBot />
             <div className="leaderboard">
                 <div className="head">
                     <i className="fas fa-crown"></i>
