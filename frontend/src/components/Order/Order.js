@@ -2,6 +2,7 @@ import './order.css';
 import React, { useEffect, useRef } from "react";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
+import ChatBot from '../ChatBot/ChatBot';
 
 const Request = ({props}) => {
     const order = useRef(0);
@@ -23,6 +24,7 @@ const Request = ({props}) => {
     return(
         <>
         <Navbar />
+        <ChatBot />
         <div className="order-box">
             <form>
                 
