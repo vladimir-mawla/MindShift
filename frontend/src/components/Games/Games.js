@@ -50,9 +50,8 @@ const Games = () => {
                                     <svg className="card-arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
                                     <div className="card-header-text">
                                         <div className='dis'>
-
-                                            <div><h3 className="card-title">{game.name}</h3></div>
-                                            <div><h3>{game.points}</h3></div>
+                                            <div className='name'><h3 className="card-title">{game.name}</h3></div>
+                                            <div className='points'><h3>{game.points}</h3></div>
                                         </div>            
                                         <span className="card-status">{game.created_at.slice(5,10)} at {game.created_at.slice(11,16)}</span>
                                     </div>
