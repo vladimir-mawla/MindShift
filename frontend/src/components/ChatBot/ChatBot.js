@@ -22,6 +22,10 @@ const ChatBot = () => {
       document.removeEventListener("keydown", listener);
     };
   }, []);
+  if( clicked && !inputs){
+    const status = document.querySelector(".chatbot-status");
+    status.innerHTML="<div class='grey'>Offline</div> "
+  }
 
   const handleInput = () => {
     const botMessage = document.querySelector("#message1");
@@ -32,6 +36,8 @@ const ChatBot = () => {
     ];
     let set1 = new RegExp(greet);
     if (set1.test(input.current.value)) {
+      const status = document.querySelector(".chatbot-status");
+      status.innerHTML="<div class='green'>Online</div>"
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
       setTimeout(() => {
         botMessage.innerHTML = "<div class='chatbot-bot-message'>Hello There how are you doing today?</br>For Rules, type \"Rules\"</br>For Navigation, type your desired location.</div>";
@@ -43,9 +49,11 @@ const ChatBot = () => {
     ];
     let set2 = new RegExp(bye);
     if (set2.test(input.current.value)) {
+      const status = document.querySelector(".chatbot-status");
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
       setTimeout(async () => {
         botMessage.innerHTML = "<div class='chatbot-bot-message'>Bye, have a nice day</div>";
+        status.innerHTML="<div class='grey'>Offline</div> "
       }, 1000);
 
     }
@@ -66,6 +74,8 @@ const ChatBot = () => {
     ];
     let set4 = new RegExp(check_up);
     if (set4.test(input.current.value)) {
+      const status = document.querySelector(".chatbot-status");
+      status.innerHTML="<div class='green'>Online</div>"
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
       setTimeout(() => {
         botMessage.innerHTML = "<div class='chatbot-bot-message'>I am fine, thank you</div>";
@@ -78,6 +88,8 @@ const ChatBot = () => {
     let set5 = new RegExp(rules);
     if (set5.test(input.current.value)) {
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      const status = document.querySelector(".chatbot-status");
+      status.innerHTML="<div class='green'>Online</div>"
       setTimeout(() => {
         botMessage.innerHTML = "<div class='chatbot-bot-message'>The game rules are simple:</br><ol><li>You can't leave empty answers.</li><li>You can't play a game twice.</li></ol> If admins detect any cheating attempt, you will be kicked out of the application.</div>";
       }, 1000);
@@ -89,6 +101,8 @@ const ChatBot = () => {
     let set6 = new RegExp(response);
     if (set6.test(input.current.value)) {
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      const status = document.querySelector(".chatbot-status");
+      status.innerHTML="<div class='green'>Online</div>"
       setTimeout(() => {
         botMessage.innerHTML =
           "<div class='chatbot-bot-message'>please choose a movie from the list(minions, doctor strange, jurassic world, thor, sonic, spider-man, dog, the lost city, morbius</div>";
@@ -102,8 +116,10 @@ const ChatBot = () => {
     let target = input.current.value;
     if (set7.test(target)) {
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      const status = document.querySelector(".chatbot-status");
+      status.innerHTML="<div class='green'>Online</div>"
       setTimeout(() => {
-        botMessage.innerHTML = `<div class='chatbot-bot-message'>Here is your link <a href="http://localhost:3000/${target}">Click here to go to ${target}</a></div>`;
+        botMessage.innerHTML = `<div class='chatbot-bot-message'>Here is your link <a color='blue' href="http://localhost:3000/${target}">Click here to go to ${target}</a></div>`;
       }, 1000);
     }
 
@@ -113,6 +129,8 @@ const ChatBot = () => {
     let words7 = new RegExp(name);
     if (words7.test(input.current.value)) {
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      const status = document.querySelector(".chatbot-status");
+      status.innerHTML="<div class='green'>Online</div>"
       setTimeout(() => {
         botMessage.innerHTML = "<div class='chatbot-bot-message'>MindShift</div>";
       }, 1000);
@@ -125,6 +143,8 @@ const ChatBot = () => {
     if (words10.test(input.current.value)) {
       // if the input contains some question
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
+      const status = document.querySelector(".chatbot-status");
+      status.innerHTML="<div class='green'>Online</div>"
       setTimeout(() => {
         botMessage.innerHTML = "<div class='chatbot-bot-message'>I've been around so long i can remember</div>";
       }, 1000);
@@ -135,7 +155,7 @@ const ChatBot = () => {
 
   return (
     <>
-      <div className={clicked ? "chatbot" : "hidden"}>
+      <div className={clicked ? "chatbot" : "hidden" }>
         <span className="close-chatbot" onClick={()=>{setClicked(false)}}><FaTimes /></span>
         <div className="chatbot-wrapper">
           <div className="chatbot-content">
@@ -144,6 +164,7 @@ const ChatBot = () => {
               </div>
               <div className="chatbot-right">
                 <div className="chatbot-name">ChatBot</div>
+                <div className="chatbot-status"></div>
               </div>
             </div>
             <div className="chatbot-main">
