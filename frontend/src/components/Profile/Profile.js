@@ -86,7 +86,10 @@ const Profile = () => {
                 <Navbar />
                 <ChatBot />
                 <div className='profile-container'>
-                    <img src={info.profile_img} className='profile-img'/>
+                    <div className='image-container'>
+                        <img src={info.profile_img} className='profile-img'/>
+                        <button className='edit-profile-button' onClick={togglePopup}>Edit Profile</button>
+                    </div>
                     <div className='profile-form'>
                         <h1>{info.name}</h1>
                         <h2><strong>Points:</strong> {info.points}</h2>
@@ -97,7 +100,6 @@ const Profile = () => {
                         <h2><strong>City:</strong> {info.city}</h2>
                     </div>
                 </div>
-                <button className='edit-profile-button' onClick={togglePopup}>Edit Profile</button>
                 {isOpen && <Popup
                     content={<>
                         <b>Edit Profile</b>
