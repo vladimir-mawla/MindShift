@@ -3,8 +3,9 @@ import "./chatbot.css";
 import { FaTimes } from 'react-icons/fa';
 
 const ChatBot = () => {
-  const [inputs, setInputs] = useState(null);
+  const [inputs, setInputs] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const [clickable, setClickable] = useState(false);
   const input = useRef(0);
 
   useEffect(() => {
@@ -13,7 +14,8 @@ const ChatBot = () => {
         if(input.current.value){
           event.preventDefault();
           handleInput();
-          setInputs(1);
+          setInputs(true);
+          setClickable(false);
       }
       }
     };
@@ -40,7 +42,7 @@ const ChatBot = () => {
       status.innerHTML="<div class='green'>Online</div>"
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
       setTimeout(() => {
-        botMessage.innerHTML = "<div class='chatbot-bot-message'>Hello There how are you doing today?</br>For Rules, type \"Rules\"</br>For Navigation, type your desired location.</div>";
+        botMessage.innerHTML = "<div class='chatbot-bot-message'>Hey There! Hope you are scoring well today!</br>For Rules, type \"Rules\".</br>For Navigation, type your desired location.</div>";
       }, 1000);
     }
 
@@ -124,10 +126,10 @@ const ChatBot = () => {
     }
 
     let name = [
-      "What's your name|what's your name|What is your name|what is your name|who are you|Who are you|?",
+      "What's your name|what's your name|What is your name|what is your name|who are you|Who are you|name|Name",
     ];
-    let words7 = new RegExp(name);
-    if (words7.test(input.current.value)) {
+    let set8 = new RegExp(name);
+    if (set8.test(input.current.value)) {
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
       const status = document.querySelector(".chatbot-status");
       status.innerHTML="<div class='green'>Online</div>"
@@ -137,10 +139,10 @@ const ChatBot = () => {
     }
 
     let age = [
-      "How old are you|how old are you",
+      "How old are you|how old are you|age|Age",
     ]; //adding the age-question
-    let words10 = new RegExp(age);
-    if (words10.test(input.current.value)) {
+    let set9 = new RegExp(age);
+    if (set9.test(input.current.value)) {
       // if the input contains some question
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
       const status = document.querySelector(".chatbot-status");
@@ -180,13 +182,14 @@ const ChatBot = () => {
                 <div className="chatbot-input">
                   <input
                     ref={input}
+                    onChange={()=>{setClickable(true)}}
                     type="text"
                     id="input"
                     placeholder="Enter your message"
                   />
                 </div>
                 <div className="chatbot-btn">
-                <button disabled={!input.current.value} className='chat-submit' onClick={() => {handleInput(); setInputs(1); }}>
+                <button disabled={!clickable} className='chat-submit' onClick={() => {handleInput(); setInputs(true); }}>
                     Send
                   </button>
                 </div>
