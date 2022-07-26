@@ -32,7 +32,6 @@ const ChatBot = () => {
     ];
     let set1 = new RegExp(greet);
     if (set1.test(input.current.value)) {
-      // const status = document.querySelector(".chatbot-status");
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
       setTimeout(() => {
         botMessage.innerHTML = "<div class='chatbot-bot-message'>Hello There how are you doing today?</br>For Rules, type \"Rules\"</br>For Navigation, type your desired location.</div>";
@@ -44,7 +43,6 @@ const ChatBot = () => {
     ];
     let set2 = new RegExp(bye);
     if (set2.test(input.current.value)) {
-      const status = document.querySelector(".chatbot-status");
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
       setTimeout(async () => {
         botMessage.innerHTML = "<div class='chatbot-bot-message'>Bye, have a nice day</div>";
@@ -68,7 +66,6 @@ const ChatBot = () => {
     ];
     let set4 = new RegExp(check_up);
     if (set4.test(input.current.value)) {
-      const status = document.querySelector(".chatbot-status");
       botMessage.innerHTML = "<div class='chatbot-bot-message'>Typing...</div>";
       setTimeout(() => {
         botMessage.innerHTML = "<div class='chatbot-bot-message'>I am fine, thank you</div>";
@@ -147,7 +144,6 @@ const ChatBot = () => {
               </div>
               <div className="chatbot-right">
                 <div className="chatbot-name">ChatBot</div>
-                <div className="chatbot-status"></div>
               </div>
             </div>
             <div className="chatbot-main">
