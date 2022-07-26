@@ -124,7 +124,7 @@ const ChatBot = () => {
     }
 
     let name = [
-      "What's your name|what's your name|What is your name|what is your name|who are you|Who are you",
+      "What's your name|what's your name|What is your name|what is your name|who are you|Who are you|?",
     ];
     let words7 = new RegExp(name);
     if (words7.test(input.current.value)) {
