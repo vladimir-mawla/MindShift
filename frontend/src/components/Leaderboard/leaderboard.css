@@ -6,10 +6,10 @@ a {
 
 
 .leaderboard {
-	background: linear-gradient(to bottom, #39535aac, #48a9bd66);
+	background: linear-gradient(to bottom, #047da1, #06a6d6);
 	width: 600px;
 	height: auto;
-	border-radius: 10px;
+	border-radius: 6px;
 	background-color: white;
 	box-shadow: rgba(126, 221, 230, 0.35) 0px 5px 15px;
 	position: absolute;
@@ -42,6 +42,13 @@ a {
 	padding: 16px;
 	display: flex;
 }
+.leaderboard li:first-child {
+	border-radius: 4px 4px 0 0;
+}
+.leaderboard li:last-child {
+	border-radius: 0 0 4px 4px;
+
+}
 .leaderboard li mark {
 	flex-grow: 1;
 	color: snow;
@@ -53,17 +60,17 @@ a {
 	margin-right: 4px;
 }
 .leaderboard li:nth-child(1) {
-	background: #56aab3;
+	background: #06a6d6;
 }
 .leaderboard li:nth-child(2) {
-	background: #4e9aa2;
+	background: #059dcc;
 }
 .leaderboard li:nth-child(3) {
-	background: #468c94;
+	background: #0593be;
 }
 .leaderboard li:nth-child(4) {
-	background: #3c787f;
+	background: #0489b1;
 }
 .leaderboard li:nth-child(5) {
-	background: #35686e;
+	background: #047da1;
 }
