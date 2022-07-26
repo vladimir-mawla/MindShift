@@ -33,14 +33,14 @@ const AnsweredQuestions = () => {
     return (
         <div>
             <AdminNavbar />
-            <ul>
+            <ol>
                 {questions.map((question) => (
                     <div key={question.id}>
                         <li key={question.id}>{question.question} ({question.points} points)</li>
                         <GetAnswer question_id={question.id} />
                     </div>
                 ))}
-            </ul>
+            </ol>
             
         </div>
     );

@@ -72,7 +72,7 @@ const Questions = () => {
         <div>
             <Navbar />
             <ChatBot />
-            <ul>
+            <ol>
                 {questions.map((question) => (
                     <div key={question.id}>
                         <li key={question.id}>{question.question} ({question.points} points)</li>
@@ -81,7 +81,7 @@ const Questions = () => {
                         }
                     </div>
                 ))}
-            </ul>
+            </ol>
             
             <button disabled={!name} onClick={() => {
                 gamePlayed(); 
