@@ -20,19 +20,19 @@ body{
     align-items: center;
 }
 .form-btn {
-    width: 160px;
-    height: 40px;
-    background-color: #03e9f4;
-    color: rgb(0, 0, 0);
-    font-size: 1em;
+    width: 200px;
+    height: 50px;
+    background-color: #026483;
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
     font-weight: bold;
     border-radius: 15px;
     border: 1px solid #95BDCE;
   }
   .form-btn:hover {
-    background-color: rgb(52, 104, 116);
+    background-color: rgb(46, 46, 46);
     color: rgb(238, 238, 238);
-    font-size: 1.1em;
+    font-size: 1.4em;
     font-weight: bolder;
     border: 1px solid rgb(52, 104, 116);
-  }
+}

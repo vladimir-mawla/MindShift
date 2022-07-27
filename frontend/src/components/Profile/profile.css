@@ -18,6 +18,9 @@
 .profile-form{
     width: 300px;
 }
+.profile-form h1,h2{
+    color: white;
+}
 .box {
     position: relative;
     width: 30%;
