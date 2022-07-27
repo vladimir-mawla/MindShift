@@ -37,7 +37,7 @@ const GetOrders = ({user_id}) => {
 
     return (
         <div className="orders">
-            {orders.length > 0 ? 
+            {orders && orders.length > 0 ? 
                 <ul>
                 {orders.map((order, index) => (
                     <>
