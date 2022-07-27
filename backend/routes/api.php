@@ -110,7 +110,8 @@ Route::group(['prefix' => 'v1'], function(){
 
     Route::group(['prefix' => 'leaderboards'], function(){
         Route::post('/add_user', [LeaderboardController::class, 'addUser']);
-        Route::get('/get_leaderboard', [LeaderboardController::class, 'getLeaderboard']);
+        Route::post('/get_leaderboard', [LeaderboardController::class, 'getLeaderboard']);
+        Route::get('/leader_pusher', [LeaderboardController::class, 'pushLeader']);
 
     });
 
