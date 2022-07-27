@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     //Get Company Users
     public function getUsers(Request $request){
-        $users = User::all()->where('company_id', $request->company_id);
+        $users = User::where('company_id', $request->company_id)->get();
 
         return response()->json([
             "status" => "success",

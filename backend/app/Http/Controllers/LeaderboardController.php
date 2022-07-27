@@ -22,7 +22,9 @@ class LeaderboardController extends Controller
     // Get Leaderboard API
     public function getLeaderboard(Request $request){
         $company_id = $request->company_id;
-        $users = User::all()->where("company_id", $company_id)->take(5);
+        $users = User::where("company_id", $company_id)->limit(5)->get();
+        $users->makeHidden(['email', 'badge', 'profile_img', "country", "city", "description", "email_verified_at", "user_type","job_title", "created_at","updated_at", "level", "id", "company_id"]);
+
 
         return response()->json([
             "status" => "success",
