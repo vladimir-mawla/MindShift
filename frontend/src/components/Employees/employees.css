@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
 
-html, body {
-  background: #f5f5f5f5;
-  font-family: Abel, Arial, Verdana, sans-serif;
-}
+
 
 .employees-container {
-  margin-top: 250px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .center {
   position: absolute;
@@ -23,6 +17,7 @@ html, body {
   border-radius: 50%;
 }
 .co-card {
+  display: flex;
   width: 450px;
   height: 250px;
   background-color: #fff;
@@ -193,16 +188,9 @@ html, body {
   border: 1px solid #999;
   overflow: auto;
 }
-.profile-close-icon {
+.delete-icon {
   cursor: pointer;
-  position: fixed;
-  right: 0%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 20px;
-  margin-left: 100px;
+  font-size: 15px;
 }
 
 .close-icon {

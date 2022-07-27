@@ -14,7 +14,11 @@ const GetOrders = ({user_id}) => {
     useEffect(() => {
     axios
     .post("http://127.0.0.1:8000/api/v1/orders/get_orders", {
-        user_id: user_id
+        user_id: user_id,
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            Accept: 'application/json'
+        }
     })
 
     .then((response) => {

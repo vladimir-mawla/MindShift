@@ -51,7 +51,7 @@ const Employees = () => {
 
             .then((response) => {
                 console.log(response.data)
-                // window.location.reload();
+                //window.location.reload();
             });
     }
 
@@ -68,7 +68,7 @@ const Employees = () => {
                 {employees.map((c) => (
 
                     <div key={c.id}>
-                        <span className="profile-close-icon" id={c.id} onClick={togglePopup}><FaTrash /></span>
+                        <span className="delete-icon" id={c.id} onClick={togglePopup}><FaTrash /></span>
                         <div id={c.id} className="co-card" onClick={handleClick}>
                             <div className="additional">
                                 <div className="user-card">
