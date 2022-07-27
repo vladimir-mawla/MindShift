@@ -66,6 +66,9 @@ const Questions = () => {
                         .post("http://127.0.0.1:8000/api/v1/users/test", {
                             message: localStorage.getItem('company_id')
                         })
+                        axios
+                        .get("http://127.0.0.1:8000/api/v1/leaderboards/leader_pusher", {
+                        })
                     }
                     navigate('/games');
                 })
