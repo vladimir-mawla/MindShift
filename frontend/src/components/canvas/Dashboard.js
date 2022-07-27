@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 import CanvasJSReact from './canvasjs.react';
 import axios from 'axios';
+import Pusher from "pusher-js"
 import AdminNavbar from '../AdminNavbar/AdminNavbar';
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
  
 class Dashboard extends Component {	
-	constructor(props) {
-        super(props);
-        this.state = {
+        state = {
             users: [],
-
         };
-
-    }
 	componentDidMount() {
 		axios
         .post("http://127.0.0.1:8000/api/v1/users/get_users", {
@@ -25,10 +21,19 @@ class Dashboard extends Component {
         })
         .then((response) => {
             const s = response.data.users;
-            // this.state.users(s);
+            console.log(s)
 			this.setState({ users: [...this.state.users, s] })
-            
-        });
+        })
+		var pusher = new Pusher('ccb92aa552693d2a8867', {
+			cluster: 'ap2'
+		  });
+		  Pusher.logToConsole = true;
+	  
+		  var channel = pusher.subscribe('my-channel');
+		  channel.bind('my-event', data => {
+
+			this.setState({ users: [data.message[0]] })
+		  });
 	  }
 	render() {
 		// console.log(this.state.users)
