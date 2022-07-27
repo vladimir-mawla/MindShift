@@ -21,13 +21,12 @@ class Dashboard extends Component {
         })
         .then((response) => {
             const s = response.data.users;
-            console.log(s)
 			this.setState({ users: [...this.state.users, s] })
         })
 		var pusher = new Pusher('ccb92aa552693d2a8867', {
 			cluster: 'ap2'
 		  });
-		  Pusher.logToConsole = true;
+		  //Pusher.logToConsole = true;
 	  
 		  var channel = pusher.subscribe('my-channel');
 		  channel.bind('my-event', data => {
