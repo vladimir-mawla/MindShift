@@ -62,6 +62,10 @@ const Questions = () => {
                             user_id: localStorage.getItem("user_id"),
                             points: response.data["Points"]
                         })
+                        axios
+                        .post("http://127.0.0.1:8000/api/v1/users/test", {
+                            message: localStorage.getItem('company_id')
+                        })
                     }
                     navigate('/games');
                 })
