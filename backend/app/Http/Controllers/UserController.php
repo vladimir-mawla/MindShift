@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Events\MyEvent;
 
 class UserController extends Controller
 {
@@ -84,5 +85,13 @@ class UserController extends Controller
         return response()->json([
             "Successfully Deleted",
         ], 200);
+    }
+    // Get Users' points API
+    public function test(Request $request){
+        $message = $request->message;
+        $users = User::all()->where('company_id', $message);
+        $users->makeHidden(['email', 'badge', 'profile_img', "country", "city", "description", "email_verified_at", "user_type","job_title", "created_at","updated_at", "level", "id", "company_id"]);
+        //echo $users;
+        event(new MyEvent([$users]));
     }
 }

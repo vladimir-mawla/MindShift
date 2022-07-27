@@ -129,6 +129,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::post('/edit_user', [UserController::class, 'editUser']);
         Route::post('/delete_user', [UserController::class, 'deleteUser']);
         Route::post('/get_colleagues', [UserController::class, 'getColleagues']);
+        Route::post('/test', [UserController::class, 'test']);
 
     });
 
