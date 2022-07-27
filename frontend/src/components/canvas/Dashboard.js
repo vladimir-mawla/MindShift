@@ -47,6 +47,7 @@ class Dashboard extends Component {
 			animationEnabled: true,
 			exportEnabled: true,
 			theme: "dark2", // "light1", "dark1", "dark2"
+			backgroundColor: "#026483",
 			title:{
 				text: "Employees' Progress"
 			},
@@ -65,6 +66,7 @@ class Dashboard extends Component {
 		<div>
 			<AdminNavbar />
 			<CanvasJSChart options = {options}
+			backgroundColor ={'yellow'}
 			/>
 		</div>
 		);
