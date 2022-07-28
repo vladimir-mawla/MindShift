@@ -1,4 +1,4 @@
-import './form.css';
+import '../Landing/landing.css';
 import React from "react";
 import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
@@ -56,9 +56,9 @@ const Login = () => {
           <input type="password" ref={password} autoComplete="on" />
         </div>
 
-        <Button text={'Login'}/>
+        <Button text={'Login'} onClick={()=>{login()}}/>
         <p>
-          Don't have an account? <Link  to={"/register"}><a>Register</a></Link>
+          Don't have an account? <Link  to={"/register"}>Register</Link>
         </p>
       </form>
 

@@ -8,9 +8,6 @@ import axios from "axios";
 
 const Register = () => {
   const name = useRef(0);
-  const country = useRef(0);
-  const city = useRef(0);
-  const description = useRef(0);
   const job_title = useRef(0);
   const email = useRef(0);
   const password = useRef(0);
@@ -26,9 +23,6 @@ const Register = () => {
           email: email.current.value,
           password: password.current.value,
           job_title: job_title.current.value,
-          password: description.current.value,
-          password: country.current.value,
-          password: city.current.value,
         })
 
         .then((res) => {
@@ -53,53 +47,34 @@ const Register = () => {
   }
 
   return (
-    <div className="login-box">
-      <form>
-        <h2>Register</h2>
-        <div className="user-box">
-          <input type="text" ref={name} />
-          <label>Name</label>
-        </div>
-        <div className="user-box">
-          <input type="email" ref={email} />
-          <label>Email</label>
-        </div>
-        <div className="user-box">
-          <input type="text" ref={city} />
-          <label>City</label>
-        </div>
-        <div className="user-box">
-          <input type="text" ref={job_title} />
-          <label>Position</label>
-        </div>
-        <div className="user-box">
-          <input type="text" ref={description} />
-          <label>Description</label>
-        </div>
-        <div className="user-box">
-          <input type="text" ref={country} />
-          <label>Country</label>
-        </div>
-        <div className="user-box">
-          <input type="password" ref={password} autoComplete="on" />
-          <label>Password</label>
-        </div>
+    <form className='login-form'>
+      <h2>Register</h2>
 
-        <a href="#" onClick={() => { register() }}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Submit
-        </a>
-        <p>
-          <Link className="goto-link" to={"/login"}>Already have an account?</Link>
-        </p>
-      </form>
+      <div className='input'>
+        <label>Name</label>
+        <input type="email" ref={name} />
+      </div>
 
+      <div className='input'>
+        <label>Email</label>
+        <input type="email" ref={email} />
+      </div>
 
-    </div>
+      <div className='input'>
+        <label>Position</label>
+        <input type="email" ref={job_title} />
+      </div>
 
+      <div className='input'>
+        <label>Password</label>
+        <input type="password" ref={password} autoComplete="on" />
+      </div>
+
+      <Button text={'Register'} onClick={()=>{register()}}/>
+      <p>
+        Already have an account? <Link  to={"/login"}>Login</Link>
+      </p>
+  </form>
   );
 };
 export default Register;

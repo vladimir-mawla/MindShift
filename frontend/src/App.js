@@ -23,6 +23,7 @@ import PlayedGames from './components/PlayedGames/PlayedGames';
 import AnsweredQuestions from './components/AnsweredQuestions/AnsweredQuestions';
 import Admin from './components/Admin/Admin';
 import ChatBot from './components/ChatBot/ChatBot';
+import LandingRegister from './components/Landing/LandingRegister';
 
 
 function App() {
@@ -30,8 +31,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
+        <Route path="/login" element={<Landing />}></Route>
+        <Route path="/register" element={<LandingRegister />}></Route>
         <Route path="/games" element={<Games />}></Route>
         <Route path="/questions" element={<Questions />}></Route>
         <Route path="/leaderboards" element={<Leaderboard />}></Route>
