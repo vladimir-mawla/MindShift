@@ -132,7 +132,7 @@ const Employees = () => {
                                 <span className="more">Mouse over the card for more info</span>
                             </div>
                         </div>
-                        <GetOrders user_id={c.id}/>
+                        <GetOrders name={c.name} user_id={c.id}/>
                     </div>
                     
                 ))}

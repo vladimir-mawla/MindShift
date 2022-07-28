@@ -37,6 +37,7 @@ const AddGame = () => {
       }
     })
     .then((response) => {
+        console.log(response.data)
         localStorage.setItem('game_id', response.data.game.id)
         navigate('/add_options')
       });
