@@ -1,8 +1,4 @@
-body{
-    margin: 0;
-    background-color: #f5f5f5f5;
-}
-.hero{
+/* .hero{
     padding-top: 50px;
     display: flex;
     justify-content: space-evenly;
@@ -10,10 +6,8 @@ body{
 .hero div{
     padding: 5%;
 }
-#logo{
-    height: 350px;
-}
-.links {
+
+.form {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -35,4 +29,54 @@ body{
     font-size: 1.4em;
     font-weight: bolder;
     border: 1px solid rgb(52, 104, 116);
+} */
+#logo{
+    height: 350px;
+}
+.hero{
+    display: flex;
+    flex-direction: row;
+}
+.hero div{
+    width: 50%;
+}
+.form{
+    background-color: #0D6582;
+    display: flex;
+    justify-content: center;
+    padding: 13.6% 0;
+    gap: 10%;
+    width: 250px;
+    align-items: center;
+}
+.form input, button{
+    height: 40px;
+    width: 250px;
+    border-radius: 5px;
+    border: 0;
+}
+.form button{
+    margin: 40px 0;
+    background-color: #DF8A27;
+}
+
+.form label{
+    color: white;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    padding: 13% 0;
+}
+.input{
+    margin: 10px 0;
+}
+.form p{
+    color: white;
+}
+.form a{
+    color: #DF8A27;
+}
+.login-form{
+    width: 250px;
 }

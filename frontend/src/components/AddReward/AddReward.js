@@ -35,6 +35,10 @@ const AddReward = () => {
           Accept: 'application/json'
       }
     })
+    .then(()=>{
+      alert("Reward Added")
+      window.location.reload()
+    })
 
   }
     return (

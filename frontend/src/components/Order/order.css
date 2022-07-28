@@ -138,3 +138,11 @@
         bottom: 100%;
     }
 }
+
+.order{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(232, 232, 232);
+    border-radius: 5px;
+    width: 90%;
+}

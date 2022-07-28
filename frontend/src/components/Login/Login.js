@@ -43,34 +43,26 @@ const Login = () => {
   }
 
   return (
-    <div className="login-box">
-      <form>
+      <form className='login-form'>
         <h2>Login</h2>
 
-        <div className="user-box">
-          <input type="email" ref={email} />
+        <div className='input'>
           <label>Email</label>
+          <input type="email" ref={email} />
         </div>
 
-        <div className="user-box">
-          <input type="password" ref={password} autoComplete="on" />
+        <div className='input'>
           <label>Password</label>
+          <input type="password" ref={password} autoComplete="on" />
         </div>
 
-        <a href="#" onClick={() => { login() }}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Login
-        </a>
+        <Button text={'Login'}/>
         <p>
-          <Link className="goto-link" to={"/login"}>Don't have an account?</Link>
+          Don't have an account? <Link  to={"/register"}><a>Register</a></Link>
         </p>
       </form>
 
 
-    </div>
   );
 };
 export default Login;
