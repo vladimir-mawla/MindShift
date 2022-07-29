@@ -79,7 +79,7 @@ h5{
   border-left: 3px solid #2994B7;
   height: 80%;
   /* margin-top: 17px; */
-  padding-left: 50px;
+  padding-left: 30px;
 }
 .link{
   margin-top: 10px;
@@ -89,4 +89,7 @@ h5{
   font-weight: 400;
   background-color: #2994b783;
   border-radius: 5px;
+}
+a{
+  text-decoration: none;
 }

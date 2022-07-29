@@ -44,7 +44,7 @@ const Login = () => {
 
   return (
       <form className='login-form'>
-        <h2>Login</h2>
+        <h1>LOGIN</h1>
 
         <div className='input'>
           <label>Email</label>

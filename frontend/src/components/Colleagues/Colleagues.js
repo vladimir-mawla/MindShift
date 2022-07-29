@@ -34,83 +34,97 @@ const Colleagues = () => {
             });
     }, []);
 
-    colleagues.sort((a,b) => b.points - a.points);
+    colleagues.sort((a, b) => b.points - a.points);
     return (
         <>
-        <Navbar />
-        <ChatBot />
-        <div className="colleagues-container">
-            {colleagues.map((c) => (
+            <div className="col-container">
+                {colleagues.map((user, index) => (
 
-
-                <div key={c.id} className="co-card">
-
-                    <div className="additional">
-                        <div className="user-card">
-                            <div className="level center">
-                                <img className='badge' src={c.badge} />
-                            </div>
-                            <div className="points center">
-                                {c.points} Points
-                            </div>
-                            <img  width="110" height="110"  src={c.profile_img} role="img" aria-labelledby="title desc" className="center"
-                            />
-                        </div>
-                        <div className="more-info">
-                            <h1>{c.name}</h1>
-                            <div className="coords">
-                                <span>{c.email}</span>
-                                <span>Joined {c.created_at.slice(5,7) == '01' ? "January":
-                                              c.created_at.slice(5,7) == '02' ? "February":
-                                              c.created_at.slice(5,7) == '03' ? "March":
-                                              c.created_at.slice(5,7) == '04' ? "April":
-                                              c.created_at.slice(5,7) == '05' ? "May":
-                                              c.created_at.slice(5,7) == '06' ? "June":
-                                              c.created_at.slice(5,7) == '07' ? "July":
-                                              c.created_at.slice(5,7) == '08' ? "August":
-                                              c.created_at.slice(5,7) == '09' ? "September":
-                                              c.created_at.slice(5,7) == '10' ? "October":
-                                              c.created_at.slice(5,7) == '11' ? "November":
-                                              c.created_at.slice(5,7) == '12' ? "December":""} {c.created_at.slice(0,4)}</span>
-                            </div>
-                            <div className="coords">
-                                <span>{c.job_title}</span>
-                                <span>{c.city}, {c.country}</span>
-                            </div>
-                            <div className="stats">
-                                <div>
-                                    <div className="title">Awards</div>
-                                    <i><FaTrophy /></i>
-                                    <div className="value">{c.gained_rewards.length}</div>
-                                </div>
-                                <div>
-                                    <div className="title">Matches</div>
-                                    <i><FaGamepad /></i>
-                                    <div className="value">{c.games.length}</div>
-                                </div>
-                                <div>
-                                    <div className="title">Pals</div>
-                                    <i><FaUsers /></i>
-                                    <div className="value">{colleagues.length}</div>
-                                </div>
-                                <div>
-                                    <div className="title">Coffee</div>
-                                    <i><FaCoffee /></i>
-                                    <div className="value infinity">∞</div>
-                                </div>
+                    <div key={index} className='col'>
+                        <div className='col-profile'>
+                            <div className='col-profile-img'><img src={user.profile_img} className='leader-profile-img' /></div>
+                            <div className='col-profile-info'>
+                                <h5>{user.name}</h5><br />
+                                <div className='leader-points'><div className='coins'></div><p>{user.points} Points</p></div>
                             </div>
                         </div>
+                        <div className='col-contents'>
+                            <h5>{user.games.length} Games</h5>
+                            <div className='col-vl'></div>
+                            <div className='col-points'><h5> {user.email.length} Rewards</h5></div>
+                        </div>
+
                     </div>
-                    <div className="general">
-                        <h1>{c.name}</h1>
-                        <p>{c.description}</p>
-                        <span className="more">Mouse over the card for more info</span>
-                    </div>
-                </div>
 
 
-            ))}
-        </div>
+                    // <div key={c.id} className="co-card">
+
+                    //     <div className="additional">
+                    //         <div className="user-card">
+                    //             <div className="level center">
+                    //                 <img className='badge' src={c.badge} />
+                    //             </div>
+                    //             <div className="points center">
+                    //                 {c.points} Points
+                    //             </div>
+                    //             <img  width="110" height="110"  src={c.profile_img} role="img" aria-labelledby="title desc" className="center"
+                    //             />
+                    //         </div>
+                    //         <div className="more-info">
+                    //             <h1>{c.name}</h1>
+                    //             <div className="coords">
+                    //                 <span>{c.email}</span>
+                    //                 <span>Joined {c.created_at.slice(5,7) == '01' ? "January":
+                    //                               c.created_at.slice(5,7) == '02' ? "February":
+                    //                               c.created_at.slice(5,7) == '03' ? "March":
+                    //                               c.created_at.slice(5,7) == '04' ? "April":
+                    //                               c.created_at.slice(5,7) == '05' ? "May":
+                    //                               c.created_at.slice(5,7) == '06' ? "June":
+                    //                               c.created_at.slice(5,7) == '07' ? "July":
+                    //                               c.created_at.slice(5,7) == '08' ? "August":
+                    //                               c.created_at.slice(5,7) == '09' ? "September":
+                    //                               c.created_at.slice(5,7) == '10' ? "October":
+                    //                               c.created_at.slice(5,7) == '11' ? "November":
+                    //                               c.created_at.slice(5,7) == '12' ? "December":""} {c.created_at.slice(0,4)}</span>
+                    //             </div>
+                    //             <div className="coords">
+                    //                 <span>{c.job_title}</span>
+                    //                 <span>{c.city}, {c.country}</span>
+                    //             </div>
+                    //             <div className="stats">
+                    //                 <div>
+                    //                     <div className="title">Awards</div>
+                    //                     <i><FaTrophy /></i>
+                    //                     <div className="value">{c.gained_rewards.length}</div>
+                    //                 </div>
+                    //                 <div>
+                    //                     <div className="title">Matches</div>
+                    //                     <i><FaGamepad /></i>
+                    //                     <div className="value">{c.games.length}</div>
+                    //                 </div>
+                    //                 <div>
+                    //                     <div className="title">Pals</div>
+                    //                     <i><FaUsers /></i>
+                    //                     <div className="value">{colleagues.length}</div>
+                    //                 </div>
+                    //                 <div>
+                    //                     <div className="title">Coffee</div>
+                    //                     <i><FaCoffee /></i>
+                    //                     <div className="value infinity">∞</div>
+                    //                 </div>
+                    //             </div>
+                    //         </div>
+                    //     </div>
+                    //     <div className="general">
+                    //         <h1>{c.name}</h1>
+                    //         <p>{c.description}</p>
+                    //         <span className="more">Mouse over the card for more info</span>
+                    //     </div>
+                    // </div>
+
+
+                ))}
+            </div>
         </>
     );
 };

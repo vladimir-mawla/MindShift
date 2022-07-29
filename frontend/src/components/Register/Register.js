@@ -48,7 +48,7 @@ const Register = () => {
 
   return (
     <form className='login-form'>
-      <h2>Register</h2>
+      <h1>REGISTER</h1>
 
       <div className='input'>
         <label>Name</label>

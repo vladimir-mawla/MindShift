@@ -3,7 +3,8 @@ import React from 'react';
 import ChatBot from '../ChatBot/ChatBot';
 import Navbar from '../Navbar/Navbar';
 import Games from '../Games/Games';
-import Leaderboard from '../Leaderboard/Leaderboard'
+import Leaderboard from '../Leaderboard/Leaderboard';
+import Colleagues from '../Colleagues/Colleagues'
 
 const Page = () => {
 
@@ -24,7 +25,7 @@ return (
                     <div className='top-users'>
                     </div>
                     <h3>COLLEAGUES</h3>
-
+                        <Colleagues />
                     <div className='col-users'>
                     </div>
                 </div>
