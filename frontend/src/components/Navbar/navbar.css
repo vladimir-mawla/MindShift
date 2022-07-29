@@ -1,18 +1,20 @@
-/* .navbar{
-  background-color: #03e9f4;
+.user-navbar{
+  background-color: #0D6582;
   height: 80px;
   display: flex;
   justify-content: space-between;
 }
-.nav-links {
+.user-nav-links {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  text-align:end;
   font-size: 18px;
   font-weight: bold;
+  margin-right: 100px;
 }
-.nav-links > li {
+.user-nav-links > li {
   margin-right: 20px;
   cursor: pointer;
   display: inline-block;
@@ -20,8 +22,8 @@
 }
 #nav-logo{
   border-radius: 50%;
-  margin: 0 0 10px 25px;
   height: 80px;
+  padding-left: 100px;
 }
 .active{
   background-color: rgba(0, 0, 0, 0.329);
@@ -32,4 +34,55 @@
   background-color: rgba(0, 0, 0, 0.329);
   border-radius: 10px;
   padding: 5px;
-} */
+}
+.user-profile-nav{
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+#profile-img{
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+.user-profile-info{
+  line-height: 70%;
+  color: white;
+  padding-top: 10px;
+}
+.user-profile-img{
+  padding-left: 10px;
+}
+#coins{
+  height: 20px;
+  width: 20px;
+  background-color: #DF8A27;
+  border-radius: 50%;
+  border: 5px solid #2994B7;
+
+}
+#points{
+  display: flex;
+  justify-content: end;
+  padding-top: 0px;
+}
+h5{
+  margin-bottom: 0px;
+  font-weight: 900;
+}
+p{
+  font-size: 13px;
+  font-weight: 500;
+  padding-right: 5px;
+  padding-top: 2px;
+}
+.vl {
+  border-left: 3px solid #2994B7;
+  height: 80%;
+  margin-top: 17px;
+  padding: 0 30px;
+}
+.links{
+  padding-top: 10px;
+  padding-right: 40px;
+}
