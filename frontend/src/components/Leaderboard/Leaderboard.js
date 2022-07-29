@@ -39,26 +39,24 @@ const Leaderboard = () => {
         users.sort((a,b) => b.points - a.points);
     return (
         <>
-            <Navbar />
-            <ChatBot />
             <div className="leaderboard">
-                <div className="head">
-                    <i className="fas fa-crown"></i>
-                    <h1>Most Active Employees</h1>
-                </div>
-                <div className="body">
-                    <ol>
                     {users.map((user, index) => (
 
-                        <li key={index}>
-                            <mark>{user.name}</mark>
-                            <small>{user.points}</small>
-                        </li>
+                        <div className='top-user' key={index}>
+                            <div className='top-user-img'>
+                                <div className='rank'>
+                                    <h3>#{index +1}</h3>
+                                </div>
+                                <img src={user.profile_img} className='leader-profile-img'/>
+                            </div>
+                            <div className='leader-profile-info'>
+                                <h5>{user.name}</h5><br/>
+                                <div className='leader-points'><div className='coins'></div><p>{user.points} Points</p></div>
+                            </div>
+                        </div>
                     ))}
 
-                    </ol>
                 </div>
-            </div>
         </>
     );
 };

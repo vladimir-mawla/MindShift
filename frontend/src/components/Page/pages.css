@@ -2,10 +2,17 @@
     padding: 30px 158px;
 }
 .title{
-    width: 260px;
+    width: 84.8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .title > h1{
     font-size: 28px;
+}
+.title > h3 {
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 .main-body{
     display: flex;
@@ -17,10 +24,14 @@
     width: 675px;
 }
 .users-section{
-    background-color: blueviolet;
     width: 252px;
+
+}
+.users-section > h3{
+    font-weight: 600;
 }
 .game-card{
+    cursor: pointer;
     background-color: #2994B7;
     border-radius: 10px;
     width: 325px;
@@ -71,6 +82,10 @@
     font-weight: 400;
     padding-right: 5px;
 }
+.points > p{
+    font-size: 12px;
+    font-weight: 400;
+}
 .game-info > p {
     color: white;
     font-weight: 400;
@@ -78,4 +93,65 @@
 .game-info > h2 {
     margin: 0;
     align-self: center;
+    color: white;
+}
+.top-user{
+    width: 250px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 5px;
+    background-color: #0D6582;
+    border-radius: 5px;
+}
+.leader-profile-info{
+    width: 122px;
+    color: white;
+    padding-top: 10px;
+    line-height: 70%;
+}
+.leaderboard{
+    margin-bottom: 50px;
+}
+.leader-points{
+    display: flex;
+    justify-content: start;
+    padding-top: 0px;
+}
+.leader-points > p{
+    align-self: center;
+    font-size: 12px;
+    font-weight: 400;
+    padding-right: 5px;
+}
+.top-user-img{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.rank{
+    display: flex;
+    width: 40px;
+    background-color: #DF8A27;
+    height: 59.39px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.rank > h3 {
+    color: white;
+    align-self: center;
+    margin: 0;
+}
+.leader-profile-img{
+    height: 30px;
+    border-radius: 50%;
+    border: 4px solid white;
+    align-self: center;
+    margin-right: 10px;
+}
+.leader-points > p{
+    padding-left: 5px;
 }

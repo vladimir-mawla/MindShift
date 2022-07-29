@@ -36,7 +36,7 @@
   align-items: center;
   padding-top: 20px;
 }
-#profile-img{
+.profile-img{
   height: 42px;
   border-radius: 50%;
   border: 4px solid white;
@@ -50,30 +50,31 @@
 .user-profile-img{
   padding-left: 10px;
 }
-#coins{
-  height: 9px;
-  width: 9px;
+.coins{
+  height: 6px;
+  width: 6px;
   background-color: #DF8A27;
   border-radius: 50%;
-  border: 4px solid #2994B7;
-
+  border: 3px solid #2994B7;
+  margin-bottom: 10px;
 }
-#points{
+.points{
   display: flex;
   justify-content: end;
   padding-top: 0px;
+}
+.points > p{
+  align-self: center;
+  font-size: 13px;
+  font-weight: 500;
+  padding-right: 5px;
 }
 h5{
   margin-bottom: 0px;
   font-weight: 900;
   font-size: 14px;
 }
-p{
-  font-size: 13px;
-  font-weight: 500;
-  padding-right: 5px;
-  padding-top: 2px;
-}
+
 .vl {
   border-left: 3px solid #2994B7;
   height: 80%;

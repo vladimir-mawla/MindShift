@@ -36,10 +36,10 @@ export default function Navbar() {
                 <div className='user-profile-nav'>
                       <div className='user-profile-info'>
                         <h5>{info.name}</h5><br/>
-                        <div id='points'><p>{info.points} Points</p><div id='coins'></div></div>
+                        <div className='points'><p>{info.points} Points</p><div className='coins'></div></div>
                       </div>
                       <div className='user-profile-img'>
-                        <img src={info.profile_img} id='profile-img'/>
+                        <img src={info.profile_img} className='profile-img'/>
                       </div>
                 </div>
             </ul>
