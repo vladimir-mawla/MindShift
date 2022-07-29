@@ -1,0 +1,81 @@
+.container{
+    padding: 30px 158px;
+}
+.title{
+    width: 260px;
+}
+.title > h1{
+    font-size: 28px;
+}
+.main-body{
+    display: flex;
+    justify-content: space-between;
+}
+.games-section{
+    display: flex;
+    justify-content: space-between;
+    width: 675px;
+}
+.users-section{
+    background-color: blueviolet;
+    width: 252px;
+}
+.game-card{
+    background-color: #2994B7;
+    border-radius: 10px;
+    width: 325px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.game-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+}
+.game-contents{
+    background-color: #0D6582;
+    border-radius: 5px;
+    align-self: center;
+    display: flex;
+    width: 305px;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.game-vl{
+    border-left: 3px solid #2994B7;
+    height: 80%;
+    align-self: center;
+}
+.game-contents > h4{
+    font-size: 12px;
+    margin-bottom:0; 
+    align-self: center;
+    color: white;
+    font-weight: 400;
+}
+.points{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.points > h4{
+    font-size: 12px;
+    margin-bottom:0; 
+    align-self: center;
+    color: white;
+    font-weight: 400;
+    padding-right: 5px;
+}
+.game-info > p {
+    color: white;
+    font-weight: 400;
+}
+.game-info > h2 {
+    margin: 0;
+    align-self: center;
+}
