@@ -29,9 +29,9 @@ export default function Navbar() {
     }
     return (
         <nav className='user-navbar'>
-              <img id='nav-logo' src={ require('../assets/logo.png') } onClick={handleClick}/>
+              <img id='user-nav-logo' src={ require('../assets/logo.png') } onClick={handleClick}/>
             <ul className='user-nav-links'>
-                <div className='links'><CustomLink to={"/rewards"}>Rewards</CustomLink></div>
+                <div className='link'><CustomLink to={"/rewards"}>REWARDS</CustomLink></div>
                 <div className="vl"></div>
                 <div className='user-profile-nav'>
                       <div className='user-profile-info'>

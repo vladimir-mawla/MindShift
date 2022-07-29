@@ -12,18 +12,18 @@
   text-align:end;
   font-size: 18px;
   font-weight: bold;
-  margin-right: 100px;
+  padding-right: 150px;
 }
 .user-nav-links > li {
-  margin-right: 20px;
   cursor: pointer;
   display: inline-block;
   margin: 0 10px;
 }
-#nav-logo{
+#user-nav-logo{
+  margin: 0;
   border-radius: 50%;
   height: 80px;
-  padding-left: 100px;
+  padding-left: 150px;
 }
 .active{
   background-color: rgba(0, 0, 0, 0.329);
@@ -82,7 +82,12 @@ p{
   margin-top: 17px;
   padding: 0 30px;
 }
-.links{
-  padding-top: 10px;
-  padding-right: 40px;
+.link{
+  margin-top: 10px;
+  margin-right: 40px;
+  padding: 5px 25px;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: #2994b783;
+  border-radius: 5px;
 }
