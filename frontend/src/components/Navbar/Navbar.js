@@ -1,10 +1,59 @@
 import './navbar.css'
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef } from 'react';
+import Button from '../Button/Button';
 import axios from 'axios';
+import Popup from '../PopUp/PopUp';
 import { Link, useNavigate, useMatch, useResolvedPath } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar({link, to}) {
+    const name = useRef(null)
+    const email = useRef(null)
+    const element = useRef(null)
+    const job_title = useRef(null)
+    var s;
+
   const [info, setInfo] = useState([])
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
+
+  function encode() {
+    var file = element.current.files[0];
+    var reader = new FileReader();
+    reader.onloadend = function () {
+      s = reader.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function edit(){
+    if( !name.current.value || !email.current.value|| !element.current.value || !job_title.current.value){
+        alert("All fields should be filled")
+    }else{
+        axios
+        .post("http://127.0.0.1:8000/api/v1/users/edit_user", {
+            user_id: localStorage.getItem('user_id'),
+            name: name.current.value,
+            email:email.current.value,
+            job_title: job_title.current.value,
+            profile_img: s,
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
+        })
+        .then(() => {
+            name.current.value = ''
+            email.current.value = ''
+            element.current.value = ''
+            job_title.current.value = ''
+            document.window.reload()
+        })
+    }
+}
+
 
   useEffect(() => {
     axios
@@ -28,12 +77,13 @@ export default function Navbar() {
         navigate("/page");
     }
     return (
+      <>
         <nav className='user-navbar'>
               <img id='user-nav-logo' src={ require('../assets/logo.png') } onClick={handleClick}/>
             <ul className='user-nav-links'>
-                <div className='link'><CustomLink to={"/rewards"}>REWARDS</CustomLink></div>
+                <div className='link' onClick={()=>{navigate(`/${to}`)}}><a>{link}</a></div>
                 <div className="vl"></div>
-                <div className='user-profile-nav'>
+                <div className='user-profile-nav' onClick={togglePopup}>
                       <div className='user-profile-info'>
                         <h5>{info.name}</h5><br/>
                         <div className='points'><p>{info.points} Points</p><div className='coins'></div></div>
@@ -43,19 +93,28 @@ export default function Navbar() {
                       </div>
                 </div>
             </ul>
-            
         </nav>
-    )
-}
-function CustomLink({ to, children, ...props  }) {
-    const resolvedPath = useResolvedPath(to)
-    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-  
-    return (
-      <li className={isActive ? "active" : ""}>
-        <Link to={to} {...props}>
-          {children}
-        </Link>
-      </li>
+        {isOpen && <Popup
+          content={<>
+          <div className='popup-profile'>
+            <img src={info.profile_img} className='popup-profile-img'/>
+            <h2>{info.name}</h2>
+            <p>{info.email}</p>
+          </div>
+          <div className='popup-contents'>
+            <h5>{info.gained_rewards.length} Rewards</h5>
+              <div className='popup-vl'></div>
+              <div className='popup-points'><h5>{info.points} Points</h5><div className='popup-coins'></div></div>
+              <div className='popup-vl'></div>
+              <h5>{info.games.length} Games</h5>
+          </div>
+          <div className='popup-buttons'>
+            <Button text={'LOGOUT'} className='popup-logout'/>
+            <Button text={'EDIT PROFILE'} className='popup-edit'/>
+          </div>
+          </>}
+          handleClose={togglePopup}
+          />}
+          </>
     )
 }

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import ChatBot from '../ChatBot/ChatBot';
+import { Button } from 'framework7-react';
 
 const Rewards = () => {
     const navigate = useNavigate();
@@ -16,56 +17,47 @@ const Rewards = () => {
         navigate("/order");
     }
 
-  useEffect(() => {
+    useEffect(() => {
 
-    axios
-      .get("http://127.0.0.1:8000/api/v1/rewards/get_rewards",{
-        headers: {
-            Authorization: `Bearer ${localStorage.getItem('token')}`,
-            Accept: 'application/json'
-        }
-      })
+        axios
+            .get("http://127.0.0.1:8000/api/v1/rewards/get_rewards", {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    Accept: 'application/json'
+                }
+            })
 
-      .then((response) => {
-        const s = response.data.rewards;
-        setRewards(s);
-      });
+            .then((response) => {
+                const s = response.data.rewards;
+                setRewards(s);
+            });
 
-  }, []);
+    }, []);
 
-  return (
-    <div className="container">
-        <Navbar />
-        <ChatBot />
-        <div className="game">
-            {rewards.map((reward) => (
-                <div className="game" key={reward.id}>
-            <ul className="cards">
-                <li id={reward.id} onClick={handleClick}>
-                    <a href="" className="card">
-                        <img src={reward.img} className="card-image" alt="" />
-                        <div className="card-overlay">
-                            <div className="card-header">
-                                <svg className="card-arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                                <div className="card-header-text">
-                                    <div className='dis'>
-
-                                        <div><h3 className="card-title">{reward.name}</h3></div>
-                                        <div><h3>{reward.needed_points}</h3></div>
-                                    </div>            
-                                    <span className="card-status">{reward.created_at.slice(5,10)} at {reward.created_at.slice(11,16)}</span>
-                                </div>
-                            </div>
-                            <p className="card-description">{reward.description}</p>
+    return (
+        <>
+            <Navbar link={"MAIN PAGE"} to={"page"}/>
+            <ChatBot />
+            <div className="reward">
+                {rewards.map((reward, index) => (
+                    <div className='reward-card' id={reward.id} key={index} onClick={handleClick}>
+                        <div className='reward-info'>
+                            <h2>{reward.name}</h2>
+                            <p>{reward.description}</p>
                         </div>
-                    </a>      
-                </li>
-            </ul>
-        </div>
-            ))}
-        </div>
-    </div>
-);
+                        <div className='reward-contents'>
+                            <div className='reward-points'>
+                                <div className='reward-coins'>
+                                </div> 
+                                <h4>{reward.needed_points} Points</h4>
+                            </div>
+                            <Button text={"REDEEM"} className='redeem'/>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
 };
 
 export default Rewards;

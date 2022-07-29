@@ -10,7 +10,7 @@ const Page = () => {
 
 return (
     <>
-        <Navbar />
+        <Navbar link={"REWARDS"} to={'rewards'}/>
         <div className='container'>
             <div className='title'>
                 <h1>AVAILABLE GAMES</h1>
