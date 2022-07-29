@@ -1,0 +1,40 @@
+.questions-container{
+    margin: 0 12%;
+    background-color: #0D6582;
+    border-radius: 10px;
+    padding: 5% 0;
+}
+.questions-container > ol{
+    width: 100%;
+}
+.element{
+    padding: 10px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 36%;
+    width: 93%;
+}
+.input > input{
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0 8px 6px -6px rgb(58, 58, 58);
+}
+
+.questions-button > button {
+    margin-left: 37%;
+    background-color: #DF8A27;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.questions-title{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 12%  0px 12%;
+}
+.questions-title h1:last-child{
+    opacity: 25%;
+}

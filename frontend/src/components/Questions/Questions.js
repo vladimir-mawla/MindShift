@@ -1,3 +1,4 @@
+import './questions.css';
 import React from "react";
 import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
@@ -10,7 +11,7 @@ import ChatBot from "../ChatBot/ChatBot";
 const Questions = () => {
     const navigate = useNavigate();
     const [questions, setQuestions] = useState([])
-    const [name, setName] = useState();
+    const [name, setName] = useState(null);
     var game_id = localStorage.getItem('game_id')
     var p;
 
@@ -76,34 +77,43 @@ const Questions = () => {
         }
         console.log(name)
     return (
-        <div>
-            <Navbar />
+        <>
+            <Navbar link={"MAIN PAGE"} to={"page"}/>
             <ChatBot />
-            <ol>
-                {questions.map((question) => (
-                    <div key={question.id}>
-                        <li key={question.id}>{question.question} ({question.points} points)</li>
-                        {(question.question_type === 0) ? <div><input onChange={(e) => setName(e.target.value)} id={question.id} type={"text"} /></div> : 
-                        <QuestionOptions setName={setName} name={name} question_id={question.id} question_type={question.question_type}/>
-                        }
-                    </div>
-                ))}
-            </ol>
-            
-            <button disabled={!name} onClick={() => {
-                gamePlayed(); 
-                const input = document.getElementsByTagName("input")
-                for (var i = 0; i < input.length; i++){
+            <div className='questions-title'>
+                <h1>OFFICE QUIZ #23</h1>
+                <h1>{questions.length} QUESTIONS</h1>
+            </div>
+            <div className='questions-container'>
+                <ol>
+                    {questions.map((question) => (
+                        <div key={question.id} className='element'>
+                            <div className='question'>
+                                <li key={question.id}>{question.question} ({question.points} points)</li>
+                            </div>
+                            {(question.question_type === 0) ? <div className='input' ><input onChange={(e) => setName(e.target.value)} id={question.id} type={"text"} /></div> : 
+                            <QuestionOptions setName={setName} name={name} question_id={question.id} question_type={question.question_type}/>
+                            }
+                        </div>
+                    ))}
+                </ol>
+                <div className='questions-button'>
+                <Button text={'SUBMIT'} disabled={!name} onClick={() => {
+                    gamePlayed(); 
+                    const input = document.getElementsByTagName("input")
+                    for (var i = 0; i < input.length; i++){
 
-                if (input[i].type === 'text'){
-                    submitAnswers(input[i].id, input[i].value)
-                    
-                } else if (input[i].checked === true) {
-                    console.log(input[i])
-                    submitAnswers(input[i].name, input[i].value)
-                };
-            }}}>Submit</button>
-        </div>
+                    if (input[i].type === 'text'){
+                        submitAnswers(input[i].id, input[i].value)
+                        
+                    } else if (input[i].checked === true) {
+                        console.log(input[i])
+                        submitAnswers(input[i].name, input[i].value)
+                    };
+                }}} />
+                </div>
+            </div>
+        </>
     );
 };
 export default Questions;

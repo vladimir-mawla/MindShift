@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 import ChatBot from '../ChatBot/ChatBot';
+import Button from '../Button/Button';
 
 const Request = ({props}) => {
     const order = useRef(0);
@@ -23,24 +24,19 @@ const Request = ({props}) => {
 }
     return(
         <>
-        <Navbar />
+        <Navbar link={"MAIN PAGE"} to={"page"}/>
         <ChatBot />
         <div className="order-box">
-            <form>
+            <form className='order'>
                 
                 <h3>Add your comment bellow</h3>
                 <p>For example: Your day off, Your dinner time, Your favorite coffee, etc...</p>
                 <div className="input-box">
-                    <label>Add Your Comment</label>
+                    <label>Add Your Comment:</label>
                     <input ref={order} type='text'></input>
                 </div>
-                <a onClick={() => {submit();}}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Submit
-                </a>
+                <Button onClick={() => {submit();}} text={'SUBMIT'}
+                    />
             </form>
         </div>
         </>

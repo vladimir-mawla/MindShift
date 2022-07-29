@@ -26,8 +26,8 @@ const QuestionOptions = (props) => {
     return(
         <div>
             {options.map((option, index) => (
-              (question_type === 1) ? <div key={index}><input onChange={(e) => props.setName(e.target.value)} type="radio" name={option.question_id} value={option.option} />{option.option} </div>:
-              (question_type === 2) ? <div key={index}><input onChange={(e) => props.setName(e.target.value)} type="checkbox" name={option.question_id} value={option.option} />{option.option} </div>:
+              (question_type === 1) ? <div className='radio' key={index}><input onChange={(e) => props.setName(e.target.value)} type="radio" name={option.question_id} value={option.option} />{option.option} </div>:
+              (question_type === 2) ? <div className='checkbox' key={index}><input onChange={(e) => props.setName(e.target.value)} type="checkbox" name={option.question_id} value={option.option} />{option.option} </div>:
               ''
             ))}
         </div>

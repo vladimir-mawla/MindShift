@@ -14,11 +14,15 @@ export default function Navbar({link, to}) {
 
   const [info, setInfo] = useState([])
   const [isOpen, setIsOpen] = useState(false);
+  const [isEditOpen, setIsEditOpen] = useState(false);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
 
+  const toggleEditPopup = () => {
+    setIsEditOpen(!isEditOpen);
+  }
   function encode() {
     var file = element.current.files[0];
     var reader = new FileReader();
@@ -110,10 +114,25 @@ export default function Navbar({link, to}) {
           </div>
           <div className='popup-buttons'>
             <Button text={'LOGOUT'} className='popup-logout'/>
-            <Button text={'EDIT PROFILE'} className='popup-edit'/>
+            <Button text={'EDIT PROFILE'} onClick={toggleEditPopup} className='popup-edit'/>
           </div>
           </>}
           handleClose={togglePopup}
+          />}
+        {isEditOpen && <Popup
+          content={<>
+              <h1>Edit Profile</h1>
+              <div className='popup-edit-profile'>
+                  <input ref={element} type="file" onChange={() => {encode();}}/>
+                  <input ref={name} type="text" placeholder="Name"/>
+                  <input ref={email} type="text" placeholder="Email"/>
+                  <input ref={job_title} type="text" placeholder="Position"/>
+                  <Button className={'edit-button'} text={'Done'} onClick={edit}/>
+                  
+              </div>
+              
+          </>}
+          handleClose={toggleEditPopup}
           />}
           </>
     )

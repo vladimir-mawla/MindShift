@@ -226,3 +226,18 @@ a{
 .popup-edit{
   background-color: #DF8A27;
 }
+.popup-edit-profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup-edit-profile > input:not(:first-child){
+  width: 80%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.popup-edit-profile > button{
+  background-color: #DF8A27;
+}

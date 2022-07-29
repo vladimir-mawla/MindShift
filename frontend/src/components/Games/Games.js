@@ -37,7 +37,7 @@ const Games = () => {
     return (
         <>
                 {games.map((game) => (
-                    <div className='game-card' key={game.id} onClick={handleClick}>
+                    <div className='game-card' id={game.id} key={game.id} onClick={handleClick}>
                         <div className='game-info'>
                             <h2>OFFICE QUIZ #{game.id}</h2>
                             <p>Added {game.created_at.slice(8,10)} {game.created_at.slice(5,7)} at {game.created_at.slice(11,16)}</p>
