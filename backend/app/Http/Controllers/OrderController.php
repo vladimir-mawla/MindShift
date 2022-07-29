@@ -10,8 +10,8 @@ class OrderController extends Controller
     // Add Order API
     public function addOrder(Request $request){
         $order = new Order;
-        $order->request = $request->request;
-        $order->reward_id = $request->question_id;
+        $order->order = $request->order;
+        $order->reward_id = $request->reward_id;
         $order->user_id = $request->user_id;
         $order->company_id = $request->company_id;
         $order->save();
@@ -24,7 +24,7 @@ class OrderController extends Controller
     // Get Orders API
     public function getOrders(Request $request){
         $user_id = $request->user_id;
-        $orders = Order::all()->where('accepted', 0)->where('user_id', $user_id);
+        $orders = Order::where('accepted', 0)->where('user_id', $user_id)->get();
 
         return response()->json([
             "status" => "success",

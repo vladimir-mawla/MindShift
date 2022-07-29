@@ -29,7 +29,7 @@ class UserController extends Controller
     }
         //Get Users Info
         public function getUser(Request $request){
-            $user = User::where('id', $request->user_id)->get();
+            $user = User::with('gainedRewards', 'games')->where('id', $request->user_id)->get();
     
             return response()->json([
                 "status" => "success",
@@ -89,7 +89,7 @@ class UserController extends Controller
     // Get Users' points API
     public function test(Request $request){
         $message = $request->message;
-        $users = User::all()->where('company_id', $message);
+        $users = User::where('company_id', $message)->get();
         $users->makeHidden(['email', 'badge', 'profile_img', "country", "city", "description", "email_verified_at", "user_type","job_title", "created_at","updated_at", "level", "id", "company_id"]);
         //echo $users;
         event(new MyEvent([$users]));
