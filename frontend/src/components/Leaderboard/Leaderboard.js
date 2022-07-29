@@ -35,7 +35,6 @@ const Leaderboard = () => {
             setUsers(data.message[0])
           });
         }, []);
-        console.log(users)
         users.sort((a,b) => b.points - a.points);
     return (
         <>

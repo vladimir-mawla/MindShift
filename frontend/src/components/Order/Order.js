@@ -4,8 +4,11 @@ import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 import ChatBot from '../ChatBot/ChatBot';
 import Button from '../Button/Button';
+import { useNavigate } from 'react-router-dom';
+
 
 const Request = ({props}) => {
+    const navigate = useNavigate();
     const order = useRef(0);
     const submit = () => {
 
@@ -21,13 +24,17 @@ const Request = ({props}) => {
             }
             
         })
+        .then(()=>{
+            alert("Request submitted")
+            navigate('/page')
+        })
 }
     return(
         <>
         <Navbar link={"MAIN PAGE"} to={"page"}/>
         <ChatBot />
         <div className="order-box">
-            <form className='order'>
+            <div className='order'>
                 
                 <h3>Add your comment bellow</h3>
                 <p>For example: Your day off, Your dinner time, Your favorite coffee, etc...</p>
@@ -37,7 +44,7 @@ const Request = ({props}) => {
                 </div>
                 <Button onClick={() => {submit();}} text={'SUBMIT'}
                     />
-            </form>
+            </div>
         </div>
         </>
     )

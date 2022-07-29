@@ -219,3 +219,10 @@
     height: 80%;
     align-self: center;
 }
+.game-coins{
+    height: 6px;
+    width: 6px;
+    background-color: #DF8A27;
+    border-radius: 50%;
+    border: 3px solid #2994B7;
+}

@@ -40,7 +40,7 @@ const Rewards = () => {
             <ChatBot />
             <div className="reward">
                 {rewards.map((reward, index) => (
-                    <div className='reward-card' id={reward.id} key={index} onClick={handleClick}>
+                    <div className='reward-card' key={index} >
                         <div className='reward-info'>
                             <h2>{reward.name}</h2>
                             <p>{reward.description}</p>
@@ -51,7 +51,7 @@ const Rewards = () => {
                                 </div> 
                                 <h4>{reward.needed_points} Points</h4>
                             </div>
-                            <Button text={"REDEEM"} className='redeem'/>
+                            <Button text={"REDEEM"} id={reward.id} onClick={handleClick} className='redeem'/>
                         </div>
                     </div>
                 ))}

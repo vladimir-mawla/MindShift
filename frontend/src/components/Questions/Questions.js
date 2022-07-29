@@ -27,7 +27,6 @@ const Questions = () => {
     
         .then((response) => {
             const s = response.data.questions;
-            console.log(response.data.questions);
             setQuestions(s);
         });
         }, []);
@@ -71,11 +70,10 @@ const Questions = () => {
                         .get("http://127.0.0.1:8000/api/v1/leaderboards/leader_pusher", {
                         })
                     }
-                    navigate('/games');
+                    navigate('/page');
                 })
             })
         }
-        console.log(name)
     return (
         <>
             <Navbar link={"MAIN PAGE"} to={"page"}/>

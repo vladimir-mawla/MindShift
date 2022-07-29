@@ -63,9 +63,9 @@ class Dashboard extends Component {
 		}
 		
 		return (
-		<div>
+		<div className='dashboard-comp'>
 			<AdminNavbar />
-			<CanvasJSChart options = {options}
+			<CanvasJSChart  className="dash" options = {options}
 			backgroundColor ={'yellow'}
 			/>
 		</div>

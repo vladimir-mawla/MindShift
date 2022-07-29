@@ -45,7 +45,7 @@ const Games = () => {
                         <div className='game-contents'>
                             <h4>100 Questions</h4>
                             <div className='game-vl'></div>
-                            <div className='points'><h4>Up to 100 Points </h4> <div id='coins'></div></div>
+                            <div className='points'><h4>Up to 100 Points </h4> <div className='game-coins'></div></div>
                         </div>
                     </div>
             //     <div key={game.id}>

@@ -47,25 +47,25 @@ const Register = () => {
   }
 
   return (
-    <form className='login-form'>
+    <div className='login-form'>
       <h1>REGISTER</h1>
 
-      <div className='input'>
+      <div className='login-input'>
         <label>Name</label>
         <input type="email" ref={name} />
       </div>
 
-      <div className='input'>
+      <div className='login-input'>
         <label>Email</label>
         <input type="email" ref={email} />
       </div>
 
-      <div className='input'>
+      <div className='login-input'>
         <label>Position</label>
         <input type="email" ref={job_title} />
       </div>
 
-      <div className='input'>
+      <div className='login-input'>
         <label>Password</label>
         <input type="password" ref={password} autoComplete="on" />
       </div>
@@ -74,7 +74,7 @@ const Register = () => {
       <p>
         Already have an account? <Link  to={"/login"}>Login</Link>
       </p>
-  </form>
+  </div>
   );
 };
 export default Register;

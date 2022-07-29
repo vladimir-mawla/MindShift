@@ -51,7 +51,7 @@ const Employees = () => {
 
             .then((response) => {
                 console.log(response.data)
-                //window.location.reload();
+                window.location.reload();
             });
     }
 
@@ -62,7 +62,7 @@ const Employees = () => {
 
     employees.sort((a, b) => b.points - a.points);
     return (
-        <>
+        <div className='employee-comp'>
             <AdminNavbar />
             <div className="employees-container">
                 {employees.map((c) => (
@@ -147,7 +147,7 @@ const Employees = () => {
                     </>}
                     handleClose={togglePopup}
                 />}
-        </>
+        </div>
     );
 };
 export default Employees;

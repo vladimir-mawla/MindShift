@@ -43,15 +43,15 @@ const Login = () => {
   }
 
   return (
-      <form className='login-form'>
+      <div className='login-form'>
         <h1>LOGIN</h1>
 
-        <div className='input'>
+        <div className='login-input'>
           <label>Email</label>
           <input type="email" ref={email} />
         </div>
 
-        <div className='input'>
+        <div className='login-input'>
           <label>Password</label>
           <input type="password" ref={password} autoComplete="on" />
         </div>
@@ -60,7 +60,7 @@ const Login = () => {
         <p>
           Don't have an account? <Link  to={"/register"}>Register</Link>
         </p>
-      </form>
+      </div>
 
 
   );
