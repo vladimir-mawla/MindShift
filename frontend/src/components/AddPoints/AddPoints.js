@@ -47,10 +47,10 @@ const AddPoints = () => {
     
 
     return (
-        <>
+        <div className='add-container'>
         <AdminNavbar />
-        <div className='points-box'>
-            <form>
+        <div className='points-container'>
+            <div className='points-form'>
             <div className='select-box'>
                 <label htmlFor="empolyees">Choose an employee:</label>
                 <select ref={user} name="employees">
@@ -63,16 +63,10 @@ const AddPoints = () => {
                 <label>Assign points:</label>
                 <input ref={points} type="text"/>
             </div>
-            <a onClick={increment}>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Assign 
-            </a>
-        </form>
+            <Button text={'ASSIGN'} onClick={increment} className='points-button' />
         </div>
-        </>
+        </div>
+        </div>
     )
 };
 export default AddPoints;

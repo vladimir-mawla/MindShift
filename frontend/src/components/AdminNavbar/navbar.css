@@ -63,3 +63,9 @@ a{
   color: white;
   align-self: center;
 }
+.admin-active > a{
+  font-weight: 300;
+}
+.admin-inactive > a{
+  font-weight: 300;
+}

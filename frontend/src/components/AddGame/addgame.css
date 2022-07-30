@@ -75,3 +75,44 @@
   width: 150px;
 
 }
+/* .game-popup-container{
+  display: flex;
+} */
+.game-popup-container{
+  margin-left: 10%;
+  background-color: #0D6582;
+  border-radius: 10px;
+  padding: 5% 0;
+  width: 80%;
+  height: 40%;
+}
+.game-popup-button{
+  background-color: #DF8A27;
+  align-self: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  width: 200px;
+}
+.popup-form{
+  color: white;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.popup-select-box{
+  align-self: center;
+}
+.popup-select-box > select{
+  border-radius: 5px;
+}
+.popup-select-box > input{
+  border-radius: 5px;
+  padding: 5px;
+  border: 0;
+  margin: 3px;
+  width: 150px;
+}

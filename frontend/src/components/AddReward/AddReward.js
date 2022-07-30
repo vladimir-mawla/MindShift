@@ -42,38 +42,30 @@ const AddReward = () => {
 
   }
     return (
-      <>
+      <div className='add-container'>
       <AdminNavbar />
-        <div>
-            <div className="reward-box">
-              <form>
-                  <div className="input-box">
+            <div className='rewards-container'>
+              <div className="rewards-form">
+                  <div className="select-box">
                     <label>Reward Name</label>
                     <input ref={name} type="text"></input>
                   </div>
-                  <div className="input-box">
+                  <div className="select-box">
                     <label>Reward Description</label>
                     <input ref={description} type="text"></input>
                   </div>
-                  <div className="input-box">
+                  <div className="select-box">
                     <label>Reward Points</label>
                     <input ref={points} type="text"></input>
                   </div>
-                  <div className="input-box">
+                  <div className="select-box">
                     <label>Reward Image</label>
                     <input ref={element} type="file" onChange={() => {encode();}}></input>
                   </div>
-                  <a onClick={() => { submit(); }}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Submit
-                  </a>
-                </form>
+                  <Button onClick={() => { submit(); }} text={'SUBMIT'} className='rewards-button' />
+                </div>
             </div>
-        </div>
-      </>
+      </div>
     )
 };
 export default AddReward;

@@ -63,10 +63,10 @@ const AddBadge = () => {
     
 
     return (
-        <>
+        <div className='add-container'>
         <AdminNavbar />
-        <div className='badge-box'>
-            <form>
+        <div className='badge-container'>
+            <div className='badge-form'>
             <div className='select-box'>
                 <label htmlFor="empolyees">Choose an employee:</label>
                 <select ref={user} name="employees">
@@ -83,16 +83,11 @@ const AddBadge = () => {
                     ))}
                 </select><br/>
             </div>
-            <a onClick={addBadge}>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Assign 
-            </a>
-        </form>
+            <Button onClick={addBadge} text={'ASSIGN'} className='badge-button' />
+
         </div>
-        </>
+        </div>
+        </div>
     )
 };
 export default AddBadge;
