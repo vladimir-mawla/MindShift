@@ -1,6 +1,6 @@
 .admin-navbar{
   background-color: #026483;
-  height: 689px;
+  min-height: 689px;
   width: 250px;
   display: flex;
   flex-direction: column;
