@@ -75,9 +75,7 @@
   width: 150px;
 
 }
-/* .game-popup-container{
-  display: flex;
-} */
+
 .game-popup-container{
   margin-left: 10%;
   background-color: #0D6582;
@@ -97,7 +95,7 @@
 }
 .popup-form{
   color: white;
-  height: 230px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -78,21 +78,11 @@ const Games = () => {
 export default Games;
 
 const AddGame = () => {
-    const element = useRef(0)
     const name = useRef(0)
     const description = useRef(0)
     const points = useRef(0)
     const navigate = useNavigate()
-    var s;
-    
-  function encode() {
-    var file = element.current.files[0];
-    var reader = new FileReader();
-    reader.onloadend = function () {
-      s = reader.result;
-    };
-    reader.readAsDataURL(file);
-  }
+
 
   function submit() {
     axios
@@ -100,7 +90,6 @@ const AddGame = () => {
         name: name.current.value,
         description: description.current.value,
         points: points.current.value,
-        img: s,
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           Accept: 'application/json'
@@ -108,7 +97,7 @@ const AddGame = () => {
     })
     .then((response) => {
         localStorage.setItem('game_id', response.data.game.id)
-        navigate('/add_options')
+        navigate('/add_game_questions')
       });
 
   }
@@ -116,21 +105,18 @@ const AddGame = () => {
         <div className='game-popup-container'>
         <div className="popup-form">
             <div className="popup-select-box">
-                <label>Reward Name</label>
+                <label>Game Name</label>
                 <input ref={name} type="text"></input>
             </div>
             <div className="popup-select-box">
-                <label>Reward Description</label>
+                <label>Game Description</label>
                 <input ref={description} type="text"></input>
             </div>
             <div className="popup-select-box">
-                <label>Reward Points</label>
+                <label>Game Points</label>
                 <input ref={points} type="text"></input>
             </div>
-            <div className="popup-select-box">
-                <label>Reward Image</label>
-                <input ref={element} type="file" onChange={() => { encode(); }}></input>
-            </div>
+
             <Button onClick={() => { submit(); }} text={'SUBMIT'} className='game-popup-button' />
         </div>
     </div>

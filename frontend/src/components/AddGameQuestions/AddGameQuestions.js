@@ -38,11 +38,11 @@ const AddGameQuestion = () => {
       }
   }
     return (
-        <>
+        <div className='add-container'>
         <AdminNavbar />
-        <div className="game-questions-box">
-            <form>
-                <div className="select-box">
+        <div className="games-container">
+            <div className='games-form'>
+                <div className="games-select-box">
                     <label>Question Type</label>
                     <select name="type" ref={question_type}>
                         <option value={0}>Text</option>
@@ -50,28 +50,23 @@ const AddGameQuestion = () => {
                         <option value={2}>Checkbox</option>
                     </select>
                 </div>
-                <div className="input-box">
+                <div className="games-select-box">
                     <label>Question</label>
                     <input ref={question} type="text"></input>
                 </div>
-                <div className="input-box">
+                <div className="games-select-box">
                     <label>Correct Answer</label>
                     <input ref={correct_answer} type="text"></input>
                 </div>
-                <div className="input-box">
+                <div className="games-select-box">
                     <label>Question Points</label>
                     <input ref={points} type="text"></input>
                 </div>
-                <a onClick={() => { submit(); }}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Submit
-                </a>
-            </form>
+                <Button text={'ADD'} className='games-button' onClick={() => { submit(); }} />
+                    
+            </div>
         </div>
-        </>
+        </div>
     )
 };
 export default AddGameQuestion;

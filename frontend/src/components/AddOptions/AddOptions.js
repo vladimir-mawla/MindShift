@@ -33,37 +33,25 @@ const AddOptions = () => {
 
  
   return (
-    <>
+    <div className='add-container'>
       <AdminNavbar />
-      <div className='options-box'>
-        <form>
-          <div className='input-box'>
+      <div className='options-container'>
+        <div className='options-form'>
+          <div className='options-select-box'>
             <label>Option {options.length + 1}</label>
             <input ref={input} type="text"></input>
           </div>
           <div>
-          <a onClick={() => {submit()} }>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Add
-          </a>
+          <Button text={'ADD'} className='options-button' onClick={() => {submit()} } />
           </div>
           <div>
-          <a onClick={() => {navigate('/add_game')}}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Finish
-          </a>
+          <Button text={'FINISH'} className='options-button' onClick={() => {navigate('/add_game_questions')}} />
           </div>
-        </form>
+        </div>
         <ListOptions options={options} />
       </div>
 
-    </>
+    </div>
   );
 };
 export default AddOptions;
