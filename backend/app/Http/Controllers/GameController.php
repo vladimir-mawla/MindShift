@@ -15,7 +15,6 @@ class GameController extends Controller
         $game->name = $request->name;
         $game->description = $request->description;
         $game->points = $request->points;
-        $game->img = $request->img;
         $game->save();
 
         return response()->json([
@@ -68,7 +67,6 @@ class GameController extends Controller
         $description = $request->description;
         Game::where('id', $game_id)->update(['name'=>$name,
                                             'points'=>$points,
-                                            'img'=>$img,
                                             'description'=>$description]);
         return response()->json([
             "status" => "Done",
