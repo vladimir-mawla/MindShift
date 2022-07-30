@@ -2,80 +2,67 @@ import './addgame.css';
 import React from "react";
 import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
-import { useNavigate, Link, Navigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
-import AdminNavbar from "../AdminNavbar/AdminNavbar";
+import AdminNavba from '../AdminNavbar/AdminNavbar';
 
-const AddGame = () => {
-    const element = useRef(0)
-    const name = useRef(0)
-    const description = useRef(0)
-    const points = useRef(0)
-    const navigate = useNavigate()
-    var s;
+const Games = () => {
+    const navigate = useNavigate();
+    const [games, setGames] = useState([])
+
     
-  function encode() {
-    var file = element.current.files[0];
-    var reader = new FileReader();
-    reader.onloadend = function () {
-      s = reader.result;
-    };
-    reader.readAsDataURL(file);
-  }
-
-  function submit() {
+    const handleClick = (event) => {
+        localStorage.setItem('game_id', event.currentTarget.id);
+        navigate("/questions");
+    }
+  
+    useEffect(() => {
     axios
-    .post("http://127.0.0.1:8000/api/v1/games/add_game", {
-        name: name.current.value,
-        description: description.current.value,
-        points: points.current.value,
-        img: s,
+    .get("http://127.0.0.1:8000/api/v1/games/get_games",{
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`,
-          Accept: 'application/json'
-      }
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            Accept: 'application/json'
+        }
     })
-    .then((response) => {
-        console.log(response.data)
-        localStorage.setItem('game_id', response.data.game.id)
-        alert("Game Added")
-        navigate('/add_game_questions')
-      });
 
-  }
+    .then((response) => {
+        const s = response.data.games;
+        console.log(response.data.games)
+        setGames(s);
+    });
+    }, []);
+
+  
     return (
       <>
-      <AdminNavbar />
-        <div className="game-box">
-          <form>
-            <div className="input-box">
-              <label>Game Name</label>
-              <input ref={name} type="text"></input>
+        <div className="add-game-container">
+          <AdminNavba />
+          <div className='add-game'>
+            <div className='add-game-title'>
+              <h1>Games</h1>
+              <Button text={'ADD GAME'} className={'admin-add'} />
             </div>
-            <div className="input-box">
-              <label>Game Description</label>
-            <input ref={description} type="text"></input>
-            </div>
-            <div className="input-box">
-              <label>Game Points</label>
-            <input ref={points} type="text"></input>
-            </div>
-            <div className="input-box">
-              <label>Game Image</label>
-            <input ref={element} type="file" onChange={() => {encode();}}></input>
-            </div>
-            
-            <a onClick={() => { submit(); }}>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Submit
-            </a>
-            </form>
+          <div className='admin-game-cards'>
+                {games.map((game) => (
+                    <div className='add-game-card' id={game.id} key={game.id} onClick={handleClick}>
+                        {/* <span className="game-remove-icon" onClick={()=>{console.log('handleClose')}}><h1>x</h1></span> */}
+                        <div className='admin-game-info'>
+                            <h2>OFFICE QUIZ #{game.id}</h2>
+                            <p>Added {game.created_at.slice(8,10)} {game.created_at.slice(5,7)} at {game.created_at.slice(11,16)}</p>
+                        </div>
+                        <div className='admin-game-contents'>
+                            <Button text={'OPEN'} className='admin-open' />
+                            <div className='admin-game-vl'></div>
+                            <Button text={'DELETE'} className='admin-delete' />
+                        </div>
+                    </div>
+                ))}
+                          </div>
+
+                </div>
         </div>
         </>
-    )
+    );
 };
-export default AddGame;
+export default Games;

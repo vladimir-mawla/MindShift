@@ -1,3 +1,4 @@
+import './dashboard.css';
 import React, { Component } from 'react';
 import CanvasJSReact from './canvasjs.react';
 import axios from 'axios';
@@ -65,9 +66,12 @@ class Dashboard extends Component {
 		return (
 		<div className='dashboard-comp'>
 			<AdminNavbar />
-			<CanvasJSChart  className="dash" options = {options}
-			backgroundColor ={'yellow'}
-			/>
+			<div className="dash">
+				<CanvasJSChart options = {options}
+				backgroundColor ={'yellow'}
+				/>
+			</div>
+
 		</div>
 		);
 	}

@@ -67,7 +67,7 @@ const Employees = () => {
             <div className="employees-container">
                 {employees.map((c) => (
 
-                    <div key={c.id}>
+                    <div className='employee' key={c.id}>
                         <span className="delete-icon" id={c.id} onClick={togglePopup}><FaTrash /></span>
                         <div id={c.id} className="co-card" onClick={handleClick}>
                             <div className="additional">
