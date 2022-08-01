@@ -25,7 +25,7 @@
     width: 675px;
 }
 .users-section{
-    width: 252px;
+    width: 252px;margin-left: 10px;
 
 }
 .users-section > h3{

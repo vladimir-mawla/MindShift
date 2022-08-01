@@ -1,9 +1,10 @@
 .add-container{
   display: flex;
+  justify-content: space-between;
 }
 .rewards-container{
   margin-top: 12%;
-  margin-left: 320px;
+  margin-right: 25%;
   background-color: #0D6582;
   border-radius: 10px;
   padding: 5% 0;
@@ -16,22 +17,29 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
+  width: 80%;
 }
 .rewards-form{
   color: white;
   height: 180px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   flex-direction: column;
 }
 .select-box{
+  margin-left: 30px;
+  margin-right: 30px;
   align-self: center;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
 }
 .select-box > select{
   border-radius: 5px;
+  width: 40%;
 }
 .select-box > input{
   border-radius: 5px;
   padding: 5px;
+  width: 40%;
 }

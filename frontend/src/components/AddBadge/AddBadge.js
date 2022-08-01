@@ -67,7 +67,7 @@ const AddBadge = () => {
         <AdminNavbar />
         <div className='badge-container'>
             <div className='badge-form'>
-            <div className='select-box'>
+            <div className='badge-select-box'>
                 <label htmlFor="empolyees">Choose an employee:</label>
                 <select ref={user} name="employees">
                     {employees.map((employee, index) => (
@@ -75,7 +75,7 @@ const AddBadge = () => {
                     ))}
                 </select><br/>
             </div>
-            <div className='select-box'>
+            <div className='badge-select-box'>
                 <label htmlFor="badges">Choose an award:</label>
                 <select ref={badge} name="badges">
                     {badges.map((badge, index) => (

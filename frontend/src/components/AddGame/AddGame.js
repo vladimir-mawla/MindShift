@@ -19,6 +19,21 @@ const Games = () => {
         navigate("/questions");
     }
 
+    const deleteGame = (event) => {
+        axios
+            .post("http://127.0.0.1:8000/api/v1/games/delete_game", {
+                game_id: event.currentTarget.id,
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`,
+                    Accept: 'application/json'
+                }
+            })
+            .then((response)=>{
+                alert('Game Deleted')
+                window.location.reload()
+            })
+    }
+
     useEffect(() => {
         axios
             .get("http://127.0.0.1:8000/api/v1/games/get_games", {
@@ -51,15 +66,15 @@ const Games = () => {
                     </div>
                     <div className='admin-game-cards'>
                         {games.map((game) => (
-                            <div className='add-game-card' id={game.id} key={game.id} onClick={handleClick}>
+                            <div className='add-game-card' id={game.id} key={game.id} >
                                 <div className='admin-game-info'>
                                     <h2>OFFICE QUIZ #{game.id}</h2>
                                     <p>Added {game.created_at.slice(8, 10)} {game.created_at.slice(5, 7)} at {game.created_at.slice(11, 16)}</p>
                                 </div>
                                 <div className='admin-game-contents'>
-                                    <Button text={'OPEN'} className='admin-open' />
+                                    <Button text={'OPEN'} className='admin-open' id={game.id} onClick={handleClick}/>
                                     <div className='admin-game-vl'></div>
-                                    <Button text={'DELETE'} className='admin-delete' />
+                                    <Button text={'DELETE'} className='admin-delete' id={game.id} onClick={deleteGame}/>
                                 </div>
                             </div>
                         ))}

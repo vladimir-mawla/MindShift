@@ -41,17 +41,13 @@ const AddOptions = () => {
             <label>Option {options.length + 1}</label>
             <input ref={input} type="text"></input>
           </div>
-          <div>
           <Button text={'ADD'} className='options-button' onClick={() => {submit()} } />
-          </div>
-          <div>
           <Button text={'FINISH'} className='options-button' onClick={() => {navigate('/add_game_questions')}} />
           </div>
         </div>
         <ListOptions options={options} />
       </div>
 
-    </div>
   );
 };
 export default AddOptions;

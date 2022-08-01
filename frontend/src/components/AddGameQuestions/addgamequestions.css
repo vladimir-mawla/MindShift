@@ -1,9 +1,10 @@
 .add-container{
   display: flex;
+  justify-content: space-between;
 }
 .games-container{
   margin-top: 12%;
-  margin-left: 320px;
+  margin-right: 25%;
   background-color: #0D6582;
   border-radius: 10px;
   padding: 5% 0;
@@ -16,6 +17,7 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
+  width: 80%;
 }
 .games-form{
   color: white;
@@ -24,17 +26,28 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+
 }
 .games-select-box{
+  margin-left: 30px;
+  margin-right: 30px;
   align-self: center;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
 }
 .games-select-box > select{
   border-radius: 5px;
+  width: 40%;
+
 }
 .games-select-box > input{
   border-radius: 5px;
   padding: 5px;
   border: 0;
   margin: 3px;
-  width: 150px;
+  width: 40%;
+}
+.games-select-box > label{
+  padding-top: 5px;
 }

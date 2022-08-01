@@ -36,10 +36,10 @@ const Request = ({props}) => {
         <div className="order-box">
             <div className='order'>
                 
-                <h3>Add your comment bellow</h3>
+                <h3>Add your request below</h3>
                 <p>For example: Your day off, Your dinner time, Your favorite coffee, etc...</p>
                 <div className="input-box">
-                    <label>Add Your Comment:</label>
+                    <label>Add Your Request:</label>
                     <input ref={order} type='text'></input>
                 </div>
                 <Button onClick={() => {submit();}} text={'SUBMIT'}
