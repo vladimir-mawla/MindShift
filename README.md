@@ -4,7 +4,7 @@
 
 > The project is a web application related to gamification at work, implemented by incorporating gaming elements in non-gaming situations.   
 
-**[PROJECT PHILOSOPHY](https://github.com/vladimir-mawla/MindShift#-project-philosophy) • [WIREFRAMES](https://github.com/vladimir-mawla/MindShift#-wireframes) • [TECH STACK](https://github.com/vladimir-mawla/MindShift#-tech-stack) • [IMPLEMENTATION](https://github.com/vladimir-mawla/MindShift#-impplementation) • [HOW TO RUN?](https://github.com/vladimir-mawla/MindShift#-how-to-run)**
+**[PROJECT PHILOSOPHY](https://github.com/vladimir-mawla/MindShift#-project-philosophy) • [WIREFRAMES](https://github.com/vladimir-mawla/MindShift#-wireframes) • [TECH STACK](https://github.com/vladimir-mawla/MindShift#-tech-stack) • [IMPLEMENTATION](https://github.com/vladimir-mawla/MindShift#-implementation) • [HOW TO RUN?](https://github.com/vladimir-mawla/MindShift#-how-to-run)**
 
 </div>
 
@@ -24,11 +24,11 @@
 > This design was planned before on paper, then moved to Figma app for the fine details.
 Note that I didn't use any styling library or theme, all from scratch and using pure css modules.
 
-| Landing  |     Home     |
-| -----------------| -----|
-| ![Landing](/readme/Landing.png) | ![Home](/readme/Home.png) |
+| Landing  |     Home     | Questions |
+| -----------------| -----|-----------|
+| ![Landing](/readme/Landing.png) | ![Home](/readme/Home.png) | ![Questions](/readme/Questions.png) |
 
-|     Rewards      |    Profile     |
+|     Rewards      | Profile |
 | -----------------| -----|
 | ![Rewards](/readme/Rewards.png) | ![Profile](/readme/Profile.png) |
 
@@ -50,9 +50,9 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 
 > Using the above mentioned tech stacks and the wireframes built with figma, the implementation of the app is shown as below. These are screenshots from the real app
 
-| Landing  | Home  |
-| -----------------| -----|
-| ![Landing](/readme/Landing_screen.png) | ![Home/Search](/readme/Home_screen.png) |
+| Landing  | Home  |Questions |
+|----------|-------|----------|
+| ![Landing](/readme/Landing_screen.png) | ![Home](/readme/Home_screen.png) | ![Questions](/readme/Questions_screen.png) |
 
 
 <br><br>
