@@ -26,11 +26,11 @@ Note that I didn't use any styling library or theme, all from scratch and using 
 
 | Landing  |     Home     |
 | -----------------| -----|
-| ![Landing](https://github.com/vladimir-mawla/MindShift/readme/Landing) | ![Home](https://github.com/vladimir-mawla/MindShift/readme/Home) |
+| ![Landing](https://github.com/vladimir-mawla/MindShift/readme/Landing.png) | ![Home](https://github.com/vladimir-mawla/MindShift/readme/Home.png) |
 
 |     Rewards      |    Profile     |
 | -----------------| -----|
-| ![Rewards](https://github.com/vladimir-mawla/MindShift/readme/Rewards) | ![Profile](https://github.com/vladimir-mawla/MindShift/readme/Profile) |
+| ![Rewards](https://github.com/vladimir-mawla/MindShift/readme/Rewards.png) | ![Profile](https://github.com/vladimir-mawla/MindShift/readme/Profile.png) |
 
 
 <br><br>
@@ -51,7 +51,7 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 
 | Landing  | Home  |
 | -----------------| -----|
-| ![Landing](https://github.com/vladimir-mawla/MindShift/readme/Landing_screen) | ![Home/Search](https://github.com/vladimir-mawla/MindShift/readme/Home_screen) |
+| ![Landing](https://github.com/vladimir-mawla/MindShift/readme/Landing_screen.png) | ![Home/Search](https://github.com/vladimir-mawla/MindShift/readme/Home_screen.png) |
 
 
 <br><br>
