@@ -22,25 +22,6 @@ class AnswerController extends Controller
             "status" => "Success",
         ], 200);
     }
-    // Get Question's Answer
-    public function getAnswerOfQuestion(Request $request){
-        $question_id = $request->question_id;
-        $answer = Answer::where('question_id', $question_id)->get();
-
-        return response()->json(
-            $answer
-        );
-    }
-    // Get User's Answer on question
-    public function getAnswerOfUserOnQuestion(Request $request){
-        $user_id = $request->user_id;
-        $question_id = $request->question_id;
-
-        $answer = Answer::where('question_id', $question_id)->where('user_id', $user_id)->get();
-        return response()->json(
-            $answer
-        );
-    }
     // Check Answer
     public function checkAnswer(Request $request){
 

@@ -8,17 +8,6 @@ use App\Models\User;
 
 class LeaderboardController extends Controller
 {
-    //Add Users API
-    public function addUser(Request $request){
-        $leaderboard = new Leaderboard;
-        $leaderboard->user_id = $request->user_id;
-        $leaderboard->save();
-
-        return response()->json([
-            "status" => "Success",
-            "leaderboard" => $leaderboard,
-        ], 200);
-    }
     // Get Leaderboard API
     public function getLeaderboard(Request $request){
         $company_id = $request->company_id;
