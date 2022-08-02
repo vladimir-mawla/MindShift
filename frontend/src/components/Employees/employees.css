@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
-
+html{
+  height: 100%;
+}
 .employee-comp{
   display: flex;
   min-width: 500px;
@@ -228,4 +230,22 @@
 }
 a {
   cursor: pointer;
+}
+@media only screen and (max-width: 1100px) {
+  .employees-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 100px;
+    margin-left: 0%;
+  }
+  .co-card {
+    display: flex;
+    width: 95%;
+  }
+  .employee{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
 }

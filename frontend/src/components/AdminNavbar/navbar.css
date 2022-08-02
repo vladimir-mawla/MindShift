@@ -69,3 +69,46 @@ a{
 .admin-inactive > a{
   font-weight: 300;
 }
+@media only screen and (max-width: 1100px) {
+  html{
+    margin: 0;
+  }
+  #admin-nav-logo{
+    display: none;
+  }
+  .admin-navbar{
+    min-height: 68px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: auto;
+    background-color: #026483;
+  }
+  .admin-upper-nav{
+    display: none;
+  }
+  .admin-nav-links {
+    flex-wrap: wrap;
+    height: 80px;
+    flex-direction: row;
+    font-size: 15px;
+  }
+  .admin-nav-links > li {
+    margin-right: 20px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .admin-inactive{
+    text-align: center;
+    width: 90px;
+    padding: 5px;
+  }
+  .admin-logout{
+    text-align: center;
+    width: 90px;
+    height: 28px;
+    padding: 5px;
+    margin: 0;
+  }
+}

@@ -54,3 +54,38 @@
     margin-bottom: 50px;
     text-align: center;
 }
+@media only screen and (max-width: 750px) {
+    html{
+        margin: 0;
+    }
+    .logo{
+        display: none;
+    }
+    #logo{
+        display: none;
+    }
+    .hero{
+        width: 100%;
+        display: block;
+    }
+    .form{
+        width: 100%;
+    }
+    .login-input{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+    .login-form{
+        width: 20%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .hero div{
+        width: 100%;
+    }
+    .login-form > div{
+        width: 254px;
+    }
+}

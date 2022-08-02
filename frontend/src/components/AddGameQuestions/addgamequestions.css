@@ -51,3 +51,18 @@
 .games-select-box > label{
   padding-top: 5px;
 }
+@media only screen and (max-width: 1100px) {
+  .add-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .games-container{
+    align-self: center;
+    padding: 5% 0;
+    width: 80%;
+    height: 40%;
+    max-width: 300px;
+    margin: 0;
+    margin-top: 12%;
+  }
+}

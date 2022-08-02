@@ -7,3 +7,16 @@
     margin-left: 185px;
     margin-right: 150px;
 }
+@media only screen and (max-width: 1100px) {
+    .dashboard-comp{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .dash{
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }

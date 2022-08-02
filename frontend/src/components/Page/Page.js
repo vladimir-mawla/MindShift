@@ -21,6 +21,7 @@ return (
                     <Games />
                 </div>
                 <div className='users-section'>
+                    <h3 className='top-active-mobile'>TOP ACTIVE</h3>
                         <Leaderboard />
                     <div className='top-users'>
                     </div>
@@ -28,6 +29,8 @@ return (
                         <Colleagues />
                     <div className='col-users'>
                     </div>
+                    <h3 className='games-mobile'>AVAILABLE GAMES</h3>
+
                 </div>
                 <ChatBot />
             </div>

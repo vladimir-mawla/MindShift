@@ -30,8 +30,9 @@ export default function AdminNavba() {
                 <CustomLink to={"/add_badge"}>Add Badge</CustomLink>
                 <CustomLink to={"/add_points"}>Add points</CustomLink>
                 <CustomLink to={"/add_reward"}>Add Rewards</CustomLink>
+                <Button text={'LOGOUT'} onClick={()=>{logout()}} className='admin-logout' /> 
+
             </ul>
-            <Button text={'LOGOUT'} onClick={()=>{logout()}} className='admin-logout' /> 
             
         </nav>
     )

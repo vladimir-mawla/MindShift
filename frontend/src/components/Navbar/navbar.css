@@ -241,3 +241,40 @@ a{
 .popup-edit-profile > button{
   background-color: #DF8A27;
 }
+@media only screen and (max-width: 830px) {
+  .user-nav-links {
+    padding-right: 5%;
+  }
+  #user-nav-logo{
+    padding-left: 5%;
+  }
+}
+@media only screen and (max-width: 600px) {
+
+  .user-profile-info{
+    display: none;
+  }
+  #user-nav-logo{
+    padding-left: 10px;
+  }
+  .user-profile-nav{
+    width: 10%;
+  }
+  .link{
+    margin: 0;
+    margin-right: 5px;
+  }
+  .user-nav-links{
+    width: 58%;
+    padding: 0;
+    padding-right: 10px;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .vl{
+    padding: 0;
+  }
+  .profile-img{
+    margin-bottom: 12px;
+  }
+}
