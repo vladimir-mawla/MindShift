@@ -23,6 +23,15 @@ const Rewards = () => {
                 Accept: 'application/json'
             }
         })
+        axios
+        .post("http://127.0.0.1:8000/api/v1/gained_rewards/add_gained_reward", {
+            user_id: localStorage.getItem("user_id"),
+            reward_id: id,
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
+        })
     }
 
     useEffect(() => {

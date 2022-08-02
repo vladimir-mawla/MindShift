@@ -6,6 +6,7 @@ import ListOptions from '../ListOptions/ListOptions'
 import { useRef, useState } from "react";
 import AdminNavbar from "../AdminNavbar/AdminNavbar";
 import { useNavigate } from 'react-router-dom';
+
 const AddOptions = () => {
   const [options, setOptions] = useState([])
   const input = useRef(0);
