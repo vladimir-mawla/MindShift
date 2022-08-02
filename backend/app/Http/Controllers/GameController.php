@@ -72,13 +72,21 @@ class GameController extends Controller
             "status" => "Done",
         ], 200);
     }
-
     // Increment Game Points API
     public function addGamePoints(Request $request){
         
         $game_id = $request->game_id;
         $points = $request->points;
         Game::where('id', $game_id)->increment('points', $points);
+        return response()->json([
+            "status" => "Done",
+        ], 200);
+    }
+    // Increment Game Questions API
+    public function addGameQuestions(Request $request){
+        
+        $game_id = $request->game_id;
+        Game::where('id', $game_id)->increment('questions_count', 1);
         return response()->json([
             "status" => "Done",
         ], 200);
