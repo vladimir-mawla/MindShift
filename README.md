@@ -47,7 +47,7 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 <br><br>
 <img src="./readme/title5.svg"/>
 
-> Uing the above mentioned tech stacks and the wireframes built with figma, the implementation of the app is shown as below, these are screenshots from the real app
+> Using the above mentioned tech stacks and the wireframes built with figma, the implementation of the app is shown as below. These are screenshots from the real app
 
 | Landing  | Home  |
 | -----------------| -----|

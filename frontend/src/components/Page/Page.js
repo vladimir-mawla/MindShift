@@ -29,7 +29,7 @@ return (
                     <div className='col-users'>
                     </div>
                 </div>
-                {/* <ChatBot /> */}
+                <ChatBot />
             </div>
         </div>
     </>
