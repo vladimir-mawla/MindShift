@@ -54,10 +54,8 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 |----------|-------|----------|
 | ![Landing](/readme/Landing_screen.png) | ![Home](/readme/Home_screen.png) | ![Questions](/readme/Questions_screen.png) |
 | Dashboard  |  Employees | Add Game|
-|------------|------------|----------|
 | ![Landing](/readme/Dashboard.png) | ![Home](/readme/Employees.png) | ![Questions](/readme/AddGame.png) |
 | Add Badge  |  Add Points | Add Rewards|
-|------------|-------------|------------|
 | ![Landing](/readme/AddBadge.png) | ![Home](/readme/AddPoints.png) | ![Questions](/readme/AddRewards.png) |
 
 <br><br>
