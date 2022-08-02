@@ -2,7 +2,6 @@ import './profile.css'
 import React from "react";
 import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
-import { useNavigate, Link } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import Popup from '../PopUp/PopUp';
@@ -43,7 +42,6 @@ const Profile = () => {
         })
     
         .then((response) => {
-            console.log(response.data.users[0])
             const s = response.data.users[0]
             setInfo(s)
         });

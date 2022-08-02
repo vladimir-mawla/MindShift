@@ -1,11 +1,8 @@
 import React from "react";
-import Button from "../Button/Button";
-import Navbar from "../Navbar/Navbar";
 import GetAnswer from '../GetAnswer/GetAnswer';
-import { useNavigate, Link, Navigate } from "react-router-dom";
-import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import QuestionOptions from '../QuestionOptions/QuestionOptions';
 import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const AnsweredQuestions = () => {
@@ -25,7 +22,6 @@ const AnsweredQuestions = () => {
     
         .then((response) => {
             const s = response.data.questions;
-            console.log(response.data.questions);
             setQuestions(s);
         });
         }, []);

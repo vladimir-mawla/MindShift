@@ -2,8 +2,8 @@ import './questions.css';
 import React from "react";
 import Button from "../Button/Button";
 import Navbar from "../Navbar/Navbar";
-import { useNavigate, Link, Navigate } from "react-router-dom";
-import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import QuestionOptions from '../QuestionOptions/QuestionOptions';
 import ChatBot from "../ChatBot/ChatBot";
@@ -13,7 +13,6 @@ const Questions = () => {
     const [questions, setQuestions] = useState([])
     const [name, setName] = useState(null);
     var game_id = localStorage.getItem('game_id')
-    var p;
 
     useEffect(() => {
         axios
@@ -105,7 +104,6 @@ const Questions = () => {
                         submitAnswers(input[i].id, input[i].value)
                         
                     } else if (input[i].checked === true) {
-                        console.log(input[i])
                         submitAnswers(input[i].name, input[i].value)
                     };
                 }}} />

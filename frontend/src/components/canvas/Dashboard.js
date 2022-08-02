@@ -27,7 +27,6 @@ class Dashboard extends Component {
 		var pusher = new Pusher('ccb92aa552693d2a8867', {
 			cluster: 'ap2'
 		  });
-		  //Pusher.logToConsole = true;
 	  
 		  var channel = pusher.subscribe('my-channel');
 		  channel.bind('my-event', data => {
@@ -36,7 +35,6 @@ class Dashboard extends Component {
 		  });
 	  }
 	render() {
-		// console.log(this.state.users)
 		const results =[];
 		this.state.users.map((user) =>(
 			user.forEach(u => {
@@ -47,7 +45,7 @@ class Dashboard extends Component {
 		const options = {
 			animationEnabled: true,
 			exportEnabled: true,
-			theme: "dark2", // "light1", "dark1", "dark2"
+			theme: "dark2",
 			backgroundColor: "#026483",
 			title:{
 				text: "Employees' Progress"

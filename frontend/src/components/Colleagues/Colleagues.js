@@ -1,12 +1,8 @@
 import './colleagues.css';
 import React from "react";
-import Button from "../Button/Button";
-import Navbar from "../Navbar/Navbar";
-import { useNavigate, Link } from "react-router-dom";
-import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { FaTrophy, FaUsers, FaGamepad, FaCoffee } from 'react-icons/fa';
-import ChatBot from '../ChatBot/ChatBot';
 
 const Colleagues = () => {
     const navigate = useNavigate();

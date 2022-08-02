@@ -1,10 +1,7 @@
 import './leaderboard.css'
 import React from "react";
-import Button from "../Button/Button";
-import Navbar from "../Navbar/Navbar";
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import ChatBot from '../ChatBot/ChatBot';
 import Pusher from "pusher-js"
 
 const Leaderboard = () => {

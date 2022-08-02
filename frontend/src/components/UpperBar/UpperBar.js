@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default function UpperBar({link, to}) {
+export default function UpperBar() {
     
 
     return (

@@ -3,7 +3,7 @@ import React, {useEffect, useState, useRef } from 'react';
 import Button from '../Button/Button';
 import axios from 'axios';
 import Popup from '../PopUp/PopUp';
-import { Link, useNavigate, useMatch, useResolvedPath } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar({link, to}) {
     const name = useRef(null)
@@ -81,7 +81,6 @@ export default function Navbar({link, to}) {
     })
 
     .then((response) => {
-        console.log(response.data.users[0])
         const s = response.data.users[0]
         setInfo(s)
     });

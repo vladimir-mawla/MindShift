@@ -1,9 +1,8 @@
 import './games.css';
 import React from "react";
 import axios from "axios";
-import Navbar from "../Navbar/Navbar";
-import { useNavigate, Link } from "react-router-dom";
-import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import AdminNavbar from '../AdminNavbar/AdminNavbar';
 
 const PlayedGames = () => {

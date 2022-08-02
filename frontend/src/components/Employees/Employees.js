@@ -34,7 +34,6 @@ const Employees = () => {
 
             .then((response) => {
                 const s = response.data.users;
-                console.log(response.data.users)
                 setEmployees(s);
             });
     }, []);
@@ -50,7 +49,6 @@ const Employees = () => {
             })
 
             .then((response) => {
-                console.log(response.data)
                 window.location.reload();
             });
     }

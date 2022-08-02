@@ -1,8 +1,6 @@
 import React from "react";
-import Button from "../Button/Button";
-import AdminNavbar from "../AdminNavbar/AdminNavbar";
-import { useNavigate, Link } from "react-router-dom";
-import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const GetOrders = ({user_id, name}) => {
@@ -23,7 +21,6 @@ const GetOrders = ({user_id, name}) => {
 
     .then((response) => {
         const s = response.data.orders;
-        console.log(s)
         setOrders(s);
     });
     }, []);

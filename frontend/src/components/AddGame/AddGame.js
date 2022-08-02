@@ -1,8 +1,7 @@
 import './addgame.css';
 import React from "react";
 import Button from "../Button/Button";
-import Navbar from "../Navbar/Navbar";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import Popup from '../PopUp/PopUp';
@@ -45,7 +44,6 @@ const Games = () => {
 
             .then((response) => {
                 const s = response.data.games;
-                console.log(response.data.games)
                 setGames(s);
             });
     }, []);

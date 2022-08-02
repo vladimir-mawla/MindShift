@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
-
 import axios from "axios";
 import ChatBot from '../ChatBot/ChatBot';
 import { Button } from 'framework7-react';

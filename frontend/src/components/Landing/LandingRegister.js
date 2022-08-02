@@ -1,7 +1,5 @@
 import './landing.css'
 import React from "react";
-import Button from "../Button/Button";
-import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import Register from "../Register/Register"
 
