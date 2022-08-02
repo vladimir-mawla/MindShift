@@ -26,11 +26,11 @@ Note that I didn't use any styling library or theme, all from scratch and using 
 
 | Landing  |     Home     |
 | -----------------| -----|
-| ![Landing](https://github.com/vladimir-mawla/MindShift/tree/main/readme/Landing.png) | ![Home](https://github.com/vladimir-mawla/MindShift/tree/main/readme/Home.png) |
+| ![Landing](/readme/Landing.png) | ![Home](/readme/Home.png) |
 
 |     Rewards      |    Profile     |
 | -----------------| -----|
-| ![Rewards](https://github.com/vladimir-mawla/MindShift/tree/main/readme/Rewards.png) | ![Profile](https://github.com/vladimir-mawla/MindShift/tree/main/readme/Profile.png) |
+| ![Rewards](/readme/Rewards.png) | ![Profile](/readme/Profile.png) |
 
 
 <br><br>
@@ -51,7 +51,7 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 
 | Landing  | Home  |
 | -----------------| -----|
-| ![Landing](https://github.com/vladimir-mawla/MindShift/tree/main/readme/Landing_screen.png) | ![Home/Search](https://github.com/vladimir-mawla/MindShift/tree/main/readme/Home_screen.png) |
+| ![Landing](/readme/Landing_screen.png) | ![Home/Search](/readme/Home_screen.png) |
 
 
 <br><br>
