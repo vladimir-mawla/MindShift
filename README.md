@@ -40,6 +40,7 @@ Note that I didn't use any styling library or theme, all from scratch and using 
 Here's a brief high-level overview of the tech stack the MindShift app uses:
 
 - This project uses the [React library](https://reactjs.org/). React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.
+- As backend, [Laravel framework](https://laravel.com/) is used, which is a free and open-source PHP web framework, intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.
 - For persistent storage (database), the app uses [MySQL](https://www.mysql.com) which is an open-source relational database management system. Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation for Structured Query Language.
 
 
