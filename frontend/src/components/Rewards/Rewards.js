@@ -12,9 +12,18 @@ const Rewards = () => {
     const navigate = useNavigate();
     const [rewards, setRewards] = useState([]);
 
-    const handleClick = (event) => {
-        localStorage.setItem('reward_id', event.currentTarget.id);
+    const handleClick = (id, needed_points) => {
+        localStorage.setItem('reward_id', id);
         navigate("/order");
+        axios
+        .post("http://127.0.0.1:8000/api/v1/users/points_control", {
+            user_id: localStorage.getItem("user_id"),
+            points: -needed_points,
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
+        })
     }
 
     useEffect(() => {
@@ -51,7 +60,7 @@ const Rewards = () => {
                                 </div> 
                                 <h4>{reward.needed_points} Points</h4>
                             </div>
-                            <Button text={"REDEEM"} id={reward.id} onClick={handleClick} className='redeem'/>
+                            <Button text={"REDEEM"} id={reward.id} onClick={()=>{handleClick( reward.id, reward.needed_points)}} className='redeem'/>
                         </div>
                     </div>
                 ))}

@@ -104,7 +104,7 @@ const AddGame = () => {
     .post("http://127.0.0.1:8000/api/v1/games/add_game", {
         name: name.current.value,
         description: description.current.value,
-        points: points.current.value,
+        points: 0,
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           Accept: 'application/json'
@@ -126,10 +126,6 @@ const AddGame = () => {
             <div className="popup-select-box">
                 <label>Game Description</label>
                 <input ref={description} type="text"></input>
-            </div>
-            <div className="popup-select-box">
-                <label>Game Points</label>
-                <input ref={points} type="text"></input>
             </div>
 
             <Button onClick={() => { submit(); }} text={'SUBMIT'} className='game-popup-button' />

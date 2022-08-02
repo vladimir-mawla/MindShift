@@ -31,7 +31,26 @@ const AddGameQuestion = () => {
         localStorage.setItem("question_id", response.data.question.id)
         question.current.value = ""
         correct_answer.current.value = ""
-        points.current.value = ""
+        axios
+        .post("http://127.0.0.1:8000/api/v1/games/add_game_points", {
+            points: points.current.value,
+            game_id: localStorage.getItem('game_id'),
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
+        })
+        axios
+        .post("http://127.0.0.1:8000/api/v1/games/add_game_questions", {
+            game_id: localStorage.getItem('game_id'),
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
+        })
+        .then(()=>{
+            points.current.value= ""
+        })
     })
     if (question_type.current.value == 1 || question_type.current.value == 2) {
         navigate("../add_options");
