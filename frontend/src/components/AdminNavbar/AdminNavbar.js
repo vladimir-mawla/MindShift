@@ -5,6 +5,16 @@ import { Link, useNavigate, useMatch, useResolvedPath } from 'react-router-dom';
 
 export default function AdminNavba() {
     const navigate = useNavigate()
+
+    const logout = () => {
+      axios.post("http://127.0.0.1:8000/api/v1/logout", {
+          headers: {
+              Authorization: `Bearer ${localStorage.getItem('token')}`,
+              Accept: 'application/json'
+          }
+      })
+  }
+
     const handleClick = (event) => {
         navigate("/admin");
     }
@@ -20,7 +30,7 @@ export default function AdminNavba() {
                 <CustomLink to={"/add_points"}>Add points</CustomLink>
                 <CustomLink to={"/add_reward"}>Add Rewards</CustomLink>
             </ul>
-            <Button text={'LOGOUT'} className='admin-logout' /> 
+            <Button text={'LOGOUT'} onClick={()=>{logout()}} className='admin-logout' /> 
             
         </nav>
     )

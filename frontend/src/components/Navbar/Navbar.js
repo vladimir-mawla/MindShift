@@ -16,6 +16,17 @@ export default function Navbar({link, to}) {
   const [isOpen, setIsOpen] = useState(false);
   const [isEditOpen, setIsEditOpen] = useState(false);
 
+      
+  const logout = () => {
+    axios.post("http://127.0.0.1:8000/api/v1/logout", {
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            Accept: 'application/json'
+        }
+    })
+}
+
+
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
@@ -113,7 +124,7 @@ export default function Navbar({link, to}) {
               <h5>{info.games.length} Games</h5>
           </div>
           <div className='popup-buttons'>
-            <Button text={'LOGOUT'} className='popup-logout'/>
+            <Button text={'LOGOUT'} onClick={()=> {logout()}} className='popup-logout'/>
             <Button text={'EDIT PROFILE'} onClick={toggleEditPopup} className='popup-edit'/>
           </div>
           </>}
