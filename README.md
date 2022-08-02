@@ -55,6 +55,8 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 | Landing  | Home  |Questions |
 |----------|-------|----------|
 | ![Landing](/readme/Landing_screen.png) | ![Home](/readme/Home_screen.png) | ![Questions](/readme/Questions_screen.png) |
+| Profile  | Rewards |
+| ![Landing](/readme/Profile_screen.png) | ![Home](/readme/Rewards_screen.png) |
 
 >Admin Page:
 
