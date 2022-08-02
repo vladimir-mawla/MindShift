@@ -37,6 +37,7 @@ Route::group(['prefix' => 'v1'], function(){
         Route::get('/get_games', [GameController::class, 'getGames']);
         Route::post('/get_specific_game', [GameController::class, 'getGameById']);
         Route::post('/edit_game', [GameController::class, 'editGame']);
+        Route::post('/add_game_points', [GameController::class, 'addGamePoints']);
     });
 
     Route::group(['prefix' => 'questions'], function(){
