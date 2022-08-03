@@ -13,7 +13,7 @@ const AddPoints = () => {
     useEffect(() => {
         axios
         .post("http://127.0.0.1:8000/api/v1/users/get_users", {
-            company_id: localStorage.getItem("company_id"),
+            company_id: localStorage.getItem("company_id")},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'
@@ -30,7 +30,7 @@ const AddPoints = () => {
         axios
         .post("http://127.0.0.1:8000/api/v1/users/points_control", {
             user_id: user.current.value,
-            points: points.current.value,
+            points: points.current.value},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'

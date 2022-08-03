@@ -20,7 +20,7 @@ const AddGameQuestion = () => {
         correct_answer: correct_answer.current.value,
         points: points.current.value,
         game_id: localStorage.getItem('game_id'),
-        question_type: question_type.current.value,
+        question_type: question_type.current.value},{
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
             Accept: 'application/json'
@@ -33,7 +33,7 @@ const AddGameQuestion = () => {
         axios
         .post("http://127.0.0.1:8000/api/v1/games/add_game_points", {
             points: points.current.value,
-            game_id: localStorage.getItem('game_id'),
+            game_id: localStorage.getItem('game_id')},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'
@@ -41,7 +41,7 @@ const AddGameQuestion = () => {
         })
         axios
         .post("http://127.0.0.1:8000/api/v1/games/add_game_questions", {
-            game_id: localStorage.getItem('game_id'),
+            game_id: localStorage.getItem('game_id')},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'

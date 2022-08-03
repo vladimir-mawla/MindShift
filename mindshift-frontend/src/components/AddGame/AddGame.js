@@ -21,7 +21,7 @@ const Games = () => {
     const deleteGame = (event) => {
         axios
             .post("http://127.0.0.1:8000/api/v1/games/delete_game", {
-                game_id: event.currentTarget.id,
+                game_id: event.currentTarget.id},{
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                     Accept: 'application/json'

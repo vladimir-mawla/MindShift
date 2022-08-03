@@ -10,7 +10,7 @@ const Leaderboard = () => {
     useEffect(() => {
         axios
         .post("http://127.0.0.1:8000/api/v1/leaderboards/get_leaderboard",{
-            company_id: localStorage.getItem("company_id"),
+            company_id: localStorage.getItem("company_id")},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'

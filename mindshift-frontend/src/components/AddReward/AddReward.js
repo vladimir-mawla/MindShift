@@ -16,7 +16,7 @@ const AddReward = () => {
     .post("http://127.0.0.1:8000/api/v1/rewards/add_reward", {
         name: name.current.value,
         description: description.current.value,
-        needed_points: points.current.value,
+        needed_points: points.current.value},{
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           Accept: 'application/json'

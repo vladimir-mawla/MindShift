@@ -8,7 +8,7 @@ const QuestionOptions = (props) => {
     useEffect(() => {
         axios
         .post("http://127.0.0.1:8000/api/v1/question_options/get_options", {
-            question_id: props.question_id,
+            question_id: props.question_id},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'

@@ -16,7 +16,7 @@ const Colleagues = () => {
     useEffect(() => {
         axios
             .post("http://127.0.0.1:8000/api/v1/users/get_colleagues", {
-                company_id: localStorage.getItem('company_id'),
+                company_id: localStorage.getItem('company_id')},{
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                     Accept: 'application/json'
@@ -25,8 +25,9 @@ const Colleagues = () => {
 
             .then((response) => {
                 const s = response.data.users;
-                console.log(response.data.users)
+                console.log(response.data)
                 setColleagues(s);
+
             });
     }, []);
 

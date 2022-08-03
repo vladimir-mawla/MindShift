@@ -53,7 +53,7 @@ export default function Navbar({link, to}) {
             name: name.current.value,
             email:email.current.value,
             job_title: job_title.current.value,
-            profile_img: s,
+            profile_img: s},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'
@@ -73,7 +73,7 @@ export default function Navbar({link, to}) {
   useEffect(() => {
     axios
     .post("http://127.0.0.1:8000/api/v1/users/get_user", {
-        user_id: localStorage.getItem('user_id'),
+        user_id: localStorage.getItem('user_id')},{
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
             Accept: 'application/json'

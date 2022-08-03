@@ -19,7 +19,7 @@ const AddOptions = () => {
     await axios
       .post("http://127.0.0.1:8000/api/v1/question_options/add_option", {
         question_id: question_id,
-        option: input.current.value,
+        option: input.current.value},{
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           Accept: 'application/json'

@@ -17,7 +17,7 @@ const Rewards = () => {
         axios
         .post("http://127.0.0.1:8000/api/v1/users/points_control", {
             user_id: localStorage.getItem("user_id"),
-            points: -needed_points,
+            points: -needed_points},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'
@@ -26,7 +26,7 @@ const Rewards = () => {
         axios
         .post("http://127.0.0.1:8000/api/v1/gained_rewards/add_gained_reward", {
             user_id: localStorage.getItem("user_id"),
-            reward_id: id,
+            reward_id: id},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'

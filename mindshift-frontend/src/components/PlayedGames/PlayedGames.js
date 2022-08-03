@@ -12,7 +12,7 @@ const PlayedGames = () => {
 
         axios
         .post("http://127.0.0.1:8000/api/v1/played_games/get_played_games", {
-            user_id: localStorage.getItem("employee_id"),
+            user_id: localStorage.getItem("employee_id")},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                 Accept: 'application/json'
