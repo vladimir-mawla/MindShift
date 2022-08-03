@@ -103,36 +103,23 @@ Route::group(['prefix' => 'v1'], function(){
     //     Route::group(['prefix' => 'games'], function(){
     //         Route::post('/add_game', [GameController::class, 'addGame']);
     //         Route::post('/delete_game', [GameController::class, 'deleteGame']);
-    //         Route::post('/edit_game', [GameController::class, 'editGame']);
+    //         Route::post('/add_game_points', [GameController::class, 'addGamePoints']);
+    //         Route::post('/add_game_questions', [GameController::class, 'addGameQuestions']);
     //     });
     
     //     Route::group(['prefix' => 'questions'], function(){
     //         Route::post('/add_question', [QuestionController::class, 'addQuestion']);
-    //         Route::post('/delete_question', [QuestionController::class, 'deleteQuestion']);
-    //         Route::post('/edit_question', [QuestionController::class, 'editQuestion']);
-    
-    //     });
-    
-    //     Route::group(['prefix' => 'answers'], function(){
-    //         Route::post('/get_question_answer', [AnswerController::class, 'getAnswerOfQuestion']);
-    //         Route::post('/get_user_answer', [AnswerController::class, 'getAnswerOfUserOnQuestion']);
     
     //     });
     
     //     Route::group(['prefix' => 'rewards'], function(){
     //         Route::post('/add_reward', [RewardController::class, 'addReward']);
     //         Route::post('/delete_reward', [RewardController::class, 'deleteReward']);
-    //         Route::post('/edit_reward', [RewardController::class, 'editReward']);
     
     //     });
     
     //     Route::group(['prefix' => 'question_options'], function(){
     //         Route::post('/add_option', [QuestionOptionController::class, 'addOption']);
-    
-    //     });
-    
-    //     Route::group(['prefix' => 'question_types'], function(){
-    //         Route::post('/add_type', [QuestionTypeController::class, 'addType']);
     
     //     });
     
@@ -148,11 +135,6 @@ Route::group(['prefix' => 'v1'], function(){
     
     //     });
     
-    //     Route::group(['prefix' => 'played_games'], function(){
-    //         Route::post('/get_played_games', [UserGameController::class, 'getPlayedGames']);
-    
-    //     });
-    
     //     Route::group(['prefix' => 'badges'], function(){
     //         Route::get('/get_badges', [BadgeController::class, 'getBadges']);
     
@@ -160,25 +142,12 @@ Route::group(['prefix' => 'v1'], function(){
     // });
     // // Auth Middleware
     // Route::middleware('auth')->group (function(){
-    //     Route::group(['prefix' => 'users'], function(){
-    //         Route::post('/get_users', [UserController::class, 'getUsers']);
-    //         Route::post('/points_control', [UserController::class, 'pointsControl']);
-    //         Route::post('/get_user', [UserController::class, 'getUser']);
-    //         Route::post('/add_badge', [UserController::class, 'addBadge']);
-    //         Route::post('/edit_user', [UserController::class, 'editUser']);
-    //         Route::post('/delete_user', [UserController::class, 'deleteUser']);
-    //         Route::post('/get_colleagues', [UserController::class, 'getColleagues']);
-    //         Route::post('/test', [UserController::class, 'test']);
-    
-    //     });
-        
     //     Route::group(['prefix' => 'games'], function(){
-    //         Route::post('/search_game', [GameController::class, 'searchGame']);
     //         Route::get('/get_games', [GameController::class, 'getGames']);
-    //         Route::post('/get_specific_game', [GameController::class, 'getGameById']);
     //     });
     
     //     Route::group(['prefix' => 'questions'], function(){
+    //         Route::post('/add_question', [QuestionController::class, 'addQuestion']);
     //         Route::post('/get_questions', [QuestionController::class, 'getQuestions']);
     
     //     });
@@ -191,7 +160,7 @@ Route::group(['prefix' => 'v1'], function(){
     
     //     Route::group(['prefix' => 'rewards'], function(){
     //         Route::get('/get_rewards', [RewardController::class, 'getRewards']);
-
+    
     //     });
     
     //     Route::group(['prefix' => 'question_options'], function(){
@@ -200,7 +169,8 @@ Route::group(['prefix' => 'v1'], function(){
     //     });
     
     //     Route::group(['prefix' => 'leaderboards'], function(){
-    //         Route::get('/get_leaderboard', [LeaderboardController::class, 'getLeaderboard']);
+    //         Route::post('/get_leaderboard', [LeaderboardController::class, 'getLeaderboard']);
+    //         Route::get('/leader_pusher', [LeaderboardController::class, 'pushLeader']);
     
     //     });
     
@@ -208,12 +178,26 @@ Route::group(['prefix' => 'v1'], function(){
     //         Route::post('/add_order', [OrderController::class, 'addOrder']);
     
     //     });
-
+    
+    //     Route::group(['prefix' => 'users'], function(){
+    //         Route::post('/get_users', [UserController::class, 'getUsers']);
+    //         Route::post('/points_control', [UserController::class, 'pointsControl']);
+    //         Route::post('/get_user', [UserController::class, 'getUser']);
+    //         Route::post('/edit_user', [UserController::class, 'editUser']);
+    //         Route::post('/get_colleagues', [UserController::class, 'getColleagues']);
+    //         Route::post('/test', [UserController::class, 'test']);
+    
+    //     });
+    
+    //     Route::group(['prefix' => 'gained_rewards'], function(){
+    //         Route::post('/add_gained_reward', [GainedRewardController::class, 'addGainedReward']);
+            
+    //     });
+    
     //     Route::group(['prefix' => 'played_games'], function(){
     //         Route::post('/add_played_game', [UserGameController::class, 'addPlayedGame']);
     
     //     });
-
     // });
 
 });
