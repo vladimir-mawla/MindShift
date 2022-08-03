@@ -1,0 +1,97 @@
+.reward{
+    padding: 30px 158px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.reward-card{
+    cursor: pointer;
+    background-color: #2994B7;
+    border-radius: 10px;
+    width: 306px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.reward-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+}
+.reward-contents{
+    gap: 8px;
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.reward-vl{
+    border-left: 2px solid #2994B7;
+    height: 50%;
+    align-self: center;
+}
+.reward-contents > h4{
+    font-size: 12px;
+    margin-bottom:0; 
+    align-self: center;
+    color: white;
+    font-weight: 400;
+}
+.reward-info > p {
+    color: white;
+    font-weight: 400;
+}
+.reward-info > h2 {
+    margin: 0;
+    align-self: center;
+    color: white;
+}
+.reward-vl{
+    border-left: 1px solid #0D6582;
+    height: 80%;
+    align-self: center;
+}
+.reward-coins{
+    height: 6px;
+    width: 6px;
+    background-color: #DF8A27;
+    border-radius: 50%;
+    border: 3px solid #2994B7;
+    margin-right: 5px;
+}
+.reward-points{
+    border-radius: 5px;
+    background-color: #0D6582;
+    width: 139px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.reward-points > h4{
+    font-size: 12px;
+    color: white;
+    font-weight: 400;
+    height: 100%;
+    vertical-align: middle;
+    margin-bottom: 0;
+    padding-top: 25px;
+}
+.redeem{
+    display: flex;
+    justify-content: center;
+    background-color: #DF8A27;
+    width: 139px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10.5px;
+}
