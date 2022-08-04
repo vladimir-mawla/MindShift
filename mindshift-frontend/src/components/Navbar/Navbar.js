@@ -11,6 +11,9 @@ export default function Navbar({link, to}) {
     const element = useRef(null)
     const job_title = useRef(null)
     var s;
+    const logoutUrl = "http://127.0.0.1:8000/api/v1/logout";
+    const editUserUrl = "http://127.0.0.1:8000/api/v1/users/edit_user";
+    const getUserUrl = "http://127.0.0.1:8000/api/v1/users/get_user";
 
   const [info, setInfo] = useState([])
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +21,7 @@ export default function Navbar({link, to}) {
 
       
   const logout = () => {
-    axios.post("http://127.0.0.1:8000/api/v1/logout", {
+    axios.post(logoutUrl, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
             Accept: 'application/json'
@@ -48,7 +51,7 @@ export default function Navbar({link, to}) {
         alert("All fields should be filled")
     }else{
         axios
-        .post("http://127.0.0.1:8000/api/v1/users/edit_user", {
+        .post(editUserUrl, {
             user_id: localStorage.getItem('user_id'),
             name: name.current.value,
             email:email.current.value,
@@ -72,7 +75,7 @@ export default function Navbar({link, to}) {
 
   useEffect(() => {
     axios
-    .post("http://127.0.0.1:8000/api/v1/users/get_user", {
+    .post(getUserUrl, {
         user_id: localStorage.getItem('user_id')},{
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
