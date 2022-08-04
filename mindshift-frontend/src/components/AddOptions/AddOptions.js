@@ -11,13 +11,13 @@ const AddOptions = () => {
   const [options, setOptions] = useState([])
   const input = useRef(0);
   const navigate = useNavigate();
-
+  const addOptionUrl = "http://127.0.0.1:8000/api/v1/question_options/add_option"
   
   async function submit() {
     setOptions([...options, input.current.value])
     const question_id = localStorage.getItem("question_id");
     await axios
-      .post("http://127.0.0.1:8000/api/v1/question_options/add_option", {
+      .post(addOptionUrl, {
         question_id: question_id,
         option: input.current.value},{
         headers: {
