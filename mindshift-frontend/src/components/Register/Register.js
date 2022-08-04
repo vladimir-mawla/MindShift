@@ -11,13 +11,14 @@ const Register = () => {
   const email = useRef(0);
   const password = useRef(0);
   const navigate = useNavigate();
+  const registerUrl = "http://127.0.0.1:8000/api/v1/register";
 
   function register() {
-    if (email.current.value == "" || password.current.value == "" || name.current.value == "") {
+    if (email.current.value === "" || password.current.value === "" || name.current.value === "") {
       alert("You should fill all fields");
     } else {
       axios
-        .post("http://127.0.0.1:8000/api/v1/register", {
+        .post(registerUrl, {
           name: name.current.value,
           email: email.current.value,
           password: password.current.value,
