@@ -12,10 +12,13 @@ const AddGameQuestion = () => {
     const correct_answer = useRef(0)
     const points = useRef(0)
     const question_type = useRef(0)
+    const addQuestionUrl = "http://127.0.0.1:8000/api/v1/questions/add_question";
+    const addGamePointsUrl = "http://127.0.0.1:8000/api/v1/games/add_game_points";
+    const addGameQuestionsUrl = "http://127.0.0.1:8000/api/v1/games/add_game_questions";
 
   function submit() {
     axios
-    .post("http://127.0.0.1:8000/api/v1/questions/add_question", {
+    .post(addQuestionUrl, {
         question: question.current.value,
         correct_answer: correct_answer.current.value,
         points: points.current.value,
@@ -31,7 +34,7 @@ const AddGameQuestion = () => {
         question.current.value = ""
         correct_answer.current.value = ""
         axios
-        .post("http://127.0.0.1:8000/api/v1/games/add_game_points", {
+        .post(addGamePointsUrl, {
             points: points.current.value,
             game_id: localStorage.getItem('game_id')},{
             headers: {
@@ -40,7 +43,7 @@ const AddGameQuestion = () => {
             }
         })
         axios
-        .post("http://127.0.0.1:8000/api/v1/games/add_game_questions", {
+        .post(addGameQuestionsUrl, {
             game_id: localStorage.getItem('game_id')},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
