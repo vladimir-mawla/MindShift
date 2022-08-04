@@ -9,13 +9,14 @@ const Login = () => {
   const email = useRef(0);
   const password = useRef(0);
   const navigate = useNavigate();
+  const loginUrl = "http://127.0.0.1:8000/api/v1/login";
 
   function login() {
     if (email.current.value == "" || password.current.value == "") {
       alert("You should fill all fields");
     } else {
       axios
-        .post("http://127.0.0.1:8000/api/v1/login", {
+        .post(loginUrl, {
           email: email.current.value,
           password: password.current.value,
         })
