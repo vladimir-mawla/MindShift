@@ -10,10 +10,13 @@ const AddBadge = () => {
     const badge = useRef(null)
     const [employees, setEmployees] = useState([])
     const [badges, setBadges] = useState([])
+    const getUsersUrl = "http://127.0.0.1:8000/api/v1/users/get_users";
+    const getBadgesUrl = "http://127.0.0.1:8000/api/v1/badges/get_badges";
+    const addBadgesUrl = "http://127.0.0.1:8000/api/v1/users/add_badge";
 
     useEffect(() => {
         axios
-            .post("http://127.0.0.1:8000/api/v1/users/get_users", {
+            .post(getUsersUrl, {
                 company_id: localStorage.getItem("company_id")},{
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -28,7 +31,7 @@ const AddBadge = () => {
     }, [])
     useEffect(() => {
         axios
-            .get("http://127.0.0.1:8000/api/v1/badges/get_badges", {
+            .get(getBadgesUrl, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                     Accept: 'application/json'
@@ -44,7 +47,7 @@ const AddBadge = () => {
 
     function addBadge() {
         axios
-            .post("http://127.0.0.1:8000/api/v1/users/add_badge", {
+            .post(addBadgesUrl, {
                 user_id: user.current.value,
                 badge: badge.current.value,
                 headers: {
