@@ -6,12 +6,13 @@ import axios from "axios";
 const GetOrders = ({user_id, name}) => {
     const navigate = useNavigate();
     const [orders, setOrders] = useState([])
-
+    const getOrdersUrl = "http://127.0.0.1:8000/api/v1/orders/get_orders";
+    const markOrderUrl = "http://127.0.0.1:8000/api/v1/orders/mark_order_done";
 
   
     useEffect(() => {
     axios
-    .post("http://127.0.0.1:8000/api/v1/orders/get_orders", {
+    .post(getOrdersUrl, {
         user_id: user_id},{
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -27,7 +28,7 @@ const GetOrders = ({user_id, name}) => {
 
     const markDone = (event) => {
         axios
-        .post("http://127.0.0.1:8000/api/v1/orders/mark_order_done", {
+        .post(markOrderUrl, {
             order_id: event.currentTarget.id},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
