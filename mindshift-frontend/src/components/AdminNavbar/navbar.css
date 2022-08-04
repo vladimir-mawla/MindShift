@@ -1,6 +1,7 @@
 .admin-navbar{
   background-color: #026483;
   min-height: 689px;
+  height: 700px;
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -25,6 +26,9 @@ a{
   cursor: pointer;
   display: inline-block;
   margin: 0 10px;
+}
+.admin-logout {
+  margin-top: 40px;
 }
 #admin-nav-logo{
   position: relative;

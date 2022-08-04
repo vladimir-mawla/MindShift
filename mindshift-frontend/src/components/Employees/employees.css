@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
 html{
-  height: 100%;
+  height: fit-content;
 }
 .employee-comp{
   display: flex;

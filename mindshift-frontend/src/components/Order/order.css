@@ -26,8 +26,8 @@
 }
 .order{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .order-box .input-box input {
@@ -67,7 +67,16 @@
                 0 0 100px #03e9f4;
 }
 
-
+.mark{
+    margin-left: 5px;
+    color: red;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(157, 157, 157);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
 
 .order > p{
     font-weight:300;
