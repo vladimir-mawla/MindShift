@@ -9,10 +9,11 @@ const AnsweredQuestions = () => {
     const navigate = useNavigate();
     const [questions, setQuestions] = useState([])
     var game_id = localStorage.getItem('played_game_id')
+    const getQuestionsUrl = "http://127.0.0.1:8000/api/v1/questions/get_questions";
 
     useEffect(() => {
         axios
-        .post("http://127.0.0.1:8000/api/v1/questions/get_questions", {
+        .post(getQuestionsUrl, {
             game_id: game_id},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
