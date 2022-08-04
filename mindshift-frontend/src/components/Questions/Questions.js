@@ -13,10 +13,17 @@ const Questions = () => {
     const [questions, setQuestions] = useState([])
     const [name, setName] = useState(null);
     var game_id = localStorage.getItem('game_id')
+    const getQuestionsUrl = "http://127.0.0.1:8000/api/v1/questions/get_questions";
+    const addPlayedGameUrl = "http://127.0.0.1:8000/api/v1/played_games/add_played_game";
+    const addAnswerUrl = "http://127.0.0.1:8000/api/v1/answers/add_answer";
+    const checkAnswerUrl = "http://127.0.0.1:8000/api/v1/answers/check_answer";
+    const pointsControlUrl = "http://127.0.0.1:8000/api/v1/users/points_control";
+    const testUrl = "http://127.0.0.1:8000/api/v1/users/test";
+    const leaderPusherUrl = "http://127.0.0.1:8000/api/v1/leaderboards/leader_pusher";
 
     useEffect(() => {
         axios
-        .post("http://127.0.0.1:8000/api/v1/questions/get_questions", {
+        .post(getQuestionsUrl, {
             game_id: game_id},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -28,11 +35,11 @@ const Questions = () => {
             const s = response.data.questions;
             setQuestions(s);
         });
-        }, []);
+        }, [game_id]);
         
         function gamePlayed(){
             axios
-            .post("http://127.0.0.1:8000/api/v1/played_games/add_played_game", {
+            .post(addPlayedGameUrl, {
                 user_id: localStorage.getItem("user_id"),
                 game_id: localStorage.getItem("game_id")},{
                 headers: {
@@ -44,7 +51,7 @@ const Questions = () => {
 
         function submitAnswers(id, answer){
             axios
-            .post("http://127.0.0.1:8000/api/v1/answers/add_answer", {
+            .post(addAnswerUrl, {
                 answer: answer,
                 question_id: id,
                 user_id: localStorage.getItem("user_id"),
@@ -56,7 +63,7 @@ const Questions = () => {
             })
             .then(()=> {
                 axios
-                .post("http://127.0.0.1:8000/api/v1/answers/check_answer", {
+                .post(checkAnswerUrl, {
                     question_id: id,
                     user_id: localStorage.getItem("user_id"),
                     answer: answer,
@@ -69,7 +76,7 @@ const Questions = () => {
                 .then((response) => {
                     if(response.data["Status"] === "True"){
                         axios
-                        .post("http://127.0.0.1:8000/api/v1/users/points_control", {
+                        .post(pointsControlUrl, {
                             user_id: localStorage.getItem("user_id"),
                             points: response.data["Points"]},{
                             headers: {
@@ -78,7 +85,7 @@ const Questions = () => {
                             }
                         })
                         axios
-                        .post("http://127.0.0.1:8000/api/v1/users/test", {
+                        .post(testUrl, {
                             message: localStorage.getItem('company_id')},{
                             headers: {
                                 Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -86,7 +93,7 @@ const Questions = () => {
                             }
                         })
                         axios
-                        .get("http://127.0.0.1:8000/api/v1/leaderboards/leader_pusher", {
+                        .get(leaderPusherUrl, {
                         
                             headers: {
                                 Authorization: `Bearer ${localStorage.getItem('token')}`,
