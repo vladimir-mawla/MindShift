@@ -10,12 +10,15 @@ import { Button } from 'framework7-react';
 const Rewards = () => {
     const navigate = useNavigate();
     const [rewards, setRewards] = useState([]);
+    const pointsControlUrl = "http://127.0.0.1:8000/api/v1/users/points_control";
+    const addGainedRewardUrl = "http://127.0.0.1:8000/api/v1/gained_rewards/add_gained_reward";
+    const getRewardsUrl = "http://127.0.0.1:8000/api/v1/rewards/get_rewards";
 
     const handleClick = (id, needed_points) => {
         localStorage.setItem('reward_id', id);
         navigate("/order");
         axios
-        .post("http://127.0.0.1:8000/api/v1/users/points_control", {
+        .post(pointsControlUrl, {
             user_id: localStorage.getItem("user_id"),
             points: -needed_points},{
             headers: {
@@ -24,7 +27,7 @@ const Rewards = () => {
             }
         })
         axios
-        .post("http://127.0.0.1:8000/api/v1/gained_rewards/add_gained_reward", {
+        .post(addGainedRewardUrl, {
             user_id: localStorage.getItem("user_id"),
             reward_id: id},{
             headers: {
@@ -37,7 +40,7 @@ const Rewards = () => {
     useEffect(() => {
 
         axios
-            .get("http://127.0.0.1:8000/api/v1/rewards/get_rewards", {
+            .get(getRewardsUrl, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                     Accept: 'application/json'
