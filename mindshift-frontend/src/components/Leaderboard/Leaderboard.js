@@ -6,10 +6,11 @@ import Pusher from "pusher-js"
 
 const Leaderboard = () => {
     const [users, setUsers] = useState([])
+    const getLeaderboardUrl = "http://127.0.0.1:8000/api/v1/leaderboards/get_leaderboard";
 
     useEffect(() => {
         axios
-        .post("http://127.0.0.1:8000/api/v1/leaderboards/get_leaderboard",{
+        .post(getLeaderboardUrl,{
             company_id: localStorage.getItem("company_id")},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
