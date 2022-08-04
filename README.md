@@ -4,7 +4,7 @@
 
 > The project is a web application related to gamification at work, implemented by incorporating gaming elements in non-gaming situations.   
 
-**[PROJECT PHILOSOPHY](https://github.com/vladimir-mawla/MindShift#-project-philosophy) • [WIREFRAMES](https://github.com/vladimir-mawla/MindShift#-wireframes) • [TECH STACK](https://github.com/vladimir-mawla/MindShift#-tech-stack) • [IMPLEMENTATION](https://github.com/vladimir-mawla/MindShift#-implementation) • [HOW TO RUN?](https://github.com/vladimir-mawla/MindShift#-how-to-run)**
+**[PROJECT PHILOSOPHY](#project-philosophy) • [WIREFRAMES](#wireframes) • [TECH STACK](#tech-stack) • [IMPLEMENTATION](#implementation) • [HOW TO RUN?](#how-to-run)**
 
 </div>
 
@@ -12,30 +12,51 @@
 
 
 <img src="./readme/title2.svg"/>
+<a id="project-philosophy"></a>
 
 > Gamification has become very popular and an integral part of the corporate world. Many companies are adopting it as it is an innovative approach and has lot of benefits on all levels. Not only it promotes employee loyalty and engagement by making work processes fun and rewarding but also it increases productivity driving better results to the company.
 > 
 > The project is about gamification at work, which increases employees motivation and loyalty to the company, ensure a fun learning environment, enhance engagement, and help employees learn skills more efficiently.
 
+<br>
+
+### User Stories
+- As a user, I want to gain rewards on my hard work.
+- As a user, I want to check my progress at my company.
+- As a user, I want to see the company's leaderboard.
+
+### Admin Stories
+- As an admin , I want to increase my employees' motivation and progress at work.
+- As an admin , I want to ensure a fun learning environment.
+- As an admin , I want to enhance my employees' engagement.
+- As an admin , I want to help employees' learn skills more efficiently.
+
+
 <br><br>
 
 <img src="./readme/title3.svg"/>
+<a id="wireframes"></a>
 
 > This design was planned before on paper, then moved to Figma app for the fine details.
 Note that I didn't use any styling library or theme, all from scratch and using pure css modules.
 
-| Landing  |     Home     | Questions |
-| -----------------| -----|-----------|
-| ![Landing](/readme/Landing.png) | ![Home](/readme/Home.png) | ![Questions](/readme/Questions.png) |
-
-|     Rewards      | Profile |
-| -----------------| -----|
-| ![Rewards](/readme/Rewards.png) | ![Profile](/readme/Profile.png) |
+| Landing  |
+| ---------|
+| ![Landing](/readme/Landing.png) | 
+| Home |
+| ![Home](/readme/Home.png) |
+|     Questions      |
+| ![Questions](/readme/Questions.png) |
+| Profile |
+| ![Profile](/readme/Profile.png) |
+|     Rewards      |
+| ![Rewards](/readme/Rewards.png) | 
 
 
 <br><br>
 
 <img src="./readme/title4.svg"/>
+<a id="tech-stack"></a>
 
 Here's a brief high-level overview of the tech stack the MindShift app uses:
 
@@ -47,27 +68,43 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 
 <br><br>
 <img src="./readme/title5.svg"/>
+<a id="implementation"></a>
 
 > Using the above mentioned tech stacks and the wireframes built with figma, the implementation of the app is shown as below. These are screenshots from the real app
 
 >User Page:
 
-| Landing  | Home  |Questions |
-|----------|-------|----------|
-| ![Landing](/readme/Landing_screen.png) | ![Home](/readme/Home_screen.png) | ![Questions](/readme/Questions_screen.png) |
-| Profile  | Rewards |
-| ![Landing](/readme/Profile_screen.png) | ![Home](/readme/Rewards_screen.png) |
+| Landing  |
+|----------|
+| ![Landing](/readme/Landing_screen.png) | 
+| Home  |
+|![Home](/readme/Home_screen.png) |
+|Questions |
+| ![Questions](/readme/Questions_screen.png) |
+| Profile |
+|![Profile](/readme/Profile_screen.png) |
+| Rewards |
+| ![Home](/readme/Rewards_screen.png) |
 
 >Admin Page:
 
-| Dashboard  |  Employees | Add Game|
-|------------|------------|---------|
-| ![Landing](/readme/Dashboard.png) | ![Home](/readme/Employees.png) | ![Questions](/readme/AddGame.png) |
+| Dashboard  |
+|------------|
+| ![Dashboard](/readme/Dashboard.png) |  
+| Employees |
+|![Employees](/readme/Employees.png) |
+| Add Game |
+|![Add Game](/readme/AddGame.png) |
 | Add Badge  |  Add Points | Add Rewards|
-| ![Landing](/readme/AddBadge.png) | ![Home](/readme/AddPoints.png) | ![Questions](/readme/AddReward.png) |
+| ![Add Badge](/readme/AddBadge.png) |
+| Add Points |
+| ![Points](/readme/AddPoints.png) |
+| Add Reward |
+| ![Rewards](/readme/AddReward.png) |
 
 <br><br>
 <img src="./readme/title6.svg"/>
+<a id="how-to-run"></a>
 
 
 > To get a local copy up and running follow these simple example steps.
