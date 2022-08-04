@@ -15,7 +15,8 @@ const Employees = () => {
     const [employees, setEmployees] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
     const [id, setId] = useState();
-
+    const getColleaguesUrl = "http://127.0.0.1:8000/api/v1/users/get_colleagues";
+    const deleteUserUrl = "http://127.0.0.1:8000/api/v1/users/delete_user";
 
     const handleClick = (event) => {
         localStorage.setItem('employee_id', event.currentTarget.id);
@@ -24,7 +25,7 @@ const Employees = () => {
 
     useEffect(() => {
         axios
-            .post("http://127.0.0.1:8000/api/v1/users/get_colleagues", {
+            .post(getColleaguesUrl, {
                 company_id: localStorage.getItem('company_id')},{
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -40,7 +41,7 @@ const Employees = () => {
 
     const removeEmployee = (event) => {
         axios
-            .post("http://127.0.0.1:8000/api/v1/users/delete_user", {
+            .post(deleteUserUrl, {
                 user_id: id},{
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
