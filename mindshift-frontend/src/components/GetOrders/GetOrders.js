@@ -1,10 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const GetOrders = ({user_id, name}) => {
-    const navigate = useNavigate();
     const [orders, setOrders] = useState([])
     const getOrdersUrl = "http://127.0.0.1:8000/api/v1/orders/get_orders";
     const markOrderUrl = "http://127.0.0.1:8000/api/v1/orders/mark_order_done";
@@ -24,7 +22,7 @@ const GetOrders = ({user_id, name}) => {
         const s = response.data.orders;
         setOrders(s);
     });
-    }, []);
+    }, [user_id]);
 
     const markDone = (event) => {
         axios

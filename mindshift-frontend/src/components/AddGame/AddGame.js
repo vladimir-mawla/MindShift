@@ -94,7 +94,6 @@ export default Games;
 const AddGame = () => {
     const name = useRef(0)
     const description = useRef(0)
-    const points = useRef(0)
     const navigate = useNavigate()
     const addGameUrl = "http://127.0.0.1:8000/api/v1/games/add_game";
 

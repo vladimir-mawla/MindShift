@@ -1,5 +1,5 @@
 import './order.css';
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 import ChatBot from '../ChatBot/ChatBot';
