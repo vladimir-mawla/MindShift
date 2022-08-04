@@ -4,7 +4,6 @@ import CanvasJSReact from './canvasjs.react';
 import axios from 'axios';
 import Pusher from "pusher-js"
 import AdminNavbar from '../AdminNavbar/AdminNavbar';
-var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
  
 class Dashboard extends Component {	
@@ -12,8 +11,9 @@ class Dashboard extends Component {
             users: [],
         };
 	componentDidMount() {
+		const getUsersUrl = "http://127.0.0.1:8000/api/v1/users/get_users";
 		axios
-        .post("http://127.0.0.1:8000/api/v1/users/get_users", {
+        .post(getUsersUrl, {
             company_id: localStorage.getItem("company_id")},{
 			headers: {
 				Authorization: `Bearer ${localStorage.getItem('token')}`,
