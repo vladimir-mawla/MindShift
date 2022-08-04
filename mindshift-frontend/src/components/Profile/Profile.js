@@ -15,6 +15,8 @@ const Profile = () => {
     const country = useRef(null)
     const city = useRef(null)
     const description = useRef(null)
+    const getUserUrl = "http://127.0.0.1:8000/api/v1/users/get_user";
+    const editUserUrl = "http://127.0.0.1:8000/api/v1/users/edit_user";
     var s;
     
     function encode() {
@@ -33,7 +35,7 @@ const Profile = () => {
       }
     useEffect(() => {
         axios
-        .post("http://127.0.0.1:8000/api/v1/users/get_user", {
+        .post(getUserUrl, {
             user_id: localStorage.getItem('user_id')},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -52,7 +54,7 @@ const Profile = () => {
                 alert("All fields should be filled")
             }else{
                 axios
-                .post("http://127.0.0.1:8000/api/v1/users/edit_user", {
+                .post(editUserUrl, {
                     user_id: localStorage.getItem('user_id'),
                     name: name.current.value,
                     email:email.current.value,
