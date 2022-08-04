@@ -8,10 +8,12 @@ import AdminNavbar from '../AdminNavbar/AdminNavbar';
 const PlayedGames = () => {
     const navigate = useNavigate()
     const [games, setGames] = useState([])
+    const getPlayedUrl = "http://127.0.0.1:8000/api/v1/played_games/get_played_games";
+
     useEffect(() => {
 
         axios
-        .post("http://127.0.0.1:8000/api/v1/played_games/get_played_games", {
+        .post(getPlayedUrl, {
             user_id: localStorage.getItem("employee_id")},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
