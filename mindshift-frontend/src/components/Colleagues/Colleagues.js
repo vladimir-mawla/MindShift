@@ -7,7 +7,7 @@ import axios from "axios";
 const Colleagues = () => {
     const navigate = useNavigate();
     const [colleagues, setColleagues] = useState([])
-
+    const getColleaguesUrl = "http://127.0.0.1:8000/api/v1/users/get_colleagues";
     const handleClick = (event) => {
         localStorage.setItem('colleague_id', event.currentTarget.id);
         navigate("/");
@@ -15,7 +15,7 @@ const Colleagues = () => {
 
     useEffect(() => {
         axios
-            .post("http://127.0.0.1:8000/api/v1/users/get_colleagues", {
+            .post(getColleaguesUrl, {
                 company_id: localStorage.getItem('company_id')},{
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
