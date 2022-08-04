@@ -4,10 +4,10 @@ import axios from "axios";
 
 const GetAnswer = (props) => {
     const [answers, setAnswers] = useState([]);
-    const question_type = props.question_type;
+    const getUserAnswerUrl = "http://127.0.0.1:8000/api/v1/answers/get_user_answer";
     useEffect(() => {
         axios
-            .post("http://127.0.0.1:8000/api/v1/answers/get_user_answer", {
+            .post(getUserAnswerUrl, {
                 question_id: props.question_id,
                 user_id: localStorage.getItem('employee_id')},{
                 headers: {
