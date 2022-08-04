@@ -7,7 +7,7 @@ import axios from "axios";
 const Games = () => {
     const navigate = useNavigate();
     const [games, setGames] = useState([])
-
+    const getGamesUrl = "http://127.0.0.1:8000/api/v1/games/get_games";
     
     const handleClick = (event) => {
         localStorage.setItem('game_id', event.currentTarget.id);
@@ -16,7 +16,7 @@ const Games = () => {
   
     useEffect(() => {
     axios
-    .get("http://127.0.0.1:8000/api/v1/games/get_games",{
+    .get(getGamesUrl,{
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
             Accept: 'application/json'
