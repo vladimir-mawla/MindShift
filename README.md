@@ -110,6 +110,8 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 | ![Points](/readme/AddPoints.png) |
 | Add Reward |
 | ![Rewards](/readme/AddReward.png) |
+| Add Questions |
+| ![AddQuestions](/readme/Add_questions.gif) |
 
 <br><br>
 <img src="./readme/title6.svg"/>
