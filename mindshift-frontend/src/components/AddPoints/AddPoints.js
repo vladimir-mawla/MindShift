@@ -9,10 +9,12 @@ const AddPoints = () => {
     const user = useRef(null)
     const points = useRef(null)
     const [employees, setEmployees] = useState([])
+    const getUsersUrl = "http://127.0.0.1:8000/api/v1/users/get_users";
+    const pointsControlUrl = "http://127.0.0.1:8000/api/v1/users/points_control";
         
     useEffect(() => {
         axios
-        .post("http://127.0.0.1:8000/api/v1/users/get_users", {
+        .post(getUsersUrl, {
             company_id: localStorage.getItem("company_id")},{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -28,7 +30,7 @@ const AddPoints = () => {
     
     function increment(){
         axios
-        .post("http://127.0.0.1:8000/api/v1/users/points_control", {
+        .post(pointsControlUrl, {
             user_id: user.current.value,
             points: points.current.value},{
             headers: {
@@ -36,7 +38,7 @@ const AddPoints = () => {
                 Accept: 'application/json'
             }
         })
-        .then((response)=> {
+        .then(()=> {
             alert(`Assigned ${points.current.value} points to the selected user`)
             user.current.value=""
             points.current.value=""
