@@ -89,7 +89,11 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 | Profile |
 |![Profile](/readme/Profile_screen.png) |
 | Rewards |
-| ![Home](/readme/Rewards_screen.png) |
+| ![Rewards](/readme/Rewards_screen.png) |
+| Order |
+| ![Order](/readme/Order.png) |
+| Chatbot |
+| ![Chatbot](/readme/Chatbot.png) |
 
 >Admin Page:
 
