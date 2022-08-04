@@ -1,10 +1,8 @@
 import './landing.css'
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Register from "../Register/Register"
 
 const Landing = () => {
-    const navigate = useNavigate();
 
     return(
         <div>

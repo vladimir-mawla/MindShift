@@ -38,7 +38,7 @@ const Employees = () => {
                 setEmployees(s);
             });
     }, []);
-
+    // removing user from the database
     const removeEmployee = (event) => {
         axios
             .post(deleteUserUrl, {
@@ -53,7 +53,7 @@ const Employees = () => {
                 window.location.reload();
             });
     }
-
+    // Handling popup
     const togglePopup = (event) => {
         setIsOpen(!isOpen);
         setId(event.currentTarget.id)

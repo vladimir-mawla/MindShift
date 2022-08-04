@@ -7,6 +7,7 @@ import { Link, useNavigate, useMatch, useResolvedPath } from 'react-router-dom';
 export default function AdminNavba() {
     const navigate = useNavigate()
     const logoutUrl = "http://127.0.0.1:8000/api/v1/logout";
+    
     const logout = () => {
       axios.post(logoutUrl, {
           headers: {

@@ -23,7 +23,7 @@ const Leaderboard = () => {
             const s = response.data.users;
             setUsers(s);
         });
-
+        // Getting the data from pusher:
         var pusher = new Pusher('ccb92aa552693d2a8867', {
             cluster: 'ap2'
           });      
@@ -33,6 +33,7 @@ const Leaderboard = () => {
             setUsers(data.message[0])
           });
         }, []);
+        // sorting the state to display the leaderboard
         users.sort((a,b) => b.points - a.points);
     return (
         <>

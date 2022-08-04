@@ -7,7 +7,7 @@ import Button from '../Button/Button';
 import { useNavigate } from 'react-router-dom';
 
 
-const Request = ({props}) => {
+const Request = () => {
     const navigate = useNavigate();
     const order = useRef(0);
     const addOrderUrl = "http://127.0.0.1:8000/api/v1/orders/add_order";

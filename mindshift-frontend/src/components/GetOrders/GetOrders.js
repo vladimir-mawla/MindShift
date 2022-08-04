@@ -24,6 +24,7 @@ const GetOrders = ({user_id, name}) => {
     });
     }, [user_id]);
 
+    // Function to mark order done
     const markDone = (event) => {
         axios
         .post(markOrderUrl, {

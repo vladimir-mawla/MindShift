@@ -9,6 +9,7 @@ const Games = () => {
     const [games, setGames] = useState([])
     const getGamesUrl = "http://127.0.0.1:8000/api/v1/games/get_games";
     
+    // saving the game id in local storage
     const handleClick = (event) => {
         localStorage.setItem('game_id', event.currentTarget.id);
         navigate("/questions");

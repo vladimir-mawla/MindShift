@@ -48,7 +48,7 @@ const Games = () => {
                 setGames(s);
             });
     }, []);
-
+    // A function to open and close the popup
     const togglePopup = () => {
         setIsOpen(!isOpen);
     }

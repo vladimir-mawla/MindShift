@@ -24,6 +24,7 @@ class Dashboard extends Component {
             const s = response.data.users;
 			this.setState({ users: [...this.state.users, s] })
         })
+		// Getting the data from pusher
 		var pusher = new Pusher('ccb92aa552693d2a8867', {
 			cluster: 'ap2'
 		  });

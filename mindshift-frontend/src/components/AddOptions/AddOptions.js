@@ -16,6 +16,7 @@ const AddOptions = () => {
   async function submit() {
     setOptions([...options, input.current.value])
     const question_id = localStorage.getItem("question_id");
+    
     await axios
       .post(addOptionUrl, {
         question_id: question_id,

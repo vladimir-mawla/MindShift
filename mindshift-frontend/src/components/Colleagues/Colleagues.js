@@ -1,17 +1,11 @@
 import './colleagues.css';
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Colleagues = () => {
-    const navigate = useNavigate();
     const [colleagues, setColleagues] = useState([])
     const getColleaguesUrl = "http://127.0.0.1:8000/api/v1/users/get_colleagues";
-    const handleClick = (event) => {
-        localStorage.setItem('colleague_id', event.currentTarget.id);
-        navigate("/");
-    }
 
     useEffect(() => {
         axios
