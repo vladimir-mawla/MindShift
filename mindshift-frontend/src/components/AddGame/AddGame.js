@@ -11,7 +11,8 @@ const Games = () => {
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
     const [games, setGames] = useState([])
-
+    const deleteGameUrls = "http://127.0.0.1:8000/api/v1/games/delete_game";
+    const getGamesUrl = "http://127.0.0.1:8000/api/v1/games/get_games";
 
     const handleClick = (event) => {
         localStorage.setItem('game_id', event.currentTarget.id);
@@ -20,7 +21,7 @@ const Games = () => {
 
     const deleteGame = (event) => {
         axios
-            .post("http://127.0.0.1:8000/api/v1/games/delete_game", {
+            .post(deleteGameUrls, {
                 game_id: event.currentTarget.id},{
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -35,7 +36,7 @@ const Games = () => {
 
     useEffect(() => {
         axios
-            .get("http://127.0.0.1:8000/api/v1/games/get_games", {
+            .get(getGamesUrl, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                     Accept: 'application/json'
