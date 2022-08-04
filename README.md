@@ -40,11 +40,6 @@
 > This design was planned before on paper, then moved to Figma app for the fine details.
 Note that I didn't use any styling library or theme, all from scratch and using pure css modules.
 
-- Implemented live scoring system
-![LiveScoring](/readme/live-scoring.gif)
-- Removing employee
-![LiveScoring](/readme/removing-employee.gif)
-
 | Landing  |
 | ---------|
 | ![Landing](/readme/Landing.png) | 
@@ -76,6 +71,11 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 <a id="implementation"></a>
 
 > Using the above mentioned tech stacks and the wireframes built with figma, the implementation of the app is shown as below. These are screenshots from the real app
+
+- Implemented live scoring system
+![LiveScoring](/readme/live-scoring.gif)
+- Removing employee
+![LiveScoring](/readme/removing-employee.gif)
 
 >User Page:
 
