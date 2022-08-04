@@ -10,10 +10,12 @@ import { useNavigate } from 'react-router-dom';
 const Request = ({props}) => {
     const navigate = useNavigate();
     const order = useRef(0);
+    const addOrderUrl = "http://127.0.0.1:8000/api/v1/orders/add_order";
+
     const submit = () => {
 
         axios
-        .post("http://127.0.0.1:8000/api/v1/orders/add_order", {
+        .post(addOrderUrl, {
             user_id: localStorage.getItem("user_id"),
             reward_id: localStorage.getItem("reward_id"),
             company_id: localStorage.getItem("company_id"),
