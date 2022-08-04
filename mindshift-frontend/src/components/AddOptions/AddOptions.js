@@ -45,8 +45,9 @@ const AddOptions = () => {
           <Button text={'ADD'} className='options-button' onClick={() => {submit()} } />
           <Button text={'FINISH'} className='options-button' onClick={() => {navigate('/add_game_questions')}} />
           </div>
+          <ListOptions options={options} />
+
         </div>
-        <ListOptions options={options} />
       </div>
 
   );

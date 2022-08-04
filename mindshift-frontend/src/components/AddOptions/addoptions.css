@@ -19,6 +19,10 @@
     cursor: pointer;
     width: 80%;
   }
+  .listed-options{
+    color: white;
+    margin-left: 10px;
+  }
   .options-form{
     color: white;
     height: 180px;

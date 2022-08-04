@@ -6,7 +6,7 @@ const ListOptions = ({options}) => {
         <>
         {options.map((option, index) => (
           <div key={index}>
-            <h2>Option {index + 1}: {option}</h2>
+            <h2 className='listed-options'>Option {index + 1}: {option}</h2>
           </div>
         ))}
       </>

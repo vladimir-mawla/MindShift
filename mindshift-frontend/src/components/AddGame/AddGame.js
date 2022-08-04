@@ -96,14 +96,14 @@ const AddGame = () => {
     const description = useRef(0)
     const points = useRef(0)
     const navigate = useNavigate()
-
+    const addGameUrl = "http://127.0.0.1:8000/api/v1/games/add_game";
 
   function submit() {
     axios
-    .post("http://127.0.0.1:8000/api/v1/games/add_game", {
+    .post(addGameUrl, {
         name: name.current.value,
         description: description.current.value,
-        points: 0,
+        points: 0},{
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           Accept: 'application/json'
