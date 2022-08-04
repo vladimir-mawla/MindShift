@@ -47,7 +47,7 @@ const GetOrders = ({user_id, name}) => {
                 <ul>
                 {orders.map((order, index) => (
                     <>
-                <li key={index} className='order'>
+                <li key={index} className='user-order'>
                     <p>{order.order}</p>
                     <div id={order.id} className='mark' onClick={markDone}>x</div>
                 </li>

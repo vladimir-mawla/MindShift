@@ -27,7 +27,7 @@
 .order{
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .order-box .input-box input {
@@ -88,4 +88,10 @@
     background-color: #DF8A27;
     width: 80%;
     max-width: 250px;
+    align-self: center;
+}
+.user-order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
