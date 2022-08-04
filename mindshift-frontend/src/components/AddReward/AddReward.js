@@ -9,11 +9,11 @@ const AddReward = () => {
     const name = useRef(0)
     const description = useRef(0)
     const points = useRef(0)
-
+    const addRewardUrl = "http://127.0.0.1:8000/api/v1/rewards/add_reward";
 
   function submit() {
     axios
-    .post("http://127.0.0.1:8000/api/v1/rewards/add_reward", {
+    .post(addRewardUrl, {
         name: name.current.value,
         description: description.current.value,
         needed_points: points.current.value},{
