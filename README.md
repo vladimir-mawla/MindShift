@@ -131,7 +131,7 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
    ```sh
    php artisan serve
    ```
-5. Start the Application 'mindshift-frontend' folder.
+5. Start the Application at 'mindshift-frontend' folder.
    ```sh
    npm start
    ```
