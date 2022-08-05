@@ -115,12 +115,23 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 ### Installation
 
 
-1. Clone the repo
+1. Clone the repo.
    ```sh
    git clone https://github.com/vladimir-mawla/MindShift.git
    ```
-2. Install NPM packages
+2. Add your DataBase name in the .env file locataed at 'mindshift-backend/.env'.
+
+   DB_DATABASE= 'yourdb'
+
+3. Install NPM packages in 'mindshift-frontend' folder.
    ```sh
    npm install
    ```
-
+4. Start the Server in 'mindshift-backend' folder.
+   ```sh
+   php artisan serve
+   ```
+5. Start the Application 'mindshift-frontend' folder.
+   ```sh
+   npm start
+   ```
