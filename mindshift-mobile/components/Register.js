@@ -34,6 +34,9 @@ export default function Register() {
         .then((response) => {
             if (response) {
                 alert('You have successfuly registered');
+                AsyncStorage.setItem("user_id", response.data.user.id);
+                AsyncStorage.setItem("company_id", response.data.user.company_id);
+                AsyncStorage.setItem('token', response.data.authorisation.token)
             } else {
                 alert("An error has occurred");
             }
