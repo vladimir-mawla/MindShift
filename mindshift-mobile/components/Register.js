@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
         fontSize:70,
         fontWeight:"bold",
         marginBottom:120,
-        marginRight:40
+        textAlign:'center',
       },
       form: {
           alignItems:'center'

@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 8,
         margin: 5,
+        width:'75%'
       },
       textInput: {
         width:"100%",
@@ -94,7 +95,8 @@ const styles = StyleSheet.create({
         fontSize:70,
         fontWeight:"bold",
         marginBottom:120,
-        marginRight:40
+        textAlign:'center',
+
       },
       form: {
         alignItems:'center'
