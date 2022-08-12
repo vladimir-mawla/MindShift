@@ -41,7 +41,12 @@ const Leaderboard = () => {
         users.sort((a,b) => b.points - a.points);
   return (
     <View>
-      <Text style={styles.HeadLeaderboard}>LeaderBoard 📊</Text>
+        {users.map((user, index) =>(
+      <View key={index}>
+          <Text>{user.name}</Text>
+          <Text>{user.points}</Text>
+      </View>
+      ))}
     </View>
   );
 };
