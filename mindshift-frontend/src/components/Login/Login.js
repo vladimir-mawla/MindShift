@@ -26,7 +26,11 @@ const Login = () => {
             localStorage.setItem("user_id", res.data.user.id);
             localStorage.setItem("company_id", res.data.user.company_id);
             localStorage.setItem('token', res.data.authorisation.token)
-            navigate("/page");
+            if(res.data.user.user_type === 1){
+              navigate("/add_game");
+            }else{
+              navigate("/page");
+            }
           }
         })
         .catch((error) => {
