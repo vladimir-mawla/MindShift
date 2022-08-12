@@ -4,11 +4,12 @@ import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Leaderboard from "./components/Leaderboard";
+import Games from "./components/Games";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Leaderboard />
+      <Games />
       <StatusBar style="auto" />
     </View>
   );
