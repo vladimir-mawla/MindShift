@@ -96,7 +96,7 @@ export default function Navbar({link, to}) {
     return (
       <>
         <nav className='user-navbar'>
-              <img id='user-nav-logo' src={ require('../assets/logo.png') } onClick={handleClick}/>
+              <img id='user-nav-logo' src={ require('../../assets/logo.png') } onClick={handleClick}/>
             <ul className='user-nav-links'>
                 <div className='link' onClick={()=>{navigate(`/${to}`)}}><a>{link}</a></div>
                 <div className="vl"></div>

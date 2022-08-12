@@ -23,7 +23,7 @@ export default function AdminNavba() {
     return (
         <nav className='admin-navbar'>
           <div className='admin-upper-nav'></div>
-            <img id='admin-nav-logo' src={ require('../assets/logo.png') } onClick={handleClick}/>
+            <img id='admin-nav-logo' src={ require('../../assets/logo.png') } onClick={handleClick}/>
             <ul className='admin-nav-links'>
                 <CustomLink to={"/dashboard"}>Dashboard</CustomLink>
                 <CustomLink to={"/employees"}>Employees</CustomLink>
