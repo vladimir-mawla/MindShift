@@ -1,10 +1,9 @@
 import './employees.css';
 import React from "react";
 import Button from "../Button/Button";
-import Navbar from "../Navbar/Navbar";
 import Popup from '../PopUp/PopUp';
-import { useNavigate, Link } from "react-router-dom";
-import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import GetOrders from '../GetOrders/GetOrders';
 import axios from "axios";
 import { FaTrophy, FaUsers, FaGamepad, FaCoffee, FaTrash } from 'react-icons/fa';
@@ -72,30 +71,30 @@ const Employees = () => {
                             <div className="additional">
                                 <div className="user-card">
                                     <div className="level center">
-                                        <img className='badge' src={c.badge} />
+                                        <img alt='badge' className='badge' src={c.badge} />
                                     </div>
                                     <div className="points center">
                                         {c.points} Points
                                     </div>
-                                    <img width="110" height="110" src={c.profile_img} role="img" aria-labelledby="title desc" className="center"
+                                    <img alt='employee profile' width="110" height="110" src={c.profile_img} aria-labelledby="title desc" className="center"
                                     />
                                 </div>
                                 <div className="more-info">
                                     <h1>{c.name}</h1>
                                     <div className="coords">
                                         <span>{c.email}</span>
-                                        <span>Joined {c.created_at.slice(5, 7) == '01' ? "January" :
-                                            c.created_at.slice(5, 7) == '02' ? "February" :
-                                                c.created_at.slice(5, 7) == '03' ? "March" :
-                                                    c.created_at.slice(5, 7) == '04' ? "April" :
-                                                        c.created_at.slice(5, 7) == '05' ? "May" :
-                                                            c.created_at.slice(5, 7) == '06' ? "June" :
-                                                                c.created_at.slice(5, 7) == '07' ? "July" :
-                                                                    c.created_at.slice(5, 7) == '08' ? "August" :
-                                                                        c.created_at.slice(5, 7) == '09' ? "September" :
-                                                                            c.created_at.slice(5, 7) == '10' ? "October" :
-                                                                                c.created_at.slice(5, 7) == '11' ? "November" :
-                                                                                    c.created_at.slice(5, 7) == '12' ? "December" : ""} {c.created_at.slice(0, 4)}</span>
+                                        <span>Joined {c.created_at.slice(5, 7) === '01' ? "January" :
+                                            c.created_at.slice(5, 7) === '02' ? "February" :
+                                                c.created_at.slice(5, 7) === '03' ? "March" :
+                                                    c.created_at.slice(5, 7) === '04' ? "April" :
+                                                        c.created_at.slice(5, 7) === '05' ? "May" :
+                                                            c.created_at.slice(5, 7) === '06' ? "June" :
+                                                                c.created_at.slice(5, 7) === '07' ? "July" :
+                                                                    c.created_at.slice(5, 7) === '08' ? "August" :
+                                                                        c.created_at.slice(5, 7) === '09' ? "September" :
+                                                                            c.created_at.slice(5, 7) === '10' ? "October" :
+                                                                                c.created_at.slice(5, 7) === '11' ? "November" :
+                                                                                    c.created_at.slice(5, 7) === '12' ? "December" : ""} {c.created_at.slice(0, 4)}</span>
                                     </div>
                                     <div className="coords">
                                         <span>{c.job_title}</span>

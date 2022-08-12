@@ -12,7 +12,7 @@ const Login = () => {
   const loginUrl = "http://127.0.0.1:8000/api/v1/login";
 
   function login() {
-    if (email.current.value == "" || password.current.value == "") {
+    if (email.current.value === "" || password.current.value === "") {
       alert("You should fill all fields");
     } else {
       axios
@@ -31,10 +31,10 @@ const Login = () => {
         })
         .catch((error) => {
           let message = error.response.data.message;
-          if (message == "The email must be a valid email address.") {
+          if (message === "The email must be a valid email address.") {
             alert("The email must be a valid email address.");
             password.current.value = "";
-          } else if (message == "Unauthorized") {
+          } else if (message === "Unauthorized") {
             alert("User Not Found");
             password.current.value = "";
           }

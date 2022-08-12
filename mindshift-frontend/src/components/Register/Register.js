@@ -35,10 +35,10 @@ const Register = () => {
         })
         .catch((error) => {
           let message = error.response.data.message;
-          if (message == "The email must be a valid email address.") {
+          if (message === "The email must be a valid email address.") {
             alert("The email must be a valid email address.");
             password.current.value = "";
-          } else if (message == "The password must be at least 6 characters.") {
+          } else if (message === "The password must be at least 6 characters.") {
             alert("The password must be at least 6 characters.");
             password.current.value = "";
           }

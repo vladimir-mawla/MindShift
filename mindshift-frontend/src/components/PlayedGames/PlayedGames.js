@@ -39,7 +39,7 @@ const PlayedGames = () => {
             <div key={game.id}>
             <ul className="cards">
                 <li id={game.id} onClick={handleClick}>
-                    <a href="" className="card">
+                    <a className="card">
                         <img src={game.img} className="card-image" alt="" />
                         <div className="card-overlay">
                             <div className="card-header">

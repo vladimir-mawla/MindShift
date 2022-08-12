@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const GetAnswer = (props) => {
@@ -19,7 +19,7 @@ const GetAnswer = (props) => {
             .then((response) => {
                 setAnswers(response.data);
             });
-    }, []);
+    }, [props.question_id]);
 
 
     return (

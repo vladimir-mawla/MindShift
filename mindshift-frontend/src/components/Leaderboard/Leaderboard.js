@@ -45,7 +45,7 @@ const Leaderboard = () => {
                                 <div className='rank'>
                                     <h3>#{index +1}</h3>
                                 </div>
-                                <img src={user.profile_img} className='leader-profile-img'/>
+                                <img alt='leader profile' src={user.profile_img} className='leader-profile-img'/>
                             </div>
                             <div className='leader-profile-info'>
                                 <h5>{user.name}</h5><br/>

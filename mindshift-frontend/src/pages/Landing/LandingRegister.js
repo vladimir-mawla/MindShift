@@ -8,7 +8,7 @@ const Landing = () => {
         <div>
             <div className='hero'>
                 <div className='logo'>
-                    <img id='logo' src={ require('../../assets/white-logo.png') } />
+                    <img alt='logo' id='logo' src={ require('../../assets/white-logo.png') } />
                 </div>
                 <div className='form'>
                     <Register />

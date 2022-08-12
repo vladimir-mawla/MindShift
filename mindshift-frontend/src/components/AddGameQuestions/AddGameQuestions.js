@@ -54,7 +54,7 @@ const AddGameQuestion = () => {
             points.current.value= ""
         })
     })
-    if (question_type.current.value == 1 || question_type.current.value == 2) {
+    if (question_type.current.value === 1 || question_type.current.value === 2) {
         navigate("../add_options");
       }
   }

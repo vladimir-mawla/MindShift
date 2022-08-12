@@ -19,7 +19,6 @@ const Colleagues = () => {
 
             .then((response) => {
                 const s = response.data.users;
-                console.log(response.data)
                 setColleagues(s);
 
             });
@@ -33,7 +32,7 @@ const Colleagues = () => {
 
                     <div key={index} className='col'>
                         <div className='col-profile'>
-                            <div className='col-profile-img'><img src={user.profile_img} className='leader-profile-img' /></div>
+                            <div className='col-profile-img'><img alt='profile' src={user.profile_img} className='leader-profile-img' /></div>
                             <div className='col-profile-info'>
                                 <h5>{user.name}</h5><br />
                                 <div className='leader-points'><div className='coins'></div><p>{user.points} Points</p></div>

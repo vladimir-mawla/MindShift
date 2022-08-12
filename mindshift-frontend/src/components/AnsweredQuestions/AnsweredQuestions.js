@@ -1,12 +1,10 @@
 import React from "react";
 import GetAnswer from '../GetAnswer/GetAnswer';
-import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const AnsweredQuestions = () => {
-    const navigate = useNavigate();
     const [questions, setQuestions] = useState([])
     var game_id = localStorage.getItem('played_game_id')
     const getQuestionsUrl = "http://127.0.0.1:8000/api/v1/questions/get_questions";
@@ -25,7 +23,7 @@ const AnsweredQuestions = () => {
             const s = response.data.questions;
             setQuestions(s);
         });
-        }, []);
+        }, [game_id]);
         
     return (
         <div>

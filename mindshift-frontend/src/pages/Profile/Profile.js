@@ -87,7 +87,7 @@ const Profile = () => {
                 <ChatBot />
                 <div className='profile-container'>
                     <div className='image-container'>
-                        <img src={info.profile_img} className='profile-img'/>
+                        <img src={info.profile_img} alt='profile' className='profile-img'/>
                         <button className='edit-profile-button' onClick={togglePopup}>Edit Profile</button>
                     </div>
                     <div className='profile-form'>
