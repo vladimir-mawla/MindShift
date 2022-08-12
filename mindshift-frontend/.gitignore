@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 canvasjs.min.js
+
+/src/reportWebVitals.js
+/src/setupTests.js
