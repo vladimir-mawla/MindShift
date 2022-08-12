@@ -40,13 +40,17 @@
 > This design was planned before on paper, then moved to Figma app for the fine details.
 Note that I didn't use any styling library or theme, all from scratch and using pure css modules.
 
+
+| Profile |
+|---------|
+| ![Profile](/readme/Profile.png) |
+
 | Landing  | Home |
 | ---------|------|
 | ![Landing](/readme/Landing.png) | ![Home](/readme/Home.png) |
-|  Questions | Profile |
-| ![Questions](/readme/Questions.png) | ![Profile](/readme/Profile.png) |
-|     Rewards      |
-| ![Rewards](/readme/Rewards.png) | 
+|  Questions | Rewards  |
+| ![Questions](/readme/Questions.png) | ![Rewards](/readme/Rewards.png) | 
+
 
 
 <br><br>
@@ -68,34 +72,47 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 
 > Using the above mentioned tech stacks and the wireframes built with figma, the implementation of the app is shown as below. These are screenshots from the real app
 
-- Implemented live scoring system
-![LiveScoring](/readme/live-scoring.gif)
-- Removing employee
-![LiveScoring](/readme/removing-employee.gif)
 
+
+<br><br>
 >User Page:
 
-| Landing  | Home  |
-|----------|-------|
-| ![Landing](/readme/Landing_screen.png) | ![Home](/readme/Home_screen.png) |
+| Home |
+|------|
+| ![Home](/readme/Home_screen.png) |
+
+| Landing  | Chatbot |
+|----------|---------|
+| ![Landing](/readme/Landing_screen.png) | ![Chatbot](/readme/Chatbot.png) |
 |Questions | Profile |
 | ![Questions](/readme/Questions_screen.png) |![Profile](/readme/Profile_screen.png) |
 | Rewards | Order |
 | ![Rewards](/readme/Rewards_screen.png) | ![Order](/readme/Order.png) |
-| Chatbot |
-| ![Chatbot](/readme/Chatbot.png) |
 
+<br>
+
+- Implemented live scoring system
+![LiveScoring](/readme/live-scoring.gif)
+
+<br><br>
 >Admin Page:
 
-| Dashboard  | Employees | 
-|------------|-----------|
-| ![Dashboard](/readme/Dashboard.png) |  ![Employees](/readme/Employees.png) |
-| Add Game | Add Badge  |  
+| Dashboard  |
+|------------|
+| ![Dashboard](/readme/Dashboard.png) |
+
+| Add Game | Add Badge  | 
+|----------|------------| 
 |![Add Game](/readme/AddGame.png) | ![Add Badge](/readme/AddBadge.png) |
 | Add Points | Add Rewards|
 | ![Points](/readme/AddPoints.png) | ![Rewards](/readme/AddReward.png) |
-| Add Questions |
-| ![AddQuestions](/readme/Add_questions.gif) |
+| Add Questions | Employees | 
+| ![AddQuestions](/readme/Add_questions.gif) |   ![Employees](/readme/Employees.png) |
+
+<br>
+
+- Removing employee
+![LiveScoring](/readme/removing-employee.gif)
 
 <br><br>
 <img src="./readme/title6.svg"/>
