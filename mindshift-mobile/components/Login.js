@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { StyleSheet, View, Text, TouchableOpacity, Alert, Image, Button, TextInput } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 export default function Login() {
 
@@ -26,14 +28,18 @@ export default function Login() {
           password: password
       })
       .then((response) => {
+        console.log(response)
           if (response) {
-              alert('You have successfuly logged in');
+            alert('You have successfuly logged in');
+            AsyncStorage.setItem("user_id", response.data.user.id);
+            AsyncStorage.setItem("company_id", response.data.user.company_id);
+            AsyncStorage.setItem('token', response.data.authorisation.token)          
           } else {
               alert("An error has occurred");
           }
       })
       } catch(error){
-          alert(error);
+          console.log(error);
       }
         
 
