@@ -7,7 +7,7 @@ import Register from "./components/Register";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Register />
+      <Login />
       <StatusBar style="auto" />
     </View>
   );

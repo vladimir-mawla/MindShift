@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, TouchableOpacity, Alert, Image, Button, TextInp
 
 export default function Register() {
 
-    const baseUrl= 'http://127.0.0.1:8000/api/v1';
+    const registerUrl= 'http://127.0.0.1:8000/api/v1/register';
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -26,7 +26,7 @@ export default function Register() {
             return;
           }
           try {
-        await axios.post("http://127.0.0.1:8000/api/v1/register", {
+        await axios.post(registerUrl, {
             name: name,
             email: email,
             password: password
@@ -74,22 +74,6 @@ export default function Register() {
                         onChangeText={onChangePasswordHandler}
                     />
                 </View>
-                {/* <View style={styles.inputView}>
-                    <TextInput 
-                        style={styles.textInput}
-                        placeholder="Username"
-                        placeholderTextColor="#003f5c"
-                        secureTextEntry={true}
-                    />
-                </View>
-                <View style={styles.inputView}>
-                    <TextInput 
-                        style={styles.textInput}
-                        placeholder="Company Name"
-                        placeholderTextColor="#003f5c"
-                        secureTextEntry={true}
-                    />
-                </View> */}
                 <View style={styles.alignButton}>
                 <Button color='#95BDCE' title={"Register"} onPress={register}/>
                 </View>
