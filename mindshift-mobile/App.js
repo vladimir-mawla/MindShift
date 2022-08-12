@@ -3,11 +3,12 @@ import { StyleSheet, Text, View } from "react-native";
 import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Leaderboard from "./components/Leaderboard";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Login />
+      <Leaderboard />
       <StatusBar style="auto" />
     </View>
   );
