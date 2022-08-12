@@ -1,11 +1,11 @@
 import './profile.css'
 import React from "react";
-import Button from "../Button/Button";
-import Navbar from "../Navbar/Navbar";
+import Button from "../../components/Button/Button";
+import Navbar from "../../components/Navbar/Navbar";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
-import Popup from '../PopUp/PopUp';
-import ChatBot from '../ChatBot/ChatBot';
+import Popup from '../../components/PopUp/PopUp';
+import ChatBot from '../../components/ChatBot/ChatBot';
 
 const Profile = () => {
     const name = useRef(null)

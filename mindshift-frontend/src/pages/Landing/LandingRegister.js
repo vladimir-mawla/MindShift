@@ -1,6 +1,6 @@
 import './landing.css'
 import React from "react";
-import Register from "../Register/Register"
+import Register from "../../components/Register/Register"
 
 const Landing = () => {
 

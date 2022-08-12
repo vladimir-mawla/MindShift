@@ -1,4 +1,4 @@
-import '../Landing/landing.css';
+import '../../pages/Landing/landing.css';
 import React from "react";
 import Button from "../Button/Button";
 import { useNavigate, Link } from "react-router-dom";

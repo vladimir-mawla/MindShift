@@ -1,10 +1,10 @@
 import './pages.css';
 import React from 'react';
-import ChatBot from '../ChatBot/ChatBot';
-import Navbar from '../Navbar/Navbar';
-import Games from '../Games/Games';
-import Leaderboard from '../Leaderboard/Leaderboard';
-import Colleagues from '../Colleagues/Colleagues'
+import ChatBot from '../../components/ChatBot/ChatBot';
+import Navbar from '../../components/Navbar/Navbar';
+import Games from '../../components/Games/Games';
+import Leaderboard from '../../components/Leaderboard/Leaderboard';
+import Colleagues from '../../components/Colleagues/Colleagues'
 
 const Page = () => {
 
