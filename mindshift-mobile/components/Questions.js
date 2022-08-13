@@ -67,6 +67,63 @@ const Questions = () => {
         })
     }
 
+    // Submit Answers Function
+    function submitAnswers(id, answer){
+        axios
+        .post(addAnswerUrl, {
+            answer: answer,
+            question_id: id,
+            user_id: userId,
+            game_id: gameId},{
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/json'
+            }
+        })
+        .then(()=> {
+            axios
+            .post(checkAnswerUrl, {
+                question_id: id,
+                user_id: userId,
+                answer: answer,
+                game_id: gameId},{
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    Accept: 'application/json'
+                }
+            })
+            .then((response) => {
+                if(response.data["Status"] === "True"){
+                    axios
+                    .post(pointsControlUrl, {
+                        user_id: userId,
+                        points: response.data["Points"]},{
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                            Accept: 'application/json'
+                        }
+                    })
+                    axios
+                    .post(testUrl, {
+                        message: localStorage.getItem('company_id')},{
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                            Accept: 'application/json'
+                        }
+                    })
+                    axios
+                    .get(leaderPusherUrl, {
+                    
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                            Accept: 'application/json'
+                        }
+                    })
+                }
+                // navigate('/page');
+            })
+        })
+    }
 
 };
 export default Questions;
