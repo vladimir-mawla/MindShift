@@ -11,6 +11,13 @@ const QuestionOptions = (props) => {
     const getOptionsUrl = "http://127.0.0.1:8000/api/v1/question_options/get_options";
 
 
+    // Get Info Function
+    const getInfo = async () => {
+        await AsyncStorage.getItem("token").then((token) => {
+            setToken(token);
+        });
+    }
+
 
 };
 export default QuestionOptions;
