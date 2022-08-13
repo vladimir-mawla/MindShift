@@ -5,11 +5,12 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Leaderboard from "./components/Leaderboard";
 import Games from "./components/Games";
+import Questions from "./components/Questions";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Games />
+      <Questions />
       <StatusBar style="auto" />
     </View>
   );

@@ -1,12 +1,10 @@
 import React, { useState, useEffect }  from "react";
 import axios from "axios";
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Button} from 'react-native';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Questions = () => {
-    const navigate = useNavigate();
     const [questions, setQuestions] = useState([])
-    const [name, setName] = useState(null);
     const [token, setToken] = useState("");
     const [userId, setUserId] = useState("");
     const [gameId, setGameId] = useState("");
@@ -21,7 +19,7 @@ const Questions = () => {
 
     // Get Info Function
     const getInfo = async () => {
-        await AsyncStorage.getItem("company_id").then((gameId) => {
+        await AsyncStorage.getItem("game_id").then((gameId) => {
         setGameId(gameId);
         });
         await AsyncStorage.getItem("token").then((token) => {
@@ -46,13 +44,14 @@ const Questions = () => {
         .then((response) => {
             const s = response.data.questions;
             setQuestions(s);
+            console.log(questions)
         });
     }
 
     useEffect(() => {
         getInfo();
         getQuestions();
-    }, [gameId]);
+    }, [token]);
         
     // Add Played Game Function
     function gamePlayed(){
@@ -127,7 +126,7 @@ const Questions = () => {
     return (
         <View>
             <View className='questions-title'>
-                <h1>OFFICE QUIZ #23</h1>
+                <h1>OFFICE QUIZ</h1>
                 <h1>{questions.length} QUESTIONS</h1>
             </View>
             <View className='questions-container'>
@@ -137,9 +136,9 @@ const Questions = () => {
                             <View className='question'>
                                 <li key={question.id}>{question.question} ({question.points} points)</li>
                             </View>
-                            {(question.question_type === 0) ? <View className='input' ><input onChange={(e) => setName(e.target.value)} id={question.id} type={"text"} /></View> : 
+                            {/* {(question.question_type === 0) ? <View className='input' ><input onChange={(e) => setName(e.target.value)} id={question.id} type={"text"} /></View> : 
                             <QuestionOptions setName={setName} name={name} question_id={question.id} question_type={question.question_type}/>
-                            }
+                            } */}
                         </View>
                     ))}
                 </ol>
