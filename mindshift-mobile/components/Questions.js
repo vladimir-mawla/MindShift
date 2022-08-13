@@ -49,6 +49,11 @@ const Questions = () => {
         });
     }
 
+    useEffect(() => {
+        getInfo();
+        getQuestions();
+    }, [gameId]);
+        
 
 };
 export default Questions;
