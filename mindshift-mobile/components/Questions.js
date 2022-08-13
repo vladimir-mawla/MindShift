@@ -54,6 +54,19 @@ const Questions = () => {
         getQuestions();
     }, [gameId]);
         
+    // Add Played Game Function
+    function gamePlayed(){
+        axios
+        .post(addPlayedGameUrl, {
+            user_id: userId,
+            game_id: gameId},{
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/json'
+            }
+        })
+    }
+
 
 };
 export default Questions;
