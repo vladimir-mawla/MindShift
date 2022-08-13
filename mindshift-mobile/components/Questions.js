@@ -124,6 +124,41 @@ const Questions = () => {
             })
         })
     }
+    return (
+        <View>
+            <View className='questions-title'>
+                <h1>OFFICE QUIZ #23</h1>
+                <h1>{questions.length} QUESTIONS</h1>
+            </View>
+            <View className='questions-container'>
+                <ol>
+                    {questions.map((question) => (
+                        <View key={question.id} className='element'>
+                            <View className='question'>
+                                <li key={question.id}>{question.question} ({question.points} points)</li>
+                            </View>
+                            {(question.question_type === 0) ? <View className='input' ><input onChange={(e) => setName(e.target.value)} id={question.id} type={"text"} /></View> : 
+                            <QuestionOptions setName={setName} name={name} question_id={question.id} question_type={question.question_type}/>
+                            }
+                        </View>
+                    ))}
+                </ol>
+                <View className='questions-button'>
+                <Button text={'SUBMIT'} disabled={!name} onClick={() => {
+                    gamePlayed(); 
+                    const input = document.getElementsByTagName("input")
+                    for (var i = 0; i < input.length; i++){
 
+                    if (input[i].type === 'text'){
+                        submitAnswers(input[i].id, input[i].value)
+                        
+                    } else if (input[i].checked === true) {
+                        submitAnswers(input[i].name, input[i].value)
+                    };
+                }}} />
+                </View>
+            </View>
+        </View>
+    );
 };
 export default Questions;
