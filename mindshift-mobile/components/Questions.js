@@ -19,6 +19,19 @@ const Questions = () => {
     const leaderPusherUrl = "http://127.0.0.1:8000/api/v1/leaderboards/leader_pusher";
 
 
+    // Get Info Function
+    const getInfo = async () => {
+        await AsyncStorage.getItem("company_id").then((gameId) => {
+        setGameId(gameId);
+        });
+        await AsyncStorage.getItem("token").then((token) => {
+            setToken(token);
+        });
+        await AsyncStorage.getItem("user_id").then((userId) => {
+            setUserId(userId);
+        });
+    }
+
 
 };
 export default Questions;
