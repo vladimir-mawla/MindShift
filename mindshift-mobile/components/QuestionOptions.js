@@ -18,6 +18,23 @@ const QuestionOptions = (props) => {
         });
     }
 
+    // Get Options Functon
+    const getOptions = () => {
+        axios
+        .post(getOptionsUrl, {
+            question_id: props.question_id},{
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`,
+                Accept: 'application/json'
+            }
+        })
+
+        .then((response) => {
+            setOptions(response.data["options"]);
+        });
+    }
+
+
 
 };
 export default QuestionOptions;
