@@ -5,6 +5,12 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
 const QuestionOptions = (props) => {
+    const [options, setOptions] = useState([]);
+    const [token, setToken] = useState("");
+    const question_type = props.question_type;
+    const getOptionsUrl = "http://127.0.0.1:8000/api/v1/question_options/get_options";
+
+
 
 };
 export default QuestionOptions;
