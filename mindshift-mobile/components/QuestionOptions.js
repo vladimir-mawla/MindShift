@@ -35,6 +35,14 @@ const QuestionOptions = (props) => {
     }
 
 
+    useEffect(() => {
+        getInfo();
+        getOptions();
+    }, [token]);
+
+
+
+
 
 };
 export default QuestionOptions;
