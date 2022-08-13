@@ -41,8 +41,14 @@ const QuestionOptions = (props) => {
     }, [token]);
 
 
-
-
-
+    return(
+        <View>
+            {options.map((option, index) => (
+              (question_type === 1) ? <View className='radio' key={index}><input onChange={(e) => props.setName(e.target.value)} type="radio" name={option.question_id} value={option.option} />{option.option} </View>:
+              (question_type === 2) ? <View className='checkbox' key={index}><input onChange={(e) => props.setName(e.target.value)} type="checkbox" name={option.question_id} value={option.option} />{option.option} </View>:
+              ''
+            ))}
+        </View>
+    )
 };
 export default QuestionOptions;
