@@ -32,6 +32,23 @@ const Questions = () => {
         });
     }
 
+    // Get Question Function 
+    const getQuestions = () => {
+        axios
+        .post(getQuestionsUrl, {
+            game_id: gameId},{
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/json'
+            }
+        })
+    
+        .then((response) => {
+            const s = response.data.questions;
+            setQuestions(s);
+        });
+    }
+
 
 };
 export default Questions;
