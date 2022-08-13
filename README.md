@@ -1,4 +1,4 @@
-<img src="./readme/title1.svg"/>
+<img src="./readme-assets/title1.svg"/>
 
 <div align="center">
 
@@ -11,7 +11,7 @@
 <br><br>
 
 
-<img src="./readme/title2.svg"/>
+<img src="./readme-assets/title2.svg"/>
 <a id="project-philosophy"></a>
 
 > Gamification has become very popular and an integral part of the corporate world. Many companies are adopting it as it is an innovative approach and has lot of benefits on all levels. Not only it promotes employee loyalty and engagement by making work processes fun and rewarding but also it increases productivity driving better results to the company.
@@ -34,7 +34,7 @@
 
 <br><br>
 
-<img src="./readme/title3.svg"/>
+<img src="./readme-assets/title3.svg"/>
 <a id="wireframes"></a>
 
 > This design was planned before on paper, then moved to Figma app for the fine details.
@@ -43,19 +43,19 @@ Note that I didn't use any styling library or theme, all from scratch and using 
 
 | Profile |
 |---------|
-| ![Profile](/readme/Profile.png) |
+| ![Profile](/readme-assets/Profile.png) |
 
 | Landing  | Home |
 | ---------|------|
-| ![Landing](/readme/Landing.png) | ![Home](/readme/Home.png) |
+| ![Landing](/readme-assets/Landing.png) | ![Home](/readme-assets/Home.png) |
 |  Questions | Rewards  |
-| ![Questions](/readme/Questions.png) | ![Rewards](/readme/Rewards.png) | 
+| ![Questions](/readme-assets/Questions.png) | ![Rewards](/readme-assets/Rewards.png) | 
 
 
 
 <br><br>
 
-<img src="./readme/title4.svg"/>
+<img src="./readme-assets/title4.svg"/>
 <a id="tech-stack"></a>
 
 Here's a brief high-level overview of the tech stack the MindShift app uses:
@@ -67,7 +67,7 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 
 
 <br><br>
-<img src="./readme/title5.svg"/>
+<img src="./readme-assets/title5.svg"/>
 <a id="implementation"></a>
 
 > Using the above mentioned tech stacks and the wireframes built with figma, the implementation of the app is shown as below. These are screenshots from the real app
@@ -79,43 +79,43 @@ Here's a brief high-level overview of the tech stack the MindShift app uses:
 
 | Home |
 |------|
-| ![Home](/readme/Home_screen.png) |
+| ![Home](/readme-assets/Home_screen.png) |
 
 | Landing  | Chatbot |
 |----------|---------|
-| ![Landing](/readme/Landing_screen.png) | ![Chatbot](/readme/Chatbot.png) |
+| ![Landing](/readme-assets/Landing_screen.png) | ![Chatbot](/readme-assets/Chatbot.png) |
 |Questions | Profile |
-| ![Questions](/readme/Questions_screen.png) |![Profile](/readme/Profile_screen.png) |
+| ![Questions](/readme-assets/Questions_screen.png) |![Profile](/readme-assets/Profile_screen.png) |
 | Rewards | Order |
-| ![Rewards](/readme/Rewards_screen.png) | ![Order](/readme/Order.png) |
+| ![Rewards](/readme-assets/Rewards_screen.png) | ![Order](/readme-assets/Order.png) |
 
 <br>
 
 - Implemented live scoring system
-![LiveScoring](/readme/live-scoring.gif)
+![LiveScoring](/readme-assets/live-scoring.gif)
 
 <br><br>
 >Admin Page:
 
 | Dashboard  |
 |------------|
-| ![Dashboard](/readme/Dashboard.png) |
+| ![Dashboard](/readme-assets/Dashboard.png) |
 
 | Add Game | Add Badge  | 
 |----------|------------| 
-|![Add Game](/readme/AddGame.png) | ![Add Badge](/readme/AddBadge.png) |
+|![Add Game](/readme-assets/AddGame.png) | ![Add Badge](/readme-assets/AddBadge.png) |
 | Add Points | Add Rewards|
-| ![Points](/readme/AddPoints.png) | ![Rewards](/readme/AddReward.png) |
+| ![Points](/readme-assets/AddPoints.png) | ![Rewards](/readme-assets/AddReward.png) |
 | Add Questions | Employees | 
-| ![AddQuestions](/readme/Add_questions.gif) |   ![Employees](/readme/Employees.png) |
+| ![AddQuestions](/readme-assets/Add_questions.gif) |   ![Employees](/readme-assets/Employees.png) |
 
 <br>
 
 - Removing employee
-![LiveScoring](/readme/removing-employee.gif)
+![LiveScoring](/readme-assets/removing-employee.gif)
 
 <br><br>
-<img src="./readme/title6.svg"/>
+<img src="./readme-assets/title6.svg"/>
 <a id="how-to-run"></a>
 
 
