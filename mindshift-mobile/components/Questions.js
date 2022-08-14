@@ -1,11 +1,13 @@
 import React, { useState, useEffect }  from "react";
 import axios from "axios";
+import QuestionOptions from "./QuestionOptions";
 import {StyleSheet, Text, View, TouchableOpacity, Button} from 'react-native';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Questions = () => {
     const [questions, setQuestions] = useState([])
     const [token, setToken] = useState("");
+    const [name, setName] = useState("");
     const [userId, setUserId] = useState("");
     const [gameId, setGameId] = useState("");
     const getQuestionsUrl = "http://127.0.0.1:8000/api/v1/questions/get_questions";
@@ -136,13 +138,12 @@ const Questions = () => {
                             <View className='question'>
                                 <li key={question.id}>{question.question} ({question.points} points)</li>
                             </View>
-                            {/* {(question.question_type === 0) ? <View className='input' ><input onChange={(e) => setName(e.target.value)} id={question.id} type={"text"} /></View> : 
+                            {(question.question_type === 0) ? <View className='input' ><input onChange={(e) => setName(e.target.value)} id={question.id} type={"text"} /></View> : 
                             <QuestionOptions setName={setName} name={name} question_id={question.id} question_type={question.question_type}/>
-                            } */}
+                            }
                         </View>
                     ))}
                 </ol>
-                <View className='questions-button'>
                 <Button text={'SUBMIT'} disabled={!name} onClick={() => {
                     gamePlayed(); 
                     const input = document.getElementsByTagName("input")
@@ -155,7 +156,6 @@ const Questions = () => {
                         submitAnswers(input[i].name, input[i].value)
                     };
                 }}} />
-                </View>
             </View>
         </View>
     );
