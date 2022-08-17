@@ -25,7 +25,29 @@ const Rewards = () => {
             setUserId(userId);
         });
     }
-
+    // Handle click function
+    const handleClick = (id, needed_points) => {
+        localStorage.setItem('reward_id', id);
+        // navigate("/order");
+        axios
+        .post(pointsControlUrl, {
+            user_id: localStorage.getItem("user_id"),
+            points: -needed_points},{
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/json'
+            }
+        })
+        axios
+        .post(addGainedRewardUrl, {
+            user_id: localStorage.getItem("user_id"),
+            reward_id: id},{
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/json'
+            }
+        })
+    }
 
 };
 
