@@ -64,6 +64,13 @@ const Rewards = () => {
         });
     }
 
+    useEffect(() => {
+        getInfo();
+        getRewards();
+
+
+    }, [token]);
+
  
 };
 
