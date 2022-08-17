@@ -49,6 +49,22 @@ const Rewards = () => {
         })
     }
 
+    const getRewards = () => {
+        axios
+        .get(getRewardsUrl, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/json'
+            }
+        })
+
+        .then((response) => {
+            const s = response.data.rewards;
+            setRewards(s);
+        });
+    }
+
+ 
 };
 
 export default Rewards;
