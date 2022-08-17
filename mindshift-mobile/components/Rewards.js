@@ -4,7 +4,6 @@ import {StyleSheet, Text, View, TouchableOpacity, Button} from 'react-native';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Rewards = () => {
-    const navigate = useNavigate();
     const [rewards, setRewards] = useState([]);
     const [token, setToken] = useState("");
     const [userId, setUserId] = useState("");
@@ -16,7 +15,7 @@ const Rewards = () => {
     // Get Info Function
     const getInfo = async () => {
         await AsyncStorage.getItem("reward_id").then((rewardId) => {
-        setGameId(rewardId);
+        setRewardId(rewardId);
         });
         await AsyncStorage.getItem("token").then((token) => {
             setToken(token);

@@ -6,11 +6,12 @@ import Register from "./components/Register";
 import Leaderboard from "./components/Leaderboard";
 import Games from "./components/Games";
 import Questions from "./components/Questions";
+import Rewards from "./components/Rewards";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Questions />
+      <Rewards />
       <StatusBar style="auto" />
     </View>
   );
