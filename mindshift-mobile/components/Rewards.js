@@ -13,6 +13,19 @@ const Rewards = () => {
     const addGainedRewardUrl = "http://127.0.0.1:8000/api/v1/gained_rewards/add_gained_reward";
     const getRewardsUrl = "http://127.0.0.1:8000/api/v1/rewards/get_rewards";
 
+    // Get Info Function
+    const getInfo = async () => {
+        await AsyncStorage.getItem("reward_id").then((rewardId) => {
+        setGameId(rewardId);
+        });
+        await AsyncStorage.getItem("token").then((token) => {
+            setToken(token);
+        });
+        await AsyncStorage.getItem("user_id").then((userId) => {
+            setUserId(userId);
+        });
+    }
+
 
 };
 
