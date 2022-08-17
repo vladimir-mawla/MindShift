@@ -71,7 +71,29 @@ const Rewards = () => {
 
     }, [token]);
 
- 
+    return (
+        <View>
+            <View className="reward">
+                {rewards.map((reward, index) => (
+                    <View className='reward-card' key={index} >
+                        <View className='reward-info'>
+                            <h2>{reward.name}</h2>
+                            <p>{reward.description}</p>
+                        </View>
+                        <View className='reward-contents'>
+                            <View className='reward-points'>
+                                <View className='reward-coins'>
+                                </View> 
+                                <h4>{reward.needed_points} Points</h4>
+                            </View>
+                            <Button text={"REDEEM"} id={reward.id} onClick={()=>{handleClick( reward.id, reward.needed_points)}} className='redeem'/>
+                        </View>
+                    </View>
+                ))}
+            </View>
+        </View>
+    );
+
 };
 
 export default Rewards;
