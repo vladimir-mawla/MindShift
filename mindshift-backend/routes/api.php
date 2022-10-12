@@ -2,19 +2,19 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\GameController;
-use App\Http\Controllers\QuestionController;
-use App\Http\Controllers\AnswerController;
-use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\RewardController;
-use App\Http\Controllers\QuestionOptionController;
-use App\Http\Controllers\LeaderboardController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\GainedRewardController;
-use App\Http\Controllers\UserGameController;
-use App\Http\Controllers\BadgeController;
+use App\App\Controllers\AuthController;
+use App\App\Controllers\GameController;
+use App\App\Controllers\QuestionController;
+use App\App\Controllers\AnswerController;
+use App\App\Controllers\CompanyController;
+use App\App\Controllers\RewardController;
+use App\App\Controllers\QuestionOptionController;
+use App\App\Controllers\LeaderboardController;
+use App\App\Controllers\OrderController;
+use App\App\Controllers\UserController;
+use App\App\Controllers\GainedRewardController;
+use App\App\Controllers\UserGameController;
+use App\App\Controllers\BadgeController;
 
 Route::group(['prefix' => 'v1'], function(){
 
